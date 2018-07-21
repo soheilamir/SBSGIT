@@ -1,0 +1,162 @@
+﻿.show-detail-h-s {
+    padding-top: 50px;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.ch-show-detail-h-s {
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+.show-detail-h-s > header {
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.r-h-sdhs, .l-h-sdhs {
+    flex-flow: column nowrap;
+}
+
+    .l-h-sdhs > img {
+        width: 70px;
+        height: auto;
+    }
+
+.split-adhs {
+    margin-bottom: 3px;
+    flex-flow: row nowrap;
+}
+
+    .split-adhs > span {
+        color: #404040;
+        margin-left: 5px;
+    }
+
+.body-show-detail-h-s {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-flow: row wrap;
+}
+
+.item-content-h-s {
+    flex-flow: row wrap;
+}
+
+    .item-content-h-s > h1 {
+        padding: 5px 0;
+        color: #404040;
+        border-bottom: 1px solid #D1D1D1;
+        font-size: 1.1em;
+        margin-bottom: 8px;
+    }
+
+.tbl-h-s {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 25px;
+}
+
+    .tbl-h-s th,
+    .tbl-h-s td {
+        padding: 5px;
+        text-align: center;
+        vertical-align: central;
+    }
+
+    .tbl-h-s .td-title, .tbl-h-s .td-ticket-p-content {
+        padding: 0 !important;
+        border-bottom: none !important;
+    }
+
+    .tbl-h-s thead {
+        background: #845092;
+        color: #fff;
+    }
+
+    .tbl-h-s tbody tr:nth-child(even) {
+        background: #f0f0f2;
+    }
+
+    .tbl-h-s td {
+        border-bottom: 1px solid #cecfd5;
+        border-left: 1px solid #cecfd5;
+    }
+
+        .tbl-h-s td:first-child {
+            border-right: 1px solid #cecfd5;
+        }
+
+        .tbl-h-s td > i {
+            font-size: 1.1em;
+            color: #AAA;
+        }
+
+        .tbl-h-s td > span {
+            font-size: 1.1em;
+            color: #AAA;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+            .tbl-h-s td > span > i {
+                font-size: 0.9em;
+                color: #5bbaff;
+                margin-right: 5px;
+            }
+
+    .tbl-h-s > caption > .b-caption {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+.ch-r-l-h-sdhs {
+    flex-flow: row nowrap;
+    margin: 0 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+    .ch-r-l-h-sdhs * {
+        margin: 0 3px;
+    }
+
+.p-t-content {
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+    .p-t-content > i {
+        font-size: 1.1em;
+        margin-right: 30px;
+        color: #404040;
+    }
+
+.b-ticket-p-content {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.desc-airline-content {
+    flex-flow: row wrap;
+}
+
+    .desc-airline-content h1, .desc-airline-content p {
+        text-align: justify;
+        font-size: 1em;
+        color: #404040;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .desc-airline-content h1 {
+        margin: 15px 0;
+        font-weight: bold;
+    }

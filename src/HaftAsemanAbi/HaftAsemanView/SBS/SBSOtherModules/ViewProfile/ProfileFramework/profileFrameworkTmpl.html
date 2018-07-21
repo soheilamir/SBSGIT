@@ -1,0 +1,124 @@
+﻿<section class="_w100 _flex base-fw-content">
+    <section class="_w100 _flex header-fw _bg1">
+        <section class="_flex _w90-pad5 body-h-fw">
+            <div class="_flex item-h _w100">
+                <div class="l-c-header-item _flex">
+                    <div class="_flex _bg1-1 header-item-content tooltip _trans" data-tooltip="تعداد افراد آنلاین">
+                        <div class="ico-user-saw sbs-ico-group _trasform_20">
+                        </div>
+                        <i class="_fnt-en _trasform_20">{{Usercount}}</i>
+                    </div>
+                    <div class="_flex _border-r header-item-content _cursor _position-r _trans" ng-click="ISActiveHeaderItem(headerItemList[0],$event)">
+                        <h1 class="_fnt-en _trasform_20">{{locationInfo}}</h1>
+                        <img alt="flag country" title="flag country" class="country-flag _trasform_20" src="../../../../../Image/Flag/ir_16.png" />
+                        <div class="show-detail-content _position-a _trasform_20" ng-if="headerItemList[0].selected===true">
+                            <!-- Data from API service -->
+                        </div>
+                    </div>
+                    <div class="_flex _border-r header-item-content _cursor _position-r _trans" ng-click="ISActiveHeaderItem(headerItemList[1],$event)">
+                        <h1 class="_fnt-en _trasform_20">{{currencyInfo}}</h1>
+                        <div class="show-detail-content currency _position-a _trasform_20" ng-if="headerItemList[1].selected===true">
+                            <!-- Data from API service -->
+                        </div>
+                    </div>
+                </div>
+                <!-- right content -->
+                <div class="r-c-header-item _flex">
+                    <div class="_cursor _trans _flex menu-trigger" ng-class="{'active-menu':menuObj.active}" ng-click="toggelMenu()">
+                        <i class="sbs-ico-menu _trasform_20"></i>
+                    </div>
+                    <div class="_flex header-item-content _cursor _position-r _trans _bg1-1">
+                        <i class="just-ico sbs-ico-chat _trasform_20 _position-r">
+                            <b class="_position-a _bg-red _color-w _fnt-en">3</b>
+                        </i>
+                    </div>
+                    <div class="signIn-content _flex">
+                        <a class="_trasform_20" href="#">
+                            <article class="_flex"></article>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="_flex base-logo-content">
+                <img alt="{{altTitle}}" title="{{altTitle}}" ng-src="{{srcUrl}}">
+            </div>
+        </section>
+    </section>
+    <section basebodyviewcontent>
+        <div class="_w100 _h100 _flex form-content _position-r">
+            <menu class="menu-content" ng-show="menuObj.show">
+                <div class="_w90-pad>5 _flex head-menu">
+                    <i class="sbs-ico-menu _color>1"></i>
+                    <h1 class="_dir>r-align>r title-head-menu">منوی کاربری</h1>
+                </div>
+                <nav ng-transclude></nav>
+            </menu>
+            <div class="_w100 _h100 _flex body-frm-container _position-r" over>
+                <section class="_flex _w100 home-menu-content _position-a">
+                    <div class="_flex _b-ico _cursor _trans _bg1 bttn-rts _position-a" ng-class="{'move-trigger-service':moveTriggerService,'other-move-runningTrigger':otherMoveRunningTrigger}" ng-show="orderList.length>0 && !$root.operation.orderItemEdited" ng-click="showRunningServices=!showRunningServices;menuObj.show=false;menuObj.active=false;">
+                        <i class="sbs-ico-chevron-thin-left _flex _trans_2"></i>
+                        <strong>درخواست های در حال اجرا</strong>
+                    </div>
+                    <menu class="_w100">
+                        <ul class="_flex _dir-align-r">
+                            <li class="_flex" ng-repeat="item in menuHomeItemList.item">
+                                <a href="{{item.href}}" title="{{item.title}}" class="_flex link-home-u-p _trans {{IsSelectOtherMenu(item,menuHomeItemList.n) && 'h-menu-selected' || ''}}" ng-click="OtherActiveMenu(item,menuHomeItemList.n);">{{item.name}}</a>
+                            </li>
+                        </ul>
+                    </menu>
+                </section>
+                <div class="_w100 _h100">
+                    <div ng-view class="_w100 _h100"></div>
+                </div>
+            </div>
+            <section class="_flex _h100 running-s-content" ng-if="showRunningServices && !$root.operation.orderItemEdited">
+                <div class="_flex _w100 t-bss-pu _dir-align-r">
+                    <strong>درخواست های درحال اجرا</strong>
+                </div>
+                <ul class="_flex _w100 body-bss-pu">
+                    <!-- ng repeat for list of sservices -->
+                    <li class="_flex _w100 li-bss" ng-repeat="item in RunServicesMenuListItem.item">
+                        <a title="{{item.name}}" href="{{item.href}}" class="_w100 _flex _trans {{IsSelectOtherMenu(item,RunServicesMenuListItem.n) && 'active-s-m' || ''}}" ng-click="OtherActiveMenu(item,RunServicesMenuListItem.n);f()">
+                            <b>{{item.name}}</b>
+                            <span class="_flex _w100">
+                                <i ng-repeat="icoItem in item.ico" class="{{icoItem}}"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="_flex base-services-section-pu _h100">
+                <div class="_flex _w100 t-bss-pu _dir-align-r">
+                    <strong>خدمات ما</strong>
+                </div>
+                <ul class="_flex _w100 body-bss-pu">
+                    <!-- ng repeat for list of sservices -->
+                    <li class="_flex _w100 li-bss" ng-repeat="item in ServicesMenuListItem.item">
+                        <a title="" href="{{item.href}}" class="_w100 _flex _trans {{IsSelectOtherMenu(item,ServicesMenuListItem.n) && 'active-s-m' || ''}}" ng-click="OtherActiveMenu(item,ServicesMenuListItem.n);">
+                            <i class="{{item.ico}} _color2"></i>
+                            <b>{{item.name}}</b>
+                        </a>
+                    </li>
+                    <li class="_flex _w100 li-bss" ng-if="(lstHotelLength>0 || lstFlightLength>0) && !orderEdited && !addPackageInOrder">
+                        <a title="" class="_w100 _flex _trans _bg5 _cursor link-f-r {{IsSelectOtherMenu(item,ServicesMenuListItem.n) && 'active-f-r' || ''}}" ng-click="FinalReg()">
+                            <i class="sbs-ico-files _color-w"></i>
+                            <b class="_color-w">ثبت نهایی</b>
+                        </a>
+                    </li>
+                    <li class="_flex _w100 li-bss" ng-if="orderEdited && !addPackageInOrder">
+                        <a title="" class="_w100 _flex _trans _bg5 _cursor link-f-r {{IsSelectOtherMenu(item,ServicesMenuListItem.n) && 'active-f-r' || ''}}" ng-click="EditOrderItem()">
+                            <i class="sbs-ico-files _color-w"></i>
+                            <b class="_color-w">تغییر نهایی</b>
+                        </a>
+                    </li>
+                    <li class="_flex _w100 li-bss" ng-if="addPackageInOrder">
+                        <a title="" class="_w100 _flex _trans _bg5 _cursor link-f-r {{IsSelectOtherMenu(item,ServicesMenuListItem.n) && 'active-f-r' || ''}}" ng-click="AddPackageInOrderItem()">
+                            <i class="sbs-ico-files _color-w"></i>
+                            <b class="_color-w">افرودن</b>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+</section>

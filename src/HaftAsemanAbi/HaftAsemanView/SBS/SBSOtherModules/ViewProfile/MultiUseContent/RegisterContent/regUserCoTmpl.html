@@ -1,0 +1,22 @@
+﻿<ul class="_w100 _flex ul-user-c">
+    <li class="_flex li-user-c acc-li _cursor" ng-repeat="user in acceptedLst" ng-click="MultiFnRegUser(user)">
+        <article class="_flex article-user-content _w100 _h100" over>
+            <figure class="_w100 _position-r" style="background:#FFF url('{{user.urlImg}}') no-repeat center center / cover" ng-if="!isCo">
+                <i class="arrow-accepted-user _position-a" ng-class="{'a-a-u':user.selected}">
+                </i>
+                <figcaption class="_w100 _flex _position-a">{{user.FullName}}</figcaption>
+            </figure>
+            <figure class="_w100 _position-r _flex _bg-w" ng-class="{'ch-fig-art-u-c':isCo}" ng-if="isCo">
+                <i class="arrow-accepted-user _position-a" ng-class="{'a-a-u':user.selected}">
+                </i>
+                <img src="{{user.urlImg}}" alt="{{user.coName}}" title="{{user.coName}}" />
+                <figcaption class="_w100 _flex _position-a">{{user.coName}}</figcaption>
+            </figure>
+            <div class="_flex other-info-user" ng-if="showBottom">
+                <div class="_flex _w90-m5 unaccept-user-bttn _cursor _trans" role="button">
+                    <i class="_color-60">غیر فعال کردن</i>
+                </div>
+            </div>
+        </article>
+    </li>
+</ul>

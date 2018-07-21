@@ -1,0 +1,217 @@
+﻿.base-body-container {
+    flex-flow: column nowrap;
+}
+
+.body-data-content {
+    flex: 1 1 auto;
+    width: 95%;
+    margin: 0;
+    padding: 0 2.5%;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: 35px;
+}
+
+.operation-content {
+    border-top: 1px solid #D1D1D1;
+    height: 45px;
+    padding: 4px 2.5%;
+    min-height: 45px;
+    max-height: 45px;
+    flex-flow: row nowrap;
+    width: 95%;
+    background: #FFF;
+}
+
+    .operation-content:first-child, .operation-content:last-child {
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+        flex-flow: row nowrap;
+    }
+
+.base-filter-content {
+    border-bottom: 1px solid #D1D1D1;
+    padding: 10px 0;
+}
+
+.filter-content {
+    flex-flow: row nowrap;
+    /*-webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 3em;
+    -moz-column-gap: 3em;
+    column-gap: 3em;*/
+}
+
+.base-s-c {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.split-i-c {
+    margin-bottom: 8px;
+    flex-flow: row nowrap;
+}
+
+.ch-split-i-c {
+    align-items: center;
+    justify-content: center;
+}
+
+.other-operation-content {
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.show-info-content {
+    border-top: 1px solid #D1D1D1;
+    padding: 10px 0;
+    flex-flow: row wrap;
+}
+
+.show-data-content {
+    height: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+    .show-data-content .grid {
+        height: 290px;
+    }
+/*grid*/
+.ui-grid-pinned-container.ui-grid-pinned-container-right .ui-grid-header-cell:first-child {
+    border-bottom: 1px solid #CCC !important;
+}
+
+input.ui-grid-filter-input[type="text"] {
+    font-size: 1em;
+    color: #606060;
+    border: 1px solid #DDD;
+    padding: 3px 2.5%;
+    width: 95%;
+}
+
+    input.ui-grid-filter-input[type="text"]:hover {
+        border: 1px solid #007acc !important;
+    }
+
+.ui-grid-menu .ui-grid-menu-inner ul li button {
+    text-align: right !important;
+}
+/*end content*/
+/* base info content */
+.base-body-info {
+    min-width: 450px;
+    min-height: 300px;
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
+    border: 1px solid #CCC;
+    flex-flow: column nowrap;
+    background: #F5F5F5;
+}
+
+    .base-body-info .b-b-c {
+        flex: 1 1 auto;
+        padding-top: 15px;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .base-body-info .t-t-c, .base-body-info .b-c {
+        flex: 0 1 auto;
+        height: 45px;
+        min-height: 45px;
+        max-height: 45px;
+        background: #E1E1E1;
+    }
+
+    .base-body-info .t-t-c {
+        border-bottom: 1px solid #CCC;
+        height: 35px;
+        min-height: 35px;
+        max-height: 35px;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+        .base-body-info .t-t-c > h1, .base-body-info .t-t-c > i {
+            color: #505050;
+            font-size: 1em;
+        }
+
+        .base-body-info .t-t-c > h1 {
+            margin-right: 10px;
+        }
+
+    .base-body-info .b-c {
+        border-top: 1px solid #CCC;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+/* end base info content */
+/*modal content */
+.body-modal-content {
+    background: rgba(255,255,255,0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+    top: 0;
+    left: 0;
+}
+/*end modal content */
+.no-border {
+    border: none !important;
+}
+
+.img-all-content {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.img-content {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    background: #CCC;
+    width: 80px;
+    min-height: 80px;
+    margin: 3px;
+}
+
+.bigimg-content {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    background: #CCC;
+    width: 200px;
+    min-height: 200px;
+}
+
+    .bigimg-content > i {
+        font-size: 1.2em;
+        color: #F1F1F1;
+    }
+
+.lbl-s {
+    min-width: 35px;
+}
+
+.lbl-m {
+    min-width: 60px;
+}
+
+.lbl-l {
+    min-width: 90px;
+}

@@ -1,0 +1,12 @@
+﻿.item-trans {
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+}
+
+.i-t {
+    flex-flow: row nowrap;
+}
+
+.ch-i-t {
+    justify-content: flex-end;
+}

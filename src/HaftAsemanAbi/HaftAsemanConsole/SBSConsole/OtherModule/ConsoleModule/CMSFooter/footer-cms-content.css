@@ -1,0 +1,18 @@
+﻿.footer-content {
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright {
+    flex-flow: row nowrap;
+}
+
+    .copyright img {
+        height: 20px;
+        margin-left: 10px;
+    }
+
+    .copyright > a {
+        font-size: 0.85em;
+    }

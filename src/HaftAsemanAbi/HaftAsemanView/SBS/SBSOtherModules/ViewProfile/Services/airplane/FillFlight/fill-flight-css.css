@@ -1,0 +1,53 @@
+﻿/* note css */
+.note {
+    font-size: 1.1em;
+    color: #C1C1C1;
+    margin-right: 10px;
+    flex: 1 1 auto;
+}
+
+    .note.blod-note {
+        color: #606060;
+        font-weight: bold;
+    }
+
+    .note.red-note {
+        color: #c33737;
+    }
+/* end note css */
+.base-all-service .fill-s-c .body-fill-flight {
+    flex-flow: column nowrap;
+}
+
+.body-fill-flight .tsc, .body-fill-flight .bsc {
+    background: #fff none repeat scroll 0 0;
+    flex: 0 1 auto;
+    height: 37px;
+    min-height: 37px;
+    padding-bottom: 6.5px;
+    padding-top: 6.5px;
+}
+
+.body-fill-flight .tsc {
+    border-bottom: 1px solid #DDD;
+    align-items: center;
+}
+
+    .body-fill-flight .tsc > i {
+        margin-left: 8px;
+    }
+
+.body-fill-flight .bsc {
+    min-height: 50px;
+}
+
+.body-fill-flight .csc {
+    flex: 1 1 auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    flex-flow: column nowrap;
+}
+
+.body-fill-flight .bsc {
+    border-top: 1px solid #DDD;
+}

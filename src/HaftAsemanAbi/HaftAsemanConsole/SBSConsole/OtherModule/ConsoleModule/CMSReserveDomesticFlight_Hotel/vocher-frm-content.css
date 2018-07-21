@@ -1,0 +1,12 @@
+﻿.base-info-h {
+    flex-flow: row wrap;
+    border-top: 1px solid #CCC;
+    background: #FFF;
+    box-shadow: 1px 0 0 0 #CCC,-1px 0 0 0 #CCC;
+}
+
+.condition-content {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}

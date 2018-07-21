@@ -1,0 +1,73 @@
+﻿<section class="_flex _w100 _h100 body-fill-hotel">
+    <div class="_flex tsc _w90-pad5 _dir-align-r">
+        <i class="sbs-ico-content-left _color2"></i>
+        <h1 class="_fnt-fa _color2">نمایش اطلاعات هتل</h1>
+    </div>
+    <div class="_flex csc _w90-pad5 _h100 _dir-align-r" over>
+        <div class="_flex _w100 split-items-sbs-fd">
+            <label class="_lbl _lbl-form _dir-align-r">نوع هتل:</label>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newHotel.hotelType" ng-options="option.name for option in baseData.lstHotelType track by option.id">
+                <option value="">انتخاب نوع هتل</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd ch-split-items-sbs-fd other-split-items _dir-align-l">
+            <h1 class="_w100 _dir-align-r _color-60">نام هتل خود را وارد نمایید:</h1>
+            <md-chips ng-model="selectedHotels" md-autocomplete-snap="" md-transform-chip="transformChip($chip)" md-require-match="false" md-max-chips="2">
+                <md-autocomplete md-selected-item="selectedItem" md-search-text="searchText" md-items="item in queryHotelsSearch(searchText)" md-item-text="item.name" placeholder="Search Hotels Name" style="width:250px;">
+                    <span md-highlight-text="searchText">
+                        {{item.name}}
+                    </span>
+                </md-autocomplete>
+                <md-chip-template>
+                    <span>
+                        <strong>{{$chip.name}}</strong>
+                        <em ng-if="$chip.type==='new'">({{$chip.type}})</em>
+                    </span>
+                </md-chip-template>
+            </md-chips>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd">
+            <label class="_lbl _lbl-form _dir-align-r">تاریخ ورود:</label>
+            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpFrom" type="text" placeholder="تاریخ ورود" ng-model="newHotel.checkIn" persiandatepickers-from readonly />
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd">
+            <label class="_lbl _lbl-form _dir-align-r">تاریخ خروج:</label>
+            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpTo" type="text" placeholder="تاریخ خروج" ng-model="newHotel.checkOut" persiandatepickers-to readonly />
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd">
+            <label class="_lbl _lbl-form _dir-align-r">تعداد ستاره:</label>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newHotel.rate" ng-options="option.number for option in baseData.lstHotelRate track by option.id">
+                <option value="">انتخاب تعداد ستاره</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd ch-split-items-sbs-fd" ng-if="newHotel.hotelType.id==1">
+            <label class="_lbl _lbl-form _dir-align-r c-lbl">استان:</label>
+            <select class="_select _select-form _dir-align-r _trans">
+                <option value="">انتخاب استان</option>
+            </select>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newHotel.to" ng-options="option.name for option in baseData.lstCity track by option.id">
+                <option value="">انتخاب شهر</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd ch-split-items-sbs-fd" ng-if="newHotel.hotelType.id==2">
+            <label class="_lbl _lbl-form _dir-align-r c-lbl">کشور:</label>
+            <select class="_select _select-form _dir-align-r _trans">
+                <option value="">انتخاب کشور</option>
+            </select>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newHotel.to" ng-options="option.name for option in baseData.lstCity track by option.id">
+                <option value="">انتخاب شهر</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd ch-split-items-sbs-fd other-split-items _dir-align-l">
+            <h1 class="_w100 _dir-align-r">توضیحات خود را در زیر وارد نمایید:</h1>
+            <textarea class="_txtarea _dir-align-r _fnt-fa  _trans" type="text" placeholder="توضیحات" ng-model="newHotel.description"></textarea>
+        </div>
+    </div>
+    <div class="_flex bsc _w90-pad5 _dir-align-l">
+        <div class="_flex _bttn _dir-align-r _fnt-fa" ng-click="AddHotelToPackage()">
+            <i class="sbs-ico-chevron-right _trans"></i>
+            <span>افزودن هتل</span>
+        </div>
+    </div>
+</section>
+

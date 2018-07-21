@@ -1,0 +1,73 @@
+﻿<section class="_flex _w100">
+    <section class="_flex _w90-pad5 _dir-align-r base-co-c">
+        <h1 class="_flex _color-w _bg1 _dir-align-r _w95-pad25">
+            <i class="_color-w sbs-ico-trending_up"></i>
+            <b class="_color-w">درخواست اعتبار - تسویه حساب</b>
+        </h1>
+        <div class="_flex _w95-pad25 _bg-w base-b-c-c _dir-align-r">
+            <div class="_w50 _dir-align-r">
+                <div class="_w90-pad5 _flex split-i-c _bg5">
+                    <label class="_lbl _lbl-form _dir-align-r lbl-s _color-w">حداکثر زمان بازپرداخت:</label>
+                    <label class="_lbl _lbl-form _dir-align-r lbl-l _bold _fnt-fa _color-w">20 روز</label>
+                </div>
+                <div class="_w90-pad5 _flex split-i-c">
+                    <label class="_lbl _lbl-form _dir-align-r lbl-s _color-60">اعتبار کل شرکت:</label>
+                    <label class="_lbl _lbl-form _dir-align-r lbl-l _bold _fnt-fa val-lbl">450،254،000،000 ریال</label>
+                </div>
+                <div class="_w90-pad5 _flex split-i-c">
+                    <label class="_lbl _lbl-form _dir-align-r lbl-s _color-60">مانده اعتبار شرکت:</label>
+                    <label class="_lbl _lbl-form _dir-align-r lbl-l _bold _fnt-fa _color-red val-lbl">150،254،000،000 ریال</label>
+                </div>
+            </div>
+            <div class="_w50 _dir-align-r">
+                <div class="_w90-pad5 _flex split-i-c">
+                    <label class="_lbl _lbl-form _dir-align-r lbl-s _color-60">حداکثر تعداد درخواست در ماه:</label>
+                    <label class="_lbl _lbl-form _dir-align-r lbl-l _bold _fnt-fa val-lbl">5</label>
+                </div>
+                <div class="_w90-pad5 _flex split-i-c">
+                    <label class="_lbl _lbl-form _dir-align-r lbl-s _color-60">تعداد درخواست ها:</label>
+                    <label class="_lbl _lbl-form _dir-align-r lbl-l _bold _fnt-fa val-lbl">3</label>
+                </div>
+                <div class="_w90-pad5 _flex split-i-c">
+                    <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="SearchOrderServices();">
+                        <span class="_color-w">درخواست اعتبار</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="_flex _w95-pad25 _bg-w history-c-c _dir-align-r">
+            <h1 class="_flex _dir-align-r">نمایش تاریخچه اعتبار شرکت</h1>
+            <div class="_flex _w100 _dir-align-r">
+                <section class="_w50 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-s">از:</label>
+                        <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpFrom" type="text" placeholder="از تاریخ" ng-model="newFlight.departingDate" persiandatepickers-from readonly />
+                        <label class="_lbl _lbl-form _dir-align-r lbl-s" style="text-align:center;">تا:</label>
+                        <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpTo" type="text" placeholder="تا تاریخ" ng-model="newFlight.returningDate" persiandatepickers-to readonly />
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="SearchOrderServices();">
+                            <span class="_color-w">جستجو</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="_flex _w100 show-data-content _dir-align-r _bg-d" ui-i18n="{{lang}}">
+                <div id="grid1" ui-grid="gridOptions" dir="rtl" ui-grid-selection ui-grid-resize-columns ui-grid-move-columns class="grid _w100"></div>
+            </section>
+        </div>
+        <div class="_flex _w95-pad25 _dir-align-r _bg-w o-p-c">
+            <h1 class="_flex _dir-align-r">پرداخت آنلاین اعتبار</h1>
+            <div class="_flex _w100 _dir-align-r">
+                <section class="_w50 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">مبلغ پرداخت:</label>
+                        <input type="text" placeholder="مبلغ پرداخت" class="_txt-form _fnt-fa" />
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button">
+                            <span class="_color-w">پرداخت از طریق درگاه بانکی</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</section>

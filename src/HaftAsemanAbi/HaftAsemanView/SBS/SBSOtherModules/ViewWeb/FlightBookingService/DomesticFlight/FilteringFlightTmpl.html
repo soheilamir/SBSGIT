@@ -1,0 +1,141 @@
+﻿<section class="_flex _w100 _h100 bb-sfs">
+    <section class="_flex _w100 base-show-flight-search _trans_2" ng-class="{'hide-bsfs':FullFiterFlight}">
+        <div class="_flex _w90-pad5 title-sfs _dir-align-r">
+            <i class="_flex _color1  sbs-ico-dots-three-horizontal"></i>
+            <h1 class="_flex _fnt-fa _color2">نمایش اطلاعات پروازی</h1>
+        </div>
+        <div class="_flex _w90-pad5 body-sfs _dir-align-r">
+            <div class="_flex _w100 splite-sfs">
+                <label class="_flex _fnt-fa">نوع پرواز:</label>
+                <label class="lbl _flex _fnt-fa _color-60" ng-show="$root.DomesticResultTickets.searchFlightItem.JourneyType.Id==1">رفت</label>
+                <label class="lbl _flex _fnt-fa _color-60" ng-show="$root.DomesticResultTickets.searchFlightItem.JourneyType.Id==2">رفت و برگشت</label>
+                <label class="_flex _fnt-fa _bold">{{$root.DomesticResultTickets.searchFlightItem.Source.CityName}} - {{$root.DomesticResultTickets.searchFlightItem.Destination.CityName}}</label>
+            </div>
+            <div class="_flex _w100 splite-sfs">
+                <label class="_flex _fnt-fa">تاریخ رفت:</label>
+                <label class="lbl _flex _fnt-fa _color-60">{{$root.DomesticResultTickets.searchFlightItem.DepartingDate}}</label>
+            </div>
+            <div class="_flex _w100 splite-sfs">
+                <label class="_flex _fnt-fa" ng-show="$root.DomesticResultTickets.searchFlightItem.JourneyType.Id==2">تاریخ برگشت:</label>
+                <label class="lbl _flex _fnt-fa _color-60" ng-show="$root.DomesticResultTickets.searchFlightItem.JourneyType.Id==2">{{$root.DomesticResultTickets.searchFlightItem.ReturningDate}}</label>
+            </div>
+            <div class="_flex _w100 splite-sfs">
+                <label class="_flex _fnt-fa">بزرگسال:</label>
+                <label class="lbl _flex _fnt-fa _color-60 _bold">{{$root.DomesticResultTickets.searchFlightItem.Adult.Number}}</label>
+                <label class="_flex _fnt-fa">کودک:</label>
+                <label class="lbl _flex _fnt-fa _color-60 _bold">{{$root.DomesticResultTickets.searchFlightItem.Child.Number}}</label>
+                <label class="_flex _fnt-fa">نوزاد:</label>
+                <label class="lbl _flex _fnt-fa _color-60 _bold">{{$root.DomesticResultTickets.searchFlightItem.Infant.Number}}</label>
+            </div>
+            <div class="_flex _w100 splite-sfs ch-splite-sfs">
+                <div class="_bttn _ch-bttn _flex _trans _cursor _bg2" ng-click="ModifySearchFlight();" role="button" tabindex="0">
+                    <span class="_fnt-fa _color-w">جستجوی مجدد پرواز</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="_flex _w100 _h100 base-filter-flight">
+        <div class="_flex _w90-pad5 title-sfs _dir-align-r _position-r">
+            <i class="_flex _color1  sbs-ico-dots-three-horizontal"></i>
+            <h1 class="_flex _fnt-fa _color2">فیلتر کردن پروازها</h1>
+            <span class="_flex _position-a" ng-click="FullFiterFlight=!FullFiterFlight">تمامی فیلترها</span>
+        </div>
+        <div class="_flex _w90-pad5 body-ff _dir-align-r">
+            <div class="_flex _w100 splite-ff">
+                <div class="_flex _w100 t-ff-s">
+                    <span class="_flex sbs-ico-dots-two-horizontal"></span>
+                    <span class="_flex">تعداد توقفات</span>
+                </div>
+                <ul class="_flex _w100 _dir-align-r">
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.step==0}" ng-click="StepItem(0)">
+                        <span class="_flex param-s p-t _fnt-en">0</span>
+                    </li>
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.step==1}" ng-click="StepItem(1)">
+                        <span class="_flex param-s p-t _fnt-en">1</span>
+                    </li>
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.step==2}" ng-click="StepItem(2)">
+                        <span class="_flex param-s p-t _fnt-en">1+</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="_flex _w100 splite-ff">
+                <div class="_flex _w100 t-ff-s">
+                    <span class="_flex sbs-ico-dots-two-horizontal"></span>
+                    <span class="_flex">ساعات پرواز</span>
+                </div>
+                <ul class="_flex _w100 _dir-align-r ul-filter-times">
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.time==0}" ng-click="TimeItem(0)">
+                        <span class="_flex param-s p-t sbs-ico-sunrise"></span>
+                        <span class="_flex param-s p-b _fnt-en">12AM-6AM</span>
+                    </li>
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.time==1}" ng-click="TimeItem(1)">
+                        <span class="_flex param-s p-t sbs-ico-sun"></span>
+                        <span class="_flex param-s p-b _fnt-en">6PM-12PM</span>
+                    </li>
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.time==2}" ng-click="TimeItem(2)">
+                        <span class="_flex param-s p-t sbs-ico-weather "></span>
+                        <span class="_flex param-s p-b _fnt-en">12PM-6PM</span>
+                    </li>
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.time==3}" ng-click="TimeItem(3)">
+                        <span class="_flex param-s p-t sbs-ico-moon"></span>
+                        <span class="_flex param-s p-b _fnt-en">6PM-12PM</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="_flex _w100 splite-ff">
+                <div class="_flex _w100 t-ff-s">
+                    <span class="_flex sbs-ico-dots-two-horizontal"></span>
+                    <span class="_flex">کلاس پروازی</span>
+                </div>
+                <ul class="_flex _w100 _dir-align-r">
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.class==0}" ng-click="ClassItem(0)">
+                        <span class="_flex param-s p-t _fnt-en ch-p">Economy</span>
+                    </li>
+                    <!--<li class="_flex _w100" ng-class="{'active-param':Param.time==1}" ng-click="TimeItem(1)">
+                        <span class="_flex param-s p-t _fnt-en ch-p">Premiun</span>
+                        <span class="_flex param-s p-b _fnt-en ch-p">Economy</span>
+                    </li>-->
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.class==1}" ng-click="ClassItem(1)">
+                        <span class="_flex param-s p-t _fnt-en ch-p">Besiness</span>
+                    </li>
+                    <!--<li class="_flex _w100" ng-class="{'active-param':Param.time==3}" ng-click="TimeItem(3)">
+                        <span class="_flex param-s p-t _fnt-en ch-p">First</span>
+                    </li>-->
+                </ul>
+            </div>
+            <div class="_flex _w100 splite-ff h-s-ff" ng-class="{'s-s-ff':FullFiterFlight}">
+                <div class="_flex _w100 t-ff-s">
+                    <span class="_flex sbs-ico-dots-two-horizontal"></span>
+                    <span class="_flex">انتخاب ایرلاین</span>
+                </div>
+                <ul class="_flex _w100 _dir-align-r">
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.airline=='IR'}" ng-click="AirlineItem('IR')">
+                        <span class="_flex param-s p-b _fnt-fa">ایران ایر</span>
+                    </li>
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.airline=='EP'}" ng-click="AirlineItem('EP')">
+                        <span class="_flex param-s p-b _fnt-fa">آسمان</span>
+                    </li>
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.airline=='QB'}" ng-click="AirlineItem('QB')">
+                        <span class="_flex param-s p-b _fnt-fa">قشم ایر</span>
+                    </li>
+                </ul>
+                <ul class="_flex _w100 _dir-align-r">
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.airline=='I3'}" ng-click="AirlineItem('I3')">
+                        <span class="_flex param-s p-b _fnt-fa">آتا</span>
+                    </li>
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.airline=='BQ'}" ng-click="AirlineItem('BQ')">
+                        <span class="_flex param-s p-b _fnt-fa">ایرتور</span>
+                    </li>
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.airline=='HH'}" ng-click="AirlineItem('HH')">
+                        <span class="_flex param-s p-b _fnt-fa">تابان</span>
+                    </li>
+                </ul>
+                <ul class="_flex _w100 _dir-align-r">
+                    <li class="_flex _w100 _cursor" ng-class="{'active-param':$root.Param.airline=='NV'}" ng-click="AirlineItem('NV')">
+                        <span class="_flex param-s p-b _fnt-fa">نفت</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>

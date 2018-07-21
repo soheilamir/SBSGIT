@@ -1,0 +1,40 @@
+﻿<section class="_flex _w100 base-all-service _dir-align-r">
+    <section class="_flex _w100 body-all-services">
+        <div class="_flex _w90-pad5 t-b-all-s">
+            <div class="_flex title-bas _dir-align-r">
+                <i class="sbs-ico-content-left _color2"></i>
+                <h1>روند درخواست شماره {{$routeParams.orderId}}</h1>
+            </div>
+            <div class="_flex fun-bas ch-fn-bas _dir-align-l">
+                <div class="tooltip-pu tooltip-pu-w-t _flex _b-ico bttn_pad5 _cursor _trans" data-tooltip="حذف سفارش" ng-click="DeleteOrderOfList()">
+                    <i class="sbs-ico-delete _flex"></i>
+                </div>
+            </div>
+        </div>
+        <section class="_flex _w90-pad5 _h100 body-all-services-container _dir-align-l" over>
+            <!-- create directive content for show recommendation  -->
+            <section class="_w100 _flex base-r-s" ng-if="lstFlightPackage.length>0">
+                <div class="_w90-pad5 _flex _bg2 t-r-s _dir-align-r">
+                    <h1>نمایش لیست هواپیما ها</h1>
+                    <div class="tooltip-pu tooltip-pu-w-t _flex _b-ico bttn_pad5 _cursor _trans _bg-w" data-tooltip="افزودن پرواز" ng-click="AddFlightInOrder()">
+                        <i class="sbs-ico-playlist_add _flex"></i>
+                    </div>
+                </div>
+                <div class="_w100 _flex body-item-r-s">
+                    <flight-tmpl ng-repeat="flightItem in lstFlightPackage" flight-pack-list="lstFlightPackage" flight-pack-item="flightItem" flight-pack-index="$index"></flight-tmpl>
+                </div>
+            </section>
+            <section class="_w100 _flex base-r-s" ng-if="lstHotelPackage.length>0">
+                <div class="_w90-pad5 _flex _bg2 t-r-s _dir-align-r">
+                    <h1>نمایش لیست هتل ها</h1>
+                    <div class="tooltip-pu tooltip-pu-w-t _flex _b-ico bttn_pad5 _cursor _trans _bg-w" data-tooltip="افزودن هتل" ng-click="AddHotelInOrder()">
+                        <i class="sbs-ico-playlist_add _flex"></i>
+                    </div>
+                </div>
+                <div class="_w100 _flex body-item-r-s">
+                    <hotel-tmpl ng-repeat="hotelItem in lstHotelPackage" hotel-pack-list="lstHotelPackage" hotel-pack-item="hotelItem" hotel-pack-index="$index"></hotel-tmpl>
+                </div>
+            </section>
+        </section>
+    </section>
+</section>

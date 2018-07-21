@@ -1,0 +1,49 @@
+﻿.base-login-content {
+    background: url('../../../../Image/element/bg-pattern.jpg') repeat left top;
+}
+
+.base-login-content {
+    align-items: center;
+    justify-content: center;
+}
+
+.body-login-console {
+    width: 380px;
+    flex-flow: column nowrap;
+}
+
+.t-login {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid #DDD;
+}
+
+    .t-login h1 {
+        font-size: 1.3em;
+        color: #909090;
+    }
+
+    .t-login img {
+        width: auto;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+.inner-log-content {
+    height: 200px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.3);
+    flex-flow: column nowrap;
+}
+
+.split-content {
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px 0;
+}

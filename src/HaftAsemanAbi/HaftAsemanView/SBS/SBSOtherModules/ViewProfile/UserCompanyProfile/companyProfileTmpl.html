@@ -1,0 +1,153 @@
+﻿<section class="_flex _w100 base-co-profile-content">
+    <section class="_flex show-user-img-content _position-r">
+        <figure class="_flex img-logo-co">
+            <i class="_flex sbs-ico-user"></i>
+            <!--<img class="" alt="company logo" title="company logo" src="#" />-->
+        </figure>
+        <div class="_flex _b-ico _cursor _trans other-b-ico _position-a _dir-align-r">
+            <i class="sbs-ico-camera _flex"></i>
+            <strong>انتخاب عکس شرکت</strong>
+        </div>
+        <!--<div class="_flex bbb-content _position-a">
+            <div class="_flex fast-menu-content _trans _cursor">
+                <i class="_flex sbs-ico-playlist_add _color2"></i>
+                <a title="" href="#" class="_flex _color2">سرویس هواپیما</a>
+            </div>
+            <div class="_flex fast-menu-content _trans _cursor">
+                <i class="_flex sbs-ico-playlist_add _color2"></i>
+            </div>
+            <div class="_flex fast-menu-content _trans _cursor">
+                <i class="_flex sbs-ico-playlist_add _color2"></i>
+            </div>
+            <div class="_flex fast-menu-content _trans _cursor">
+                <i class="_flex sbs-ico-playlist_add _color2"></i>
+            </div>
+        </div>-->
+    </section>
+    <section class="_flex body-user-info-content _position-r _dir-align-r">
+        <div class="_w100 _flex _position-a arrow-onTop">
+            <i class="back _position-r">
+                <i class="on _position-a"></i>
+            </i>
+        </div>
+        <div class="_flex _w100 content-intro-pu q-pu-content">
+            <div class="_flex t-intro-pu ch-t-intro-pu _dir-align-r _position-r">
+                <a title="" href="#" class="_flex l-t _dir-align-r">
+                    <i class="sbs-ico-trending_up _color5"></i>
+                    <b>اطلاعات حساب</b>
+                    <i class="sbs-ico-long-arrow-left _color5"></i>
+                    <b>سقف اعتبار</b>
+                    <span class="_color5 _dir-align-r _bold">2،560،000</span>
+                    <b>مانده اعتبار</b>
+                    <span class="_color5 _dir-align-r _bold">2،560،000</span>
+                </a>
+                <div class="tooltip-pu _flex _b-ico _cursor _trans" data-tooltip="نمایش">
+                    <i class="sbs-ico-edit _flex"></i>
+                </div>
+            </div>
+        </div>
+        <section class="_flex sec-r-co-item">
+            <div class="_w90-pad5 _flex split-i-c _bg5">
+                <label class="_lbl _lbl-form _dir-align-r lbl-s _color-w">حداکثر زمان بازپرداخت:</label>
+                <label class="_lbl _lbl-form _dir-align-r lbl-l _bold _fnt-fa _color-w">20 روز</label>
+            </div>
+            <div class="_flex _w100 content-intro-pu intro-sum-c">
+                <div class="_flex t-intro-pu _dir-align-r _position-r">
+                    <a title="" href="#" class="_flex l-t _dir-align-r">
+                        <i class="sbs-ico-earth _color1"></i>
+                        <b>نمایش اطلاعات شرکت</b>
+                    </a>
+                    <div class="tooltip-pu _flex _b-ico _cursor _trans" data-tooltip="تغییر">
+                        <i class="sbs-ico-edit _flex"></i>
+                    </div>
+                </div>
+                <div class="_flex desc-pu-items-content _dir-align-r">
+                    <div class="_flex _w100 intro-items">
+                        <i class="_flex sbs-ico-home"></i>
+                        <h1>نام کامل شرکت:</h1>
+                        <h1>شرکت فرتاک</h1>
+                    </div>
+                    <div class="_flex _w100 intro-items">
+                        <i class="_flex sbs-ico-calendar"></i>
+                        <h1>تاریخ همکاری:</h1>
+                        <h1>28 فروردین 1367</h1>
+                    </div>
+                    <div class="_flex _w100 intro-items">
+                        <i class="_flex sbs-ico-mapmarker"></i>
+                        <h1>محل اقامت:</h1>
+                        <h1>ایران - تهران</h1>
+                    </div>
+                    <div class="_flex _w100 intro-items">
+                        <i class="_flex sbs-ico-fax"></i>
+                        <h1>تلفن تماس:</h1>
+                        <h1>22940463 (021)</h1>
+                    </div>
+                    <div class="_flex _w100 intro-items">
+                        <i class="_flex sbs-ico-fax"></i>
+                        <h1>فکس:</h1>
+                        <h1>22940463 (021)</h1>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="_flex sec-l-co-item">
+            <div class="_flex _w100 accept-user-content"></div>
+            <div class="_flex _w100 content-intro-pu intro-sum-c">
+                <div class="_flex t-intro-pu _dir-align-r _position-r">
+                    <a title="" href="#" class="_flex l-t _dir-align-r">
+                        <i class="sbs-ico-group" style="color:#7bad50"></i>
+                        <b>اطلاعات اعضا</b>
+                        <b class="_bg-red _color-w show-count-user-reg">4 نفر جدید</b>
+                    </a>
+                    <a class="tooltip-pu _flex _b-ico a-link-content _cursor _trans" href="#/sbs/company-profile/user/acception-user" data-tooltip="نمایش">
+                        <i class="sbs-ico-cog _flex"></i>
+                    </a>
+                </div>
+                <div class="_flex detail-user-item _dir-align-r">
+                    <article class="_flex info-user-item" ng-repeat="regUser in RegUserOfCompanyList" over>
+                        <figure class="_flex _w100 fig-user _position-r">
+                            <i class="arrow-accepted-user _position-a"></i>
+                            <i class="user-img-content _w100 _h100" style="background:#FFF url('{{regUser.urlImg}}') no-repeat center center / cover"></i>
+                        </figure>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="_flex base-last-news-content _position-r">
+        <div class="_w100 _flex _position-a arrow-onTop">
+            <i class="back _position-r">
+                <i class="on _position-a"></i>
+            </i>
+        </div>
+        <h1 class="_flex _w90-m5 title-l-n-co _dir-align-r _bold">نمایش آخرین فاکتورها</h1>
+        <section class="_flex _w90-m5 base-body-news-content" style="height:600px;align-items:flex-start;align-content:flex-start">
+            <section class="_flex _dir-align-r _w100 base-body-all-info">
+                <table class="_w100 _dir-align-r">
+                    <tbody class="_dir-align-r">
+                        <tr class="_dir-align-r">
+                            <th class="_dir-align-r">ردیف</th>
+                            <th class="_dir-align-r">تاریخ ثبت</th>
+                            <th class="_dir-align-r">عنوان درخواست</th>
+                            <th class="_dir-align-r">قیمت کل</th>
+                            <th class="_dir-align-r">نمایش بلیط</th>
+                        </tr>
+                        <tr class="_dir-align-r">
+                            <td class="_dir-align-r">1</td>
+                            <td class="_dir-align-r">1396/12/11</td>
+                            <td class="_dir-align-r">بلیط هواپیما</td>
+                            <td class="_dir-align-r">1675000 ریال</td>
+                            <td class="_dir-align-r">
+                                <div class="_flex _bttn _dir-align-r _fnt-fa" style="margin:0 !important;padding:3px !important;    " role="button" ng-click="PrintTicket();">
+                                    <i class="sbs-ico-chevron-right _trans"></i>
+                                    <span>پرینت بلیط</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </section>
+</section>

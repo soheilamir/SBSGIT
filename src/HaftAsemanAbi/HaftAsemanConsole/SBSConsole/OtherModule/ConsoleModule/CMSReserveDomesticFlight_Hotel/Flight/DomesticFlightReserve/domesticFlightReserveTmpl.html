@@ -1,0 +1,49 @@
+﻿<section class="_flex _w100 base-all-service _dir-align-r">
+    <section class="_flex _w100 body-all-services">
+        <div class="_flex _w90-pad5 t-b-all-s">
+            <div class="_flex title-bas _dir-align-r">
+                <i class="sbs-ico-content-left _color2"></i>
+                <h1>رزرو بلیط هواپیما</h1>
+            </div>
+            <div class="_flex fun-bas _dir-align-l">
+                <div class="tooltip-pu tooltip-pu-w-t _flex _b-ico bttn_pad5 _cursor _trans" data-tooltip="افزودن بزرگسال" ng-click="AddAdult()">
+                    <strong class="_color-60">بزرگسال</strong>
+                    <i class="sbs-ico-playlist_add _flex"></i>
+                </div>
+                <div class="tooltip-pu tooltip-pu-w-t _flex _b-ico bttn_pad5 _cursor _trans" data-tooltip="افزودن کودک" ng-click="AddChild()">
+                    <strong class="_color-60">کودک</strong>
+                    <i class="sbs-ico-playlist_add _flex"></i>
+                </div>
+                <div class="tooltip-pu tooltip-pu-w-t _flex _b-ico bttn_pad5 _cursor _trans" data-tooltip="افزودن نوزاد" ng-click="AddInfant()">
+                    <strong class="_color-60">نوزاد</strong>
+                    <i class="sbs-ico-playlist_add _flex"></i>
+                </div>
+            </div>
+        </div>
+        <section class="_flex _w100 _h100 body-all-services-container ch-body-all-services-container _dir-align-l" over>
+            <section class="_flex _h100 base-all-info-flight-content" over>
+                <section class="_w100 _flex inner-b-a-i-f" ng-if="Section._1">
+                    <section class="_w100 body-base-info _bg2">
+                        <base-info-flight source="DomesticFlightInfo.Source" destination="DomesticFlightInfo.Destination" departing-date="DomesticFlightInfo.DepartingDate"
+                                          returning-date="DomesticFlightInfo.ReturningDate" adult="DomesticFlightInfo.Adult" child="DomesticFlightInfo.Child" infant="DomesticFlightInfo.Infant"></base-info-flight>
+                    </section>
+                    <passenger-flight lst-adult="lstAdult" lst-child="lstChild" lst-infant="lstInfant"></passenger-flight>
+                    <section class="_flex _w100 _dir-align-r" ng-show="lstAdult.length>0 || lstChild.length>0 || lstInfant.length>0">
+                        <div class="_flex _bttn _dir-align-r _fnt-fa ng-scope" ng-click="FlightReserve()" role="button">
+                            <i class="sbs-ico-chevron-right _trans"></i>
+                            <span>ادامه خرید آنلاین</span>
+                        </div>
+                    </section>
+                </section>
+                <section class="_w100 _flex inner-b-a-i-f" ng-if="Section._2">
+                    <full-info-flight all-info="objReserveFlight" domestic-flight="DomesticFlightInfo"></full-info-flight>
+                </section>
+                <section class="_w100 _flex inner-b-a-i-f">
+                </section>
+            </section>
+            <section class="_flex _h100 base-info-flight" ng-if="Section._1">
+                <flight-content class="_flex" flight-obj="DomesticFlightInfo"></flight-content>
+            </section>
+        </section>
+    </section>
+</section>

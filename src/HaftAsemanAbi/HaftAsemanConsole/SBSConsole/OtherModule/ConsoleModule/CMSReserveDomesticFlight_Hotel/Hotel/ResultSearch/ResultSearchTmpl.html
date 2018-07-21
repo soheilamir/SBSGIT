@@ -1,0 +1,172 @@
+﻿<section class="_flex _w90-p base-body-r-s-content _h100">
+    <section class="_flex _w90-m5 base-search-content ch-base-search-content">
+        <div class="_flex _w100 s-c _dir-align-r _position-r">
+            <div angucomplete-alt id="auto_c_Hotels" placeholder="شهر مقصد، نام هتل مورد نظر" maxlength="50" pause="100" selected-object="selectedSource" local-data="dataCitys" search-fields="CityName" title-field="CityName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+            </div>
+            <input class="_flex input-s ch-input-s _fnt-fa _trans dpFrom" type="text" placeholder="تاریخ ورود" ng-model="searchFlight.DepartingDate" persiandatepickers-from readonly />
+            <input class="_flex input-s ch-input-s _fnt-fa _trans dpTo" type="text" placeholder="تاریخ خروج" ng-model="searchFlight.ReturningDate" persiandatepickers-to readonly />
+        </div>
+        <div class="_flex _w100 s-c _dir-align-l s-c-bttn-content">
+            <div class="bttn-srch-f _flex _trans _cursor" ng-click="SearchInternalHotel();" role="button" tabindex="0">
+                <span class="_fnt-fa _color-w">جستجوی هتل</span>
+            </div>
+        </div>
+    </section>
+    <section class="_flex _w90-pad5 _dir-align-r body-s-r-content">
+        <section class="_flex _dir-align-r _w100 set-user-content">
+            <h1 class="_flex _color-60 _dir-align-r _w100">در صورتی که مایل هستید این رزرو به یک سفارش خاص انتقال یابد، کد سفارش مورد نظر را در زیر وارد نمایید.</h1>
+            <div class="_w40-m5 _dir-align-r _flex">
+                <label class="_lbl _lbl-form _dir-align-r">کد سفارش:</label>
+                <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" placeholder="کد سفارش" />
+            </div>
+        </section>
+        <section class="_flex _dir-align-r _w100 set-user-content">
+            <h1 class="_flex _color-60 _dir-align-r _w100">لطفا نام مشتری مورد نظر خود را جستجو نمایید و در صورت تخصیص به شرکت، شرکت مورد نظر را انتخاب کنید.</h1>
+            <div class="_w40-m5 _dir-align-r _flex">
+                <div class="_flex _w100 s-c _dir-align-r _position-r">
+                    <label class="_lbl _lbl-form _dir-align-r">نام مشتری:</label>
+                    <div angucomplete-alt id="auto_c_Users" placeholder="نام مشتری مورد نظر را وارد نمایید" maxlength="50" pause="100" selected-object="selectedUser" local-data="dataUserList" search-fields="FullName" title-field="FullName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+                    </div>
+                </div>
+            </div>
+            <div class="_w40-m5 _dir-align-r _flex">
+                <span class="_flex _dir-align-r span-co">
+                    <input type="radio" ng-model="radio" value="1" />
+                    <i>شرکت شماره 1</i>
+                </span>
+                <span class="_flex _dir-align-r span-co">
+                    <input type="radio" ng-model="radio" value="2" />
+                    <i>شرکت شماره 2</i>
+                </span>
+                <span class="_flex _dir-align-r span-co">
+                    <input type="radio" ng-model="radio" value="3" />
+                    <i>شرکت شماره 3</i>
+                </span>
+            </div>
+        </section>
+        <ul class="_flex _w100 _dir-align-r body-ul-re-h-content">
+            <li class="_flex _w100 _position-r">
+                <article class="_w95-pad25 _flex _dir-align-r _trans article-h-content">
+                    <figure class="_flex fig-img-content">
+                        <img alt="title" src="../../../../../../Image/temp/2598.jpg" title="title" />
+                    </figure>
+                    <div class="_flex _dir-align-r _w100 detial-h-content">
+                        <div class="_flex _dir-align-r _w100 title-h">
+                            <div class="_w40-m5 _flex r-t-h _dir-align-r">
+                                <h1 class="_color-blue-1 _fnt-fa">هتل اسپیناس پالاس</h1>
+                                <i class="sbs-ico-star _flex"></i>
+                                <i class="sbs-ico-star _flex"></i>
+                                <i class="sbs-ico-star _flex"></i>
+                                <i class="sbs-ico-star _flex"></i>
+                                <i class="sbs-ico-star _flex"></i>
+                                <span class="_color-60 _fnt-fa _w100">تهران، تهران، سعادت آباد</span>
+                            </div>
+                            <div class="_w40-m5 _flex l-t-h _dir-align-l">
+                                <h1 class="_flex sbs-ico-heart"><i class="_fnt-fa">امتیاز هتل 8.9</i></h1>
+                            </div>
+                        </div>
+                        <div class="_flex _dir-align-r _w100 facilities-h-c">
+                            <i class="_flex sbs-ico-connection"><b class="_fnt-fa">اینترنت در قسمت لابی</b></i>
+                            <i class="_flex sbs-ico-spoon-knife"><b class="_fnt-fa">رستوران</b></i>
+                            <i class="_flex sbs-ico-pool"><b class="_fnt-fa">استخر، سونا و جکوزی</b></i>
+                            <i class="_flex"><b class="_fnt-fa">آسانسور</b></i>
+                            <i class="_flex"><b class="_fnt-fa">تاکسی سرویس</b></i>
+                        </div>
+                        <div class="_flex _dir-align-r _w100 distance-h-c">
+                            <i class="_flex sbs-ico-circle-compass"><b class="_fnt-fa">فاصله تا ایستگاه راه آهن تهران : 17 دقیقه با ماشین</b></i>
+                            <i class="_flex sbs-ico-circle-compass"><b class="_fnt-fa">فاصله تا فرودگاه امام خمینی : 51 دقیقه با ماشین</b></i>
+                            <i class="_flex sbs-ico-circle-compass"><b class="_fnt-fa"> فاصله تا فرودگاه مهرآباد : 26 دقیقه با ماشین</b></i>
+                        </div>
+                        <div class="_flex _dir-align-r _w100 desc-h-c">
+                            <i class="_flex sbs-ico-document-fill _w100"><b class="_fnt-fa">رزرو این اقامتگاه قابلیت کنسلی دارد و جریمه کنسلی بر اساس قوانین اعلام شده از طرف اقامتگاه محاسبه می‌گردد</b></i>
+                            <a href="#" title="هتل اسپیناس پالاس" class="_flex _dir-align-r bttn-show-h-content">
+                                <i class="_color-w sbs-ico-chevron-thin-left"></i>
+                                <h1 class="_color-w">شروع قیمت برای یک شب : 3,390,000 ریال </h1>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <section class="_flex _w95-pad25 _dir-align-r _trans show-rooms-reserve-content _position-a">
+                    <table class="tbl-h-s _w100">
+                        <thead>
+                            <tr>
+                                <th scope="col">نوع اتاق</th>
+                                <th scope="col">ظرفیت اتاق</th>
+                                <th scope="col">خدمات</th>
+                                <th scope="col">قیمت برای هر شب</th>
+                                <th scope="col">تعداد اتاق</th>
+                                <th scope="col" style="width:150px;">رزرو</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="_w100">
+                                <td>اتاق یک تخته</td>
+                                <td>
+                                    <i class="sbs-ico-user2"></i>
+                                </td>
+                                <td>
+                                    <span class="sbs-ico-drink"></span>
+                                    <h1 class="_color-blue">صبحانه</h1>
+                                </td>
+                                <td><h2 class="_fnt-fa">1,960,000 ریال</h2></td>
+                                <td><input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="number" placeholder="تعداد (0 الی 8)" max="8" min="0" /></td>
+                                <td rowspan="400" class="td-r-co">
+                                    <div class="_flex _dir-align-r r-col-content _w95-pad25">
+                                        <h1 class="_color2">مجموع قیمت سفارش</h1>
+                                        <h1 class="_color-60">37,500,000 ريال</h1>
+                                        <div class="bttn-srch-f _flex _trans _cursor" ng-click="ReserveInternalHotel();" role="button" tabindex="0">
+                                            <span class="_fnt-fa _color-w">رزرو نهایی هتل</span>
+                                        </div>
+                                        <span class="_color-red">هزینه اقامت کودک خردسال‌تان تا سن 5 سال رایگان محاسبه می‌شود.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="_w100">
+                                <td>اتاق دو تخته</td>
+                                <td>
+                                    <i class="sbs-ico-user2"></i>
+                                    <i class="sbs-ico-user2"></i>
+                                </td>
+                                <td>
+                                    <span class="sbs-ico-drink"></span>
+                                    <h1 class="_color-blue">صبحانه</h1>
+                                </td>
+                                <td><h2 class="_fnt-fa">1,960,000 ریال</h2></td>
+                                <td><input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="number" placeholder="تعداد (0 الی 8)" max="8" min="0" /></td>
+
+                            </tr>
+                            <tr class="_w100">
+                                <td>سوییت دو تخته</td>
+                                <td>
+                                    <i class="sbs-ico-user2"></i>
+                                    <i class="sbs-ico-user2"></i>
+                                </td>
+                                <td>
+                                    <span class="sbs-ico-drink"></span>
+                                    <h1 class="_color-blue">صبحانه</h1>
+                                </td>
+                                <td><h2 class="_fnt-fa"> 5,340,000 ریال </h2></td>
+                                <td><input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="number" placeholder="تعداد (0 الی 8)" max="8" min="0" /></td>
+                            </tr>
+                            <tr class="_w100">
+                                <td>سوییت رویال چهار تخته</td>
+                                <td>
+                                    <i class="sbs-ico-user2"></i>
+                                    <i class="sbs-ico-user2"></i>
+                                    <i class="sbs-ico-user2"></i>
+                                    <i class="sbs-ico-user2"></i>
+                                </td>
+                                <td>
+                                    <span class="sbs-ico-drink"></span>
+                                    <h1 class="_color-blue">صبحانه</h1>
+                                </td>
+                                <td><h2 class="_fnt-fa"> 7,200,000 ریال </h2></td>
+                                <td><input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="number" placeholder="تعداد (0 الی 8)" max="8" min="0" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </li>
+        </ul>
+    </section>
+</section>

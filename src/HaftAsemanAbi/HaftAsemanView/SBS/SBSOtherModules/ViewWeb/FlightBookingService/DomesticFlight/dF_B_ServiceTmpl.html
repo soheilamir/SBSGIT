@@ -1,0 +1,134 @@
+﻿<section class="_flex base-dfs _position-r" ng-class="{'ch-base-dfs':Departing.selectedItem!=null || Returning.selectedItem!=null}">
+    <section class="_w100 _h100 fade-content _position-a _trans" ng-class="{'show-fade':Show_searchFlightContent}"></section>
+    <section class="_flex s-f-c _position-f _trans_2" ng-class="{'show-sfc':Show_searchFlightContent}">
+        <modify-search-flight></modify-search-flight>
+    </section>
+    <section class="_flex filter-f-c _position-f">
+        <filtering-flight-services></filtering-flight-services>
+    </section>
+    <section class="_flex body-dfs _dir-align-r">
+        <section class="_flex _w100 f" ng-if="Departing.lst.length>0">
+            <div class="_flex _w100 t-f _dir-align-r">
+                <i class="_flex sbs-ico-long-arrow-left"></i>
+                <h1 class="_flex">پروازهای رفت</h1>
+            </div>
+            <ul class="_flex _w100 b-b-f _dir-align-r">
+                <li class="_flex _w100" ng-repeat="departing in Departing.lst | custFilterTicket:$root.Param.airline | orderBy:'DepartureTime'">
+                    <article class="_flex _w100 article-f-s" ng-class="{'selected-article-f-s':departing.selected}">
+                        <div class="_flex _w100 b-a-f">
+                            <div class="_flex t-a-f _dir-align-r">
+                                <img alt="{{departing.AirLine}}" title="{{departing.AirLine}}" src="{{departing.LogoImg}}" />
+                                <i class="_flex _fnt-fa _dir-align-r">{{departing.Name}} - {{departing.PlaneType}}</i>
+                                <i class="_flex _fnt-fa _dir-align-r">شماره پرواز: {{departing.FlightNo}}</i>
+                                <i class="_flex _fnt-fa _dir-align-r">ساعت پرواز: {{departing.DepartureTime}}</i>
+                                <i class="_flex _fnt-fa _dir-align-r">ساعت فرود: {{departing.ArrivalTime}}</i>
+                                <i class="_flex _fnt-fa _dir-align-r">سیستمی</i>
+                            </div>
+                            <div class="_w100 _flex b-desc-f _dir-align-r">
+                                <ul class="_w90-pad5 _flex">
+                                    <li class="_w100 _flex _dir-align-r inner-desc-f" ng-repeat="classFareListItem in departing.ClassFareList" ng-class="{'selected-inner-desc-f':classFareListItem.selected}">
+                                        <i class="_flex _fnt-fa _bold ch">موجود</i>
+                                        <i class="_flex _fnt-fa ch">اکونومی</i>
+                                        <i class="_flex _fnt-fa ch">{{classFareListItem.FlightClass}}</i>
+                                        <i class="_flex _fnt-fa _bold">بزرگسال: {{classFareListItem.AdultFare}}</i>
+                                        <i class="_flex _fnt-fa">کودک: {{classFareListItem.ChildFare}}</i>
+                                        <i class="_flex _fnt-fa">نوزاد: {{classFareListItem.InfantFare}}</i>
+                                        <div class="bttn-selected-f _bg2 _flex _trans _cursor" ng-click="DepartingSelectedFlight(departing,classFareListItem);" role="button" tabindex="0">
+                                            <span class="_fnt-fa _color-w">انتخاب پرواز</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+        <section class="_flex _w100 f" ng-if="Returning.lst.length>0">
+            <div class="_flex _w100 t-f _dir-align-r">
+                <i class="_flex sbs-ico-long-arrow-right"></i>
+                <h1 class="_flex">پروازهای برگشت</h1>
+            </div>
+            <ul class="_flex _w100 b-b-f _dir-align-r">
+                <li class="_flex _w100" ng-repeat="returning in Returning.lst | custFilterTicket:$root.Param.airline | orderBy:'DepartureTime'">
+                    <article class="_flex _w100 article-f-s" ng-class="{'selected-article-f-s':returning.selected}">
+                        <div class="_flex _w100 b-a-f">
+                            <div class="_flex t-a-f _dir-align-r">
+                                <img alt="{{returning.AirLine}}" title="{{returning.AirLine}}" src="{{returning.LogoImg}}" />
+                                <i class="_flex _fnt-fa _dir-align-r">{{returning.Name}} - {{returning.PlaneType}}</i>
+                                <i class="_flex _fnt-fa _dir-align-r">شماره پرواز: {{returning.FlightNo}}</i>
+                                <i class="_flex _fnt-fa _dir-align-r">ساعت پرواز: {{returning.DepartureTime}}</i>
+                                <i class="_flex _fnt-fa _dir-align-r">ساعت فرود: {{returning.ArrivalTime}}</i>
+                                <i class="_flex _fnt-fa _dir-align-r">سیستمی</i>
+                            </div>
+                            <div class="_w100 _flex b-desc-f _dir-align-r">
+                                <ul class="_w90-pad5 _flex">
+                                    <li class="_w100 _flex _dir-align-r inner-desc-f" ng-repeat="classFareListItem in returning.ClassFareList" ng-class="{'selected-inner-desc-f':classFareListItem.selected}">
+                                        <i class="_flex _fnt-fa _bold ch">موجود</i>
+                                        <i class="_flex _fnt-fa ch">اکونومی</i>
+                                        <i class="_flex _fnt-fa ch">{{classFareListItem.FlightClass}}</i>
+                                        <i class="_flex _fnt-fa _bold">بزرگسال: {{classFareListItem.AdultFare}}</i>
+                                        <i class="_flex _fnt-fa">کودک: {{classFareListItem.ChildFare}}</i>
+                                        <i class="_flex _fnt-fa">نوزاد: {{classFareListItem.InfantFare}}</i>
+                                        <div class="bttn-selected-f _bg2 _flex _trans _cursor" ng-click="ReturningSelectedFlight(returning,classFareListItem);" role="button" tabindex="0">
+                                            <span class="_fnt-fa _color-w">انتخاب پرواز</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+        <section class="_flex _w100 f" style="margin-top:20px;">
+            <div class="_flex _w100 t-f _dir-align-r _bg1-1" style="background:#53155c;">
+                <h1 class="_flex" style="color:#FFF;">هتل های {{$root.DomesticResultTickets.searchFlightItem.Destination.CityName}}</h1>
+            </div>
+            <ul class="_flex _w100 _dir-align-r body-ul-re-h-content">
+                <li class="_flex _w100" ng-repeat="itemHotel in LsthotelData">
+                    <art-hotel-content item-hotel="itemHotel" lst-hotel="LsthotelData"></art-hotel-content>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <section class="_flex _w100 _dir-align-r _position-f show-selected-flight-content" ng-show="Departing.selectedItem!=null || Returning.selectedItem!=null">
+        <div class="_flex _w90-m5 d-item-content" ng-show="Departing.selectedItem!=null">
+            <figure class="_flex">
+                <img alt="{{Departing.selectedItem.AirLine}}" title="{{Departing.selectedItem.AirLine}}" src="{{Departing.selectedItem.LogoImg}}" />
+            </figure>
+            <i class="_flex _fnt-fa _dir-align-r">{{Departing.selectedItem.Name}} - {{Departing.selectedItem.PlaneType}}</i>
+            <i class="_flex _fnt-fa _dir-align-r">شماره پرواز: {{Departing.selectedItem.FlightNo}}</i>
+            <i class="_flex _fnt-fa _dir-align-r">ساعت پرواز: {{Departing.selectedItem.DepartureTime}}</i>
+            <i class="_flex _fnt-fa _dir-align-r">ساعت فرود: {{Departing.selectedItem.ArrivalTime}}</i>
+            <i class="_flex _fnt-fa">{{Departing.selected_c_f.FlightClass}}</i>
+            <i class="_flex _fnt-fa">کودک: {{Departing.selected_c_f.ChildFare}}</i>
+            <i class="_flex _fnt-fa">نوزاد: {{Departing.selected_c_f.InfantFare}}</i>
+            <i class="_flex _fnt-fa _bold">{{Departing.selected_c_f.AdultFare}}</i>
+        </div>
+        <div class="_flex _w90-m5 r-item-content" ng-show="Returning.selectedItem!=null">
+            <figure class="_flex">
+                <img alt="{{Returning.selectedItem.AirLine}}" title="{{Returning.selectedItem.AirLine}}" src="{{Returning.selectedItem.LogoImg}}" />
+            </figure>
+            <i class="_flex _fnt-fa _dir-align-r">{{Returning.selectedItem.Name}} - {{Returning.selectedItem.PlaneType}}</i>
+            <i class="_flex _fnt-fa _dir-align-r">شماره پرواز: {{Returning.selectedItem.FlightNo}}</i>
+            <i class="_flex _fnt-fa _dir-align-r">ساعت پرواز: {{Returning.selectedItem.DepartureTime}}</i>
+            <i class="_flex _fnt-fa _dir-align-r">ساعت فرود: {{Returning.selectedItem.ArrivalTime}}</i>
+            <i class="_flex _fnt-fa">{{Returning.selected_c_f.FlightClass}}</i>
+            <i class="_flex _fnt-fa">کودک: {{Returning.selected_c_f.ChildFare}}</i>
+            <i class="_flex _fnt-fa">نوزاد: {{Returning.selected_c_f.InfantFare}}</i>
+            <i class="_flex _fnt-fa _bold">{{Returning.selected_c_f.AdultFare}}</i>
+        </div>
+        <div class="_flex _w90-m5 b-item-content _dir-align-l">
+            <div class="last-bttn _flex _trans _cursor" role="button" tabindex="0" ng-click="CancelFlightSelected()">
+                <span class="_fnt-fa _color-w">انصراف</span>
+            </div>
+            <div class="last-bttn _flex _trans _cursor" role="button" tabindex="0" ng-click="SubmitFlightSelected()">
+                <span class="_fnt-fa">تایید</span>
+                <span class="_fnt-fa">|</span>
+                <span class="_fnt-fa">{{totalPrice}}</span>
+            </div>
+            <h1 class="_flex" style="color:#e1ba00;margin-top:10px;font-size:1.2em" ng-show="selectedHotel_1 || selectedHotel_2 || selectedHotel_3">هتل مورد نظر به روند درخواست اضافه گردید</h1>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,94 @@
+﻿<section class="_flex _w100 _h100 body-fill-flight">
+    <div class="_flex tsc _w90-pad5 _dir-align-r">
+        <i class="sbs-ico-content-left _color2"></i>
+        <h1 class="_fnt-fa _color2">نمایش اطلاعات پروازی</h1>
+    </div>
+    <div class="_flex csc _w90-pad5 _h100 _dir-align-r" over>
+        <div class="_flex _w100 split-items-sbs-fd">
+            <label class="_lbl _lbl-form _dir-align-r">نوع بلیط:</label>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.ticketType" ng-options="option.name for option in baseData.lstTicketType track by option.id">
+                <option value="">انتخاب نوع بلیط</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd">
+            <label class="_lbl _lbl-form _dir-align-r">نوع سفر:</label>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.journeyType" ng-options="option.name for option in baseData.lstJourneyType track by option.id">
+                <option value="">انتخاب نوع سفر</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd">
+            <label class="_lbl _lbl-form _dir-align-r">کلاس پروازی:</label>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.cabinClass" ng-options="option.name for option in baseData.lstCabinClass track by option.id">
+                <option value="">انتخاب کلاس پروازی</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd" ng-if="newFlight.journeyType.id==1 || newFlight.journeyType.id==2 || newFlight.journeyType.id==3">
+            <label class="_lbl _lbl-form _dir-align-r">تاریخ رفت:</label>
+            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpFrom" type="text" placeholder="تاریخ رفت" ng-model="newFlight.departingDate" persiandatepickers-from readonly />
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd" ng-if="newFlight.journeyType.id==2">
+            <label class="_lbl _lbl-form _dir-align-r">تاریخ برگشت:</label>
+            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpTo" type="text" placeholder="تاریخ برگشت" ng-model="newFlight.returningDate" persiandatepickers-to readonly />
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd">
+            <label class="_lbl _lbl-form _dir-align-r">زمان ترجیهی:</label>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.preferredTime" ng-options="option.name for option in baseData.lstPreferredTime track by option.id">
+                <option value="">انتخاب زمان ترجیهی</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd ch-split-items-sbs-fd">
+            <input id="cboxChangableDate" type="checkbox" class="regular-checkbox big-checkbox" ng-model="newFlight.selectedFlexibleDate" />
+            <label for="cboxChangableDate"></label>
+            <h1 class="note _dir-align-r" ng-class="{'blod-note':newFlight.selectedFlexibleDate,'red-note':!newFlight.selectedFlexibleDate}">تاریخ انتخابی قابل تغییر است</h1>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd ch-split-items-sbs-fd" ng-if="newFlight.journeyType.id==1 || newFlight.journeyType.id==2 || newFlight.journeyType.id==3">
+            <label class="_lbl _lbl-form _dir-align-r c-lbl">مبدا:</label>
+            <select class="_select _select-form _dir-align-r _trans">
+                <option value="">انتخاب کشور</option>
+            </select>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.from" ng-options="option.name for option in baseData.lstCity track by option.id">
+                <option value="">انتخاب شهر</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd ch-split-items-sbs-fd" ng-if="newFlight.journeyType.id==1 || newFlight.journeyType.id==2 || newFlight.journeyType.id==3">
+            <label class="_lbl _lbl-form _dir-align-r c-lbl">مقصد:</label>
+            <select class="_select _select-form _dir-align-r _trans">
+                <option value="">انتخاب کشور</option>
+            </select>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.to" ng-options="option.name for option in baseData.lstCity track by option.id">
+                <option value="">انتخاب شهر</option>
+            </select>
+        </div>
+        <div class="_flex _w100 split-items-sbs-fd ch-split-items-sbs-fd other-split-items _dir-align-l">
+            <h1 class="_w100 _dir-align-r _color-60">نام ایرلاین پیشنهادی خود را در زیر وارد نمایید:</h1>
+            <md-chips ng-model="selectedAirlines" md-autocomplete-snap="" md-require-match="true">
+                <md-autocomplete md-selected-item="selectedItem" md-search-text="searchText" md-items="item in querySearch(searchText)" md-item-text="item.name" placeholder="Search for a airlines" style="width:250px;">
+                    <span md-highlight-text="searchText">
+                        {{item.name}}
+                    </span>
+                </md-autocomplete>
+                <md-chip-template>
+                    <span>
+                        <span class="img-chips">
+                            <img alt="" title="" src="#" />
+                        </span>
+                        <strong>{{$chip.name}}</strong>
+                    </span>
+                </md-chip-template>
+            </md-chips>
+        </div>
+
+    </div>
+    <div class="_flex bsc _w90-pad5 _dir-align-l">
+        <div class="_flex _bttn _dir-align-r _fnt-fa" ng-if="newFlight.journeyType.id==1 || newFlight.journeyType.id==2" ng-click="CreateFlightInPackage(!newFlight.IsMulti)">
+            <i class="sbs-ico-chevron-right _trans"></i>
+            <span ng-if="!newFlight.edited">ثبت پرواز</span>
+            <span ng-if="newFlight.edited">تغییر پرواز</span>
+        </div>
+        <div class="_flex _bttn _dir-align-r _fnt-fa" ng-if="newFlight.journeyType.id==3" ng-click="AddMultiFlightInPackage(newFlight.IsMulti)">
+            <i class="sbs-ico-chevron-right _trans"></i>
+            <span ng-if="!newFlight.edited">افزودن پرواز</span>
+            <span ng-if="newFlight.edited">تغییر پرواز</span>
+        </div>
+    </div>
+</section>

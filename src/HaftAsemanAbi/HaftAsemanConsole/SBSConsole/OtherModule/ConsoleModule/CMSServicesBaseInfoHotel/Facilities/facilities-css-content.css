@@ -1,0 +1,27 @@
+﻿.ul-add-f-content {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.li-f-c {
+    margin: 6px;
+    background: #FFF;
+    border-radius: 2px;
+    padding: 6px;
+    flex-flow: row nowrap;
+    min-width: 120px;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #CCC;
+}
+
+    .li-f-c * {
+        font-size: 1em;
+        padding: 0 3px;
+        margin: 0 3px;
+    }
+
+    .li-f-c > span {
+        padding: 2px 5px;
+    }

@@ -1,0 +1,199 @@
+﻿.base-hotels-content {
+    flex-flow: column nowrap;
+    background: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    border-radius: 2px 2px 2px 2px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.selected-hp-content {
+    box-shadow: 8px 0 0 0 #7bad50,0 2px 2px 0 rgba(0,0,0,0.2) !important;
+}
+
+.t-h-content {
+    flex-flow: row nowrap;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.13) inset;
+}
+
+    .t-h-content .fn-h-c {
+        flex-flow: row nowrap;
+    }
+
+    .t-h-content .name-h {
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+        .t-h-content .name-h > i {
+            font-size: 1.2em;
+            margin-left: 5px;
+        }
+
+        .t-h-content .name-h > h1 {
+            font-size: 1em;
+            color: #505050;
+        }
+
+    .t-h-content .fn-h-c {
+        flex-flow: row nowrap;
+        margin-right: 10px;
+        border-right: 1px solid #DDD;
+        padding: 0 10px;
+        align-items: center;
+    }
+
+        .t-h-content .fn-h-c .status-content {
+            flex-flow: row nowrap;
+            align-items: center;
+            box-shadow: 0 0 15px 0 rgba(0,0,0,0.2) inset;
+            padding: 0 8px;
+            justify-content: center;
+        }
+
+            .t-h-content .fn-h-c .status-content .ico-status {
+                background: #d94040;
+                padding: 8px;
+                border-radius: 100%;
+                margin: 8px 0 8px 4px;
+            }
+
+.t-h-content.add-order-true {
+    box-shadow: 2px 0 0 0 #c1344d;
+}
+
+.b-h-content {
+    flex-flow: column nowrap;
+    background: #EEE;
+}
+
+    .b-h-content .t-b-hp-c {
+        flex-flow: row nowrap;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        align-items: center;
+    }
+
+        .b-h-content .t-b-hp-c.ch-t-b-hp-c {
+            border-bottom: 1px solid #c1344d;
+            background: none !important;
+        }
+
+.t-b-hp-c > h1 {
+    font-size: 1em;
+}
+
+.ch-t-b-hp-c > .hotel-name {
+    font-size: 1em;
+    margin-right: 5px;
+    padding: 0 3px;
+    border-right: 1px solid #DDD;
+}
+
+.hp-info-content {
+    flex-flow: column nowrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #DDD;
+}
+
+    .hp-info-content .items-info-hp-c {
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+        .hp-info-content .items-info-hp-c .inner-item-hp {
+            flex-flow: row nowrap;
+            margin-left: 30px;
+            min-width: 150px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+            .hp-info-content .items-info-hp-c .inner-item-hp:last-child {
+                margin-left: 0;
+            }
+
+            .hp-info-content .items-info-hp-c .inner-item-hp .lbl-data {
+                color: #505050;
+            }
+
+            .hp-info-content .items-info-hp-c .inner-item-hp > i {
+                font-size: 1em;
+                color: #505050;
+                margin-right: 8px;
+            }
+
+.body-bttn-package {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+    .body-bttn-package .bttn-package-content {
+        flex-flow: row nowrap;
+        padding: 3px 5px;
+        margin: 0 10px;
+        align-items: center;
+        background: #FFF;
+    }
+
+        .body-bttn-package .bttn-package-content i, .body-bttn-package .bttn-package-content h1 {
+            font-size: 1em;
+            color: #606060;
+        }
+/* /////////////// add room and apartment content */
+.body-add-ra-content {
+    flex-flow: column nowrap;
+}
+
+.room-content, .apartment-content {
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+    .room-content .inner-room-r, .apartment-content .inner-apartment-r {
+        align-items: center;
+        border-left: 1px solid #CCC;
+        min-width: 90px;
+        flex: 0 1 auto;
+    }
+
+        .room-content .inner-room-r .ico-room-h, .apartment-content .inner-apartment-r .ico-apartment-h {
+            margin-left: 10px;
+            border-radius: 100%;
+            padding: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .room-content .inner-room-r .ico-room-h > i, .apartment-content .inner-apartment-r .ico-apartment-h > i {
+                margin: 3px;
+                font-size: 0.9em;
+            }
+
+        .room-content .inner-room-r h1, .apartment-content .inner-apartment-r h1 {
+            font-size: 1em;
+        }
+
+    .room-content .inner-room-l, .apartment-content .inner-apartment-l {
+        align-items: center;
+        justify-content: center;
+        flex: 0 1 auto;
+    }
+
+.info-room, .info-apartment {
+    flex-flow: row nowrap;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+}
+/* /////////////// end add room and apartment content */

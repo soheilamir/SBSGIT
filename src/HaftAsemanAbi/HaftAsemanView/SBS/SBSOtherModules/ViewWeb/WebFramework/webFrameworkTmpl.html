@@ -1,0 +1,63 @@
+﻿<header class="_w100 header-content">
+    <div class="_w90-pad5 _bg1 _flex header-body-content">
+        <div class="_flex item-h">
+            <div class="l-c-header-item _flex">
+                <div class="_flex _bg1-1 header-item-content tooltip _trans" data-tooltip="تعداد افراد آنلاین">
+                    <div class="ico-user-saw sbs-ico-group _trasform_20">
+                    </div>
+                    <i class="_fnt-en _trasform_20">{{Usercount}}</i>
+                </div>
+                <div class="_flex _border-r header-item-content _cursor _position-r _trans" ng-click="ISActiveHeaderItem(headerItemList[0],$event)">
+                    <h1 class="_fnt-en _trasform_20">{{locationInfo}}</h1>
+                    <img alt="flag country" title="flag country" class="country-flag _trasform_20" src="../../../../../Image/Flag/ir_16.png" />
+                    <div class="show-detail-content _position-a _trasform_20" ng-if="headerItemList[0].selected===true">
+                        <!-- Data from API service -->
+                    </div>
+                </div>
+                <div class="_flex _border-r header-item-content _cursor _position-r _trans" ng-click="ISActiveHeaderItem(headerItemList[1],$event)">
+                    <h1 class="_fnt-en _trasform_20">{{currencyInfo}}</h1>
+                    <div class="show-detail-content currency _position-a _trasform_20" ng-if="headerItemList[1].selected===true">
+                        <!-- Data from API service -->
+                    </div>
+                </div>
+            </div>
+            <!-- right content -->
+            <div class="r-c-header-item _flex">
+                <header-menu inner-menu="_Menu"></header-menu>
+                <div class="_flex header-item-content _cursor _position-r _trans _bg1-1" ng-click="ISActiveHeaderItem(headerItemList[2],$event)">
+                    <i class="just-ico sbs-ico-feedback _trasform_20"></i>
+                    <div class="show-detail-content feedback _position-a _trasform_20 _flex" ng-if="headerItemList[2].selected===true">
+                        <!-- Data from API service -->
+                        <ul class="_w100 _flex">
+                            <li class="_w100 _flex">
+                                <a href="#" title="" class="_w90-pad5 _trans">پیشنهادات شما</a>
+                            </li>
+                            <li class="_w100 _flex">
+                                <a href="#" title="" class="_w90-pad5 _trans">سئوالات متداول</a>
+                            </li>
+                            <li class="_w100 _flex">
+                                <a href="#" title="" class="_w90-pad5 _trans">خدمات مشتریان</a>
+                            </li>
+                            <li class="_w100 _flex">
+                                <a href="#" title="" class="_w90-pad5 _trans">روش استفاده از سایت</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="signIn-content _flex">
+                    <a href="#/haft-aseman-abi/travel-agency/sbs-login-authentication" title="" class="sign-in-user _bg3 _trasform_20">ورود / عضویت</a>
+                </div>
+            </div>
+        </div>
+        <div class="_flex base-logo-content">
+            <img alt="{{altTitle}}" title="{{altTitle}}" ng-src="{{srcUrl}}" />
+        </div>
+    </div>
+</header>
+<section basebodyviewcontent>
+    <div class="_w100 _h100 _flex form-content" over>
+        <div class="_w100">
+            <div ng-view class="_w100"></div>
+        </div>
+    </div>
+</section>

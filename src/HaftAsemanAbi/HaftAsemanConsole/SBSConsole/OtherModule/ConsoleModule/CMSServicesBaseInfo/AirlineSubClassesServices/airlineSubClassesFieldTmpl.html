@@ -1,0 +1,28 @@
+﻿<section class="_w100 base-filter-content _dir-align-r">
+    <section class="_w100 _flex filter-content _dir-align-r" ng-class="{'ch-filter-content':!yContent}">
+        <section class="base-s-c _flex" ng-class="{'_w40-m5':yContent,'_w100':!yContent}">
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">شرکت سازنده:</label>
+                <div angucomplete-alt id="auto_c_Airlines" placeholder="نام ایرلاین ها به لاتین" maxlength="50" pause="100" selected-object="selectedAirline" local-data="airlineList" search-fields="Name" title-field="Name" minlength="1" input-class="form-control form-control-small _txt _txt-form _fnt-fa _txt-ac" match-class="highlight">
+                </div>
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">کلاس پروازی:</label>
+                <select class="_select _select-form _dir-align-r _trans" ng-model="airlineSubClassesModel.AirlineClassesItem" ng-options="option.name for option in baseData.lstTicketType track by option.id">
+                    <option value="">انتخاب کلاس پروازی</option>
+                </select>
+            </div>
+        </section>
+        <section class="base-s-c _flex" ng-class="{'_w40-m5':yContent,'_w100':!yContent}">
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">نام زیر کلاس پروازی:</label>
+                <input type="text" placeholder="نام زیر کلاس پروازی" class="_txt-form _fnt-fa" ng-model="airlineSubClassesModel.AirlineSubClassName" />
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <input id="cboxChangableDate" type="checkbox" class="regular-checkbox big-checkbox" ng-model="airlineSubClassesModel.IsActive" />
+                <label for="cboxChangableDate"></label>
+                <h1 class="note _dir-align-r" style="margin-right:10px;">فعال بودن</h1>
+            </div>
+        </section>
+    </section>
+</section>

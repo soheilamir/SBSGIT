@@ -1,0 +1,103 @@
+﻿<section class="_w100 body-info-passenger-content _dir-align-r">
+    <ul class="_w100 _flex _dir-align-r">
+        <li class="_flex _w100 _dir-align-r _bg-w" ng-show="lstAdult.length>0">
+            <h1 class="_flex _w100 _bg1">بزرگسال</h1>
+            <section class="_flex _w100 i-p-c" ng-repeat="adult in lstAdult">
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام مسافر:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" placeholder="نام به فارسی" ng-model="adult.Name_Fa" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام خانوادگی:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" placeholder="نام خانوادگی به فارسی" ng-model="adult.LastName_Fa" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">تاریخ تولد:</label>
+                    <input class="_txt _txt-form _fnt-fa _trans dpTo" type="text" placeholder="تاریخ تولد" persiandatepickers-Bd ng-model="adult.BD" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">کد ملی:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" maxlength="10" placeholder="کد ملی" ng-model="adult.NationalCode" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام مسافر:</label>
+                    <input class="_txt _txt-form _dir-align-l _fnt-en  _trans" type="text" placeholder="Passenger Name" ng-model="adult.Name_En" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام خانوادگی:</label>
+                    <input class="_txt _txt-form _dir-align-l _fnt-en  _trans" type="text" placeholder="Passenger Lastname" ng-model="adult.LastName_En" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">تلفن تماس:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" maxlength="12" placeholder="شماره تماس" ng-model="adult.Tel" />
+                </div>
+            </section>
+        </li>
+        <li class="_flex _w100 _dir-align-r _bg-w" ng-show="lstChild.length>0">
+            <h1 class="_flex _w100 _bg1">کودک</h1>
+            <section class="_flex _w100 i-p-c" ng-repeat="child in lstChild">
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام مسافر:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" placeholder="نام به فارسی" ng-model="child.Name_Fa" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام خانوادگی:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" placeholder="نام خانوادگی به فارسی" ng-model="child.LastName_Fa" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">تاریخ تولد:</label>
+                    <input class="_txt _txt-form _fnt-fa _trans dpTo" type="text" placeholder="تاریخ تولد" persiandatepickers-Bd readonly ng-model="child.BD" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">کد ملی:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" maxlength="10" placeholder="کد ملی" ng-model="child.NationalCode" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام مسافر:</label>
+                    <input class="_txt _txt-form _dir-align-l _fnt-en  _trans" type="text" placeholder="Passenger Name" ng-model="child.Name_En" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام خانوادگی:</label>
+                    <input class="_txt _txt-form _dir-align-l _fnt-en  _trans" type="text" placeholder="Passenger Lastname" ng-model="child.LastName_En" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">تلفن تماس:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" maxlength="12" placeholder="شماره تماس" ng-model="child.Tel" />
+                </div>
+            </section>
+        </li>
+        <li class="_flex _w100 _dir-align-r _bg-w" ng-show="lstInfant.length>0">
+            <h1 class="_flex _w100 _bg1">نوزاد</h1>
+            <section class="_flex _w100 i-p-c" ng-repeat="infant in lstInfant">
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام مسافر:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" placeholder="نام به فارسی" ng-model="infant.Name_Fa" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام خانوادگی:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" placeholder="نام خانوادگی به فارسی" ng-model="infant.LastName_Fa" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">تاریخ تولد:</label>
+                    <input class="_txt _txt-form _fnt-fa _trans dpTo" type="text" placeholder="تاریخ تولد" persiandatepickers-Bd readonly ng-model="infant.BD" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">کد ملی:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" maxlength="10" placeholder="کد ملی" ng-model="infant.NationalCode" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام مسافر:</label>
+                    <input class="_txt _txt-form _dir-align-l _fnt-en  _trans" type="text" placeholder="Passenger Name" ng-model="infant.Name_En" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">نام خانوادگی:</label>
+                    <input class="_txt _txt-form _dir-align-l _fnt-en  _trans" type="text" placeholder="Passenger Lastname" ng-model="infant.LastName_En" />
+                </div>
+                <div class="_flex split-passenger-items">
+                    <label class="_lbl _lbl-form _dir-align-r">تلفن تماس:</label>
+                    <input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="text" maxlength="12" placeholder="شماره تماس" ng-model="infant.Tel" />
+                </div>
+            </section>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,203 @@
+﻿<ul class="_flex _w100 ul-menu _h100" over>
+    <li class="_flex _w90-pad5 _bg-w top-t-menu _dir-align-r">
+        <i class="sbs-ico-menu _color1"></i>
+        <h1 class="_color1">منوی کاربری</h1>
+    </li>
+    <li class="_flex _w100">
+        <section class="_flex _w90-pad5 b-p-info _dir-align-r">
+            <div class="_flex p-img">
+                <!-- img personel section -->
+            </div>
+            <div class="_flex _h100 _w100 info-p _dir-align-r">
+                <ul class="_flex _w100 _h100 _position-r">
+                    <li class="li-bttn-content _position-a">
+                        <div class="_flex _b-ico _cursor _trans" role="button">
+                            <i class="sbs-ico-edit _flex"
+                               tooltips
+                               tooltip-template="تغییر اطلاعات"
+                               tooltip-side="bottom"
+                               tooltip-class="tt-w"
+                               tooltip-size="small">
+                            </i>
+                        </div>
+                    </li>
+                    <li class="_flex _w100 li-p">
+                        <h1>محمد مهدی بهاری</h1>
+                    </li>
+                    <li class="_flex _w100 li-p">
+                        <h1>سمت:</h1>
+                        <h1>مدیر بحش پرواز داخلی</h1>
+                    </li>
+                    <li class="_flex _w100 li-p">
+                        <h1>ساعت ورود:</h1>
+                        <h1>[]</h1>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </li>
+    <li class="_flex _w100 menu-p-content _dir-align-l">
+        <ul class="_flex _w100 _dir-align-r">
+            <li class="_flex _w100 item-m-content _bg1" ng-init="reserve=false" ng-click="reserve=!reserve">
+                <a class="_flex _w90-pad5 _trans _cursor _color-w link-menu-p">
+                    بخش اطلاعات رزرو
+                </a>
+            </li>
+        </ul>
+        <ul class="_flex _w100 _dir-align-r" ng-if="reserve">
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/reserve/domestic/flight" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    رزرو پرواز داخلی
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    نمایش سفارشات پرواز داخلی
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/reserve/domestic/hotel" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    رزرو هتل های داخلی
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/travel-agency/hotel-ordering" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    نمایش سفارشات هتل داخلی
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/travel-agency/insurance-services" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ثبت سفارش بیمه
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="_flex _w100 menu-p-content _dir-align-r">
+        <ul class="_flex _w100">
+            <li class="_flex _w100 item-m-content _bg1" ng-init="baseInfoFlight=false" ng-click="baseInfoFlight=!baseInfoFlight">
+                <a class="_flex _w90-pad5 _cursor _trans _color-w link-menu-p">
+                    بخش اطلاعات پایه پروازها
+                </a>
+            </li>
+        </ul>
+        <ul class="_flex _w100" ng-if="baseInfoFlight">
+            <li class="_flex _w100 item-m-content">
+                <a href="#" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    مدیریت ایرلاین ها
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات هواپیما ها
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات کلاس پروازی
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات زیر کلاس پروازی
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات مسیر پروازی
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات مسیر کلاس پروازی
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="_flex _w100 menu-p-content _dir-align-r">
+        <ul class="_flex _w100">
+            <li class="_flex _w100 item-m-content _bg1" ng-init="baseInfoHotel=false" ng-click="baseInfoHotel=!baseInfoHotel">
+                <a class="_flex _w90-pad5 _cursor _trans _color-w link-menu-p">
+                    بخش اطلاعات پایه هتل ها
+                </a>
+            </li>
+        </ul>
+        <ul class="_flex _w100" ng-if="baseInfoHotel">
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/hotels/facilities-Cat-config" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات دسته بندی امکانات
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/hotels/facilities-config" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات امکانات
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/hotels/city-public-place-config" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات مکان های عمومی شهرها
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/hotels/hotel-base-config" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات هتل ها
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="_flex _w100 menu-p-content _dir-align-l">
+        <ul class="_flex _w100 _dir-align-r">
+            <li class="_flex _w100 item-m-content _bg1" ng-init="website=false" ng-click="website=!website">
+                <a class="_flex _w90-pad5 _trans _cursor _color-w link-menu-p">
+                    بخش اطلاعات وب سایت
+                </a>
+            </li>
+        </ul>
+        <ul class="_flex _w100 _dir-align-r" ng-if="website">
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/upload-files" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    مدیریت فایل ها و عکسها
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/website-sec/websitepages" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات صفحه ها
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/website-sec/websitepages-cat" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    اطلاعات دسته بندی صفحه ها
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/website-sec/websitepages-context" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات متن صفحه ها
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/website-sec/websitepages-banner" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات بنر صفحه ها
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/website-sec/tag-config" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات تگ
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/website-sec/newstag-config" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                     ورود اطلاعات تگ خبر
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/website-sec/news-config" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات خبر
+                </a>
+            </li>
+            <li class="_flex _w100 item-m-content">
+                <a href="#/haft-aseman-abi/CMS-Console/website-sec/blog-config" class="_flex _w90-pad5 _trans _color-60 link-menu-p">
+                    ورود اطلاعات بلاگ
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

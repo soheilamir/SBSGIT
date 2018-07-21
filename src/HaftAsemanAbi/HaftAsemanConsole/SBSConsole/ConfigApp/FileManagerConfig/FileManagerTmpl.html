@@ -1,0 +1,105 @@
+﻿<section class="base-fm-content _flex _dir-align-r">
+    <div class="_w100 header-fm-content _flex _dir-align-r">
+        <div class="_flex h-l _w100 _h100 _dir-align-l">
+            <div class="base-fn-fm _flex">
+                <div class="_flex _bttn _bttn-form _trans _cursor _dir-align-r" role="button" ng-click="AssignData();" ng-show="showAssign">
+                    <span class="_color-60">تخصیص</span>
+                </div>
+                <div class="_flex _bttn _bttn-form _trans _cursor _dir-align-r" role="button" ng-click="AssignToCK();" ng-show="showCkAssign">
+                    <span class="_color-60">تخصیص</span>
+                </div>
+                <div class="_flex bttn-fm ch-bttn-fm _cursor _trans_1" role="button" ng-click="CreateFolder();">
+                    <i class="ico-bttn-fm fm-icoedit"></i>
+                </div>
+                <div class="_flex bttn-fm ch-bttn-fm _cursor" role="button" ng-click="DeleteFolder(FMItems.selectedFolder);" ng-show="showBttnDeleteFolder && showBttnDelete">
+                    <i class="ico-bttn-fm fm-icodelete"></i>
+                </div>
+                <div class="_flex bttn-fm ch-bttn-fm _cursor" role="button" ng-click="DeleteFiles();" ng-show="!showBttnDeleteFolder && showBttnDelete">
+                    <i class="ico-bttn-fm fm-icodelete"></i>
+                </div>
+            </div>
+            <div class="other-fn-fm _dir-align-l _flex">
+                <span class="_dir-align-l _flex base-fld-t-c">
+                    <i ng-click="GetFolderItems(FMItems.upFolder);" class="_fnt-fa fld-t-c _trans _cursor">{{FMItems.upFolder.Name}}</i><i> >> </i><i class="_fnt-fa ch-fld-t-c _trans">{{FMItems.selectedFolder.Name}}</i>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="_w100 base-body-fm _flex _h100 _dir-align-r">
+        <section drop-torget class=" body-fm-content _h100 _position-r" overflow>
+            <div class="_flex inner-body-fm _dir-align-r">
+                <section class="_flex _w100 sec-item-content _dir-align-r" ng-show="FMItems.folders.length>0">
+                    <span class="_flex _w100 title-sec" ng-if="false">
+                        <i>پوشه ها</i>
+                    </span>
+                    <ul class="_flex _w100 base-items-content">
+                        <li class="f-item _bg-w _cursor" ng-class="{'selected-folder':fld.selected}" ng-repeat="fld in FMItems.folders" ng-click="selectedFolder(fld);" ng-dblclick="GetFolderItems(fld);">
+                            <div class="_flex _w100 f-i-c ch-f-i-c" over>
+                                <i class="ico-f-c fm-icofolder _trans"></i>
+                                <h1 class="_flex _w90-p title-f _trans">
+                                    <i class="_trans">
+                                        {{fld.Name}}
+                                    </i>
+                                </h1>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="_flex _w100 sec-item-content _dir-align-r" ng-show="FMItems.files.length>0">
+                    <span class="_flex _w100 title-sec">
+                        <i>فایل ها</i>
+                    </span>
+                    <ul class="_flex _w100 base-items-content">
+                        <li class="f-item ch-f-item _bg-w" ng-repeat="f in FMItems.files">
+                            <div class="_flex _w100 f-i-c _cursor">
+                                <figure class="_w100 fig-imgs-content _flex" style="background-image:url('{{f.FileUrl}}')" over>
+                                    <input type="checkbox"  ng-model="f.selected" ng-checked="CheckedFile(f.selected) || f.selected" />
+                                </figure>
+                                <div class="_w100 _flex base-details-files _dir-align-l">
+                                    <i class="_flex ico-f-c ch-ico-f-c fm-icofile-picture-o"></i>
+                                    <h1 class="title-f">
+                                        <i class="t-i-f">
+                                            {{f.FileName}}
+                                        </i>
+                                    </h1>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <section class="_flex _position-a modal-uploader-file-content _trans" ng-show="showUploader">
+                <div ngf-drop ngf-select ng-model="files" class="drop-box _flex _w100 _h100 body-uploader-content"
+                     ngf-drag-over-class="'dragover'" ngf-keep="false" ngf-multiple="true" ngf-allow-dir="true"
+                     accept="image/*,application/pdf,video/*"
+                     ngf-validate="{size: {min: 10, max: '30MB'}}"
+                     ngf-pattern="'image/*,application/pdf,video/*'">
+                    <i class="ico-file-uploader  fm-icoupload"></i>
+                    <h1 class="title-uploader-content">فایل خود را برای آپلود در این قسمت بیندازید</h1>
+                </div>
+            </section>
+            <section class="_flex _position-f show-result-upload-file" ng-show="showResult">
+                <section class="_flex _w90-p title-uploader _dir-align-r">
+                    <h1 class="_color-w">آپلود فایل ها</h1>
+                    <div class="_flex bttn-fm w-bttn-fm _cursor _trans_1" role="button" ng-click="showResult=fasle">
+                        <i class="ico-bttn-fm fm-icoclose _color-w"></i>
+                    </div>
+                </section>
+                <section class="_flex _w90-p body-uploader-files _h100" overflow>
+                    <div class="_w100 _flex inner-upload-file _dir-align-l" ng-repeat="f in files">
+                        <span class="body-file-name" over>
+                            <i class="title-file">{{f.name}}</i>
+                        </span>
+                        <span class="progress _w100" ng-show="f.progress >= 0">
+                            <i style="width:{{f.progress}}%"></i>
+                        </span>
+                        <div class="_flex delete-file-bttn _cursor _trans_1" role="button" ng-click="f.upload.abort();">
+                            <i class="ico-bttn-fm fm-icoclose"></i>
+                        </div>
+                    </div>
+
+                </section>
+            </section>
+        </section>
+    </div>
+</section>

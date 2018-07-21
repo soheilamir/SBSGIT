@@ -1,0 +1,310 @@
+﻿<section class="_flex _w100 _h100 base-body-container _position-r">
+    <section class="_flex body-data-content _h100 _dir-align-r _bg-w1" over>
+        <section class="_w100 base-filter-content _dir-align-r" ng-show="Sec_1==true">
+            <section class="_w100 _flex filter-content _dir-align-r">
+                <section class="_w45-m25 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">زبان:</label>
+                        <select class="_select _select-form _dir-align-r _trans" ng-model="Facilities.LanguagesItem" ng-options="option.name for option in lstLangs track by option.id">
+                            <option value="">انتخاب زبان</option>
+                        </select>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">نام هتل:</label>
+                        <input type="text" placeholder="نام هتل" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button">
+                            <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="_w45-m25 base-s-c _flex"></section>
+            </section>
+            <section class="_w100 _flex filter-content _dir-align-r h-photo-content">
+                <h1 class="_flex _w95-pad25 _dir-align-r">
+                    <i class="_color3 sbs-ico-image"></i>
+                    <span class="_color3">بخش نمایش عکسهای هتل</span>
+                </h1>
+                <div class="_flex _w100 _dir-align-r base-b-h-photo">
+                    <div class="_flex tmpl-img _bg-w _trans _cursor" ng-click="ShowPhotoCollection();">
+                        <i class="sbs-ico-image"></i>
+                        <i class="sbs-ico-playlist_add"></i>
+                    </div>
+                </div>
+            </section>
+            <section class="_w100 _flex filter-content _dir-align-r">
+                <section class="_w45-m25 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-m">نام کشور:</label>
+                        <select class="_select _select-form _dir-align-r _trans" ng-model="publicPlace.Country" ng-options="option.name for option in lstCountrys track by option.id">
+                            <option value="">انتخاب کشور</option>
+                        </select>
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button">
+                            <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-m">نام استان:</label>
+                        <select class="_select _select-form _dir-align-r _trans" ng-model="publicPlace.StateProvince" ng-options="option.name for option in lstStateProvinces track by option.id">
+                            <option value="">انتخاب استان</option>
+                        </select>
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button">
+                            <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-m">نام شهر:</label>
+                        <select class="_select _select-form _dir-align-r _trans" ng-model="publicPlace.CityName" ng-options="option.name for option in lstCitys track by option.id">
+                            <option value="">انتخاب شهر</option>
+                        </select>
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button">
+                            <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="_w45-m25 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-m">ستاره دار:</label>
+                        <select class="_select _select-form _dir-align-r _trans" style="width:270px;margin-left:10px;flex:0 1 auto" ng-model="publicPlace.CityName" ng-options="option.name for option in lstCitys track by option.id">
+                            <option value="">انتخاب تعداد ستاره</option>
+                        </select>
+                        <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                        <label for="cboxMembershipCard"></label>
+                        <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">IS WIFI</h1>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-m">آدرس:</label>
+                        <input type="text" placeholder="آدرس هتل" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                    </div>
+                </section>
+            </section>
+            <section class="_w100 _flex filter-content _dir-align-r">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">متن هتل:</label>
+                <textarea class="_txtarea _fnt-fa" placeholder="متن اطلاعات هتل"></textarea>
+            </section>
+        </section>
+        <section class="_w100 base-filter-content _dir-align-r" ng-show="Sec_2==true">
+            <section class="_w100 _flex filter-content _dir-align-r">
+                <section class="_w45-m25 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <div angucomplete-alt id="auto_c_HotelName_1" placeholder="انتخاب نام هتل" maxlength="50" pause="100" selected-object="selectedSource" local-data="dataCitys" search-fields="CityName" title-field="CityName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <h1 class="_flex _w95-pad25 h-title _color-w">انتخاب مکان های نزدیک به هتل</h1>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <div angucomplete-alt id="auto_c_PublicPlace" placeholder="مکان های نزدیک به هتل" maxlength="50" pause="100" selected-object="selectedSource" local-data="dataCitys" search-fields="CityName" title-field="CityName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">فاصله با ماشین:</label>
+                        <input type="text" placeholder="فاصله با ماشین" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">فاصله پیاده:</label>
+                        <input type="text" placeholder="فاصله پیاده" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <h1 class="_flex _w95-pad25 h-title _color-w">شرایط مختلف جریمه های هتل</h1>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <textarea class="_txtarea _fnt-fa" placeholder="متن شرایط جریمه هتل"></textarea>
+                    </div>
+                </section>
+                <section class="_w45-m25 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <h1 class="_flex _w95-pad25 h-title _color-w">انتخاب امکانات هتل</h1>
+                    </div>
+                    <div class="_w100 _flex split-i-c cha-split-i-c">
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">سالن اجتماعات</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">باشگاه بیلیارد</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">اینترنت در قسمت لابی</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">سالن کنفرانس</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">کافی شاپ</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">رستوران</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">سالن اجتماعات</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">باشگاه بیلیارد</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">اینترنت در قسمت لابی</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">سالن کنفرانس</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">کافی شاپ</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">آسانسور</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">رستوران</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">سالن اجتماعات</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">باشگاه بیلیارد</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">اینترنت در قسمت لابی</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">سالن کنفرانس</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">کافی شاپ</h1>
+                        </div>
+                        <div class="_flex b-facilities">
+                            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                            <label for="cboxMembershipCard"></label>
+                            <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">آسانسور</h1>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section class="_w100 base-filter-content _dir-align-r" ng-show="Sec_3==true">
+            <section class="_w100 _flex filter-content _dir-align-r">
+                <section class="_w45-m25 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <div angucomplete-alt id="auto_c_HotelName_2" placeholder="انتخاب نام هتل" maxlength="50" pause="100" selected-object="selectedSource" local-data="dataCitys" search-fields="CityName" title-field="CityName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-m">نوع اتاق:</label>
+                        <select class="_select _select-form _dir-align-r _trans" ng-model="publicPlace.Country" ng-options="option.name for option in lstCountrys track by option.id">
+                            <option value="">انتخاب نوع اتاق</option>
+                        </select>
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button">
+                            <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-m">تعداد اتاق:</label>
+                        <input type="text" placeholder="تعداد اتاق" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                        <label for="cboxMembershipCard"></label>
+                        <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">صبحانه</h1>
+
+                        <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                        <label for="cboxMembershipCard"></label>
+                        <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">ناهار</h1>
+
+                        <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+                        <label for="cboxMembershipCard"></label>
+                        <h1 class="note _dir-align-r _flex" style="margin-right:5px;align-items:center;justify-content:center;">شام</h1>
+                    </div>
+                </section>
+                <section class="_w45-m25 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">تعداد برزگسال:</label>
+                        <input type="text" placeholder="تعداد برزگسال" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">تعداد کودک:</label>
+                        <input type="text" placeholder="تعداد کودک" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">تعداد مهمان:</label>
+                        <input type="text" placeholder="تعداد مهمان" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                    </div>
+
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">قیمت هر شب:</label>
+                        <input type="text" placeholder="قیمت هر شب" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                    </div>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section class="_flex operation-content _dir-align-r _bg-w">
+        <div class="_w50 _flex _dir-align-r">
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="SaveData();" ng-show="ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                <span class="_color-w">ثبت اطلاعات</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="UpdateData();" ng-show="ShowBttnOther">
+                <i class="_color-w _trans sbs-ico-border_color"></i>
+                <span class="_color-w">ویرایش</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="DeleteData();" ng-show="ShowBttnOther">
+                <i class="_color-w _trans sbs-ico-delete"></i>
+                <span class="_color-w">حذف اطلاعات</span>
+            </div>
+        </div>
+        <div class="_w50 _flex _dir-align-l">
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-show="ShowBttnSec_1" ng-click="SecConfig(false,true,false)">
+                <i class="_color-w _trans sbs-ico-chevron-thin-left"></i>
+                <span class="_color-w">بخش بعدی</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-show="ShowBttnPre_1" ng-click="SecConfig(true,false,false)">
+                <i class="_color-w _trans sbs-ico-chevron-thin-right"></i>
+                <span class="_color-w">قبلی</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-show="ShowBttnSec_2" ng-click="SecConfig(false,false,true)">
+                <i class="_color-w _trans sbs-ico-chevron-thin-left"></i>
+                <span class="_color-w">بخش اتاق ها</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-show="ShowBttnPre_2" ng-click="SecConfig(false,true,false)">
+                <i class="_color-w _trans sbs-ico-chevron-thin-right"></i>
+                <span class="_color-w">قبلی</span>
+            </div>
+        </div>
+    </section>
+</section>
+
+

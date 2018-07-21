@@ -1,0 +1,121 @@
+﻿.base-req-content {
+    flex-flow: column nowrap;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.t-req-content {
+    flex-flow: row nowrap;
+    align-items: center;
+    background: #DDD;
+    border-bottom: 1px solid #D1D1D1;
+    width: 95%;
+    padding: 0 2.5%;
+}
+
+.img-user-content {
+    border-radius: 3px 3px 3px 3px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: #FFF;
+}
+
+    .img-user-content > i {
+        font-size: 1.2em;
+    }
+
+.txt-user-info-content {
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+    .txt-user-info-content h1, .txt-user-info-content i {
+        font-size: 0.85em;
+    }
+
+.body-req-content {
+    width: 95%;
+    padding: 5px 2.5%;
+    background: #FFF;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #DDD;
+}
+
+    .body-req-content .item-s {
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 4px;
+    }
+
+        .body-req-content .item-s .inner-item-s {
+            background: #FFF;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .body-req-content .item-s .inner-item-s > i {
+                font-size: 0.8em;
+                color: #AAA;
+            }
+/* tooltip content */
+.air-req-cls {
+    padding: 10px 8px;
+    min-width: 290px !important;
+}
+
+.h-req-cls {
+    padding: 10px 8px;
+    min-width: 260px !important;
+}
+
+.ul-tooltip {
+    flex-flow: column nowrap;
+    margin-bottom: 4px;
+    width: 95%;
+    padding: 0 2.5%;
+    align-items: center;
+    justify-content: center;
+}
+
+    .ul-tooltip li {
+        flex-flow: row nowrap;
+        align-items: center;
+        border-bottom: 1px solid #707070;
+    }
+
+        .ul-tooltip li:last-child {
+            border-bottom: none;
+        }
+
+        .ul-tooltip li h1 {
+            margin-left: 3px;
+            padding: 0 3px;
+            color: #FFF;
+            font-size: 0.85em;
+            border-left: 1px solid #707070;
+            align-items: center;
+        }
+
+    .ul-tooltip .ch-i h1:nth-child(3) {
+        min-width: 35px;
+    }
+
+    .ul-tooltip li h1:nth-child(3) {
+        min-width: 70px;
+    }
+
+    .ul-tooltip li h1:last-child {
+        border-left: none;
+    }
+/* end tooltip content */

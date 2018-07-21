@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetPriceInquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userInfo" type="tns:UserInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="countryCode" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="birthDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="durationOfStay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="zoneCode" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NationalCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPriceInquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPriceInquiryResult" type="tns:TISPriceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TISPriceInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="countryCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="priceGross" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="priceAvarez" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceTax" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceDiscount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceTotal" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorText" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="registerInsurance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserInfo" type="tns:UserInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="insuranceData" type="tns:TISInsuranceInsertData" />
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TISInsuranceInsertData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nationalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="latinFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="latinLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="birthDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Gender" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Birthplace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="passportNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="countryCode" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="durationOfStay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZoneCode" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthDate_PassPort" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="registerInsuranceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registerInsuranceResult" type="tns:TISInsuranceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TISInsuranceInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="bimehNo" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="policyNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="passportNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="durationOfStay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttpolicyNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cancelDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="country" type="tns:TISCountryInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="customer" type="tns:TISCustomerInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="price" type="tns:TISPriceInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorText" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TISCountryInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="zoneCode" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="zoneTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="zoneTitleEnglish" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorText" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TISCustomerInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="nationalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="latinFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="latinLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="birthDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isMale" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Birthplace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthDate_PassPort" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="confirmInsurance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userInfo" type="tns:UserInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="serialNo" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="confirmInsuranceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="confirmInsuranceResult" type="tns:TISInsuranceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userinfo" type="tns:UserInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCountriesResult" type="tns:ArrayOfTISCountryInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTISCountryInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TISCountryInfo" nillable="true" type="tns:TISCountryInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getZone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userinfo" type="tns:UserInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getZoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getZoneResult" type="tns:ArrayOfTISZoneInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTISZoneInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TISZoneInfo" nillable="true" type="tns:TISZoneInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TISZoneInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="zoneCode" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="zoneTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="zoneTitleEnglish" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorText" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="cancelInsurance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userinfo" type="tns:UserInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="PolicyNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancelInsuranceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cancelInsuranceResult" type="tns:TISInsuranceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInsurance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userinfo" type="tns:UserInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="PolicyNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInsuranceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInsuranceResult" type="tns:TISInsuranceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPriceInquirySoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceInquiry" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceInquirySoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="registerInsuranceSoapIn">
+    <wsdl:part name="parameters" element="tns:registerInsurance" />
+  </wsdl:message>
+  <wsdl:message name="registerInsuranceSoapOut">
+    <wsdl:part name="parameters" element="tns:registerInsuranceResponse" />
+  </wsdl:message>
+  <wsdl:message name="confirmInsuranceSoapIn">
+    <wsdl:part name="parameters" element="tns:confirmInsurance" />
+  </wsdl:message>
+  <wsdl:message name="confirmInsuranceSoapOut">
+    <wsdl:part name="parameters" element="tns:confirmInsuranceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountriesSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountries" />
+  </wsdl:message>
+  <wsdl:message name="getCountriesSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getZoneSoapIn">
+    <wsdl:part name="parameters" element="tns:getZone" />
+  </wsdl:message>
+  <wsdl:message name="getZoneSoapOut">
+    <wsdl:part name="parameters" element="tns:getZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelInsuranceSoapIn">
+    <wsdl:part name="parameters" element="tns:cancelInsurance" />
+  </wsdl:message>
+  <wsdl:message name="cancelInsuranceSoapOut">
+    <wsdl:part name="parameters" element="tns:cancelInsuranceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInsuranceSoapIn">
+    <wsdl:part name="parameters" element="tns:getInsurance" />
+  </wsdl:message>
+  <wsdl:message name="getInsuranceSoapOut">
+    <wsdl:part name="parameters" element="tns:getInsuranceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AgancyTravelInsSoap">
+    <wsdl:operation name="GetPriceInquiry">
+      <wsdl:input message="tns:GetPriceInquirySoapIn" />
+      <wsdl:output message="tns:GetPriceInquirySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registerInsurance">
+      <wsdl:input message="tns:registerInsuranceSoapIn" />
+      <wsdl:output message="tns:registerInsuranceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmInsurance">
+      <wsdl:input message="tns:confirmInsuranceSoapIn" />
+      <wsdl:output message="tns:confirmInsuranceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountries">
+      <wsdl:input message="tns:getCountriesSoapIn" />
+      <wsdl:output message="tns:getCountriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getZone">
+      <wsdl:input message="tns:getZoneSoapIn" />
+      <wsdl:output message="tns:getZoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelInsurance">
+      <wsdl:input message="tns:cancelInsuranceSoapIn" />
+      <wsdl:output message="tns:cancelInsuranceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInsurance">
+      <wsdl:input message="tns:getInsuranceSoapIn" />
+      <wsdl:output message="tns:getInsuranceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AgancyTravelInsSoap" type="tns:AgancyTravelInsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPriceInquiry">
+      <soap:operation soapAction="http://tempuri.org/GetPriceInquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerInsurance">
+      <soap:operation soapAction="http://tempuri.org/registerInsurance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmInsurance">
+      <soap:operation soapAction="http://tempuri.org/confirmInsurance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountries">
+      <soap:operation soapAction="http://tempuri.org/getCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZone">
+      <soap:operation soapAction="http://tempuri.org/getZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelInsurance">
+      <soap:operation soapAction="http://tempuri.org/cancelInsurance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInsurance">
+      <soap:operation soapAction="http://tempuri.org/getInsurance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AgancyTravelInsSoap12" type="tns:AgancyTravelInsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPriceInquiry">
+      <soap12:operation soapAction="http://tempuri.org/GetPriceInquiry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerInsurance">
+      <soap12:operation soapAction="http://tempuri.org/registerInsurance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmInsurance">
+      <soap12:operation soapAction="http://tempuri.org/confirmInsurance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountries">
+      <soap12:operation soapAction="http://tempuri.org/getCountries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZone">
+      <soap12:operation soapAction="http://tempuri.org/getZone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelInsurance">
+      <soap12:operation soapAction="http://tempuri.org/cancelInsurance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInsurance">
+      <soap12:operation soapAction="http://tempuri.org/getInsurance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AgancyTravelIns">
+    <wsdl:port name="AgancyTravelInsSoap" binding="tns:AgancyTravelInsSoap">
+      <soap:address location="http://dev.mellatinsurance.com/axa/WebServices/AgancyTravelIns.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AgancyTravelInsSoap12" binding="tns:AgancyTravelInsSoap12">
+      <soap12:address location="http://dev.mellatinsurance.com/axa/WebServices/AgancyTravelIns.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

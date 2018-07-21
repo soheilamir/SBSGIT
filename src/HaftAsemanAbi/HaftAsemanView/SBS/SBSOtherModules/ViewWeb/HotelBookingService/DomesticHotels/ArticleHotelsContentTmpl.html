@@ -1,0 +1,97 @@
+﻿<section class="_flex _w100 _dir-align-r base-art-h _trans" ng-class="{'other-base-art-h':itemHotel.selected}">
+    <article class="_w95-pad25 _flex _dir-align-r article-h-content">
+        <figure class="_flex fig-img-content _h100">
+            <i class="_w100" style="background: url('{{itemHotel.HotelPhotosS[0].FileItem.FileUrl}}') no-repeat top center / cover"></i>
+            <div class="_w100 _flex n-h-content">
+                <div class="_w95-pad25 _flex _dir-align-r split-nhc _position-r">
+                    <h1 class="_color-blue _fnt-fa">{{itemHotel.HotelNameByLanguageS[0].Name}}</h1>
+                    <span class="_w95-pad25 _position-a _flex _dir-align-l">
+                        <i class="sbs-ico-star _flex" ng-repeat="n in [] | range:itemHotel.Stars"></i>
+                        <b class="sbs-ico-heart _flex"><i class="_fnt-fa">امتیاز هتل {{itemHotel.Rate}}</i></b>
+                    </span>
+                    <i class="_color-60 _fnt-fa _w100">{{itemHotel.Address}}</i>
+                    <div class="_flex _dir-align-r _w100 desc-h-c">
+                    </div>
+                </div>
+            </div>
+        </figure>
+        <div class="_flex _dir-align-r _w100 detial-h-content _position-r">
+            <div class="_flex _dir-align-r _w100 facilities-h-c">
+                <i class="_flex" ng-repeat="facilities in itemHotel.HotelFacilitiesS | isImportant" ng-class="{'sbs-ico-connection':facilities.FacilitiesItem.FacilitiesPersianName.includes('اینترنت'),'sbs-ico-spoon-knife':facilities.FacilitiesItem.FacilitiesPersianName.includes('رستوران'),'sbs-ico-pool':facilities.FacilitiesItem.FacilitiesPersianName.includes('استخر، سونا و جکوزی')}"><b class="_fnt-fa">{{facilities.FacilitiesItem.FacilitiesPersianName}}</b></i>
+            </div>
+            <div class="_flex _dir-align-r _w100 distance-h-c">
+                <i class="_flex sbs-ico-circle-compass" ng-repeat="accessibility in itemHotel.HotelAccessibilityS | isImportant"><b class="_fnt-fa">{{accessibility.Title}}:</b><b class="_fnt-fa" ng-show="accessibility.TimeWithCar">{{accessibility.TimeWithCar}} دقیقه با ماشین</b><b class="_fnt-fa" ng-show="accessibility.TimeWithWalk">{{accessibility.TimeWithWalk}} دقیقه پیاده</b></i>
+            </div>
+            <div class="_flex _dir-align-r _w100 desc-h-c">
+                <i class="_flex sbs-ico-document-fill _w100"><b class="_fnt-fa">رزرو این اقامتگاه قابلیت کنسلی دارد و جریمه کنسلی بر اساس قوانین اعلام شده از طرف اقامتگاه محاسبه می‌گردد</b></i>
+                <a href="#" title="هتل اسپیناس پالاس" class="_flex _dir-align-r bttn-show-h-content">
+                    <i class="_color-w sbs-ico-chevron-thin-left"></i>
+                    <h1 class="_color-w">شروع قیمت برای یک شب : {{itemHotel.minPrice| isoCurrency}} ریال </h1>
+                </a>
+                <a ng-init="h_room=false" ng-click="h_room=!h_room" title="هتل اسپیناس پالاس" class="_flex _cursor _dir-align-r bttn-show-h-content">
+                    <i class="_color-w sbs-ico-chevron-thin-left"></i>
+                    <h1 class="_color-w">انتخاب اتاق</h1>
+                </a>
+            </div>
+        </div>
+    </article>
+    <section class="_w95-pad25 _flex room-content" ng-show="h_room===true">
+        <table class="tbl-h-s _w100">
+            <thead>
+                <tr>
+                    <th scope="col">نوع اتاق</th>
+                    <th scope="col">ظرفیت اتاق</th>
+                    <th scope="col">خدمات</th>
+                    <th scope="col">ساعت ورود</th>
+                    <th scope="col">ساعت خروج</th>
+                    <th scope="col">قیمت هر شب (ریال)</th>
+                    <th scope="col">تعداد اتاق</th>
+                    <th scope="col" style="width:130px;">رزرو</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="_w100" ng-class="{'room-selected':itemHotel.HotelRoomS[0].selected}">
+                    <td>{{itemHotel.HotelRoomS[0].HotelRoomTypeItem.Name}}</td>
+                    <td>
+                        <i class="sbs-ico-user2" ng-repeat="n in [] | range:itemHotel.HotelRoomS[0].MaxAdults"></i>
+                    </td>
+                    <td class="td-food">
+                        <span class="_flex sbs-ico-drink" ng-show="itemHotel.HotelRoomS[0].HasBreakfast"><i class="_color-blue _fnt-fa">صبحانه</i></span>
+                        <span class="_flex sbs-ico-spoon-knife" ng-show="itemHotel.HotelRoomS[0].HasLunch"><i class="_color-blue _fnt-fa">ناهار</i></span>
+                        <span class="_flex sbs-ico-spoon-knife" ng-show="itemHotel.HotelRoomS[0].HasDinner"><i class="_color-blue _fnt-fa">شام</i></span>
+                    </td>
+                    <td class="_dir-align-l _fnt-en"><kk-timepicker id="timepicker_in_1" settings="settings" ng-disabled="false" ng-model="itemHotel.HotelRoomS[0].TimeIn"></kk-timepicker></td>
+                    <td class="_dir-align-l _fnt-en"><kk-timepicker id="timepicker_in_1" settings="settings" ng-disabled="false" ng-model="itemHotel.HotelRoomS[0].TimeOut"></kk-timepicker></td>
+                    <td><h3 class="_fnt-fa">{{itemHotel.HotelRoomS[0].ActiveNightPriceItem.Price | isoCurrency}}</h3></td>
+                    <td><input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="number" placeholder="تعداد" max="8" min="1" ng-model="itemHotel.HotelRoomS[0].ReqRoomCount" ng-change="ChangePriceRooms(itemHotel,itemHotel.HotelRoomS[0]);" /></td>
+                    <td rowspan="400" class="td-r-co">
+                        <div class="_flex _dir-align-r r-col-content _w95-pad25" ng-show="itemHotel.selected">
+                            <h2 class="_color2">مجموع قیمت سفارش</h2>
+                            <h2 class="_color-60">{{itemHotel.TotalPrice | isoCurrency}} ريال</h2>
+                            <div class="bttn-srch-f _flex _trans _cursor" ng-click="ReserveInternalHotel(itemHotel);" role="button" tabindex="0">
+                                <span class="_fnt-fa _color-w">رزرو نهایی هتل</span>
+                            </div>
+                            <span class="_color-red">هزینه اقامت کودک خردسال‌تان تا سن 5 سال رایگان محاسبه می‌شود.</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="_w100" ng-repeat="roomsItem in itemHotel.HotelRoomS.slice(1,itemHotel.HotelRoomS.length)" ng-class="{'room-selected':roomsItem.selected}">
+                    <td>{{roomsItem.HotelRoomTypeItem.Name}}</td>
+                    <td>
+                        <i class="sbs-ico-user2" ng-repeat="n in [] | range:roomsItem.MaxAdults"></i>
+                    </td>
+                    <td class="td-food">
+                        <span class="_flex sbs-ico-drink" ng-show="roomsItem.HasBreakfast"><i class="_color-blue _fnt-fa">صبحانه</i></span>
+                        <span class="_flex sbs-ico-spoon-knife" ng-show="roomsItem.HasLunch"><i class="_color-blue _fnt-fa">ناهار</i></span>
+                        <span class="_flex sbs-ico-spoon-knife" ng-show="roomsItem.HasDinner"><i class="_color-blue _fnt-fa">شام</i></span>
+                    </td>
+                    <td class="_dir-align-l _fnt-en"><kk-timepicker id="timepicker_in_{{roomsItem.Id}}" settings="settings" ng-disabled="false" ng-model="roomsItem.TimeIn"></kk-timepicker></td>
+                    <td class="_dir-align-l _fnt-en"><kk-timepicker id="timepicker_in_{{roomsItem.Id}}" settings="settings" ng-disabled="false" ng-model="roomsItem.TimeOut"></kk-timepicker></td>
+
+                    <td><h3 class="_fnt-fa">{{roomsItem.ActiveNightPriceItem.Price | isoCurrency}}</h3></td>
+                    <td><input class="_txt _txt-form _dir-align-r _fnt-fa  _trans" type="number" placeholder="تعداد" max="8" min="1" ng-model="roomsItem.ReqRoomCount" ng-change="ChangePriceRooms(itemHotel,roomsItem);" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>

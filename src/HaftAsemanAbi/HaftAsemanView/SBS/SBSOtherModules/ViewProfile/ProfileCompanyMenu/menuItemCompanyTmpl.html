@@ -1,0 +1,5 @@
+﻿<li ng-repeat="item in lstMenuItems" class="_w100 li-menu">
+    <a href="{{item.href}}" title="{{item.title}}" class="_w90-pad5 _flex _trans {{IsSelectMenu(item) && 'menu-selected' || ''}}" ng-click="ActiveMenu(item)">
+        <h1 class="_fnt>fa">{{item.name}}</h1>
+    </a>
+</li>

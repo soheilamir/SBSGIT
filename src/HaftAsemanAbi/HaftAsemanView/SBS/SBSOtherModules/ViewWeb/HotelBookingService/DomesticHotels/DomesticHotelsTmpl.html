@@ -1,0 +1,51 @@
+﻿<section class="_flex _dir-align-r _w95-pad25 base-hotel-view-content">
+    <section class="_flex _dir-align-r _w100 search-body-content">
+        <re-search-hotel-Services></re-search-hotel-Services>
+    </section>
+    <section class="_flex _dir-align-r _w100 base-body-r-s-content">
+        <section class="_flex _dir-align-r _w100 set-properties">
+            <span class="_color-blue-1 _fnt-fa">صفحه اصلی</span>
+            <i class="_color4 sbs-ico-chevron-left"></i>
+            <span class="_color-blue-1 _fnt-fa">ایران ( 1343 مورد )</span>
+            <i class="_color4 sbs-ico-chevron-left"></i>
+            <span class="_color-blue-1 _fnt-fa">تهران:</span>
+            <span class="_color-blue-1 _fnt-fa">145 مورد هتل در این شهر یافت شد.</span>
+        </section>
+        <section class="_flex _dir-align-r _w100 b-b-s-c">
+            <section class="_flex _dir-align-r filter-content">
+                <div class="_flex _dir-align-r _w95-pad25 _bg2 title-f-c">بخش فیلترهای هتل ها</div>
+                <div class="_flex _dir-align-r _w95-pad25 b-filter-c"></div>
+            </section>
+            <section class="_flex _w100 _dir-align-r s-b-content">
+                <ul class="_flex _w100 _dir-align-r other-filter-c _bg-w">
+                    <li class="_flex _w100 _cursor _trans">
+                        <i class="_color2 _fnt-fa _trans">پیشنهاد هفت آسمان</i>
+                    </li>
+                    <li class="_flex _w100 _cursor _trans">
+                        <i class="_color2 _fnt-fa _trans">بر اساس امتیاز</i>
+                    </li>
+                    <li class="_flex _w100 _cursor _trans">
+                        <i class="_color2 _fnt-fa _trans">بشترین امکانات</i>
+                    </li>
+                    <li class="_flex _w100 _cursor _trans">
+                        <i class="_color2 _fnt-fa sbs-ico-chevron-small-up _trans">قیمت</i>
+                    </li>
+                    <li class="_flex _w100 _cursor _trans">
+                        <i class="_color2 _fnt-fa sbs-ico-chevron-small-down _trans">قیمت</i>
+                    </li>
+                    <li class="_flex _w100 _cursor _trans">
+                        <i class="_color2 _fnt-fa sbs-ico-chevron-small-up _trans">درجه هتل</i>
+                    </li>
+                    <li class="_flex _w100 _cursor _trans">
+                        <i class="_color2 _fnt-fa sbs-ico-chevron-small-down _trans">درجه هتل</i>
+                    </li>
+                </ul>
+                <ul class="_flex _w100 _dir-align-r body-ul-re-h-content">
+                    <li class="_flex _w100" ng-repeat="itemHotel in LsthotelData">
+                        <art-hotel-content item-hotel="itemHotel" lst-hotel="LsthotelData"></art-hotel-content>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+</section>

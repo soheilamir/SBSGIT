@@ -1,0 +1,115 @@
+﻿<section class="_w100 _flex about-base-content">
+    <section class="_w100 _flex banner-about-content _position-r" style="background:url('{{initDataPage.Banner}}')no-repeat center center">
+        <i class="_w100 _h100 shadow-a-b _position-a _flex">
+            <strong class="title-a-p">{{initDataPage.TextBanner}}</strong>
+            <strong class="desc-title-a-p _fnt-en">{{initDataPage.DescriptionTextBanner}}</strong>
+        </i>
+    </section>
+    <section class="_w90-pad5 _flex desc-a-content">
+        <div class="l-a-content _flex _position-r">
+            <img alt="" title="" src="../../../../../Image/SBS-Logo_web.png" />
+            <div class="_flex bg-collected">
+                <i class="_bg1"></i>
+                <i class="_bg2"></i>
+                <i class="_bg3"></i>
+                <i class="_bg4"></i>
+            </div>
+        </div>
+        <div class="r-a-content _flex">
+            <p class="_w90-pad5" ng-repeat="aboutUsTextItem in initDataPage.AboutUsText">{{aboutUsTextItem}}</p>
+        </div>
+    </section>
+    <section class="_w100 location-img-content _position-r">
+        <div class="swiper-container swiper-about-container" about-swiper-directive>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slides" style="background:url('{{initDataPage.LstLocationImage[0]}}')no-repeat center center"></div>
+                <div class="swiper-slide swiper-slides" style="background:url('{{initDataPage.LstLocationImage[1]}}')no-repeat center center"></div>
+                <div class="swiper-slide swiper-slides" style="background:url('{{initDataPage.LstLocationImage[2]}}')no-repeat center center"></div>
+                <div class="swiper-slide swiper-slides" style="background:url('{{initDataPage.LstLocationImage[3]}}')no-repeat center center"></div>
+                <div class="swiper-slide swiper-slides" style="background:url('{{initDataPage.LstLocationImage[4]}}')no-repeat center center"></div>
+                <div class="swiper-slide swiper-slides" style="background:url('{{initDataPage.LstLocationImage[5]}}')no-repeat center center"></div>
+            </div>
+            <div class="swiper-pagination s-p-ch about-pagination"></div>
+        </div>
+    </section>
+    <section class="_w90-pad5 _flex desc-a-content">
+        <div class="l-a-content l-a-content-ch _flex _position-r">
+            <div class="_flex title-join-us">
+                <strong class="title-a-p title-a-p-ch">چرا آژانس مسافرتی هفت آسمان آبی</strong>
+                <strong class="desc-title-a-p desc-title-a-p-ch _fnt-en">Why join us?</strong>
+                <a class="team-link _color2 _trans" href="#" title="">تیم هفت آسمان آبی</a>
+            </div>
+            <div class="_flex bg-collected">
+                <i class="_bg1"></i>
+                <i class="_bg2"></i>
+                <i class="_bg3"></i>
+                <i class="_bg4"></i>
+            </div>
+        </div>
+        <div class="r-a-content r-a-content-ch  _flex">
+            <article class="article-join-us _flex">
+                <i class="_w100 sbs-ico-history ico-join-us _flex"></i>
+                <p class="_w90-pad5">
+                    بیش از <i class="_color-blue">نیم قرن</i> فعالیت و تجربه در امر توربسم در محیطی <i class="_color-blue">آرامش بخش</i>، متفاوت و <i class="_color2">پویا</i>
+                </p>
+            </article>
+            <article class="article-join-us _flex">
+                <i class="_w100 sbs-ico-stats-dots ico-join-us _flex"></i>
+                <p class="_w90-pad5">
+                    تلاش در راستای <i class="_color-blue">بالاترین سطح خدمات و</i> حفظ <i class="_color-blue">رضایت مشتریان</i> هفت آسمان آبی
+                </p>
+            </article>
+            <article class="article-join-us _flex">
+                <i class="_w100 sbs-ico-share ico-join-us _flex"></i>
+                <p class="_w90-pad5">
+                    همکاری با <i class="_color-blue">افراد با تجربه و متخصص</i> و <i class="_color-blue">تبادل تجربیات</i> در بخش های مختلف و ارتقاع سطح کاری با در نظر گرفتن <i class="_color-blue"> توان اجرایی و لیاقت</i> افراد
+                </p>
+            </article>
+            <article class="article-join-us _flex">
+                <i class="_w100 sbs-ico-power ico-join-us _flex"></i>
+                <p class="_w90-pad5">
+                    پیشرفت در کار و <i class="_color-blue">توجه به ایده های نو</i> از سوی هفت آسمان آبی به منظور بهبود سطح خدمات بهتر به مشتریان
+                </p>
+            </article>
+        </div>
+    </section>
+    <section class="_w100 _flex awards-content">
+        <div class="_flex r-items-awards _position-r">
+            <div class="swiper-container swiper-awards-container" awards-swiper-directive>
+                <div class="swiper-wrapper">
+                    <div class="_flex swiper-slide">
+                        <img ng-src="{{initDataPage.LstSelectedAwardsImage[0]}}" />
+                    </div>
+                    <div class="_flex swiper-slide">
+                        <img ng-src="{{initDataPage.LstSelectedAwardsImage[1]}}" />
+                    </div>
+                    <div class="_flex swiper-slide">
+                        <img ng-src="{{initDataPage.LstSelectedAwardsImage[2]}}" />
+                    </div>
+                    <div class="_flex swiper-slide">
+                        <img ng-src="{{initDataPage.LstSelectedAwardsImage[3]}}" />
+                    </div>
+                </div>
+                <div class="swiper-pagination s-p-ch awards-pagination"></div>
+            </div>
+
+        </div>
+        <div class="_flex l-items-awards">
+            <div class="_flex _w100 split-culm-content">
+                <figure class="_w50 _h100" style="background:url('{{initDataPage.LstSelectedAwardsImage[4]}}')no-repeat center center"></figure>
+                <div class="_w50 _h100 _flex _trans">
+                    <a class="_flex _fnt-fa _trans" href="#" title="">
+                        افتخارات هفت آسمان
+                        <i class="sbs-ico-in-alt _trans"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="_flex _w100 split-culm-content">
+                <div class="_w50 _h100 _fnt-fa _flex">
+                    <h1 class="_flex _fnt-fa">بیش از نیم قرن فعالیت و تجربه در امر توربسم</h1>
+                </div>
+                <figure class="_w50 _h100" style="background:url('{{initDataPage.LstSelectedAwardsImage[5]}}')no-repeat center center"></figure>
+            </div>
+        </div>
+    </section>
+</section>

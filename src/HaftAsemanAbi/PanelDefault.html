@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>آژانس هواپیمایی هفت آسمان آبی - پنل مدیریتی پرسنل</title>
+    <meta charset="utf-8" />
+    <link href="/style/master.css" rel="stylesheet" />
+    <link href="/style/sbs-console-tmpl-css.css" rel="stylesheet" />
+    <link href="/style/angular-material.css" rel="stylesheet" />
+    <link href="/style/autocomplete/angucomplete-alt.css" rel="stylesheet" />
+    <link href="/style/tooltip/angular-tooltips.css" rel="stylesheet" />
+    <link href="/style/datepicker/persian-datepicker.css" rel="stylesheet" />
+    <link href="/style/ngProgress/ngProgress.css" rel="stylesheet" />
+    <link href="/style/UIGrid/ui-grid.css" rel="stylesheet" />
+    <link href="/style/ngDialog/ngDialog-custom-width.css" rel="stylesheet" />
+    <link href="/style/ngDialog/ngDialog.css" rel="stylesheet" />
+    <link href="/style/ngDialog/ngDialog-theme-plain.css" rel="stylesheet" />
+    <link href="/style/ngDialog/ngDialog-theme-default.css" rel="stylesheet" />
+    <!-- css tmpl content -->
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFramework/cms-fw-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFooter/footer-cms-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSMenu/cms-menu-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSResponseServices/airplane/res-airplane-s.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFramework/req-css-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSBaseDashboard/dashboard-s-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/base-container-page.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/ConfigApp/FileManagerConfig/ui-fm-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/r-s-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/s-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/DomesticFlightReserve/d-f-r-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/css-form-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/ReqCreditLimit/req-c-l-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/vocher-frm-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/BaseHotelInfo/baseInfo/base-h-info-content-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Facilities/facilities-css-content.css" rel="stylesheet" />
+
+    <!-- base Js -->
+    <script src="/scripts/jquery-2.1.4.js"></script>
+    <script src="/ckeditor/ckeditor.js"></script>
+    <script src="/scripts/datepicker/persian-datepicker.js"></script>
+    <script src="/scripts/angular.min.js"></script>
+    <script src="/Scripts/angular-touch.min.js"></script>
+    <script src="/scripts/angular-animate.min.js"></script>
+    <script src="/scripts/angular-route.min.js"></script>
+    <script src="/scripts/angular-aria.min.js"></script>
+    <script src="/scripts/angular-material.js"></script>
+    <script src="/Scripts/UIGrid/ui-grid.min.js"></script>
+    <script src="/scripts/angular-local-storage.min.js"></script>
+    <script src="/scripts/ngProgress/ngprogress.min.js"></script>
+    <script src="/scripts/autocomplete/angucomplete-alt.js"></script>
+    <script src="/scripts/angular-tooltips.min.js"></script>
+    <script src="/scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/Scripts/ng-ckeditor.js"></script>
+    <script src="/scripts/fileupload/ng-file-upload.min.js"></script>
+    <script src="/scripts/fileupload/ng-file-upload-shim.min.js"></script>
+    <script src="/scripts/ngDialog/ngDialog.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <!-- cms framework module -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFramework/CmsFrameworkModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFramework/CmsFrameworkCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFramework/CmsFrameworkDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFramework/ReqDirective.js"></script>
+
+    <!-- cms dashboard module -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSBaseDashboard/dashboardServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSBaseDashboard/dashboardServiceFactory.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSBaseDashboard/dashboardServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSBaseDashboard/dashboardServiceDirective.js"></script>
+
+    <!-- upload file module -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/uploadFile/uploadFileServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/uploadFile/uploadFileServiceFactory.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/uploadFile/uploadFileServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/uploadFile/uploadFileServiceDirective.js"></script>
+
+    <!--///////////////////// CMSReserveDomesticFlight_Hotel //////////////////// -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/CMSReserveDomesticFlight_Hotel.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/CMSReserveDomesticHotelModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/CMSReserveDomesticFlightModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/CMSReserveDomesticFlightFactory.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/Search/SearchServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/Search/SearchServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/Search/SearchServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/ResultSearch/ResultSearchServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/ResultSearch/ResultSearchServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/ResultSearch/ResultSearchServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/ReqHotelBeforeBooking/ReqHBBServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/ReqHotelBeforeBooking/ReqHBBServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/ReqHotelBeforeBooking/ReqHBBDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/PassengerVocherHotel/PassengerVocherHotelServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/PassengerVocherHotel/PassengerVocherHotelServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/PassengerVocherHotel/PassengerVocherHotelDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/SendReqToHotel/SendReqToHotelServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/SendReqToHotel/SendReqToHotelServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/SendReqToHotel/SendReqToHotelDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/DetailOrderingHotel/DetailOrderingHotelServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/DetailOrderingHotel/DetailOrderingHotelServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/DetailOrderingHotel/DetailOrderingHotelDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/Search/SearchServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/Search/SearchServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/Search/SearchServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/ResultSearch/ResultSearchServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/ResultSearch/ResultSearchServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/ResultSearch/ResultSearchServiceDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/DomesticFlightReserve/domesticFlightReserveModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/DomesticFlightReserve/domesticFlightReserveCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/PassengerContent/passengerFlightCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/DomesticFlightReserve/domesticFlightReserveDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/DomesticFlightReserve/baseInfoFlightDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/DomesticFlightReserve/flightContentDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/DomesticFlightReserve/fullInfoFlightDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Flight/PassengerContent/PassengerDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/ReqCreditLimit/ReqCreditLimitServiceMadule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/ReqCreditLimit/ReqCreditLimitServiceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/ReqCreditLimit/ReqCreditLimitDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/HotelOrdering/HotelOrderingModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/HotelOrdering/HotelOrderingCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Hotel/HotelOrdering/HotelOrderingDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Insurance/InsuranceModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Insurance/IncuranceFactory.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Insurance/InsuranceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSReserveDomesticFlight_Hotel/Insurance/InsuranceDirective.js"></script>
+    <!--///////////////////// END CMSReserveDomesticFlight_Hotel //////////////////// -->
+    <!--///////////////////// CMSResponseServices -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSResponseServices/responseServicesModule.js"></script>
+    <!-- airplane services/////////////////////////////// -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSResponseServices/airplane/res-airplaneModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSResponseServices/airplane/res-airplaneCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSResponseServices/airplane/res-airplaneFactory.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSResponseServices/airplane/One_RT_wayAirplaneServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSResponseServices/airplane/MultiwayAirplaneServiceDirective.js"></script>
+    <!-- ///////////////////// END CMSResponseServices -->
+    <!-- ///////////////////// CMSServicesBaseInfoFlight -->
+    <!-- ///////////////////// END CMSServicesBaseInfoFlight -->
+    <!--///////////////////// CMSServicesBaseInfoHotel -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/CMSServicesBaseInfoHotelModule.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/FacilitiesCategory/FacilitiesCategoryModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Factory/FacilitiesCategoryFactory.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/FacilitiesCategory/FacilitiesCategoryCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/FacilitiesCategory/FacilitiesCategoryDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Facilities/FacilitiesModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Facilities/FacilitiesCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Facilities/FacilitiesDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/PublicPlace/PublicPlaceModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/PublicPlace/PublicPlaceCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/PublicPlace/PublicPlaceDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/BaseHotelInfo/baseInfo/baseInfoHotelModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/BaseHotelInfo/baseInfo/baseInfoHotelCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/BaseHotelInfo/baseInfo/baseInfoHotelDirective.js"></script>
+
+    <!-- Factory -->
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Factory/FacilitiesFactory.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Factory/PublicPlaceFactory.js"></script>
+    <!-- Model -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Model/FacilitiesCategoryModel.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Model/FacilitiesModel.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesBaseInfoHotel/Model/PublicPlaceModel.js"></script>
+    <!--///////////////////// END CMSServicesBaseInfoHotel -->
+    <!--///////////////////// CMSServicesBaseWebSite -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/CMSServicesWebSiteModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/BaseWebsitePagesFactoryModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/BaseWebsitePagesFactoryModel.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/BaseWebsitePagesFactory.js"></script>
+
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/NewsBlogFactoryModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/NewsBlogFactoryModel.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/NewsBlogFactory.js"></script>
+
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPages/WsPagesModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPages/WsPagesCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPages/WsPagesDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPagesCat/WsPagesCatModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPagesCat/WsPagesCatCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPagesCat/WsPagesCatDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPagesContext/WsPagesContextModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPagesContext/WsPagesContextCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPagesContext/WsPagesContextDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPagesBanner/WsPagesBannerModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPagesBanner/WsPagesBannerCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/BaseWebsitePages/WsPagesBanner/WsPagesBannerDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/Tag/TagModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/Tag/TagCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/Tag/TagDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/NewsTag/NewsTagModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/NewsTag/NewsTagCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/NewsTag/NewsTagDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/News/NewsModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/News/NewsCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/News/NewsDirective.js"></script>
+
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/Blog/BlogModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/Blog/BlogCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSServicesWebSite/NewsBlog/Blog/BlogDirective.js"></script>
+
+
+
+
+    <!--///////////////////// END CMSServicesBaseWebSite -->
+    <!-- cms menu module -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSMenu/CmsMenuModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSMenu/CmsMenuCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSMenu/CmsMenuDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSMenu/DetailMenuDirective.js"></script>
+
+    <!-- cms footer module -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFooter/CmsFooterModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFooter/CmsFooterCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFooter/CmsFooterDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/CMSFooter/DetailFooterDirective.js"></script>
+
+    <!-- base run framework module -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/CmsRunModule.js"></script>
+
+    <!-- base extra module -->
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/extraCMSModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/OtherModule/ConsoleModule/datePickerDirective.js"></script>
+
+    <!-- file manager module -->
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/FileManagerConfig/FileManagerModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/FileManagerConfig/FileManagerFactory.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/FileManagerConfig/FileManagerCtrl.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/FileManagerConfig/FileManagerDirective.js"></script>
+
+    <!-- base cms module -->
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/CMSModule.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/CMSRouteConfigServices.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/CMSRouteConfigBaseInfoHotel.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/CMSRouteConfigBaseInfoFlight.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/CMSRoutConfigReserveDomesticFlight_Hotel.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/CMSRouteConfigWebSite.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/CMSBaseRouteConfig.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ModalFactoryConfig.js"></script>
+    <!-- BaseDirective -->
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseDirective/wwaDashboardService.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseDirective/wwaUploadFileService.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseDirective/wwaReqCreditLimitServiceDirective.js"></script>
+    <!-- BaseWebSiteDirective -->
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseWebSiteDirective/wwaWebsitepagesConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseWebSiteDirective/wwaWebsitepagesCatConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseWebSiteDirective/wwaWebsitepagesContextConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseWebSiteDirective/wwaWebsitepagesBannerConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseWebSiteDirective/wwaTagConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseWebSiteDirective/wwaNewsTagConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseWebSiteDirective/wwaNewsConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseWebSiteDirective/wwaBlogConfigServiceDirective.js"></script>
+
+
+    <!-- BaseInfoFlightServicesDirective -->
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoFlightServicesDirective/wwaAirlineClassesConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoFlightServicesDirective/wwaAirlineClassPathConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoFlightServicesDirective/wwaAirlineConfigServicesDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoFlightServicesDirective/wwaAirlineSubClassesConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoFlightServicesDirective/wwaAirplaneConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoFlightServicesDirective/wwaFlightNumberConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoFlightServicesDirective/wwaFlightPathConfigServiceDirective.js"></script>
+    <!-- BaseInfoHotelServicesDirective -->
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoHotelServicesDirective/wwaHotelCityPublicPlaceConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoHotelServicesDirective/wwaHotelFacilitiescatConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoHotelServicesDirective/wwaHotelFacilitiesConfigServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseInfoHotelServicesDirective/wwaHotelBaseConfigServiceDirective.js"></script>
+    <!-- BaseReserveDomesticDirective -->
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaDfbServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaDhbServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaDomesticFlightReserveServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaReserveDomesticFlightServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaReserveDomesticHotelServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaReqHotelBeforeBookingServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaVocherHotelServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaSendReqHotelServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaDetailOrderingHotelServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaOrderingHotelServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseReserveDomesticDirective/wwaInsuranceService.js"></script>
+    <!-- BaseServicesDirective -->
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseServicesDirective/wwaMultiWayAirplaneServiceDirective.js"></script>
+    <script src="/HaftAsemanConsole/SBSConsole/ConfigApp/ConsoleConfig/BaseServicesDirective/wwaOnewayAirlineServiceDirective.js"></script>
+</head>
+<body data-lang="fa" data-bg="F5">
+    <section class="_w100">
+        <sbs-cms-framefork alt-title="آژانس هواپیمایی هفت آسمان آبی"
+                           src-url="/Image/SBS-Logo_web.png">
+            <cms-menu>
+                <detail-menu-items></detail-menu-items>
+            </cms-menu>
+        </sbs-cms-framefork>
+    </section>
+</body>
+</html>

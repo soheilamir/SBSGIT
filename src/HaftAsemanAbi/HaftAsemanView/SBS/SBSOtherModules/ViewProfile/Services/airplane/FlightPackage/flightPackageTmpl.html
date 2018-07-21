@@ -1,0 +1,91 @@
+﻿<section id="{{flightPackItem.id}}" class="_flex _w100 base-f-p" ng-class="{'selected-pack-content':flightPackItem.selected}">
+    <div class="_flex _w90-pad5 _dir-align-r t-fp-c">
+        <div class="_flex fn-fp-c _dir-align-r">
+            <div class="_flex name-f _dir-align-r">
+                <i class="sbs-ico-airplane _color5"></i>
+                <h1>نمایش اطلاعات پروازی</h1>
+            </div>
+            <div class="_flex fn-c _dir-align-l">
+                <div class="tooltip-pu _flex _b-ico _cursor" data-tooltip="حذف" ng-click="flightPackItem.delete=true;" ng-if="!flightPackItem.delete && !flightPackItem.edited && !$root.operation.orderItemEdited">
+                    <i class="sbs-ico-delete _flex"></i>
+                </div>
+                <div class="tooltip-pu _flex _b-ico _cursor" data-tooltip="برگشت" ng-click="flightPackItem.delete=false;" ng-if="flightPackItem.delete">
+                    <i class="sbs-ico-arrow-forward _flex "></i>
+                </div>
+                <div class="tooltip-pu _flex _b-ico _cursor" data-tooltip="حذف" ng-click="DeletePackage(flightPackIndex)" ng-if="flightPackItem.delete">
+                    <i class="sbs-ico-delete _flex"></i>
+                </div>
+            </div>
+        </div>
+        <div class="_flex _dir-align-r l-fp-c" ng-hide="flightPackItem.delete">
+            <label title="" class="_lbl form-lbl _color-60">تعداد مسافرین:</label>
+            <input type="text" placeholder="تعداد" class="_txt-form w-txt _fnt-fa" ng-model="flightPackItem.cntCust" />
+        </div>
+    </div>
+    <section class="_flex flight-from-path-content _dir-align-l _bg5 _w90-pad5" ng-if="flightPackItem.lstFlight[0].journeyType.id==3">
+        <aside class="_flex" ng-repeat="item in flightPackItem.lstFlight">
+            <h1 class="_color-w _fnt-en">{{item.from.name}}</h1>
+            <i class="sbs-ico-chevron-right _color-w"></i>
+        </aside>
+    </section>
+    <section class="_flex _w100 body-fp-c" ng-repeat="itemFlight in flightPackItem.lstFlight" ng-if="!flightPackItem.delete">
+        <div class="_flex _w90-pad5 t-b-fp-c _bg5 _dir-align-r _position-r" ng-class="{'ch-t-b-fp-c':itemFlight.journeyType.id==3}">
+            <h1>پرواز ({{itemFlight.from.name}} - {{itemFlight.to.name}})</h1>
+            <div class="_flex _position-a f-fn-c">
+                <div class="tooltip-pu _flex _b-ico _cursor _bg-w" data-tooltip="تغییر" ng-click="EditFlight($index,flightPackIndex)" ng-if="!itemFlight.delete">
+                    <i class="sbs-ico-edit _flex"></i>
+                </div>
+                <div class="tooltip-pu _flex _b-ico _cursor _bg-w" data-tooltip="حذف" ng-click="DeleteFlight($index,flightPackIndex)" ng-if="!itemFlight.delete && !itemFlight.edited && !$root.operation.orderItemEdited">
+                    <i class="sbs-ico-delete _flex"></i>
+                </div>
+                <div class="tooltip-pu _flex _b-ico _cursor _bg-w" data-tooltip="برگشت" ng-click="UndoFlight($index,flightPackIndex)" ng-if="itemFlight.delete">
+                    <i class="sbs-ico-arrow-forward _flex"></i>
+                </div>
+                <div class="tooltip-pu _flex _b-ico _cursor _bg-w" data-tooltip="حذف" ng-click="CompletedDeleteFlight($index,flightPackIndex)" ng-if="itemFlight.delete">
+                    <i class="sbs-ico-delete _flex"></i>
+                </div>
+            </div>
+        </div>
+        <div id="{{itemFlight.id}}" class="_flex _w90-pad5 fp-info-content _dir-align-r" ng-class="{'selected-flight-content':itemFlight.selected}" ng-if="!itemFlight.delete">
+            <div class="_flex _w100 items-info-fp-c _dir-align-r">
+                <div class="_flex inner-item-fp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">نوع بلیط:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{itemFlight.ticketType.name}}</label>
+                </div>
+                <div class="_flex inner-item-fp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">نوع سفر:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{itemFlight.journeyType.name}}</label>
+                    <i class="sbs-ico-transfer"></i>
+                </div>
+                <div class="_flex inner-item-fp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">کلاس پروازی:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{itemFlight.cabinClass.name}}</label>
+                </div>
+            </div>
+            <div class="_flex _w100 items-info-fp-c _dir-align-r">
+                <div class="_flex inner-item-fp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">تاریخ رفت:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{itemFlight.departingDate}}</label>
+                </div>
+                <div class="_flex inner-item-fp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">تاریخ برگشت:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{itemFlight.returningDate}}</label>
+                </div>
+                <div class="_flex inner-item-fp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">زمان ترجیهی:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{itemFlight.preferredTime.name}}</label>
+                </div>
+            </div>
+            <div class="_flex _w100 items-info-fp-c _dir-align-r">
+                <div class="_flex inner-item-fp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data lbl-data-content-checked" ng-if="itemFlight.selectedFlexibleDate">تاریخ قابل تغییر است</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data lbl-data-content-checked" ng-if="!itemFlight.selectedFlexibleDate">تاریخ قابل تغییر نیست</label>
+                </div>
+                <div class="_flex inner-item-fp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">ایرلاین های پیشنهادی:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data _fnt-en" ng-repeat="airlineItem in itemFlight.airlineList">[{{airlineItem.name}}]</label>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SBSWebProject.Web.NewApi.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SBSWebProject_Web_NewApi_com_mellatinsurance_dev_AgancyTravelIns" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dev.mellatinsurance.com/axa/WebServices/AgancyTravelIns.asmx</Value>
+    </Setting>
+    <Setting Name="SBSWebProject_Web_NewApi_com_mellatinsurance_apps_AgancyTravelIns" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://apps.mellatinsurance.com/axa/WebServices/AgancyTravelIns.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

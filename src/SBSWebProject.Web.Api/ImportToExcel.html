@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        //$(document).on("click", "#bttnSaveToDb", function () {
+        //    $.ajax({
+        //        url: 'api/V1/AddCountry',
+        //        dataType: 'text',
+        //        type: 'post',
+        //        contentType: 'application/x-www-form-urlencoded',
+        //        //data: $(this).serialize(),
+        //        data: "D:\Country.xlsx",
+        //        success: function (data, textStatus, jQxhr) {
+        //            //$('#response pre').html(data);
+        //        },
+        //        error: function (jqXhr, textStatus, errorThrown) {
+        //            //console.log(errorThrown);
+        //        }
+        //    });
+
+        //    e.preventDefault();
+        //});
+        var data = {
+            EarthRegionItem: {},
+            ContinentItem: {},
+            DialingCode: "93",
+            IsoCode: "AF",
+            UnCode: "AFG",
+            UnNum: "4"
+        };
+        var _nUser = {};
+        _nUser.FaName = "salam";
+        _nUser.FaFamily = "salam";
+        _nUser.Tel = "salam";
+        _nUser.Email = "salam";
+        _nUser.Password = "salam";
+        var save = function () {
+            $.ajax({
+                url: 'api/V1/AddCountriesFromExcle',
+                dataType: 'text',
+                type: 'post',
+                contentType: 'application/x-www-form-urlencoded',
+                //data: $(this).serialize(),
+                data: data,
+                success: function (data, textStatus, jQxhr) {
+                    //$('#response pre').html(data);
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    //console.log(errorThrown);
+                }
+            });
+
+            e.preventDefault();
+        };
+        var saveState = function () {
+            $.ajax({
+                url: 'api/V1/AddStateFromXml',
+                dataType: 'text',
+                type: 'post',
+                contentType: 'application/x-www-form-urlencoded',
+                //data: $(this).serialize(),
+                data: data,
+                success: function (data, textStatus, jQxhr) {
+                    //$('#response pre').html(data);
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    //console.log(errorThrown);
+                }
+            });
+
+            e.preventDefault();
+        };
+
+    </script>
+</head>
+<body>
+    <input type="text" id="txtFilePath" />
+    <input type="button" id="bttnSaveToDb" onclick="save();" />
+    <input type="button" id="bttnSaveToDb" onclick="saveState();" name="SaveState" />
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<section class="_flex _w100 _h100 _position-a base-framework-container">
+    <header class="_flex _w90-pad5 base-cms-header-content _dir-align-r">
+        <div class="_flex _w100 r-h-content _h100">
+            <div class="_cursor _trans _flex menu-trigger active-menu _h100" ng-click="toggelMenu()" ng-class="{'active-menu':menuObj.active}" role="button">
+                <i class="sbs-ico-menu _trasform_20"></i>
+            </div>
+            <div class="_cursor _trans _flex ico-head-content _h100" ng-click="Logou();" role="button">
+                <i class="sbs-ico-in-alt _trasform_20 _color-w _trans_1"></i>
+                <h1 class="_trasform_20 _color-w ">خروج</h1>
+            </div>
+        </div>
+        <div class="_flex _h100 l-h-content">
+            <img alt="{{altTitle}}" title="{{altTitle}}" src="{{srcUrl}}" />
+        </div>
+    </header>
+    <section class="_flex _w100 base-view-content _dir-align-l">
+        <!-- بر اساس سطح دسترسی باید بیاید /// ng-show => by ACL for website or another content  -->
+        <div class="_flex _h100 dashboard-content _position-r" ng-if="false">
+            <section class="_flex _w100 req-content _position-a" over requset-content>
+                <div class="_flex _w90-pad5 b-req-content">
+                    <request-item class="_flex" ng-repeat="reqItem in lstReq" req-item="reqItem" list-req="lstReq"></request-item>
+                </div>
+            </section>
+            <section class="_flex _w100 process-content _position-a" draggable-process-content>
+                <span class="_position-a _w100 _flex span-arrow-content">
+                    <i class="sbs-ico-select-arrows"></i>
+                </span>
+            </section>
+        </div>
+        <div class="_w100 _h100 view-content">
+            <section class="body-view-content _w100 _h100" over ng-view></section>
+        </div>
+        <div class="_flex _h100 menu-content" ng-if="menuObj.active">
+            <menu class="_w100" ng-transclude></menu>
+        </div>
+    </section>
+    <section class="_flex _w90-pad5 base-cms-footer-content">
+        <cms-footer>
+            <detail-footer></detail-footer>
+        </cms-footer>
+    </section>
+</section>

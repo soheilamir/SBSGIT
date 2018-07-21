@@ -1,0 +1,126 @@
+﻿.base-co-e {
+    width: 80%;
+    margin: 50px 10% 20px;
+    padding: 0;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.item-c-e {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-flow: row nowrap;
+}
+
+    .item-c-e.top-desc {
+        margin-bottom: 10px;
+        border-radius: 2px 2px 2px 2px;
+        background: #0094ff;
+        align-items: center;
+        justify-content: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        box-shadow: 0 0 50px 0 rgba(0,0,0,0.2) inset;
+    }
+
+        .item-c-e.top-desc > h3 {
+            width: 95%;
+            padding: 0 2.5%;
+            font-size: 1.1em;
+            text-shadow: -1px -1px 1px #606060;
+            text-align: justify;
+        }
+
+.title-e, .ch-e-one, .ch-other-e-one {
+    flex: 0 1 auto;
+    width: 150px;
+    margin-left: 20px;
+    font-size: 1.4em;
+    color: #606060;
+    align-items: center;
+}
+
+.ch-e-one, .ch-other-e-one {
+    width: 98%;
+    margin: 0 1%;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.e-one, .other-e-one {
+    width: 98%;
+    margin: 0 1%;
+    flex: 1 1 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FFF;
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid #CCC;
+    height: 90px;
+}
+
+.article-e-content {
+    width: 95%;
+    padding: 0 2.5%;
+    align-items: center;
+}
+
+    .article-e-content > figure {
+        width: 120px;
+        height: 80px;
+        border-radius: 100%;
+        border: 1px solid #CCC;
+        background: #EEE;
+        flex: 0 1 auto;
+        overflow: hidden;
+        margin: 0 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .article-e-content > figure > i {
+            font-size: 5em;
+            margin-top: 10px;
+            color: #C1C1C1;
+        }
+
+    .article-e-content .desc-e {
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        padding-top: 8px;
+    }
+
+        .article-e-content .desc-e .split-desc-item-e {
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 6px 0;
+            margin-bottom: 8px;
+        }
+
+.e-1, .e-2, .e-3 {
+    background: #DDD;
+}
+
+.e-1 {
+    width: 90%;
+}
+
+.e-2 {
+    width: 70%;
+}
+
+.e-3 {
+    width: 50%;
+}
+
+.e-one:hover, .other-e-one:hover {
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2) inset;
+        
+}

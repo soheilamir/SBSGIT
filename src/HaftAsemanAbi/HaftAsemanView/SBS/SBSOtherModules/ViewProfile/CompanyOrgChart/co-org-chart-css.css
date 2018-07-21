@@ -1,0 +1,110 @@
+﻿.split-org-item {
+    flex-flow: row nowrap;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+/* /////////// base-modal-org-content */
+.base-modal-org-content {
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+}
+
+.body-dep-org-content, .body-per-org-content {
+    width: 300px;
+    height: 160px;
+    flex-flow: column nowrap;
+    background: #FFF;
+    border-radius: 2px;
+}
+
+.body-per-org-content {
+    height: 300px;
+    width: 350px;
+}
+
+.b-dep-c {
+    flex-flow: row wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding-top: 15px;
+}
+
+.h-content {
+    align-items: center;
+    justify-content: flex-start;
+    height: 45px;
+    min-height: 45px;
+    max-height: 45px;
+}
+
+    .h-content > i {
+        margin: 0 5px;
+        font-size: 1.2em;
+    }
+
+    .h-content > h1 {
+        margin: 0 5px;
+        font-size: 1em;
+    }
+
+.f-content {
+    align-items: center;
+    justify-content: flex-start;
+    height: 45px;
+    min-height: 45px;
+    max-height: 45px;
+    background: #DDD;
+    border-top: 1px solid #CCC;
+}
+/* /////////// end base-modal-org-content */
+.base-co-org-content {
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.base-item-org {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+    .base-item-org > h1 {
+        font-size: 0.8em !important;
+        color: #F1F1F1;
+        align-items: center;
+        margin-bottom: 8px;
+        margin-top: 5px;
+        height: 25px;
+    }
+
+    .base-item-org .other-info-org-content {
+        flex-flow: row wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+        .base-item-org .other-info-org-content > span {
+            margin-bottom: 3px;
+            font-size: 0.7em !important;
+        }
+
+.base-dep-content {
+    align-items: center;
+    justify-content: center;
+    background: #606060;
+}
+
+    .base-dep-content > .title-dep-content {
+        font-size: 1.1em;
+        color: #F1F1F1;
+        text-align: center;
+        vertical-align: central;
+        justify-content: center;
+        align-items: center;
+    }

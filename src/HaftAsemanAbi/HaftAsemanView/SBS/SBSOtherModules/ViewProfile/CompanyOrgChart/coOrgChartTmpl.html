@@ -1,0 +1,28 @@
+﻿<section class="_flex _w95-pad25 base-co-org-content _position-r">
+    <div class="_flex _bttn _bttn-form _cursor _dir-align-r _position-a" style="top:50px;left:10px;z-index:2000" role="button" ng-click="ChangeViewOrgChart();">
+        <span class="_color-w">تغییر حالت</span>
+    </div>
+    <div id="basicdiagram" bp-org-diagram data-options="myOptions" data-on-highlight-changed="onMyHighlightChanged()" data-on-cursor-changed="onMyCursorChanged()" style="width: 100%; height: 680px;"></div>
+    <section class="_flex _w100 _h100 _position-f base-modal-org-content" ng-if="$root.ModalOrgContent">
+        <div class="_flex body-dep-org-content">
+            <header class="_flex _w95-pad25 _dir-align-r h-content _bg2">
+                <i class="_color-w sbs-ico-window"></i>
+                <h1 class="_color-w">اطلاعات بخش شرکت</h1>
+            </header>
+            <div class="_flex _w95-pad25 _h100 b-dep-c _dir-align-r">
+                <div class="_w100 _flex split-org-item _dir-align-r">
+                    <label class="_lbl _lbl-form _dir-align-r lbl-s">عنوان بخش:</label>
+                    <input type="text" placeholder="عنوان بخش" ng-model="deportmanetOrg.SectionName" class="_txt-form _fnt-fa" />
+                </div>
+            </div>
+            <footer class="_flex _w95-pad25 _dir-align-l f-content">
+                <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="CreateDepOrg(deportmanetOrg);">
+                    <span class="_color-w">ایجاد</span>
+                </div>
+                <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="CloseSection();">
+                    <span class="_color-w">انصراف</span>
+                </div>
+            </footer>
+        </div>
+    </section>
+</section>

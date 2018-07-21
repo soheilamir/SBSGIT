@@ -1,0 +1,23 @@
+﻿<ul class="_w100 _flex ul-user-c">
+    <li class="_flex li-user-c" ng-repeat="user in unAcceptLst">
+        <article class="_flex article-user-content _w100 _h100 _position-r" over>
+            <i class="arrow-unaccepted-user _position-a"></i>
+            <div class="_flex other-info-user" style="padding-top:10px;">
+                <div class="_w100 _flex split-uc _dir-align-r" ng-if="!isCo">
+                    <span>کد عضویت:</span>
+                    <h3 class="_fnt-en">{{user.RegisterCode}}</h3>
+                </div>
+                <div class="_w100 _flex split-uc _dir-align-r" ng-if="isCo">
+                    <img src="http://www.poolnews.ir/files/fa/news/1395/11/5/261403_381.png" alt="company logo" title="company logo" />
+                    <h3 class="_fnt-en">{{user.coName}}</h3>
+                </div>
+                <div class="_w100 _flex split-uc _dir-align-r">
+                    <div class="_flex _w90-m5 accept-user-bttn _cursor _trans" role="button">
+                        <i class="_color-w" ng-if="!isCo">درخواست عضویت</i>
+                        <i class="_color-w" ng-if="isCo">پذیرش درخواست</i>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </li>
+</ul>

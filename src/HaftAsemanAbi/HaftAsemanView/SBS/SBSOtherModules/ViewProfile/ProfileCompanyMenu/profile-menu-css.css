@@ -1,0 +1,27 @@
+﻿.ul-menu .li-menu > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    align-items: stretch;
+    flex-flow: row-reverse nowrap;
+    vertical-align: central;
+    border-bottom: 1px solid #AAA;
+    font-size: 0.9em;
+}
+
+    .ul-menu .li-menu > a > h1 {
+        color: #606060;
+        font-size: 1.2em;
+    }
+
+    .ul-menu .li-menu > a:hover, .ul-menu .li-menu > a.menu-selected {
+        background: #6C1B78;
+    }
+
+        .ul-menu .li-menu > a:hover > h1 {
+            color: #FFF;
+        }
+
+        .ul-menu .li-menu > a.menu-selected > h1 {
+            color: #FFF;
+            font-size: 1.2em;
+        }

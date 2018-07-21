@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F019DD1-A3C3-4123-8439-4B455E8B99E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SBSWebProject.Data</RootNamespace>
+    <AssemblyName>SBSWebProject.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataHandlers\IBasicDataHandler.cs" />
+    <Compile Include="DataHandlers\IDomainEntity.cs" />
+    <Compile Include="Entities\AirlineClasses.cs" />
+    <Compile Include="Entities\AirlineClassPath.cs" />
+    <Compile Include="Entities\AirlineClassPathFee.cs" />
+    <Compile Include="Entities\AirlineMembers.cs" />
+    <Compile Include="Entities\AirlineNameByLanguage.cs" />
+    <Compile Include="Entities\Airlines.cs" />
+    <Compile Include="Entities\AirlineSubClasses.cs" />
+    <Compile Include="Entities\Airplane.cs" />
+    <Compile Include="Entities\AirplaneTicketPreferedAirlines.cs" />
+    <Compile Include="Entities\AirportNameByLanguage.cs" />
+    <Compile Include="Entities\Airports.cs" />
+    <Compile Include="Entities\Blogs.cs" />
+    <Compile Include="Entities\City.cs" />
+    <Compile Include="Entities\CityNameByLanguage.cs" />
+    <Compile Include="Entities\CityPublicPlace.cs" />
+    <Compile Include="Entities\CityPublicPlaceNameByLanguage.cs" />
+    <Compile Include="Entities\Company.cs" />
+    <Compile Include="Entities\CompanyAttachment.cs" />
+    <Compile Include="Entities\CompanyEmployee.cs" />
+    <Compile Include="Entities\CompanyEmployeePosition.cs" />
+    <Compile Include="Entities\CompanyOrdersConfirmation.cs" />
+    <Compile Include="Entities\CompanySection.cs" />
+    <Compile Include="Entities\CompanyServiceFee.cs" />
+    <Compile Include="Entities\ConditionType.cs" />
+    <Compile Include="Entities\ConditionValues.cs" />
+    <Compile Include="Entities\Continent.cs" />
+    <Compile Include="Entities\Country.cs" />
+    <Compile Include="Entities\CountryIpAddresses.cs" />
+    <Compile Include="Entities\CountryNameByLanguage.cs" />
+    <Compile Include="Entities\EarthRegion.cs" />
+    <Compile Include="Entities\Extensions.cs" />
+    <Compile Include="Entities\Facilities.cs" />
+    <Compile Include="Entities\FacilitiesCategory.cs" />
+    <Compile Include="Entities\FacilitiesNameByLanguage.cs" />
+    <Compile Include="Entities\Files.cs" />
+    <Compile Include="Entities\FlightCondition.cs" />
+    <Compile Include="Entities\FlightFreeServices.cs" />
+    <Compile Include="Entities\FlightNumbers.cs" />
+    <Compile Include="Entities\FlightPath.cs" />
+    <Compile Include="Entities\FlightStopOver.cs" />
+    <Compile Include="Entities\Folders.cs" />
+    <Compile Include="Entities\HotelAccessibility.cs" />
+    <Compile Include="Entities\HotelComments.cs" />
+    <Compile Include="Entities\HotelFacilities.cs" />
+    <Compile Include="Entities\HotelNameByLanguage.cs" />
+    <Compile Include="Entities\HotelOrRoomConditions.cs" />
+    <Compile Include="Entities\HotelPhotos.cs" />
+    <Compile Include="Entities\HotelRoom.cs" />
+    <Compile Include="Entities\HotelRoomBeds.cs" />
+    <Compile Include="Entities\HotelRoomComments.cs" />
+    <Compile Include="Entities\HotelRoomNightPrice.cs" />
+    <Compile Include="Entities\HotelRoomPhotos.cs" />
+    <Compile Include="Entities\HotelRoomType.cs" />
+    <Compile Include="Entities\HotelRoomTypeNameByLanguage.cs" />
+    <Compile Include="Entities\Hotels.cs" />
+    <Compile Include="Entities\InsuranceAgeInterval.cs" />
+    <Compile Include="Entities\InsuranceCoverage.cs" />
+    <Compile Include="Entities\InsuranceOrders.cs" />
+    <Compile Include="Entities\InsurancePriceTable.cs" />
+    <Compile Include="Entities\InsuranceTravelInterval.cs" />
+    <Compile Include="Entities\InsuranceZone.cs" />
+    <Compile Include="Entities\InsuranceZoneCountry.cs" />
+    <Compile Include="Entities\InternationalInsuranceCompany.cs" />
+    <Compile Include="Entities\IranianInsuranceCompany.cs" />
+    <Compile Include="Entities\IVersionedEntity.cs" />
+    <Compile Include="Entities\JobOpportunity.cs" />
+    <Compile Include="Entities\Languages.cs" />
+    <Compile Include="Entities\Messages.cs" />
+    <Compile Include="Entities\News.cs" />
+    <Compile Include="Entities\NewsTags.cs" />
+    <Compile Include="Entities\OnlineFlightTicket.cs" />
+    <Compile Include="Entities\OnlineFlightTicketPassengers.cs" />
+    <Compile Include="Entities\OnlineFlightTicketPath.cs" />
+    <Compile Include="Entities\Orders.cs" />
+    <Compile Include="Entities\Passengers.cs" />
+    <Compile Include="Entities\Persons.cs" />
+    <Compile Include="Entities\ReceivedResume.cs" />
+    <Compile Include="Entities\RequestAirplaneService.cs" />
+    <Compile Include="Entities\RequestAirplaneTicket.cs" />
+    <Compile Include="Entities\RequestAirplaneTicketPassenger.cs" />
+    <Compile Include="Entities\RequestStatus.cs" />
+    <Compile Include="Entities\ResponseAirplaneTicket.cs" />
+    <Compile Include="Entities\RolesInSection.cs" />
+    <Compile Include="Entities\SbsBranchAwards.cs" />
+    <Compile Include="Entities\SbsBranches.cs" />
+    <Compile Include="Entities\SbsBranchImages.cs" />
+    <Compile Include="Entities\SbsBranchTeam.cs" />
+    <Compile Include="Entities\SbsRoles.cs" />
+    <Compile Include="Entities\SbsSections.cs" />
+    <Compile Include="Entities\SbsTags.cs" />
+    <Compile Include="Entities\Services.cs" />
+    <Compile Include="Entities\StateProvince.cs" />
+    <Compile Include="Entities\StateProvinceNameByLanguage.cs" />
+    <Compile Include="Entities\Status.cs" />
+    <Compile Include="Entities\Sysdiagrams.cs" />
+    <Compile Include="Entities\Tasks.cs" />
+    <Compile Include="Entities\Taskuser.cs" />
+    <Compile Include="Entities\TicketNumber.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserAddresses.cs" />
+    <Compile Include="Entities\UserAndPassengerDocuments.cs" />
+    <Compile Include="Entities\UserCreditInfo.cs" />
+    <Compile Include="Entities\UserEmails.cs" />
+    <Compile Include="Entities\UserFavoriteAirlines.cs" />
+    <Compile Include="Entities\UserLanguages.cs" />
+    <Compile Include="Entities\UserLoginLog.cs" />
+    <Compile Include="Entities\UserPassenger.cs" />
+    <Compile Include="Entities\Users.cs" />
+    <Compile Include="Entities\UsersInGroup.cs" />
+    <Compile Include="Entities\UserTels.cs" />
+    <Compile Include="Entities\WebPageBanners.cs" />
+    <Compile Include="Entities\WebPageContext.cs" />
+    <Compile Include="Entities\WebPages.cs" />
+    <Compile Include="Entities\WebsiteCategory.cs" />
+    <Compile Include="Entities\WebsiteFAQs.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Exceptions\ChildObjectNotFoundException.cs" />
+    <Compile Include="Exceptions\RootObjectNotFoundException.cs" />
+    <Compile Include="PagedDataRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryProcessors\IAddTaskQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\IAllTasksQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\ITaskByIdQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\IUpdateTaskQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\IUpdateTaskStatusQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\IUserQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\IUsersQueryProcessor.cs" />
+    <Compile Include="QueryResult.cs" />
+    <Compile Include="ResultsPagingUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SBSWebProject.Common\SBSWebProject.Common.csproj">
+      <Project>{c2fe4937-9640-485e-8432-ffcf05875e1c}</Project>
+      <Name>SBSWebProject.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

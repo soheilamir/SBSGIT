@@ -1,0 +1,40 @@
+﻿<ul class="_flex _w100" over>
+    <li class="_flex _w100">
+        <h1 class="_flex _w90-pad5 _color2 _dir-align-r">پرواز رفت</h1>
+        <div class="_flex _w90-pad5 item-f-content _dir-align-r">
+            <div class="_flex _w100">
+                <img class="_flex" alt="{{flightObj.D_Name}}" title="{{flightObj.D_Name}}" src="{{flightObj.D_LogoImg}}" />
+                <aside class="_flex _w100">
+                    <i class="_dir-align-r">{{flightObj.D_AirLine}} - {{flightObj.D_Name}} - {{flightObj.D_PlaneType}}</i>
+                    <i class="_dir-align-r">شماره پرواز: {{flightObj.D_FlightNo}}</i>
+                </aside>
+            </div>
+            <div class="_flex _w100">
+                <i class="_dir-align-r _bold">ساعت رفت: {{flightObj.D_DepartureTime}} فرود: {{flightObj.D_ArrivalTime}}</i>
+                <i class="_dir-align-r">کلاس نرخی: {{flightObj.D_FlightClass}}</i>
+                <i class="_dir-align-r _bold">کودک: {{flightObj.D_ChildFare}}</i>
+                <i class="_dir-align-r _bold">نوزاد: {{flightObj.D_InfantFare}}</i>
+                <i class="_dir-align-r _bold">قیمت: {{flightObj.D_AdultFare}}</i>
+            </div>
+        </div>
+    </li>
+    <li class="_flex _w100" ng-if="flightObj.R_FlightNo!=null">
+        <h1 class="_flex _w90-pad5 _color2 _dir-align-r">پرواز برگشت</h1>
+        <div class="_flex _w90-pad5 item-f-content _dir-align-r">
+            <div class="_flex _w100">
+                <img alt="{{flightObj.R_Name}}" title="{{flightObj.R_Name}}" src="{{flightObj.R_LogoImg}}" />
+                <aside class="_flex _w100">
+                    <i class="_dir-align-r">{{flightObj.R_AirLine}} - {{flightObj.R_Name}} - {{flightObj.R_PlaneType}}</i>
+                    <i class="_dir-align-r">شماره پرواز: {{flightObj.R_FlightNo}}</i>
+                </aside>
+            </div>
+            <div class="_flex _w100">
+                <i class="_dir-align-r _bold">ساعت رفت: {{flightObj.R_DepartureTime}} فرود: {{flightObj.R_ArrivalTime}}</i>
+                <i class="_dir-align-r">کلاس نرخی: {{flightObj.R_FlightClass}}</i>
+                <i class="_dir-align-r _bold">کودک: {{flightObj.R_ChildFare}}</i>
+                <i class="_dir-align-r _bold">نوزاد: {{flightObj.R_InfantFare}}</i>
+                <i class="_dir-align-r _bold">قیمت: {{flightObj.R_AdultFare}}</i>
+            </div>
+        </div>
+    </li>
+</ul>

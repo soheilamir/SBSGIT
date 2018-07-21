@@ -1,0 +1,25 @@
+﻿<section class="_flex _w100 _h100 base-body-container _position-r">
+    <section class="_flex body-data-content _h100 _dir-align-r _bg-w1" over>
+        <flight-path-field flight-path-model="FlightPath" countrys="CountryS" y-content="yContent"></flight-path-field>
+        <flight-path-grid-content show-grid="showGrid"></flight-path-grid-content>
+        <section class="_flex _w100 show-info-content _dir-align-r"></section>
+    </section>
+    <section class="_flex operation-content _dir-align-r _bg-w">
+        <div class="_w50 _flex _dir-align-r">
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="SaveData();" ng-show="ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                <span class="_color-w">ثبت اطلاعات</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="UpdateData();" ng-show="!ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-border_color"></i>
+                <span class="_color-w">ویرایش</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="DeleteData();" ng-show="!ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-delete"></i>
+                <span class="_color-w">حذف</span>
+            </div>
+        </div>
+    </section>
+</section>
+
+

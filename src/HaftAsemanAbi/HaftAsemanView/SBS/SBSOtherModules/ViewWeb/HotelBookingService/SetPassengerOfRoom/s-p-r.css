@@ -1,0 +1,91 @@
+﻿.base-s-p-content {
+    flex-flow: row wrap;
+    width: 80%;
+    padding: 20px 10% 0;
+}
+
+.h-info-content {
+    flex-flow: row nowrap;
+    margin-bottom: 15px;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    background: #FFF;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2);
+    border-radius: 2px;
+}
+
+    .h-info-content > .fig-img {
+        width: 180px;
+        min-width: 180px;
+        max-width: 180px;
+        border: 8px solid #EEE;
+        box-shadow: 0 0 1.5px 0 #404040;
+        height: 180px;
+    }
+
+    .h-info-content > .impo-info-h {
+        margin-right: 20px;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+        .h-info-content > .impo-info-h > div {
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+            .h-info-content > .impo-info-h > div > h1 {
+                font-size: 1.8em;
+                margin-left: 10px;
+            }
+
+            .h-info-content > .impo-info-h > div > i {
+                margin-left: 3px;
+                font-size: 1.3em;
+                color: #ffd800;
+            }
+
+            .h-info-content > .impo-info-h > div > h2 {
+                font-size: 1.3em;
+                margin-right: 15px;
+            }
+
+            .h-info-content > .impo-info-h > div > span {
+                flex-flow: row nowrap;
+                margin: 4px;
+                padding: 5px;
+                border-radius: 2px;
+            }
+
+            .h-info-content > .impo-info-h > div > .day-content {
+                padding: 5px 12px;
+            }
+
+            .h-info-content > .impo-info-h > div > span > i {
+                margin-left: 3px;
+            }
+
+.body-set-p-content {
+    flex-flow: row wrap;
+}
+
+    .body-set-p-content > header {
+        flex-flow: row nowrap;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+        .body-set-p-content > header > i {
+            margin-left: 8px;
+        }
+
+        .body-set-p-content > header > h1 {
+            font-size: 1.1em;
+        }
+
+

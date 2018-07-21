@@ -1,0 +1,79 @@
+﻿<section class="_flex _w100 _h100 base-body-container _position-r">
+    <section class="_flex body-data-content _h100 _dir-align-r _bg-w1" over>
+        <section class="_w100 base-filter-content _dir-align-r">
+            <section class="_w100 _flex filter-content _dir-align-r">
+                <section class="_w40-m5 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <span class="_flex img-other-content" style="background:#CCC url('{{Article.FilesItem.FileUrl}}')no-repeat center center / cover">
+                            <i>نمایش عکس اصلی</i>
+                        </span>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">نام دسته بندی:</label>
+                        <select class="_select _select-form _dir-align-r _trans" ng-model="Facilities.LanguagesItem" ng-options="option.name for option in lstLangs track by option.id">
+                            <option value="">انتخاب دسته بندی صفحه</option>
+                        </select>
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button">
+                            <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="_w40-m5 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <div class="_w100 _flex split-i-c">
+                            <label class="_lbl _lbl-form _dir-align-r lbl-l">تاریخ انتشار:</label>
+                            <input type="text" placeholder="تاریخ انتشار" class="_txt-form _fnt-fa" />
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">انتشار دهنده:</label>
+                        <div angucomplete-alt id="auto_c_TeamName_1" placeholder="انتخاب انتشار دهنده" maxlength="50" pause="100" selected-object="selectedSource" local-data="dataCitys" search-fields="CityName" title-field="CityName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+                        </div>
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button">
+                            <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <div class="_w100 _flex split-i-c">
+                            <label class="_lbl _lbl-form _dir-align-r lbl-l">عنوان بلاگ:</label>
+                            <input type="text" placeholder="عنوان بلاگ" class="_txt-form _fnt-fa" />
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section class="_flex _w100 show-data-content _dir-align-r">
+            <textarea ng-model="Context" data-ck-editor></textarea>
+        </section>
+        <section class="_flex _w100 show-data-content _dir-align-r" style="background:#DDD" ui-i18n="{{lang}}">
+            <div id="grid1" ui-grid="gridOptions" dir="rtl" ui-grid-selection ui-grid-resize-columns ui-grid-move-columns class="grid _w100"></div>
+        </section>
+        <section class="_flex _w100 show-info-content _dir-align-r"></section>
+    </section>
+    <section class="_flex operation-content _dir-align-r _bg-w">
+        <div class="_w50 _flex _dir-align-r">
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="SaveData();" ng-show="ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                <span class="_color-w">ثبت اطلاعات</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="UpdateData();" ng-show="!ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-border_color"></i>
+                <span class="_color-w">ویرایش</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="DeleteData();" ng-show="!ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-delete"></i>
+                <span class="_color-w">حذف اطلاعات</span>
+            </div>
+        </div>
+        <div class="_w50 _flex _dir-align-l">
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="ShowFileManagerContent();">
+                <i class="_color-w _trans sm-ico-image"></i>
+                <span class="_color-w">انتخاب عکس</span>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+
+

@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>آژانس هواپیمایی هفت آسمان آبی</title>
+    <meta charset="utf-8" />
+    <link href="/style/master.css" rel="stylesheet" />
+    <link href="/style/sbs-web-tmpl-css.css" rel="stylesheet" />
+    <link href="/style/dist/swiper.min.css" rel="stylesheet" />
+    <link href="/style/angular-material.css" rel="stylesheet" />
+    <link href="/style/autocomplete/angucomplete-alt.css" rel="stylesheet" />
+    <link href="/style/datepicker/persian-datepicker.css" rel="stylesheet" />
+    <link href="/style/ngProgress/ngProgress.css" rel="stylesheet" />
+    <!--<link href="/style/bootstrap.min.css" rel="stylesheet" />
+    <link href="/style/bootstrap-theme.min.css" rel="stylesheet" />-->
+    <link href="/style/angular-kk-timepicker/angular-kk-timepicker.css" rel="stylesheet" />
+    <!-- css tmpl content -->
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/MenuService/header-menu-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/WebFramework/webframework.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HomePageService/home-page-service.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/AboutPageService/about-page-service-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/contact-page-service-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/call-content-service.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/map-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/TeamsPageService/teams-page-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/BlogPageService/blog-page-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/NewsPageService/news-page-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/Register_Login_Service/log-reg-css-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/FlightBookingService/DomesticFlight/df-b-s-c.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DomesticHotels/dh-b-s-c.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DetailHotelsInfo/detail-h-s-c.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/SetPassengerOfRoom/s-p-r.css" rel="stylesheet" />
+    <!-- base Js -->
+    <script src="/scripts/jquery-2.1.4.js"></script>
+    <script src="/scripts/datepicker/persian-datepicker.js"></script>
+    <script src="/scripts/dist/swiper.js"></script>
+    <script src="/scripts/angular.min.js"></script>
+    <script src="/scripts/angular-messages.min.js"></script>
+    <script src="/scripts/angular-animate.min.js"></script>
+    <script src="/scripts/angular-route.min.js"></script>
+    <script src="/scripts/angular-aria.min.js"></script>
+    <script src="/scripts/angular-material.js"></script>
+    <script src="/scripts/angular-local-storage.min.js"></script>
+    <script src="/scripts/ngProgress/ngprogress.min.js"></script>
+    <script src="/scripts/accounting.min.js"></script>
+    <script src="/scripts/autocomplete/angucomplete-alt.js"></script>
+    <script src="/scripts/angular-kk-timepicker/angular-kk-timepicker.min.js"></script>
+    <script src="/scripts/angular-kk-timepicker/angular-kk-timepicker.tpl.js"></script>
+    <script src="/scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <!-- SBS web homepage module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HomePageService/HomeServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HomePageService/HomeServiceFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HomePageService/HomeServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HomePageService/HomeServiceDirective.js"></script>
+    <!-- SBS web aboutpage module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/AboutPageService/AboutServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/AboutPageService/AboutServiceFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/AboutPageService/AboutServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/AboutPageService/AboutServiceDirective.js"></script>
+    <!-- SBS web contactpage module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/ContactServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/ContactServiceFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/ContactServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/ContactServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/Call-directive.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/ApiMapSBSDirective.js"></script>
+    <!-- SBS web teamspage module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/TeamsPageService/TeamsServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/TeamsPageService/TeamsServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/TeamsPageService/TeamsServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/TeamsPageService/DetailTeamsServiceDirective.js"></script>
+    <!-- SBS web blogpage & News module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/BlogPageService/BlogServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/BlogPageService/BlogServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/BlogPageService/BlogServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/BlogPageService/DetailBlogServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/NewsPageService/NewsServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/NewsPageService/NewsServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/NewsPageService/NewsServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/NewsPageService/DetailNewsServiceDirective.js"></script>
+    <!-- SBS header menu module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/MenuService/HeaderMenuModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/MenuService/HeaderMenuCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/MenuService/HeaderMenuDirective.js"></script>
+    <!-- //////////////////////// SBS web Register and login Authentication section -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/Register_Login_Service/LoginServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/Register_Login_Service/RegisterServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/Register_Login_Service/LoginServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/Register_Login_Service/RegisterServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/Register_Login_Service/RegisterCoServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/Register_Login_Service/LoginServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/Register_Login_Service/RegisterServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/Register_Login_Service/RegisterCoServiceDirective.js"></script>
+    <!-- //////////////////////// END SBS web Register and login Authentication section -->
+    <!-- //////////////////////// SBS web Flight Online Booking -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/FlightBookingService/FlightBookingServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/FlightBookingService/FlightBookingServiceFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/FlightBookingService/DomesticFlight/DF_B_ServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/FlightBookingService/DomesticFlight/DF_B_ServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/FlightBookingService/DomesticFlight/ModifySearchFlightDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/FlightBookingService/DomesticFlight/FilteringFlightServiceDirective.js"></script>
+    <!-- //////////////////////// SBS web hotel Online Booking -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/HotelBookingServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/HotelBookingServiceFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DomesticHotels/DomesticHotelsCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DomesticHotels/DomesticHotelsDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DomesticHotels/ArticleHotelsContentModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DomesticHotels/ArticleHotelsContentCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DomesticHotels/ArticleHotelsContentDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DomesticHotels/ReSearchHotelDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DomesticHotels/ReSearchDateHotelDirective.js"></script>
+
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DetailHotelsInfo/DetailHotelsInfoCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DetailHotelsInfo/DetailHotelsInfoDirective.js"></script>
+
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/SetPassengerOfRoom/SetPassengerRoomCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/SetPassengerOfRoom/SetPassengerRoomDirective.js"></script>
+    <!-- //////////////////////// END SBS web Flight & Hotel Online Booking -->
+    <!-- SBS web faramework module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/WebFramework/webFrameworkModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/WebFramework/webFrameworkCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/WebFramework/webFrameworkDirective.js"></script>
+    <!-- SBS website module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/websiteModule.js"></script>
+    <!-- Extra SBS module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/extraSBSModule.js"></script>
+    <script src="/HaftAsemanView/SBS/ModalFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/datePickerDirective.js"></script>
+    <!-- SBS profile module -->
+    <!-- SBS web module -->
+    <script src="/HaftAsemanView/SBS/SBSApp/SBSWebModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/SBS-LinkAllModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/AuthenticationModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/AuthenticationServiceFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/SBS-WebRouteConfig.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaHomeServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaAboutServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaContactServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaTeamServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaDetailTeamServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaBlogServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaDetailBlogServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaNewsServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaDetailNewsServiceDirective.js"></script>
+    <!-- SBS web module -register and login section -->
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaLoginAuthenticationServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaRegisterServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaRegisterCompanyServiceDirective.js"></script>
+    <!-- SBS web module flight & hotel online booking section -->
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaDomesticFlightServiceDirective.js"></script>
+    <script src="HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaDomesticHotelServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaDetailHotelsServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseWebDirective/wwaSetPassengerRoomsServiceDirective.js"></script>
+
+</head>
+<body data-lang="fa" contextmenu="">
+    <section class="_w100">
+        <sbsweb-framework alt-title="آژانس هواپیمایی هفت آسمان آبی"
+                          src-url="/Image/SBS-Logo_web.png">
+        </sbsweb-framework>
+    </section>
+</body>
+</html>

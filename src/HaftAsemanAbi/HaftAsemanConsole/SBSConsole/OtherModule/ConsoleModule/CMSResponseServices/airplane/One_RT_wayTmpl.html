@@ -1,0 +1,673 @@
+﻿<section class="_flex _w100 base-res-s">
+    <div class="_flex _w90-pad5 base-title-content _dir-align-r">
+        <i class="sbs-ico-airplane _color2"></i>
+        <h1 class="_color2">درخواست بلیط هواپیما</h1>
+        <h1>پرواز داخلی</h1>
+        <h1>(تهران - اصفهان)</h1>
+    </div>
+    <section class="_flex _w100 base-body-s-c">
+        <section class="req-service-content _flex _w90-m5">
+            <div class="_flex _w100 body-req-s _dir-align-r">
+                <div class="_flex _w90-pad5 _bg1 title-req-s _position-r">
+                    <div class="_flex img-req-content">
+                        <i class="sbs-ico-user"></i>
+                    </div>
+                    <h1 class="user-n-f">محمد مهدی بهاری</h1>
+                    <div class="_flex type-user">
+                        <h1>نوع کاربر:</h1>
+                        <h1>شرکتی</h1>
+                    </div>
+                    <div class="_flex _b-ico _cursor _trans _bg-w _position-a" role="button" ng-click="closeUserInfo=!closeUserInfo">
+                        <i class="sbs-ico-chevron-small-down2 _flex"
+                           tooltips
+                           tooltip-template="نمایش"
+                           tooltip-side="bottom"
+                           tooltip-class="tt-w"
+                           tooltip-size="small" ng-if="closeUserInfo">
+                        </i>
+                        <i class="sbs-ico-chevron-small-up _flex"
+                           tooltips
+                           tooltip-template="عدم نمایش"
+                           tooltip-side="bottom"
+                           tooltip-class="tt-w"
+                           tooltip-size="small" ng-if="!closeUserInfo">
+                        </i>
+                    </div>
+                </div>
+                <div class="body-req-items _flex _w90-pad5" ng-hide="closeUserInfo">
+                    <div class="_flex _w50 _dir-align-r f-content">
+                        <div class="_flex _w100 split-item">
+                            <label class="_lbl _lbl-form _dir-align-r">نوع بلیط:</label>
+                            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.ticketType" ng-options="option.name for option in baseData.lstTicketType track by option.id">
+                                <option value="">انتخاب نوع بلیط</option>
+                            </select>
+                        </div>
+                        <div class="_flex _w100 split-item">
+                            <label class="_lbl _lbl-form _dir-align-r">نوع سفر:</label>
+                            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.journeyType" ng-options="option.name for option in baseData.lstJourneyType track by option.id">
+                                <option value="">انتخاب نوع سفر</option>
+                            </select>
+                        </div>
+                        <div class="_flex _w100 split-item">
+                            <label class="_lbl _lbl-form _dir-align-r">کلاس پروازی:</label>
+                            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.cabinClass" ng-options="option.name for option in baseData.lstCabinClass track by option.id">
+                                <option value="">انتخاب کلاس پروازی</option>
+                            </select>
+                        </div>
+                        <div class="_flex _w100 split-item">
+                            <label class="_lbl _lbl-form _dir-align-r">زمان ترجیهی:</label>
+                            <select class="_select _select-form _dir-align-r _trans" ng-model="newFlight.preferredTime" ng-options="option.name for option in baseData.lstPreferredTime track by option.id">
+                                <option value="">انتخاب زمان ترجیهی</option>
+                            </select>
+                        </div>
+                        <div class="_flex _w100 split-item">
+                            <label class="_lbl _lbl-form _dir-align-r">تعداد نفرات:</label>
+                            <input type="text" placeholder="تعداد" class="_txt-form _fnt-fa" ng-model="flightPackItem.cntCust" />
+                        </div>
+                    </div>
+                    <div class="_flex _w50 _dir-align-r l-content">
+                        <div class="_flex _w100 split-item">
+                            <label class="_lbl _lbl-form _dir-align-r">تاریخ رفت:</label>
+                            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpFrom" type="text" placeholder="تاریخ رفت" ng-model="newFlight.departingDate" persiandatepickers-from readonly />
+                        </div>
+                        <div class="_flex _w100 split-item">
+                            <label class="_lbl _lbl-form _dir-align-r">تاریخ برگشت:</label>
+                            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpTo" type="text" placeholder="تاریخ برگشت" ng-model="newFlight.returningDate" persiandatepickers-to readonly />
+                        </div>
+                        <div class="_flex _w100 split-item">
+                            <h1 class="note _dir-align-r" ng-class="{'blod-note':newFlight.selectedFlexibleDate,'red-note':!newFlight.selectedFlexibleDate}">تاریخ انتخابی قابل تغییر است</h1>
+                        </div>
+                        <div class="_flex _w100 split-item last-s-i">
+                            <label title="" class="_lbl form-lbl">ایرلاین های پیشنهادی:</label>
+                            <label title="" class="_lbl form-lbl _fnt-en _dir-align-l" ng-repeat="airlineItem in itemFlight.airlineList">[]</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="res-service-content _flex _w90-m5 _dir-align-r">
+            <div class="_flex _w100 split-res-content">
+                <div class="_flex _w90-pad5 title-r-res _dir-align-r">
+                    <label title="" class="_lbl form-lbl">پرواز رفت:</label>
+                    <div angucomplete-alt id="fNumberFrom_ac" placeholder="شماره پرواز رفت" maxlength="50" pause="100" selected-object="packageItem.PackageFlightNumber.from.objFlightNumber" local-data="lstFlightNumberFrom" search-fields="flightNumber" title-field="flightNumber" data-index="{{$index}}" minlength="1" input-class="form-control form-control-small _txt _txt-form _fnt-fa _txt-ac ch-txt" match-class="highlight">
+                    </div>
+                    <div class="_flex _b-ico _cursor _trans other-b-ico" role="button">
+                        <i class="sbs-ico-playlist_add _flex"
+                           tooltips
+                           tooltip-template="افزودن"
+                           tooltip-side="bottom"
+                           tooltip-class="tt-w"
+                           tooltip-size="small">
+                        </i>
+                    </div>
+                    <div class="_flex _b-ico _cursor _trans other-b-ico" role="button">
+                        <i class="sbs-ico-border_color _flex"
+                           tooltips
+                           tooltip-template="تکمیل اطلاعات"
+                           tooltip-side="bottom"
+                           tooltip-class="tt-w"
+                           tooltip-size="small">
+                        </i>
+                    </div>
+                </div>
+                <div class="_flex _w100 base-body-r-res">
+                    <ul class="_flex _w100">
+                        <li class="_flex _w100">
+                            <article class="_flex article-item-content _w100">
+                                <div class="_flex _w90-pad5 t-a-item">
+                                    <div class="_flex split-t-item">
+                                        <h1>ایران ایر</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1>شماره پرواز:</h1>
+                                        <h1>1231245</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1>first class</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1>زمان پرواز:</h1>
+                                        <h1 class="_bold">15:30</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1>زمان فرود:</h1>
+                                        <h1 class="_bold">18:45</h1>
+                                    </div>
+                                </div>
+                                <div class="_flex _w100 body-item-a _dir-align-r">
+                                    <div class="_flex r-item">
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ رفت:</h1>
+                                            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpFrom ch-dp" type="text" placeholder="تاریخ رفت" ng-model="newFlight.departingDate" persiandatepickers-from readonly />
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ برگشت:</h1>
+                                            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpTo ch-dp" type="text" placeholder="تاریخ برگشت" ng-model="newFlight.returningDate" persiandatepickers-to readonly />
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>اعتبار بلیط:</h1>
+                                            <h1 class="_bold">3 روز</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>کلاس پروازی</h1>
+                                            <h1 class="_bold">V</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>طول پرواز</h1>
+                                            <h1 class="_bold">8 ساعت</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تعداد توقف:</h1>
+                                            <h1 class="_bold">2</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>زمان / مکان توقف:</h1>
+                                            <h1 class="_bold">[لندن - 20 دقیقه]</h1>
+                                        </div>
+                                        <div class="_flex split-a-item _w100 ch-split-a-item">
+                                            <h1>تعداد نفرات:</h1>
+                                            <input type="text" placeholder="تعداد نفرات" class="_txt-form _fnt-fa" ng-model="flightPackItem.cntCust" />
+                                            <h1>قیمت:</h1>
+                                            <input type="text" placeholder="قیمت" class="_txt-form _fnt-fa" ng-model="flightPackItem.cntCust" />
+                                        </div>
+                                    </div>
+                                    <div class="_flex l-item">
+                                        <div class="_flex _w100 t-condition">
+                                            <h1>condition</h1>
+                                        </div>
+                                        <div class="_flex _w100 body-condition _dir-align-l">
+                                            <div class="_flex _w100 split-c-c">
+                                                <h1 class="_flex lbl-t _fnt-en">no show:</h1>
+                                                <h1 class="_flex _fnt-fa lbl-data">free</h1>
+                                            </div>
+                                            <div class="_flex _w100 split-c-c">
+                                                <h1 class="_flex lbl-t _fnt-en">cancle:</h1>
+                                                <h1 class="_flex _fnt-fa lbl-data">anytime 50$</h1>
+                                            </div>
+                                            <div class="_flex _w100 split-c-c">
+                                                <h1 class="_flex lbl-t _fnt-en">refound:</h1>
+                                                <h1 class="_flex _fnt-fa lbl-data">
+                                                    <i>before 50$</i>
+                                                    <i>after 100%</i>
+                                                </h1>
+                                            </div>
+                                            <div class="_flex _w100 split-c-c">
+                                                <h1 class="_flex lbl-t _fnt-en">baggage:</h1>
+                                                <h1 class="_flex _fnt-fa lbl-data">100 kg</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="_flex _w100">
+                            <article class="_flex article-item-content _w100">
+                                <div class="_flex _w90-pad5 t-a-item ch-t-a-item">
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">ایران ایر</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">شماره پرواز:</h1>
+                                        <h1 class="_color-w1">1231245</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">first class</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان پرواز:</h1>
+                                        <h1 class="_color-w1">15:30</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان فرود:</h1>
+                                        <h1 class="_color-w1">18:45</h1>
+                                    </div>
+                                </div>
+                                <div class="_flex _w100 body-item-a _dir-align-r">
+                                    <div class="_flex r-item">
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ رفت:</h1>
+                                            <h1 class="_bold">1395/4/12</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ برگشت:</h1>
+                                            <h1 class="_bold">1395/4/17</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>کلاس نرخی</h1>
+                                            <h1 class="_bold">V</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تعداد نفرات:</h1>
+                                            <h1 class="_bold">15 نفر</h1>
+                                        </div>
+                                        <div class="_flex split-a-item _w100 ch-split-a-item">
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت:</h1>
+                                                <h1 class="_bold">1,450,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت کودک:</h1>
+                                                <h1 class="_bold">850,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت نوزاد:</h1>
+                                                <h1 class="_bold">550,000 ریال</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="_flex _w100">
+                            <article class="_flex article-item-content _w100">
+                                <div class="_flex _w90-pad5 t-a-item ch-t-a-item">
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">ایران ایر</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">شماره پرواز:</h1>
+                                        <h1 class="_color-w1">1231245</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">first class</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان پرواز:</h1>
+                                        <h1 class="_color-w1">15:30</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان فرود:</h1>
+                                        <h1 class="_color-w1">18:45</h1>
+                                    </div>
+                                </div>
+                                <div class="_flex _w100 body-item-a _dir-align-r">
+                                    <div class="_flex r-item">
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ رفت:</h1>
+                                            <h1 class="_bold">1395/4/12</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ برگشت:</h1>
+                                            <h1 class="_bold">1395/4/17</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>کلاس نرخی</h1>
+                                            <h1 class="_bold">V</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تعداد نفرات:</h1>
+                                            <h1 class="_bold">15 نفر</h1>
+                                        </div>
+                                        <div class="_flex split-a-item _w100 ch-split-a-item">
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت:</h1>
+                                                <h1 class="_bold">1,450,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت کودک:</h1>
+                                                <h1 class="_bold">850,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت نوزاد:</h1>
+                                                <h1 class="_bold">550,000 ریال</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="_flex _w100">
+                            <article class="_flex article-item-content _w100">
+                                <div class="_flex _w90-pad5 t-a-item ch-t-a-item">
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">ایران ایر</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">شماره پرواز:</h1>
+                                        <h1 class="_color-w1">1231245</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">first class</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان پرواز:</h1>
+                                        <h1 class="_color-w1">15:30</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان فرود:</h1>
+                                        <h1 class="_color-w1">18:45</h1>
+                                    </div>
+                                </div>
+                                <div class="_flex _w100 body-item-a _dir-align-r">
+                                    <div class="_flex r-item">
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ رفت:</h1>
+                                            <h1 class="_bold">1395/4/12</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ برگشت:</h1>
+                                            <h1 class="_bold">1395/4/17</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>کلاس نرخی</h1>
+                                            <h1 class="_bold">V</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تعداد نفرات:</h1>
+                                            <h1 class="_bold">15 نفر</h1>
+                                        </div>
+                                        <div class="_flex split-a-item _w100 ch-split-a-item">
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت:</h1>
+                                                <h1 class="_bold">1,450,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت کودک:</h1>
+                                                <h1 class="_bold">850,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت نوزاد:</h1>
+                                                <h1 class="_bold">550,000 ریال</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="_flex _w100 split-res-content" ng-hide="false">
+                <div class="_flex _w90-pad5 title-r-res _dir-align-r">
+                    <label title="" class="_lbl form-lbl">پرواز برگشت:</label>
+                    <div angucomplete-alt id="fNumberFrom_ac" placeholder="شماره پرواز برگشت" maxlength="50" pause="100" selected-object="packageItem.PackageFlightNumber.from.objFlightNumber" local-data="lstFlightNumberFrom" search-fields="flightNumber" title-field="flightNumber" data-index="{{$index}}" minlength="1" input-class="form-control form-control-small _txt _txt-form _fnt-fa  _txt-ac ch-txt" match-class="highlight">
+                    </div>
+                    <div class="_flex _b-ico _cursor _trans other-b-ico" role="button">
+                        <i class="sbs-ico-playlist_add _flex"
+                           tooltips
+                           tooltip-template="افزودن"
+                           tooltip-side="bottom"
+                           tooltip-class="tt-w"
+                           tooltip-size="small">
+                        </i>
+                    </div>
+                    <div class="_flex _b-ico _cursor _trans other-b-ico" role="button">
+                        <i class="sbs-ico-border_color _flex"
+                           tooltips
+                           tooltip-template="تکمیل اطلاعات"
+                           tooltip-side="bottom"
+                           tooltip-class="tt-w"
+                           tooltip-size="small">
+                        </i>
+                    </div>
+                </div>
+                <div class="_flex _w100 base-body-r-res">
+                    <ul class="_flex _w100">
+                        <li class="_flex _w100">
+                            <article class="_flex article-item-content _w100">
+                                <div class="_flex _w90-pad5 t-a-item">
+                                    <div class="_flex split-t-item">
+                                        <h1>ایران ایر</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1>شماره پرواز:</h1>
+                                        <h1>1231245</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1>first class</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1>زمان پرواز:</h1>
+                                        <h1 class="_bold">15:30</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1>زمان فرود:</h1>
+                                        <h1 class="_bold">18:45</h1>
+                                    </div>
+                                </div>
+                                <div class="_flex _w100 body-item-a _dir-align-r">
+                                    <div class="_flex r-item">
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ رفت:</h1>
+                                            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpFrom ch-dp" type="text" placeholder="تاریخ رفت" ng-model="newFlight.departingDate" persiandatepickers-from readonly />
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ برگشت:</h1>
+                                            <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpTo ch-dp" type="text" placeholder="تاریخ برگشت" ng-model="newFlight.returningDate" persiandatepickers-to readonly />
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>اعتبار بلیط:</h1>
+                                            <h1 class="_bold">3 روز</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>کلاس پروازی</h1>
+                                            <h1 class="_bold">V</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>طول پرواز</h1>
+                                            <h1 class="_bold">8 ساعت</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تعداد توقف:</h1>
+                                            <h1 class="_bold">2</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>زمان / مکان توقف:</h1>
+                                            <h1 class="_bold">[لندن - 20 دقیقه]</h1>
+                                        </div>
+                                        <div class="_flex split-a-item _w100 ch-split-a-item">
+                                            <h1>تعداد نفرات:</h1>
+                                            <input type="text" placeholder="تعداد نفرات" class="_txt-form _fnt-fa" ng-model="flightPackItem.cntCust" />
+                                            <h1>قیمت:</h1>
+                                            <input type="text" placeholder="قیمت" class="_txt-form _fnt-fa" ng-model="flightPackItem.cntCust" />
+                                        </div>
+                                    </div>
+                                    <div class="_flex l-item">
+                                        <div class="_flex _w100 t-condition">
+                                            <h1>condition</h1>
+                                        </div>
+                                        <div class="_flex _w100 body-condition _dir-align-l">
+                                            <div class="_flex _w100 split-c-c">
+                                                <h1 class="_flex lbl-t _fnt-en">no show:</h1>
+                                                <h1 class="_flex _fnt-fa lbl-data">free</h1>
+                                            </div>
+                                            <div class="_flex _w100 split-c-c">
+                                                <h1 class="_flex lbl-t _fnt-en">cancle:</h1>
+                                                <h1 class="_flex _fnt-fa lbl-data">anytime 50$</h1>
+                                            </div>
+                                            <div class="_flex _w100 split-c-c">
+                                                <h1 class="_flex lbl-t _fnt-en">refound:</h1>
+                                                <h1 class="_flex _fnt-fa lbl-data">
+                                                    <i>before 50$</i>
+                                                    <i>after 100%</i>
+                                                </h1>
+                                            </div>
+                                            <div class="_flex _w100 split-c-c">
+                                                <h1 class="_flex lbl-t _fnt-en">baggage:</h1>
+                                                <h1 class="_flex _fnt-fa lbl-data">100 kg</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="_flex _w100">
+                            <article class="_flex article-item-content _w100">
+                                <div class="_flex _w90-pad5 t-a-item ch-t-a-item">
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">ایران ایر</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">شماره پرواز:</h1>
+                                        <h1 class="_color-w1">1231245</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">first class</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان پرواز:</h1>
+                                        <h1 class="_color-w1">15:30</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان فرود:</h1>
+                                        <h1 class="_color-w1">18:45</h1>
+                                    </div>
+                                </div>
+                                <div class="_flex _w100 body-item-a _dir-align-r">
+                                    <div class="_flex r-item">
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ رفت:</h1>
+                                            <h1 class="_bold">1395/4/12</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ برگشت:</h1>
+                                            <h1 class="_bold">1395/4/17</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>کلاس نرخی</h1>
+                                            <h1 class="_bold">V</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تعداد نفرات:</h1>
+                                            <h1 class="_bold">15 نفر</h1>
+                                        </div>
+                                        <div class="_flex split-a-item _w100 ch-split-a-item">
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت:</h1>
+                                                <h1 class="_bold">1,450,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت کودک:</h1>
+                                                <h1 class="_bold">850,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت نوزاد:</h1>
+                                                <h1 class="_bold">550,000 ریال</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="_flex _w100">
+                            <article class="_flex article-item-content _w100">
+                                <div class="_flex _w90-pad5 t-a-item ch-t-a-item">
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">ایران ایر</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">شماره پرواز:</h1>
+                                        <h1 class="_color-w1">1231245</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">first class</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان پرواز:</h1>
+                                        <h1 class="_color-w1">15:30</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان فرود:</h1>
+                                        <h1 class="_color-w1">18:45</h1>
+                                    </div>
+                                </div>
+                                <div class="_flex _w100 body-item-a _dir-align-r">
+                                    <div class="_flex r-item">
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ رفت:</h1>
+                                            <h1 class="_bold">1395/4/12</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ برگشت:</h1>
+                                            <h1 class="_bold">1395/4/17</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>کلاس نرخی</h1>
+                                            <h1 class="_bold">V</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تعداد نفرات:</h1>
+                                            <h1 class="_bold">15 نفر</h1>
+                                        </div>
+                                        <div class="_flex split-a-item _w100 ch-split-a-item">
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت:</h1>
+                                                <h1 class="_bold">1,450,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت کودک:</h1>
+                                                <h1 class="_bold">850,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت نوزاد:</h1>
+                                                <h1 class="_bold">550,000 ریال</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="_flex _w100">
+                            <article class="_flex article-item-content _w100">
+                                <div class="_flex _w90-pad5 t-a-item ch-t-a-item">
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">ایران ایر</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">شماره پرواز:</h1>
+                                        <h1 class="_color-w1">1231245</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">first class</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان پرواز:</h1>
+                                        <h1 class="_color-w1">15:30</h1>
+                                    </div>
+                                    <div class="_flex split-t-item">
+                                        <h1 class="_color-w1">زمان فرود:</h1>
+                                        <h1 class="_color-w1">18:45</h1>
+                                    </div>
+                                </div>
+                                <div class="_flex _w100 body-item-a _dir-align-r">
+                                    <div class="_flex r-item">
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ رفت:</h1>
+                                            <h1 class="_bold">1395/4/12</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تاریخ برگشت:</h1>
+                                            <h1 class="_bold">1395/4/17</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>کلاس نرخی</h1>
+                                            <h1 class="_bold">V</h1>
+                                        </div>
+                                        <div class="_flex split-a-item">
+                                            <h1>تعداد نفرات:</h1>
+                                            <h1 class="_bold">15 نفر</h1>
+                                        </div>
+                                        <div class="_flex split-a-item _w100 ch-split-a-item">
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت:</h1>
+                                                <h1 class="_bold">1,450,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت کودک:</h1>
+                                                <h1 class="_bold">850,000 ریال</h1>
+                                            </div>
+                                            <div class="_flex split-a-item inner-split-a-item">
+                                                <h1>قیمت نوزاد:</h1>
+                                                <h1 class="_bold">550,000 ریال</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

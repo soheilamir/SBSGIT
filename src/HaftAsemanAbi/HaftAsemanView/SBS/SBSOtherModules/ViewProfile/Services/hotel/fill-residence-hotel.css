@@ -1,0 +1,55 @@
+﻿.base-residence-h-c {
+    width: 550px;
+    height: 200px;
+    background: #FFF;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
+    flex-flow: column nowrap;
+}
+
+    .base-residence-h-c .t-r-h-c, .base-residence-h-c .footer-r-h-c {
+        flex-flow: row nowrap;
+        align-items: center;
+        flex: 0 1 auto;
+        height: 50px;
+    }
+
+    .base-residence-h-c .footer-r-h-c {
+        border-top: 1px solid #DDD;
+    }
+
+    .base-residence-h-c .t-r-h-c i {
+        margin-left: 10px;
+    }
+
+    .base-residence-h-c .t-r-h-c h1 {
+        font-size: 1.1em;
+    }
+
+    .base-residence-h-c .body-r-hc {
+        flex: 1 1 auto;
+    }
+
+.fill-item-cotnent {
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+    .fill-item-cotnent > input {
+        max-width: 90px;
+        margin-left: 5px;
+    }
+
+    .fill-item-cotnent > select {
+        max-width: 70px;
+        margin-left: 5px;
+    }
+
+    .fill-item-cotnent > label {
+        min-width: 80px;
+        margin-left: 5px;
+    }
+
+        .fill-item-cotnent > label:first-child {
+            min-width: 45px;
+        }

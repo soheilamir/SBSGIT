@@ -1,0 +1,29 @@
+﻿<section class="_flex _w95-pad25 base-co-org-content">
+    <div id="basicdiagram" personel-dep-org-diagram data-options="myOptions" data-on-highlight-changed="onMyHighlightChanged()" data-on-cursor-changed="onMyCursorChanged()" style="width: 100%; height: 680px;"></div>
+    <section class="_flex _w100 _h100 _position-f base-modal-org-content" ng-if="$root.ModalOrgContent">
+        <div class="_flex body-dep-org-content body-per-org-content">
+            <header class="_flex _w95-pad25 _dir-align-r h-content _bg2">
+                <i class="_color-w sbs-ico-window"></i>
+                <h1 class="_color-w">اطلاعات اعضا</h1>
+            </header>
+            <div class="_flex _w95-pad25 _h100 b-dep-c _dir-align-r">
+                <div class="_w100 _flex split-org-item _dir-align-r">
+                    <label class="_lbl _lbl-form _dir-align-r lbl-m">نام اعضا:</label>
+                    <input type="text" placeholder="نام اعضا" ng-model="personelOnDepOrg.Name" class="_txt-form _fnt-fa" />
+                </div>
+                <div class="_w100 _flex split-org-item _dir-align-r">
+                    <label class="_lbl _lbl-form _dir-align-r lbl-m">سمت فرد:</label>
+                    <input type="text" placeholder="سمت فرد" ng-model="personelOnDepOrg.Position" class="_txt-form _fnt-fa" readonly disabled="disabled" />
+                </div>
+            </div>
+            <footer class="_flex _w95-pad25 _dir-align-l f-content">
+                <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="CreatePersonelOnDepOrg(personelOnDepOrg);">
+                    <span class="_color-w">ایجاد</span>
+                </div>
+                <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="CloseSection();">
+                    <span class="_color-w">انصراف</span>
+                </div>
+            </footer>
+        </div>
+    </section>
+</section>

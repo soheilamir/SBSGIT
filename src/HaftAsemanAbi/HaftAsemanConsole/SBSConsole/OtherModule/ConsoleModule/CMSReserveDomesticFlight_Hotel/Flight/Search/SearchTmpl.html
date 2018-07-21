@@ -1,0 +1,48 @@
+﻿<section class="_flex _w90-p _h100 base-body-search-content">
+    <section class="_flex _w90-pad5 _dir-align-r t-search-content ch-t-search-content">
+        <h1 class="_color-60 _fnt-fa">برای گرفتن اطلاعات پروازهای داخلی، پارامترهای زیر را پر نمایید.</h1>
+    </section>
+    <section class="_flex _w90-pad5 base-search-content">
+        <div class="_flex _w100 s-c _dir-align-r _position-r">
+            <div class="_flex _dir-align-r dp-fa-en _position-a">
+                انتخاب نوع تقویم:
+                (
+                <span class="_flex _cursor _fnt-fa" ng-class="{'underline':dp._J.b}" ng-click="C_Jalali_Gregorian(dp._J);">تقویم شمسی</span>
+                -
+                <span class="_flex _cursor _fnt-fa" ng-class="{'underline':dp._G.b}" ng-click="C_Jalali_Gregorian(dp._G);">تقویم میلادی</span>
+                )
+            </div>
+            <div angucomplete-alt id="auto_c_From" placeholder="مبدا ( شهر یا فرودگاه)" maxlength="50" pause="100" selected-object="selectedSource" local-data="dataCitys" search-fields="CityName" title-field="CityName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+            </div>
+            <div angucomplete-alt id="auto_c_To" placeholder="مقصد ( شهر یا فرودگاه)" maxlength="50" pause="100" selected-object="selectedDestination" local-data="dataCitys" search-fields="CityName" title-field="CityName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+            </div>
+            <select class="_flex select-s _dir-align-r _trans" ng-model="searchFlight.JourneyType" ng-init="searchFlight.JourneyType={Id: '1', JourneyTypeName: 'رفت'}" ng-options="option.JourneyTypeName for option in baseData.lstJourneyType track by option.Id"></select>
+            <input class="_flex input-s _fnt-fa _trans dpFrom" type="text" placeholder="تاریخ رفت" ng-model="searchFlight.DepartingDate" persiandatepickers-from ng-show="searchFlight.JourneyType.Id==1 || searchFlight.JourneyType.Id==2" />
+            <input class="_flex input-s _fnt-fa _trans dpTo" type="text" placeholder="تاریخ برگشت" ng-model="searchFlight.ReturningDate" persiandatepickers-to ng-show="searchFlight.JourneyType.Id==2" />
+        </div>
+        <div class="_flex _w100 s-c _dir-align-r cmb-ch-s-c">
+            <select class="_flex select-s ch-select-s _dir-align-r _trans" ng-model="searchFlight.Adult" ng-options="option.Number for option in baseData.lstAdult track by option.Id">
+                <option value="">بزرگسال(12 به بالا)</option>
+            </select>
+            <select class="_flex select-s ch-select-s _dir-align-r _trans" ng-model="searchFlight.Child" ng-options="option.Number for option in baseData.lstChild track by option.Id">
+                <option value="">کودک(بین 2 تا 12)</option>
+            </select>
+            <select class="_flex select-s ch-select-s _dir-align-r _trans" ng-model="searchFlight.Infant" ng-options="option.Number for option in baseData.lstInfant track by option.Id">
+                <option value="">نوزاد(بین 0 تا 2)</option>
+            </select>
+            <select class="_flex select-s ch-select-s _dir-align-rr _trans" ng-model="searchFlight.DomesticAirline" ng-options="option.D_AirlineName for option in baseData.lstDomesticAirline track by option.Id">
+                <option value="">انتخاب ایرلاین</option>
+            </select>
+        </div>
+        <div class="_flex _w100 s-c _dir-align-r">
+            <input id="cboxMembershipCard" type="checkbox" class="regular-checkbox big-checkbox" ng-model="searchFlight.SelectedNonStop" />
+            <label for="cboxMembershipCard"></label>
+            <h1 class="note _dir-align-r" style="margin-right:5px;" ng-class="{'blod-note':searchFlight.SelectedNonStop}">پرواز بدون توقف</h1>
+        </div>
+        <div class="_flex _w100 s-c _dir-align-l s-c-bttn-content">
+            <div class="bttn-srch-f _flex _trans _cursor" ng-click="SearchInternalFlight(selectedSource.originalObject,selectedDestination.originalObject);" role="button" tabindex="0">
+                <span class="_fnt-fa _color-w">جستجوی پرواز</span>
+            </div>
+        </div>
+    </section>
+</section>

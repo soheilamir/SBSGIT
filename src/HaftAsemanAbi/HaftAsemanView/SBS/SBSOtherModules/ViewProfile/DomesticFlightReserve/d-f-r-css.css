@@ -1,0 +1,150 @@
+﻿.ch-body-all-services-container {
+    flex-flow: row nowrap !important;
+    padding-top: 0 !important;
+}
+
+.base-all-info-flight-content {
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+}
+
+    .base-all-info-flight-content .inner-b-a-i-f {
+        flex-flow: row wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+        .base-all-info-flight-content .inner-b-a-i-f .body-base-info {
+            margin-bottom: 15px;
+            margin-top: 20px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+            .base-all-info-flight-content .inner-b-a-i-f .body-base-info .inner-body-info-flight-content {
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+.item-info-f {
+    min-width: 90px;
+    margin: 0 8px;
+    padding: 0 8px;
+    color: #F1F1F1;
+}
+
+.base-info-flight {
+    flex: 0 1 auto;
+    width: 250px;
+    background: #FFF;
+    min-width: 250px;
+    max-width: 250px;
+    border-left: 1px solid #CCC;
+}
+
+    .base-info-flight > ul {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+        .base-info-flight > ul li {
+            flex-flow: row wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+            .base-info-flight > ul li:first-child {
+                margin-bottom: 30px;
+            }
+
+            .base-info-flight > ul li > h1 {
+                padding: 5px 5%;
+                margin-bottom: 8px;
+                border-bottom: 1px solid #CCC;
+                background: #E1E1E1;
+            }
+
+            .base-info-flight > ul li:last-child > h1 {
+                border-top: 1px solid #CCC;
+            }
+
+            .base-info-flight > ul li .item-f-content {
+                flex-flow: column wrap;
+            }
+
+                .base-info-flight > ul li .item-f-content div:first-child {
+                    flex-flow: row nowrap;
+                    margin-bottom: 10px;
+                }
+
+                .base-info-flight > ul li .item-f-content div:last-child {
+                    flex-flow: column nowrap;
+                }
+
+                .base-info-flight > ul li .item-f-content div:first-child > img {
+                    width: 50px;
+                    min-width: 50px;
+                    height: auto;
+                    flex: 0 1 auto;
+                    margin-left: 10px;
+                }
+
+                .base-info-flight > ul li .item-f-content div:first-child aside {
+                    flex: 1 1 auto;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .base-info-flight > ul li .item-f-content i {
+                    font-size: 0.95em;
+                    color: #505050;
+                }
+/* full info flight page content */
+.head-pre-req-f {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.body-info-f {
+    flex-flow: row wrap;
+    box-shadow: 1px 0 0 0 #CCC,-1px 0 0 0 #CCC;
+}
+
+    .body-info-f .base-b-d-f, .body-info-f .base-b-r-f {
+        flex-flow: row wrap;
+    }
+
+        .body-info-f .base-b-d-f > h1, .body-info-f .base-b-r-f > h1 {
+            padding: 8px 0;
+            color: #606060;
+            font-size: 1.1em;
+        }
+
+        .body-info-f .base-b-r-f > h1 {
+            border-top: 1px solid #CCC;
+        }
+
+.s-i-c {
+    flex-flow: row nowrap;
+}
+
+.footer-total-price-f {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    flex-flow: row nowrap;
+}
+/* full info flight page content */
+.other-css {
+    flex-flow: row nowrap !important;
+}
+
+    .other-css li {
+        margin: 5px !important;
+    }
+
+        .other-css li:last-child > h1 {
+            border-top: none !important;
+        }

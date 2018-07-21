@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>پروفایل شرکتی ها - آژانس هواپیمایی هفت آسمان آبی</title>
+    <meta charset="utf-8" />
+    <link href="/style/master.css" rel="stylesheet" />
+    <link href="/style/sbs-profile-tmpl-css.css" rel="stylesheet" />
+    <link href="/style/angular-material.css" rel="stylesheet" />
+    <link href="/style/autocomplete/angucomplete-alt.css" rel="stylesheet" />
+    <link href="/style/datepicker/persian-datepicker.css" rel="stylesheet" />
+    <link href="/style/ngProgress/ngProgress.css" rel="stylesheet" />
+    <link href="/style/UIGrid/ui-grid.css" rel="stylesheet" />
+    <link href="/style/jquery-ui-1.10.2.custom.css" rel="stylesheet" />
+    <link href="/style/primitives/primitives.latest.css" rel="stylesheet" media="screen" type="text/css" />
+    <!-- css tmpl content -->
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/ProfileCompanyFramework/p-fw-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/ProfileCompanyMenu/profile-menu-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyProfile/company-profile-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/all-s-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/airplane/FillFlight/fill-flight-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/airplane/FlightPackage/f-p-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/FillHotel/f-h-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/HotelPackage/h-p-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/fill-residence-hotel.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/RunningServices/run-s-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticFlightReserve/d-f-r-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyAcception/user-co-acception-css.css" rel="stylesheet" />
+    <!--<link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyEmployee/co-employee-css.css" rel="stylesheet" />-->
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyOrgChart/co-org-chart-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSApp/FileManagerConfig/ui-fm-content.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryAllServices/history-sbs-services-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/base-container-page.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyCredit/co-credit-css.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyPaymentReq/u-co-pay-req.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompany_DetailFlightOrder/u-co-dfo.css" rel="stylesheet" />
+    <link href="/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/HotelBookingService/DomesticHotels/dh-b-s-c.css" rel="stylesheet" />
+
+    <!-- base Js -->
+    <script src="/scripts/jquery-2.1.4.js"></script>
+    <script src="/scripts/jquery-ui-1.10.2.custom.js"></script>
+    <script src="/scripts/datepicker/persian-datepicker.js"></script>
+    <script src="/scripts/angular.min.js"></script>
+    <script src="/scripts/angular-animate.min.js"></script>
+    <script src="/scripts/angular-route.min.js"></script>
+    <script src="/scripts/angular-aria.min.js"></script>
+    <script src="/scripts/angular-material.js"></script>
+    <script src="/scripts/UIGrid/ui-grid.min.js"></script>
+    <script src="/scripts/angular-local-storage.min.js"></script>
+    <script src="/scripts/ngProgress/ngprogress.min.js"></script>
+    <script src="/scripts/accounting.min.js"></script>
+    <script src="/scripts/autocomplete/angucomplete-alt.js"></script>
+    <script src="/scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/scripts/fileupload/ng-file-upload.min.js"></script>
+    <script src="/scripts/fileupload/ng-file-upload-shim.min.js"></script>
+    <script src="/scripts/primitives/primitives.latest.js"></script>
+    <script src="/signalr/hubs"></script>
+    <!-- menu module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/ProfileCompanyMenu/menuProfileCompanyModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/ProfileCompanyMenu/menuProfileCompanyCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/ProfileCompanyMenu/menuProfileCompanyDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/ProfileCompanyMenu/detailMenuCompanyDirective.js"></script>
+    <!-- all page use profile section ////////////////////////////////////////// -->
+    <!--home page -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyProfile/companyProfileModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyProfile/companyProfileCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyProfile/companyProfileDirective.js"></script>
+    <!--user acception page -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyAcception/userCoAcceptionModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyAcception/userCoAcceptionCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyAcception/userCoAcceptionDirective.js"></script>
+    <!--company Organization Chart page -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyOrgChart/coOrgChartModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyOrgChart/coOrgChartFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyOrgChart/coOrgChartCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyOrgChart/coOrgChartDirective.js"></script>
+
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyOrgChart/addPersonelCoOrgChartModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyOrgChart/addPersonelCoOrgChartCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyOrgChart/addPersonelCoOrgChartDirective.js"></script>
+    <!--upload file page -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UploadFileService/uploadFileServiceMadule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UploadFileService/uploadFileServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UploadFileService/uploadFileServiceDirective.js"></script>
+    <!--change Info co page -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyInfo/coInfoModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyInfo/coInfoCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyInfo/coInfoDirective.js"></script>
+    <!--History of SBS Services page -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryAllServices/historyAllServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryAllServices/historyAllServicesCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryAllServices/historyAllServicesDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryAllServices/ShowDetailHistoryOfServicesDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryAllServices/Gen_Tr_F_Directive.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryAllServices/Gen_Tr_H_Directive.js"></script>
+    <!--History of SBS online flight booking page -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryOfOnlineFlightBooking/historyOnlineFlightBookingModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryOfOnlineFlightBooking/historyOnlineFlightBookingCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/HistoryOfOnlineFlightBooking/historyOnlineFlightBookingDirective.js"></script>
+    <!--Company Credit page -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyCredit/coCreditModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyCredit/coCreditCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/CompanyCredit/coCreditDirective.js"></script>
+    <!-- /////////////// all services sbs //////////////// -->
+    <!-- ////// -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/servicesModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/servicesFactory.js"></script>
+    <!-- /// airplane /// -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/airplane/airplaneServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/airplane/airplaneServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/airplane/airplaneServiceFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/airplane/airplaneServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/airplane/FillFlight/fillFlightDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/airplane/FlightPackage/flightPackageDirective.js"></script>
+    <!-- /// hotel /// -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/hotelServiceModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/hotelServiceCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/hotelServiceFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/hotelServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/FillHotel/fillHotelDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/HotelPackage/hotelPackageDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/hotel/modalFillResidenceHotelDirective.js"></script>
+    <!-- /// all running services /// -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/RunningServices/runningServicesModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/RunningServices/runningServicesCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/RunningServices/runningServicesDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/RunningServices/ServiceTmpl/flightDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/Services/RunningServices/ServiceTmpl/hotelDirective.js"></script>
+    <!-- end all page use profile section ////////////////////////////////////////// -->
+    <!-- ////////////////////// sbs Domestic flight reserve && Hotel reserve  //////////////////// -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticFlightReserve/domesticFlightReserveModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticFlightReserve/domesticFlightReserveFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticFlightReserve/domesticFlightReserveCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticFlightReserve/domesticFlightReserveDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticFlightReserve/baseInfoFlightDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticFlightReserve/flightContentDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticFlightReserve/fullInfoFlightDirective.js"></script>
+    <!-- req peyment module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyPaymentReq/userCompanyPaymentReqModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyPaymentReq/userCompanyPaymentReqCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompanyPaymentReq/userCompanyPaymentReqDirective.js"></script>
+    <!-- detail order module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompany_DetailFlightOrder/userCompanyDFOModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompany_DetailFlightOrder/userCompanyDFOCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/UserCompany_DetailFlightOrder/userCompanyDFODirective.js"></script>
+
+    <!-- Hotel article item module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticHotelReserve/DomesticHotelReserveModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticHotelReserve/ArticleHotelInfo/ArticleHotelInfoModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticHotelReserve/ArticleHotelInfo/ArticleHotelInfoCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/DomesticHotelReserve/ArticleHotelInfo/ArticleHotelInfoDirective.js"></script>
+
+    <!-- ////////////////////// end sbs Domestic flight reserve && Hotel reserve //////////////////// -->
+    <!-- framework module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/ProfileCompanyFramework/profileCompanyFrameworkModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/ProfileCompanyFramework/profileCompanyFrameworkCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/ProfileCompanyFramework/profileCompanyFrameworkDirective.js"></script>
+    <!-- file manager module -->
+    <script src="/HaftAsemanView/SBS/SBSApp/FileManagerConfig/FileManagerModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/FileManagerConfig/FileManagerFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/FileManagerConfig/FileManagerCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/FileManagerConfig/FileManagerDirective.js"></script>
+    <!-- companyprofile module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/companyProfileModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/MultiUseModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/multiUseFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/PassengerContent/passengerFlightCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/RegisterContent/RegisterUserCoCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/AllPrintContent/PrintCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/PassengerContent/PassengerDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/RegisterContent/RegisterUserCompanyDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/RegisterContent/UnRegisterUserCopmanyDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/AllPrintContent/flight/flightTicketPrintDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/AllPrintContent/hotel/hotelVoucherPrintDirective.js"></script>
+
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/CheckoutInfoTicket/CheckoutInfoTicketCtrl.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/ViewProfile/MultiUseContent/CheckoutInfoTicket/CheckoutInfoTicketDirective.js"></script>
+
+    <!-- Extra SBS module -->
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/extraSBSModule.js"></script>
+    <script src="/HaftAsemanView/SBS/ModalFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSOtherModules/datePickerDirective.js"></script>
+    <!-- base Copmany profile module -->
+    <script src="/HaftAsemanView/SBS/SBSApp/SBSProfileCompanyModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/SBS-LinkAllModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/AuthenticationModule.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/AuthenticationServiceFactory.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/SBS-ProfileCompanyRouteConfig.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/SBS-Link-User-Company-RouteConfig.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaCompanyProfilePageServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaUserAcceptionCompanyServiceDirective.js"></script>
+    <!--<script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaCompanyEmployeeServiceDirective.js"></script>-->
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaCompanyOrgChartServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaAddCompanyPersonelOrgChartServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaAirplaneServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaSBSRunningServicesDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaHotelServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaDomesticFlightReserveDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaSbsUploadFileServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaCompanyInfoServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaSbsSerachHistoryServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaSbsDetailHistoryServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaSbsFlightTicketPrintServicesDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaSbsHotelVoucherPrintServicesDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaSbsBookingOnlineHistoryServicesDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaCheckoutTicketServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaCoCreditServiceDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaSbsReqPeymentServicesDirective.js"></script>
+    <script src="/HaftAsemanView/SBS/SBSApp/BaseProfileDirective/wwaSbsDetailFlightOrderServicesDirective.js"></script>
+</head>
+<body data-lang="fa" contextmenu="">
+    <section class="_w100">
+        <sbs-profile-company-framework alt-title="آژانس هواپیمایی هفت آسمان آبی"
+                                       src-url="/Image/SBS-Logo_web.png">
+            <company-profile-menu>
+                <detail-menu-items></detail-menu-items>
+            </company-profile-menu>
+        </sbs-profile-company-framework>
+    </section>
+</body>
+</html>

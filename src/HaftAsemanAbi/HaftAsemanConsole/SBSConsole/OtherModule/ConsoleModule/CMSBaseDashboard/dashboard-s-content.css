@@ -1,0 +1,25 @@
+﻿.base-dashboard-content {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+    .base-dashboard-content > figure {
+        padding: 10px;
+        background: #CCC;
+        border-radius: 100% 100% 100% 100%;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 130px;
+        margin-bottom: 10px;
+    }
+
+        .base-dashboard-content > figure > img {
+            width: 120px;
+            height: auto;
+        }
+
+    .base-dashboard-content > h1 {
+        font-size: 1.5em;
+    }

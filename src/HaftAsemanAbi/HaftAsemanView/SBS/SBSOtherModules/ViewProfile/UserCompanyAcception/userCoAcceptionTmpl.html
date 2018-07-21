@@ -1,0 +1,25 @@
+﻿<section class="_flex _w100 base-all-user-co-content">
+    <section class="_w90-pad5 user-c top-user-c _flex _dir-align-r">
+        <div class="_flex _w100 top-content-user">
+            <h1 class="_color2">لیست مشخصات افراد غیر عضو</h1>
+            <div class="_flex search-user-c">
+                <label class="_flex" title="کد عضویت">کد عضویت:</label>
+                <input class="_txt _txt-form _fnt-fa _dir-align-r" placeholder="کد عضویت" ng-model="user.RegisterCode" maxlength="10" type="text" />
+                <div class="bttn-searching _flex _trans _bg2 _cursor" role="button" ng-click="">
+                    <span class="_fnt>fa _color-w">جستجو</span>
+                </div>
+            </div>
+        </div>
+        <un-reg-user-co un-accept-lst="unAcceptUserList" is-co="IsCo"></un-reg-user-co>
+    </section>
+    <section class="_w90-pad5 user-c _flex _dir-align-r">
+        <div class="_flex _w100 top-content-user">
+            <h1 class="_color2">لیست اعضا</h1>
+            <div class="_flex search-user-c">
+                <label class="_flex" title="فیلتر اعضا">فیلتر اعضا:</label>
+                <input class="_txt _txt-form _fnt-fa _dir-align-r" placeholder="نام اعضا را وارد نمایید" ng-model="user.FullName" type="text" />
+            </div>
+        </div>
+        <reg-user-co show-bottom="showBottom" is-modal="IsModal" accepted-lst="acceptedUserList" is-co="IsCo"></reg-user-co>
+    </section>
+</section>

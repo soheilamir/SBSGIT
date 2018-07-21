@@ -1,0 +1,55 @@
+﻿<section class="_w100 base-filter-content _dir-align-r">
+    <section class="_w100 _flex filter-content _dir-align-r" ng-class="{'ch-filter-content':!yContent}">
+        <section class="base-s-c _flex" ng-class="{'_w40-m5':yContent,'_w100':!yContent}">
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">نام ایرلاین:</label>
+                <div angucomplete-alt id="auto_c_Airlines" placeholder="نام ایرلاین ها به لاتین" maxlength="50" pause="100" selected-object="selectedAirline" local-data="airlineList" search-fields="Name" title-field="Name" minlength="1" input-class="form-control form-control-small _txt _txt-form _fnt-fa _txt-ac" match-class="highlight">
+                </div>
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">کلاس پروازی:</label>
+                <select class="_select _select-form _dir-align-r _trans" ng-model="FlightClassItem" ng-options="option.FlightClassName for option in airClsS track by option.Id">
+                    <option value="">انتخاب کلاس پروازی</option>
+                </select>
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">زیر کلاس پروازی:</label>
+                <select class="_select _select-form _dir-align-r _trans" ng-model="airClsPathModel.AirlineSubClassesItem" ng-options="option.AirlineSubClassName for option in airSubClsS track by option.Id">
+                    <option value="">انتخاب زیر کلاس پروازی</option>
+                </select>
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">مسیر پروازی:</label>
+                <div angucomplete-alt id="auto_c_FlightPath" placeholder="مثال: تهران-شیراز" maxlength="50" pause="100" selected-object="selectedFlightPath" local-data="airFlightPathS" search-fields="Name" title-field="Name" minlength="1" input-class="form-control form-control-small _txt _txt-form _fnt-fa _txt-ac" match-class="highlight">
+                </div>
+            </div>
+            <div class="_w100 _flex split-i-c" style="border-top:1px solid #CCC;padding-top:20px;margin-top:12px">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">ورود اطلاعات قیمت های بزرگسال، کودک، نوزاد در هر مسیر پروازی</label>
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">قیمت بزرگسال:</label>
+                <input type="text" placeholder="نام کلاس پروازی" class="_txt-form _fnt-fa" ng-model="airClsPathModel.FlightClassName" />
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">قیمت کودک:</label>
+                <input type="text" placeholder="نام کلاس پروازی" class="_txt-form _fnt-fa" ng-model="airClsPathModel.FlightClassName" />
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">قیمت نوزاد:</label>
+                <input type="text" placeholder="قیمت نوزاد" class="_txt-form _fnt-fa" ng-model="airClsPathModel.FlightClassName" />
+            </div>
+            <div class="_w100 _flex split-i-c" style="border-top:1px solid #CCC;padding-top:20px;margin-top:12px">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">ورود اطلاعات جریمه ها در هر مسیر پروازی</label>
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">نوع:</label>
+                <select class="_select _select-form _dir-align-r _trans" ng-model="airClsPathModel.AirlineSubClassesItem" ng-options="option.AirlineSubClassName for option in flightConditionS track by option.Id">
+                    <option value="">Condition Type</option>
+                </select>
+            </div>
+        </section>
+        <section class="base-s-c _flex" ng-class="{'_w40-m5':yContent,'_w100':!yContent}">
+            
+        </section>
+    </section>
+</section>

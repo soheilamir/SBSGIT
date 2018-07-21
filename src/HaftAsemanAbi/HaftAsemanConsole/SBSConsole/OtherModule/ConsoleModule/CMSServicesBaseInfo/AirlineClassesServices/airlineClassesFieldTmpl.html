@@ -1,0 +1,16 @@
+﻿<section class="_w100 base-filter-content _dir-align-r">
+    <section class="_w100 _flex filter-content _dir-align-r" ng-class="{'ch-filter-content':!yContent}">
+        <section class="base-s-c _flex" ng-class="{'_w40-m5':yContent,'_w100':!yContent}">
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">نام ایرلاین:</label>
+                <div angucomplete-alt id="auto_c_Airlines" placeholder="نام ایرلاین ها به لاتین" maxlength="50" pause="100" selected-object="selectedAirline" local-data="airlineList" search-fields="Name" title-field="Name" minlength="1" input-class="form-control form-control-small _txt _txt-form _fnt-fa _txt-ac" match-class="highlight">
+                </div>
+            </div>
+            <div class="_w100 _flex split-i-c">
+                <label class="_lbl _lbl-form _dir-align-r lbl-l">نام کلاس پروازی:</label>
+                <input type="text" placeholder="نام کلاس پروازی" class="_txt-form _fnt-fa" ng-model="airlineClassesModel.FlightClassName" />
+            </div>
+        </section>
+        <section class="base-s-c _flex" ng-class="{'_w40-m5':yContent,'_w100':!yContent}"></section>
+    </section>
+</section>

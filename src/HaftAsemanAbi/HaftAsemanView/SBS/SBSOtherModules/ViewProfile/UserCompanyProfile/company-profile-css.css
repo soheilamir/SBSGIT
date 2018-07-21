@@ -1,0 +1,268 @@
+﻿.base-co-profile-content {
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.show-user-img-content, .body-user-info-content {
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.show-user-img-content {
+    width: 80%;
+    margin: 0 10%;
+    padding: 0;
+    margin-top: 50px;
+}
+
+    .show-user-img-content .img-logo-co {
+        width: 120px;
+        height: 120px;
+        border-radius: 100% 100% 100% 100%;
+        align-items: center;
+        justify-content: center;
+        background: #FFF;
+        border: 1px solid #C1C1C1;
+        overflow: hidden;
+    }
+
+        .show-user-img-content .img-logo-co > i {
+            font-size: 8em;
+            margin-top: 30px;
+            color: #CCC;
+        }
+
+.other-b-ico {
+    padding: 5px 8px;
+    bottom: 0;
+    left: 0;
+    background: #FFF;
+    border: 1px solid #CCC;
+}
+
+.bbb-content {
+    right: 0;
+    bottom: 0;
+}
+
+.fast-menu-content {
+    padding: 10px 8px;
+    margin: 0 5px;
+    background: #FFF;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid rgba(0,0,0,0);
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+}
+
+    .fast-menu-content > i {
+        font-size: 1.5em;
+    }
+
+    .fast-menu-content > a {
+        font-size: 1em;
+        margin-right: 8px;
+    }
+
+    .fast-menu-content:hover {
+        border: 1px solid #6c1b78;
+        background: #6c1b78;
+    }
+
+        .fast-menu-content:hover i, .fast-menu-content:hover a {
+            color: #FFF;
+        }
+
+.body-user-info-content, .base-last-news-content {
+    width: 85%;
+    margin: 0 7.5%;
+    padding: 12px 0;
+    background: #FFF;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.1);
+    margin-top: 30px;
+    margin-bottom: 0;
+    border: 1px solid #D1D1D1;
+    flex-flow: row wrap;
+}
+
+.base-last-news-content {
+    margin-bottom: 35px;
+    flex-flow: row wrap;
+}
+
+.arrow-onTop {
+    top: -20px;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+    .arrow-onTop .back {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #D1D1D1;
+    }
+
+        .arrow-onTop .back .on {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #FFF;
+            z-index: 5;
+            left: -20px;
+            top: 2px;
+        }
+
+.sec-r-co-item, .sec-l-co-item {
+    flex-flow: row wrap;
+    width: 45%;
+    margin: 0 2.5%;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+/* item css content */
+.intro-items {
+    margin-bottom: 3px;
+    align-items: center;
+    vertical-align: central;
+}
+
+    .intro-items * {
+        margin-left: 5px;
+        font-size: 0.85em;
+        color: #707070;
+    }
+
+.content-intro-pu {
+    flex-flow: column nowrap;
+    margin: 0 0;
+    padding: 8px 0;
+    border-radius: 2px;
+    background: #FFF;
+}
+
+    .content-intro-pu .t-intro-pu {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        padding: 0 2.5%;
+    }
+
+        .content-intro-pu .t-intro-pu.ch-t-intro-pu {
+            background: #F1F1F1;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .content-intro-pu .t-intro-pu .l-t {
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+            .content-intro-pu .t-intro-pu .l-t > b {
+                color: #505050;
+                font-size: 0.95em;
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+
+            .content-intro-pu .t-intro-pu .l-t > i {
+                margin-left: 8px;
+            }
+
+            .content-intro-pu .t-intro-pu .l-t > .q-ico {
+                color: #1ab1f2;
+            }
+
+            .content-intro-pu .t-intro-pu .l-t > .intro-pu {
+                color: #4267b2;
+            }
+
+            .content-intro-pu .t-intro-pu .l-t > .img-pu {
+                color: #7bad50;
+            }
+
+            .content-intro-pu .t-intro-pu .l-t > .fav-pu {
+                color: #feba02;
+            }
+
+    .content-intro-pu .desc-pu-items-content, .content-intro-pu .detail-user-item {
+        flex-flow: column nowrap;
+        border-top: 1px solid #DDD;
+        padding: 5px 2.5%;
+        width: 95%;
+    }
+
+    .content-intro-pu .detail-user-item {
+        flex-flow: row wrap;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+.info-user-item {
+    width: 21%;
+    margin: 4px 1.5%;
+    border: 1px solid #DDD;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+    height: 90px;
+}
+
+    .info-user-item .fig-user {
+        height: 90px;
+        overflow: hidden;
+    }
+
+        .info-user-item .fig-user .arrow-accepted-user {
+            width: 0;
+            height: 0;
+            border-top: 30px solid rgba(123, 173, 80, 0.85);
+            border-right: 30px solid transparent;
+            top: 0;
+            left: 0;
+        }
+
+.credit-co-content {
+    flex-flow: row wrap;
+    padding: 5px 0;
+}
+
+    .credit-co-content .split-c-co {
+        margin-bottom: 8px;
+        flex-flow: row nowrap;
+    }
+
+        .credit-co-content .split-c-co > span, .credit-co-content .split-c-co > h3 {
+            font-size: 1.2em;
+            margin-left: 10px;
+        }
+
+        .credit-co-content .split-c-co > h3 {
+            color: #ffca56;
+        }
+
+.base-last-news-content .title-l-n-co {
+    padding: 8px 5%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(108, 27, 120, 0.3);
+    color: #6c1b78;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.show-count-user-reg {
+    border-radius: 10px 10px 10px 10px;
+    margin: 0 8px;
+    padding: 0 10px;
+}
+
+.a-link-content {
+    border: 1px solid rgba(0,0,0,0);
+}

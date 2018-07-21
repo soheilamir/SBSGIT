@@ -1,0 +1,97 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using NHibernate;
+using SBSWebProject.Data.Entities;
+using SBSWebProject.Data.Exceptions;
+using SBSWebProject.Data.QueryProcessors;
+using PropertyValueMapType = System.Collections.Generic.Dictionary<string, object>;
+
+namespace SBSWebProject.Data.SqlServer.QueryProcessors
+{
+    public class UpdateTaskQueryProcessor : IUpdateTaskQueryProcessor
+    {
+        private readonly ISession _session;
+        public UpdateTaskQueryProcessor(ISession session)
+        {
+            _session = session;
+        }
+        public Tasks GetUpdatedTask(long taskId, PropertyValueMapType updatedPropertyValueMap)
+        {
+            var task = GetValidTask(taskId);
+            var propertyInfos = typeof(Tasks).GetProperties();
+            foreach (var propertyValuePair in updatedPropertyValueMap)
+            {
+                propertyInfos.Single(x => x.Name == propertyValuePair.Key).SetValue(task, propertyValuePair.Value);
+            }
+            _session.SaveOrUpdate(task);
+            return task;
+        }
+        public Tasks ReplaceTaskUsers(long taskId, IEnumerable<long> userIds)
+        {
+            var task = GetValidTask(taskId);
+            UpdateTaskUsers(task, userIds, false);
+            _session.SaveOrUpdate(task);
+            return task;
+        }
+        public Tasks DeleteTaskUsers(long taskId)
+        {
+            var task = GetValidTask(taskId);
+            UpdateTaskUsers(task, null, false);
+            _session.SaveOrUpdate(task);
+            return task;
+        }
+        public Tasks AddTaskUser(long taskId, long userId)
+        {
+            var task = GetValidTask(taskId);
+            UpdateTaskUsers(task, new[] { userId }, true);
+            _session.SaveOrUpdate(task);
+            return task;
+        }
+        public Tasks DeleteTaskUser(long taskId, long userId)
+        {
+            var task = GetValidTask(taskId);
+            var user = task.Users.FirstOrDefault(x => x.UserId == userId);
+            if (user != null)
+            {
+                task.Users.Remove(user);
+                _session.SaveOrUpdate(task);
+            }
+            return task;
+        }
+        public virtual Tasks GetValidTask(long taskId)
+        {
+            var task = _session.Get<Tasks>(taskId);
+            if (task == null)
+            {
+                throw new RootObjectNotFoundException("Task not found");
+            }
+            return task;
+        }
+        public virtual User GetValidUser(long userId)
+        {
+            var user = _session.Get<User>(userId);
+            if (user == null)
+            {
+                throw new ChildObjectNotFoundException("User not found");
+            }
+            return user;
+        }
+        public virtual void UpdateTaskUsers(Tasks task, IEnumerable<long> userIds, bool appendToExisting)
+        {
+            if (!appendToExisting)
+            {
+                task.Users.Clear();
+            }
+            if (userIds != null)
+            {
+                foreach (var user in userIds.Select(GetValidUser))
+                {
+                    if (!task.Users.Contains(user))
+                    {
+                        task.Users.Add(user);
+                    }
+                }
+            }
+        }
+    }
+}

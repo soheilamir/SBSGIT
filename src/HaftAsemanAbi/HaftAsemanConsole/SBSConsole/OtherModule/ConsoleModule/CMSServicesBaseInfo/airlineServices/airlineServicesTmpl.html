@@ -1,0 +1,60 @@
+﻿<section class="_flex _w100 _h100 base-body-container _position-r">
+    <section class="_flex body-data-content _h100 _dir-align-r _bg-w1" over>
+        <section class="_w100 base-filter-content _dir-align-r">
+            <section class="_w100 _flex filter-content _dir-align-r">
+                <section class="_w40-m5 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">کشور:</label>
+                        <div angucomplete-alt id="auto_c_Country" placeholder="نام کشور به لاتین" maxlength="50" pause="100" selected-object="selectedSource" local-data="dataCountryS" search-fields="CountryName" title-field="CountryName" minlength="1" input-class="form-control form-control-small _txt _txt-form _fnt-fa _txt-ac" match-class="highlight">
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">نام ایرلاین:</label>
+                        <input type="text" placeholder="نام ایرلاین" class="_txt-form _fnt-fa" ng-model="Airline.Name" />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">وضعیت پرواز:</label>
+                        <input type="text" placeholder="وضعیت پرواز" class="_txt-form _fnt-fa" ng-model="Airline.FlightStateCode" />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">نوع:</label>
+                        <input type="text" placeholder="نوع" class="_txt-form _fnt-fa" ng-model="Airline.Type" />
+                    </div>
+                </section>
+                <section class="_w40-m5 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-m">IATA Code:</label>
+                        <input type="text" placeholder="IATA Code" class="_txt-form _fnt-en _dir-align-l" ng-model="Airline.IataCode" />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-m">IACA Code:</label>
+                        <input type="text" placeholder="IACA Code" class="_txt-form _fnt-en _dir-align-l" ng-model="Airline.IacoCode" />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <input id="cboxChangableDate" type="checkbox" class="regular-checkbox big-checkbox" ng-model="Airline.Include" />
+                        <label for="cboxChangableDate"></label>
+                        <h1 class="note _dir-align-r" style="margin-right:10px;">نمایش در لیست اصلی</h1>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section class="_flex _w100 show-data-content _dir-align-r" style="background:#DDD" ui-i18n="{{lang}}">
+            <div id="grid1" ui-grid="gridOptions" dir="rtl" ui-grid-selection ui-grid-resize-columns ui-grid-move-columns class="grid _w100"></div>
+        </section>
+        <section class="_flex _w100 show-info-content _dir-align-r"></section>
+    </section>
+    <section class="_flex operation-content _dir-align-r _bg-w">
+        <div class="_w50 _flex _dir-align-r">
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="SaveData(selectedSource.originalObject,Airline);" ng-show="ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                <span class="_color-w">ثبت اطلاعات</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="UpdateData(selectedSource.originalObject,Airline);" ng-show="!ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-border_color"></i>
+                <span class="_color-w">ویرایش</span>
+            </div>
+        </div>
+    </section>
+</section>
+
+

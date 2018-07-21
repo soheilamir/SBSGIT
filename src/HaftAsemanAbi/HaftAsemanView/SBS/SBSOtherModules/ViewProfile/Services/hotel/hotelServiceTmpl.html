@@ -1,0 +1,25 @@
+﻿<section class="_flex _w100 base-all-service _dir-align-r">
+    <section class="_flex _w100 body-all-services">
+        <div class="_flex _w90-pad5 t-b-all-s">
+            <div class="_flex title-bas _dir-align-r">
+                <i class="sbs-ico-content-left _color2"></i>
+                <h1>درخواست بلیط هتل</h1>
+            </div>
+            <div class="_flex fun-bas _dir-align-l">
+                <div class="tooltip-pu tooltip-pu-w-t _flex _b-ico bttn_pad5 _cursor _trans" data-tooltip="اطلاعات هتل" ng-click="ShowFillHotelContent();">
+                    <i class="sbs-ico-border_color _flex"></i>
+                </div>
+                <div class="tooltip-pu tooltip-pu-w-t _flex _b-ico bttn_pad5 _cursor _trans" data-tooltip="نمایش هتل ها" ng-if="lstPackage.length>0">
+                    <i class="sbs-ico-eye _flex"></i>
+                </div>
+            </div>
+        </div>
+        <section class="_flex _w90-pad5 _h100 body-all-services-container _dir-align-l" over>
+            <hotel-package ng-repeat="itemPack in lstPackage" hotel-pack-list="lstPackage" hotel-pack-item="itemPack" hotel-pack-index="$index"></hotel-package>
+            <modal-fill-residence-hotel class="_position-f _flex model-fill-content _w100 _h100" ng-if="showModalContent" room-selected="roomSelected" apartment-selected="apartmentSelected" show-modal="showModalContent"></modal-fill-residence-hotel>
+        </section>
+    </section>
+    <section class="_flex fill-s-c" ng-show="ShowFillHotel">
+        <fill-hotel></fill-hotel>
+    </section>
+</section>

@@ -1,0 +1,88 @@
+﻿<section class="_flex _w90-pad5 base-body-all-info">
+    <table class="_w100 _dir-align-r">
+        <tbody class="_dir-align-r">
+            <tr class="_dir-align-r">
+                <th class="_dir-align-r">مسیر</th>
+                <th class="_dir-align-r">تاریخ</th>
+                <th class="_dir-align-r">نام ایرلاین</th>
+                <th class="_dir-align-r">شماره پرواز</th>
+                <th class="_dir-align-r">کلاس نرخی</th>
+                <th class="_dir-align-r">ساعت رفت</th>
+                <th class="_dir-align-r">ساعت فرود</th>
+                <th class="_dir-align-r">قیمت</th>
+                <th class="_dir-align-r">قیمت کودک</th>
+                <th class="_dir-align-r">قیمت نوزاد</th>
+            </tr>
+            <tr class="_dir-align-r">
+                <td class="_dir-align-r">{{domesticFlight.Source}} به {{domesticFlight.Destination}}</td>
+                <td class="_dir-align-r">{{domesticFlight.DepartingDate}}</td>
+                <td class="_dir-align-r">{{domesticFlight.D_AirLine}} - {{domesticFlight.D_Name}} - {{domesticFlight.D_PlaneType}}</td>
+                <td class="_dir-align-r">{{domesticFlight.D_FlightNo}}</td>
+                <td class="_dir-align-r">{{domesticFlight.D_FlightClass}}</td>
+                <td class="_dir-align-r">{{domesticFlight.D_DepartureTime}}</td>
+                <td class="_dir-align-r">{{domesticFlight.D_ArrivalTime}}</td>
+                <td class="_dir-align-r">{{domesticFlight.D_AdultFare}}</td>
+                <td class="_dir-align-r">{{domesticFlight.D_ChildFare}}</td>
+                <td class="_dir-align-r">{{domesticFlight.D_InfantFare}}</td>
+            </tr>
+            <tr class="_dir-align-r" ng-if="domesticFlight.R_FlightNo!=null">
+                <td class="_dir-align-r">{{domesticFlight.Destination}} به {{domesticFlight.Source}}</td>
+                <td class="_dir-align-r">{{domesticFlight.ReturningDate}}</td>
+                <td class="_dir-align-r">{{domesticFlight.R_AirLine}} - {{domesticFlight.R_Name}} - {{domesticFlight.R_PlaneType}}</td>
+                <td class="_dir-align-r">{{domesticFlight.R_FlightNo}}</td>
+                <td class="_dir-align-r">{{domesticFlight.R_FlightClass}}</td>
+                <td class="_dir-align-r">{{domesticFlight.R_DepartureTime}}</td>
+                <td class="_dir-align-r">{{domesticFlight.R_ArrivalTime}}</td>
+                <td class="_dir-align-r">{{domesticFlight.R_AdultFare}}</td>
+                <td class="_dir-align-r">{{domesticFlight.R_ChildFare}}</td>
+                <td class="_dir-align-r">{{domesticFlight.R_InfantFare}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="_w100 _dir-align-r">
+        <tbody class="_dir-align-r">
+            <tr class="_dir-align-r">
+                <th class="_dir-align-r">کد ملی</th>
+                <th class="_dir-align-r">نام</th>
+                <th class="_dir-align-r">نام خانوادگی</th>
+                <th class="_dir-align-l">Full Name</th>
+                <th class="_dir-align-r">تاریخ تولد</th>
+                <th class="_dir-align-r">تلفن تماس</th>
+            </tr>
+            <tr class="_dir-align-r" ng-repeat="adult in allInfo.lstAdult">
+                <td class="_dir-align-r">{{adult.NationalCode}}</td>
+                <td class="_dir-align-r">{{adult.Name_Fa}}</td>
+                <td class="_dir-align-r">{{adult.LastName_Fa}}</td>
+                <td class="_dir-align-l">{{adult.Name_En}} {{adult.LastName_En}}</td>
+                <td class="_dir-align-r">{{adult.BD}}</td>
+                <td class="_dir-align-r">{{adult.Tel}}</td>
+            </tr>
+            <tr class="_dir-align-r" ng-repeat="child in allInfo.lstChild">
+                <td class="_dir-align-r">{{child.NationalCode}}</td>
+                <td class="_dir-align-r">{{child.Name_Fa}}</td>
+                <td class="_dir-align-r">{{child.LastName_Fa}}</td>
+                <td class="_dir-align-l">{{child.Name_En}} {{child.LastName_En}}</td>
+                <td class="_dir-align-r">{{child.BD}}</td>
+                <td class="_dir-align-r">{{child.Tel}}</td>
+            </tr>
+            <tr class="_dir-align-r" ng-repeat="infant in allInfo.lstInfant">
+                <td class="_dir-align-r">{{infant.NationalCode}}</td>
+                <td class="_dir-align-r">{{infant.Name_Fa}}</td>
+                <td class="_dir-align-r">{{infant.LastName_Fa}}</td>
+                <td class="_dir-align-l">{{infant.Name_En}} {{infant.LastName_En}}</td>
+                <td class="_dir-align-r">{{infant.BD}}</td>
+                <td class="_dir-align-r">{{infant.Tel}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <section class="_flex _w100 _dir-align-r">
+        <div class="_flex _bttn _dir-align-r _fnt-fa ng-scope" ng-click="FlightReserve()" role="button">
+            <i class="sbs-ico-chevron-right _trans"></i>
+            <span>خرید بلیط</span>
+        </div>
+        <div class="_flex _bttn _dir-align-r _fnt-fa ng-scope" ng-click="BackToFillPassengerFlight()" role="button">
+            <i class="sbs-ico-chevron-right _trans"></i>
+            <span>تغییر اطلاعات مسافر</span>
+        </div>
+    </section>
+</section>

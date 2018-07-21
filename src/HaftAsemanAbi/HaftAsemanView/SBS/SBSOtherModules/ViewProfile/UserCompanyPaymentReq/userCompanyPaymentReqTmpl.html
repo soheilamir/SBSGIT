@@ -1,0 +1,36 @@
+﻿<section class="_flex _w95-pad25 base-u-c-pr-content">
+    <header class="_flex _w95-pad25 _dir-align-r _bg1">
+        <h1 class="_color-w _fnt-fa">بخش پرداخت سفارشات</h1>
+    </header>
+    <section class="_flex _dir-align-r _w95-pad25 base-body-u-c-pr">
+        <section class="_w100 _flex inner-b-a-i-f">
+            <full-info-flight all-info="objReserveFlight" domestic-flight="DomesticFlightInfo" show-content="false"></full-info-flight>
+        </section>
+        <section class="_flex _w95-pad25 _dir-align-r" style="margin-bottom:30px;">
+            <div class="_flex _w95-pad25 _bg-w body-peyment _dir-align-r">
+                <div class="_flex _w100 _dir-align-r t-p">
+                    <div class="_w90-pad5 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-s _color-60">مبلغ کل پرداختی:</label>
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l _bold _fnt-fa _color-red val-lbl">254،230،000 ریال</label>
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="OnlineBankPeyment()">
+                            <span class="_color-w">پرداخت از طریق درگاه بانکی</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="_w100 _dir-align-r">
+                    <div class="_flex _dir-align-r _w100 o-p-c">
+                        <h1 class="_flex _dir-align-r t-c-p">پرداخت از حساب</h1>
+                        <h2 class="_flex _dir-align-r _color-blue _w95-pad25">در صورتی که مایل به پرداخت از طریق اعتبار خود هستید، از روش زیر اقدام فرمایید</h2>
+                        <div class="_w90-pad5 _flex split-i-c">
+                            <label class="_lbl _lbl-form _dir-align-r lbl-s _color-60">مانده اعتبار:</label>
+                            <label class="_lbl _lbl-form _dir-align-r lbl-l _bold _fnt-fa _color-g val-lbl">654،780،000 ریال</label>
+                            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="CreditPeyment()">
+                                <span class="_color-w">پرداخت بصورت اعتباری</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

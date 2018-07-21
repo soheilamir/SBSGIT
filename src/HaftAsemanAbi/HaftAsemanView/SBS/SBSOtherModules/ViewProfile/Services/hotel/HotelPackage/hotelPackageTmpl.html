@@ -1,0 +1,132 @@
+﻿<section id="{{hotelPackItem.id}}" class="_w100 _flex base-hotels-content" ng-class="{'selected-hp-content':hotelPackItem.selected}">
+    <section class="_w90-pad5 _flex t-h-content _dir-align-r">
+        <div class="_flex name-h _dir-align-r">
+            <i class="sbs-ico-bed _color5"></i>
+            <h1>نمایش اطلاعات هتل</h1>
+        </div>
+        <div class="_flex fn-h-c _dir-align-l">
+            <div class="tooltip-pu _flex _b-ico _cursor" data-tooltip="تغییر" ng-click="EditHotelPackage(hotelPackIndex)" ng-if="!hotelPackItem.delete">
+                <i class="sbs-ico-edit _flex"></i>
+            </div>
+            <div class="tooltip-pu _flex _b-ico _cursor" data-tooltip="حذف" ng-click="hotelPackItem.delete=true;" ng-if="!hotelPackItem.delete && !hotelPackItem.edited && !$root.operation.orderItemEdited">
+                <i class="sbs-ico-delete _flex"></i>
+            </div>
+            <div class="tooltip-pu _flex _b-ico _cursor" data-tooltip="برگشت" ng-click="hotelPackItem.delete=false;" ng-if="hotelPackItem.delete">
+                <i class="sbs-ico-arrow-forward _flex"></i>
+            </div>
+            <div class="tooltip-pu _flex _b-ico _cursor" data-tooltip="حذف" ng-click="DeleteHotelPackage(hotelPackIndex)" ng-if="hotelPackItem.delete">
+                <i class="sbs-ico-delete _flex"></i>
+            </div>
+        </div>
+    </section>
+    <section class="_w100 _flex b-h-content" ng-if="!hotelPackItem.delete">
+        <div class="_flex _w90-pad5 t-b-hp-c ch-t-b-hp-c _bg5 _dir-align-l">
+            <h1 class="_fnt-en _color-60">Hotels Name:</h1>
+            <h1 class="_fnt-en _color5 hotel-name" ng-repeat="hotelName in hotelPackItem.hotelsName">
+                {{hotelName.name}}
+            </h1>
+        </div>
+        <div id="{{hotelPackItem.id}}" class="_flex _w90-pad5 hp-info-content _dir-align-r _position-r">
+            <div class="_flex _w100 items-info-hp-c _dir-align-r">
+                <div class="_flex inner-item-hp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">نوع هتل:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{hotelPackItem.hotelType.name}}</label>
+                </div>
+                <div class="_flex inner-item-hp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">شهر مقصد:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{hotelPackItem.to.name}}</label>
+                </div>
+                <div class="_flex inner-item-hp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">تعداد ستاره:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{hotelPackItem.rate.number}}</label>
+                </div>
+            </div>
+            <div class="_flex _w100 items-info-hp-c _dir-align-r">
+                <div class="_flex inner-item-hp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">تاریخ ورود به هتل:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{hotelPackItem.checkIn}}</label>
+                </div>
+                <div class="_flex inner-item-hp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">تاریخ خروج از هتل:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{hotelPackItem.checkOut}}</label>
+                </div>
+            </div>
+            <div class="_flex _w100 items-info-hp-c _dir-align-r">
+                <div class="_flex inner-item-hp _dir-align-r">
+                    <label title="" class="_lbl form-lbl _color-60 _bold">توضیحات تکمیلی:</label>
+                    <label title="" class="_lbl form-lbl _color-60 lbl-data">{{hotelPackItem.description}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="_flex _w90-pad5 body-bttn-package _bg5 _dir-align-l">
+            <div class="_flex _cursor _trans bttn-package-content _dir-align-r" ng-click="FillRoomsInPackage(true,false,hotelPackIndex)">
+                <i class="sbs-ico-playlist_add _flex"></i>
+                <h1 class="_fnt-fa">افزودن اتاق</h1>
+            </div>
+            <div class="_flex _cursor _trans bttn-package-content _dir-align-r" ng-click="FillApartmentInPackage(false,true,hotelPackIndex)">
+                <i class="sbs-ico-playlist_add _flex"></i>
+                <h1 class="_fnt-fa">افزودن آپارتمان</h1>
+            </div>
+        </div>
+        <section class="_flex _w100 body-add-ra-content">
+            <div class="_flex _w90-pad5 room-content _dir-align-r" ng-repeat="roomItem in hotelPackItem.roomList">
+                <div class="_flex _dir-align-r inner-room-r">
+                    <div class="_flex ico-room-h _bg5">
+                        <i class="sbs-ico-bed _color-w"></i>
+                    </div>
+                    <h1 class="_color5">اتاق</h1>
+                </div>
+                <div class="_flex _w100 _dir-align-r info-room">
+                    <div class="_flex _w90-pad5 items-info-hp-c _dir-align-r">
+                        <div class="_flex inner-item-hp _dir-align-r">
+                            <label title="" class="_lbl form-lbl _color-60 _bold">نوع اتاق:</label>
+                            <label title="" class="_lbl form-lbl _color-60 lbl-data">{{roomItem.RoomType.name}}</label>
+                        </div>
+                        <div class="_flex inner-item-hp _dir-align-r">
+                            <label title="" class="_lbl form-lbl _color-60 _bold">بزرگسال:</label>
+                            <label title="" class="_lbl form-lbl _color-60 lbl-data">{{roomItem.adult}}</label>
+                        </div>
+                        <div class="_flex inner-item-hp _dir-align-r">
+                            <label title="" class="_lbl form-lbl _color-60 _bold">کودک:</label>
+                            <label title="" class="_lbl form-lbl _color-60 lbl-data">{{roomItem.child}}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="_flex _dir-align-r inner-room-l">
+                    <div class="tooltip-pu _flex _b-ico _cursor _trans" data-tooltip="حذف" ng-click="DeleteRooms($index,hotelPackIndex)">
+                        <i class="sbs-ico-delete _flex"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="_flex _w90-pad5 apartment-content _dir-align-r" ng-repeat="apartmentItem in hotelPackItem.apartmentList">
+                <div class="_flex _dir-align-r inner-apartment-r">
+                    <div class="_flex ico-apartment-h _bg1">
+                        <i class="sbs-ico-office _color-w"></i>
+                    </div>
+                    <h1 class="_color1">آپارتمان</h1>
+                </div>
+                <div class="_flex _w100 _dir-align-r info-apartment">
+                    <div class="_flex _w90-pad5 items-info-hp-c _dir-align-r">
+                        <div class="_flex inner-item-hp _dir-align-r">
+                            <label title="" class="_lbl form-lbl _color-60 _bold">تعداد خواب:</label>
+                            <label title="" class="_lbl form-lbl _color-60 lbl-data">{{apartmentItem.RoomCnt.number}}</label>
+                        </div>
+                        <div class="_flex inner-item-hp _dir-align-r">
+                            <label title="" class="_lbl form-lbl _color-60 _bold">بزرگسال:</label>
+                            <label title="" class="_lbl form-lbl _color-60 lbl-data">{{apartmentItem.adult}}</label>
+                        </div>
+                        <div class="_flex inner-item-hp _dir-align-r">
+                            <label title="" class="_lbl form-lbl _color-60 _bold">کودک:</label>
+                            <label title="" class="_lbl form-lbl _color-60 lbl-data">{{apartmentItem.child}}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="_flex _dir-align-r inner-apartment-l">
+                    <div class="tooltip-pu _flex _b-ico _cursor _trans" data-tooltip="حذف" ng-click="DeleteApartment($index,hotelPackIndex)">
+                        <i class="sbs-ico-delete _flex"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

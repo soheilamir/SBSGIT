@@ -1,0 +1,56 @@
+﻿.base-co-c {
+    padding-top: 60px;
+    flex-flow: row wrap;
+}
+
+    .base-co-c > h1 {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+        .base-co-c > h1 > i {
+            margin-left: 10px;
+            font-size: 1.4em;
+        }
+
+        .base-co-c > h1 > b {
+            font-size: 1.1em;
+        }
+
+.base-b-c-c, .history-c-c, .o-p-c {
+    flex-flow: row nowrap;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 8px;
+}
+
+.split-i-c {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+    .split-i-c > .val-lbl {
+        font-size: 1.3em;
+    }
+
+.history-c-c {
+    flex-flow: row wrap;
+    margin-bottom: 5px;
+}
+
+    .history-c-c > h1, .o-p-c > h1 {
+        font-size: 1.2em;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #CCC;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+.o-p-c {
+    flex-flow: row wrap;
+    margin-bottom: 40px;
+}

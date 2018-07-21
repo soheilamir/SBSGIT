@@ -1,0 +1,77 @@
+﻿<tr>
+    <td colspan="6" class="td-ticket-p-content _bg-w">
+        <section class="_flex _w90-pad5 show-detail-h-s ch-show-detail-h-s">
+            <header class="_flex _w100 _dir-align-r">
+                <div class="_flex r-h-sdhs">
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">نام مسافر:</span>
+                        <span class="_flex _dir-align-r">امیر سهیل</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">شماره بلیط:</span>
+                        <span class="_flex _dir-align-r">34534634635235234</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">تاریخ صدور:</span>
+                        <span class="_flex _dir-align-r">1395/11/22</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">مبلغ پرداختی:</span>
+                        <span class="_flex _dir-align-r">361700</span>
+                    </div>
+                </div>
+                <div class="_flex l-h-sdhs">
+                    <img src="http://rrfco.com/AirlinesLogo/IR.png" alt="airline img" />
+                </div>
+            </header>
+            <section class="_flex _w100 _dir-align-r body-show-detail-h-s">
+                <table class="tbl-h-s _w100">
+                    <thead>
+                        <tr>
+                            <th scope="col">تاریخ</th>
+                            <th scope="col">مبدا</th>
+                            <th scope="col">مقصد</th>
+                            <th scope="col">خط هوایی</th>
+                            <th scope="col">شماره پرواز</th>
+                            <th scope="col">کلاس نرخی</th>
+                            <th scope="col">روز پرواز</th>
+                            <th scope="col">ساعت</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="infoItem in selectedLstInfoFlightTickets">
+                            <td>1395/11/18</td>
+                            <td>تهران</td>
+                            <td>شیراز</td>
+                            <td>ایران ایر</td>
+                            <td class="_fnt-en">FP5643</td>
+                            <td class="_fnt-en">V</td>
+                            <td>شنبه</td>
+                            <td>15:45</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="tbl-h-s _w50">
+                    <thead>
+                        <tr>
+                            <th scope="col">شرایط تعویض و استرداد بلیط</th>
+                            <th scope="col">هزینه ابطال</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="conditionItem in lstCondition">
+                            <td>تا 30 دقیقه قبل از پرواز</td>
+                            <td>20%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="_w100 _flex _dir-align-l">
+                    <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="PrintTicketOfPassenger();">
+                        <i class="_color-w _trans sbs-ico-eye"></i>
+                        <span class="_color-w">پریت بلیط مسافر</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </td>
+</tr>

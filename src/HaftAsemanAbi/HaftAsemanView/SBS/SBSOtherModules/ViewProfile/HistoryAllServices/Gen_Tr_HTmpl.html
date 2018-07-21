@@ -1,0 +1,100 @@
+﻿<tr>
+    <td colspan="5" class="td-ticket-p-content _bg-w">
+        <section class="_flex _w90-pad5 show-detail-h-s ch-show-detail-h-s">
+            <header class="_flex _w100" ng-class="{'_dir-align-l':pos==='l','_dir-align-r':pos==='r'}">
+                <div class="_flex _w50 r-h-sdhs" ng-class="{'_dir-align-l':pos==='l','_dir-align-r':pos==='r'}">
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Data:</span>
+                        <span class="_flex">Saturday,February 4, 2017</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Booking Refrence No:</span>
+                        <span class="_flex">3D546456</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Supplier Refrence</span>
+                        <span class="_flex">2342353453534534543</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Supplier Name:</span>
+                        <span class="_flex">Agora Swiss Night Fassbind</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Address:</span>
+                        <span class="_flex">Avenue du round-point 9, 1006</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Telephone:</span>
+                        <span class="_flex">+41 56456767</span>
+                    </div>
+                </div>
+                <div class="_flex _w50 l-h-sdhs" ng-class="{'_dir-align-l':pos==='l','_dir-align-r':pos==='r'}">
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Check-In:</span>
+                        <span class="_flex">Tuesday,28 March, 2017</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Check-Out:</span>
+                        <span class="_flex">Tuesday,28 March, 2017</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">RoomCategory:</span>
+                        <span class="_flex">Standard</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Room Type:</span>
+                        <span class="_flex">Single</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Rate Basis:</span>
+                        <span class="_flex">Buffet Breakfast</span>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span class="_flex lbl-l">Additional Request:</span>
+                        <span class="_flex">Guest is VIP</span>
+                    </div>
+                </div>
+            </header>
+            <section class="_flex _w100 body-show-detail-h-s" ng-class="{'_dir-align-l':pos==='l','_dir-align-r':pos==='r'}">
+                <table class="tbl-h-s _w50" ng-show="pos==='l'">
+                    <thead>
+                        <tr>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Passenger Name</th>
+                            <th>Family Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="passenger in selectedLstInfoHotelsVoucher">
+                            <td>Mr</td>
+                            <td>Amir</td>
+                            <td>Soheil</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="tbl-h-s _w50" ng-show="pos==='r'">
+                    <thead>
+                        <tr>
+                            <th scope="col">جنسیت</th>
+                            <th scope="col">نام مسافر</th>
+                            <th>نام خانوادگی</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="passenger in selectedLstInfoHotelsVoucher">
+                            <td>مرد</td>
+                            <td>امیر</td>
+                            <td>سهیل</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="_w100 _flex _dir-align-l">
+                    <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="PrintTicketOfPassenger();">
+                        <i class="_color-w _trans sbs-ico-eye"></i>
+                        <span class="_color-w">پریت بلیط مسافر</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </td>
+</tr>

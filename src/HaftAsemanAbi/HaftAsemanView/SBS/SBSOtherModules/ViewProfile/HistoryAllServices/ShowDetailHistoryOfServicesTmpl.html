@@ -1,0 +1,156 @@
+﻿<section class="_flex _w95-pad25 show-detail-h-s">
+    <header class="_flex _w100 _dir-align-r">
+        <div class="_flex r-h-sdhs">
+            <div class="_flex split-adhs">
+                <span class="_flex lbl-l">نام درخواست کننده:</span>
+                <span class="_flex _dir-align-r">امیر سهیل</span>
+            </div>
+            <div class="_flex split-adhs">
+                <span class="_flex lbl-s">کد ملی:</span>
+                <span class="_flex _dir-align-r">0097756854</span>
+            </div>
+        </div>
+        <div class="_flex l-h-sdhs">
+            <div class="_flex split-adhs">
+                <span class="_flex lbl-l">شماره درخواست:</span>
+                <span class="_flex _dir-align-r">23423545430</span>
+            </div>
+            <div class="_flex split-adhs">
+                <span class="_flex lbl-l">تاریخ درخواست:</span>
+                <span class="_flex _dir-align-r">1395/11/20</span>
+            </div>
+        </div>
+    </header>
+    <section class="_flex _w100 _dir-align-r body-show-detail-h-s">
+        <div class="_flex _w100 _dir-align-r item-content-h-s">
+            <h1 class="_flex _w100 _dir-align-r">
+                بلیط هواپیما
+            </h1>
+            <table class="tbl-h-s _w100">
+                <caption class="_bg1 _w100">
+                    <div class="_flex _w100 b-caption _dir-align-r">
+                        <div class="_flex r-h-sdhs ch-r-l-h-sdhs">
+                            <i class="_flex _color-w sbs-ico-airplane"></i>
+                            <span class="_flex _color-w _dir-align-r">پرواز( تهران - شیراز)</span>
+                            <i class="_flex _color-w sbs-ico-long-arrow-left"></i>
+                            <span class="_flex _color-w _dir-align-r">رفت و برگشت</span>
+                        </div>
+                        <div class="_flex l-h-sdhs ch-r-l-h-sdhs">
+                            <span class="_flex _color-w lbl-m">تعداد مسافر:</span>
+                            <span class="_flex _color-w _dir-align-r">3 نفر</span>
+                        </div>
+                    </div>
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">کلاس</th>
+                        <th scope="col">تاریخ رفت</th>
+                        <th scope="col">تاریخ برگشت</th>
+                        <th scope="col">زمان</th>
+                        <th scope="col">تغییر تاریخ</th>
+                        <th scope="col">ایرلاینهای پیشنهادی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="_fnt-en">Economy</td>
+                        <td>1395/11/18</td>
+                        <td>1395/11/20</td>
+                        <td>ظهر</td>
+                        <td>بله</td>
+                        <td class="_fnt-en">mahan,aseman,iran air</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="td-title">
+                            <h1 class="_flex _bg-w _w100 _color-w p-t-content">
+                                <i>نمایش مسافرین</i>
+                            </h1>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th scope="col">نمایش</th>
+                        <th scope="col">نام کامل مسافر</th>
+                        <th scope="col">نام مسافر - لاتین</th>
+                        <th scope="col">کد ملی</th>
+                        <th scope="col">تلفن</th>
+                        <th scope="col">ایمیل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="_tr_F_{{($index+1)}}" ng-repeat="passenger in lstFlightTicketPassengers">
+                        <td class="_fnt-en _cursor" style="width:40px;" ng-click="ShowTicketPassenger($index+1,lstFlightTicketsOfPassenger[$index])">+</td>
+                        <td>امیر سهیل همدانی</td>
+                        <td class="_fnt-en">Amir Soheil Hamedani</td>
+                        <td>0097459654</td>
+                        <td>09363329873</td>
+                        <td class="_fnt-en">software@rrfco.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="_flex _w100 _dir-align-r item-content-h-s">
+            <h1 class="_flex _w100 _dir-align-r">
+                بلیط هتل
+            </h1>
+            <table class="tbl-h-s _w100">
+                <caption class="_bg1 _w100">
+                    <div class="_flex _w100 b-caption _dir-align-r">
+                        <div class="_flex r-h-sdhs ch-r-l-h-sdhs">
+                            <i class="_flex _color-w sbs-ico-bed"></i>
+                            <span class="_flex _color-w _dir-align-r">هتل</span>
+                            <i class="_flex _color-w sbs-ico-long-arrow-left"></i>
+                            <span class="_flex _color-w _dir-align-r">داخلی</span>
+                        </div>
+                        <div class="_flex l-h-sdhs ch-r-l-h-sdhs _dir-align-l">
+                            <span class="_flex _color-w _fnt-en _dir-align-l">Preferd Hotels:</span>
+                            <span class="_flex _color-w _fnt-en _dir-align-l">Rosewood Abu Dhabi</span>
+                        </div>
+                    </div>
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col" style="width:30px">ستاره</th>
+                        <th scope="col">تاریخ ورود</th>
+                        <th scope="col">تاریخ خروج</th>
+                        <th scope="col">شهر مقصد</th>
+                        <th scope="col">توضیحات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="_fnt-en">3</td>
+                        <td>1395/11/18</td>
+                        <td>1395/11/20</td>
+                        <td>تهران</td>
+                        <td>-------------</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="td-title">
+                            <h1 class="_flex _bg-w w100 _color-w p-t-content">
+                                <i>نمایش اطلاعات اتاق / آپارتمان</i>
+                            </h1>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th scope="col">نمایش</th>
+                        <th scope="col" colspan="2">نوع درخواست</th>
+                        <th scope="col" style="width:120px">تعداد بزرگسال</th>
+                        <th scope="col" style="width:120px">تعداد کودک</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="_tr_H_{{($index+1)}}" ng-repeat="roomItem in lstHotelRooms">
+                        <td class="_fnt-en _cursor" style="width:40px;" ng-click="ShowHotelsVoucher($index+1,lstHotelsVoucherOfPassenger[$index])">+</td>
+                        <td colspan="2">اتاق - Double</td>
+                        <td>2</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>

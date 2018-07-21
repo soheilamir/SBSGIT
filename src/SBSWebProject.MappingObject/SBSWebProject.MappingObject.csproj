@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{703A7844-8C5B-4CE7-9A49-AC7E3965B27D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SBSWebProject.MappingObject</RootNamespace>
+    <AssemblyName>SBSWebProject.MappingObject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DateController.cs" />
+    <Compile Include="EntityToModel\AirlineClassesMapper.cs" />
+    <Compile Include="EntityToModel\AirlineClassPathMapper.cs" />
+    <Compile Include="EntityToModel\AirlineMapper.cs" />
+    <Compile Include="EntityToModel\AirlineMemberMapper.cs" />
+    <Compile Include="EntityToModel\AirlineNameByLanguageMapper.cs" />
+    <Compile Include="EntityToModel\AirlineSubClassesMapper.cs" />
+    <Compile Include="EntityToModel\AirplaneMapper.cs" />
+    <Compile Include="EntityToModel\AirportMapper.cs" />
+    <Compile Include="EntityToModel\AirportNameByLanguageMapper.cs" />
+    <Compile Include="EntityToModel\BlogsMapper.cs" />
+    <Compile Include="EntityToModel\CityMapper.cs" />
+    <Compile Include="EntityToModel\CityNameByLanguageMapper.cs" />
+    <Compile Include="EntityToModel\CityPublicPlaceMapper.cs" />
+    <Compile Include="EntityToModel\CityPublicPlaceNameByLanguageMapper.cs" />
+    <Compile Include="EntityToModel\CompanyAttachmentMapper.cs" />
+    <Compile Include="EntityToModel\CompanyEmployeeMapper.cs" />
+    <Compile Include="EntityToModel\CompanyMapper.cs" />
+    <Compile Include="EntityToModel\CompanyOrdersConfirmationMapper.cs" />
+    <Compile Include="EntityToModel\CompanyServiceFeeMapper.cs" />
+    <Compile Include="EntityToModel\ConditionTypeMapper.cs" />
+    <Compile Include="EntityToModel\ConditionValuesMapper.cs" />
+    <Compile Include="EntityToModel\ContinentMapper.cs" />
+    <Compile Include="EntityToModel\CountryIpAddressMapper.cs" />
+    <Compile Include="EntityToModel\CountryMapper.cs" />
+    <Compile Include="EntityToModel\CountryNameByLanguageMapper.cs" />
+    <Compile Include="EntityToModel\EarthRegionMapper.cs" />
+    <Compile Include="EntityToModel\ExtensionsMapper.cs" />
+    <Compile Include="EntityToModel\FacilitiesCategoryMapper.cs" />
+    <Compile Include="EntityToModel\FacilitiesMapper.cs" />
+    <Compile Include="EntityToModel\FacilitiesNameByLanguageMapper.cs" />
+    <Compile Include="EntityToModel\FilesMapper.cs" />
+    <Compile Include="EntityToModel\FlightConditionMapper.cs" />
+    <Compile Include="EntityToModel\FlightFreeServiceMapper.cs" />
+    <Compile Include="EntityToModel\FlightNumbersMapper.cs" />
+    <Compile Include="EntityToModel\FlightPathMapper.cs" />
+    <Compile Include="EntityToModel\FlightStopOverMapper.cs" />
+    <Compile Include="EntityToModel\FoldersMapper.cs" />
+    <Compile Include="EntityToModel\HotelAccessibilityMapper.cs" />
+    <Compile Include="EntityToModel\HotelCommentsMapper.cs" />
+    <Compile Include="EntityToModel\HotelFacilitiesMapper.cs" />
+    <Compile Include="EntityToModel\HotelNameByLanguageMapper.cs" />
+    <Compile Include="EntityToModel\HotelOrRoomConditionsMapper.cs" />
+    <Compile Include="EntityToModel\HotelPhotosMapper.cs" />
+    <Compile Include="EntityToModel\HotelRoomBedsMapper.cs" />
+    <Compile Include="EntityToModel\HotelRoomCommentsMapper.cs" />
+    <Compile Include="EntityToModel\HotelRoomMapper.cs" />
+    <Compile Include="EntityToModel\HotelRoomNightPriceMapper.cs" />
+    <Compile Include="EntityToModel\HotelRoomPhotosMapper.cs" />
+    <Compile Include="EntityToModel\HotelRoomTypeMapper.cs" />
+    <Compile Include="EntityToModel\HotelRoomTypeNameByLanguageMapper.cs" />
+    <Compile Include="EntityToModel\HotelsMapper.cs" />
+    <Compile Include="EntityToModel\JobOpportunityMapper.cs" />
+    <Compile Include="EntityToModel\LanguageMapper.cs" />
+    <Compile Include="EntityToModel\MessagesMapper.cs" />
+    <Compile Include="EntityToModel\NewsMapper.cs" />
+    <Compile Include="EntityToModel\NewsTagsMapper.cs" />
+    <Compile Include="EntityToModel\NewUserMapper.cs" />
+    <Compile Include="EntityToModel\OnlineFlightTicketMapper.cs" />
+    <Compile Include="EntityToModel\OnlineFlightTicketModelMapper.cs" />
+    <Compile Include="EntityToModel\OnlineFlightTicketPassengersMapper.cs" />
+    <Compile Include="EntityToModel\OnlineFlightTicketPathMapper.cs" />
+    <Compile Include="EntityToModel\OrdersMapper.cs" />
+    <Compile Include="EntityToModel\PassengerFlightMapper.cs" />
+    <Compile Include="EntityToModel\PassengerMapper.cs" />
+    <Compile Include="EntityToModel\ReceivedResumeMapper.cs" />
+    <Compile Include="EntityToModel\RequestAirplaneServiceMapper.cs" />
+    <Compile Include="EntityToModel\RequestAirplaneTicketMapper.cs" />
+    <Compile Include="EntityToModel\RequestAirplaneTicketPassengerMapper.cs" />
+    <Compile Include="EntityToModel\RequestStatusMapper.cs" />
+    <Compile Include="EntityToModel\ResponseAirplaneTicketMapper.cs" />
+    <Compile Include="EntityToModel\RolesInSectionMapper.cs" />
+    <Compile Include="EntityToModel\SbsBranchAwardsMapper.cs" />
+    <Compile Include="EntityToModel\SbsBranchesMapper.cs" />
+    <Compile Include="EntityToModel\SbsBranchImagesMapper.cs" />
+    <Compile Include="EntityToModel\SbsTagsMapper.cs" />
+    <Compile Include="EntityToModel\ServicesMapper.cs" />
+    <Compile Include="EntityToModel\StateProvinceMapper.cs" />
+    <Compile Include="EntityToModel\StateProvinceNameByLanguageMapper.cs" />
+    <Compile Include="EntityToModel\StatusMapper.cs" />
+    <Compile Include="EntityToModel\TicketNumberMapper.cs" />
+    <Compile Include="EntityToModel\UserAddressMapper.cs" />
+    <Compile Include="EntityToModel\UserAndPassengerDocumentMapper.cs" />
+    <Compile Include="EntityToModel\UserCreditInfoMapper.cs" />
+    <Compile Include="EntityToModel\UserEmailMapper.cs" />
+    <Compile Include="EntityToModel\UserFavoriteAirlineMapper.cs" />
+    <Compile Include="EntityToModel\SbsSectionMapper.cs" />
+    <Compile Include="EntityToModel\UserLanguageMapper.cs" />
+    <Compile Include="EntityToModel\UserLoginLogMapper.cs" />
+    <Compile Include="EntityToModel\UserPassengerMapper.cs" />
+    <Compile Include="EntityToModel\SbsRoleMapper.cs" />
+    <Compile Include="EntityToModel\SbsBranchTeamMapper.cs" />
+    <Compile Include="EntityToModel\UsersMapper.cs" />
+    <Compile Include="EntityToModel\UserTelMapper.cs" />
+    <Compile Include="EntityToModel\WebPageBannersMapper.cs" />
+    <Compile Include="EntityToModel\WebPageContextMapper.cs" />
+    <Compile Include="EntityToModel\WebPagesMapper.cs" />
+    <Compile Include="EntityToModel\WebsiteCategoryMapper.cs" />
+    <Compile Include="EntityToModel\WebsiteFAQsMapper.cs" />
+    <Compile Include="IMappingObject.cs" />
+    <Compile Include="ModelToEntity\AirlineClassesMapper.cs" />
+    <Compile Include="ModelToEntity\AirlineClassPathMapper.cs" />
+    <Compile Include="ModelToEntity\AirlineMapper.cs" />
+    <Compile Include="ModelToEntity\AirlineMemberMapper.cs" />
+    <Compile Include="ModelToEntity\AirlineNameByLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\AirlineSubClassesMapper.cs" />
+    <Compile Include="ModelToEntity\AirplaneMapper.cs" />
+    <Compile Include="ModelToEntity\AirportMapper.cs" />
+    <Compile Include="ModelToEntity\AirportNameByLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\BlogsMapper.cs" />
+    <Compile Include="ModelToEntity\CityMapper.cs" />
+    <Compile Include="ModelToEntity\CityNameByLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\CityPublicPlaceMapper.cs" />
+    <Compile Include="ModelToEntity\CityPublicPlaceNameByLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\CompanyAttachmentMapper.cs" />
+    <Compile Include="ModelToEntity\CompanyEmployeeMapper.cs" />
+    <Compile Include="ModelToEntity\CompanyMapper.cs" />
+    <Compile Include="ModelToEntity\CompanyOrdersConfirmationMapper.cs" />
+    <Compile Include="ModelToEntity\CompanyServiceFeeMapper.cs" />
+    <Compile Include="ModelToEntity\ConditiontypeMapper.cs" />
+    <Compile Include="ModelToEntity\ConditionValuesMapper.cs" />
+    <Compile Include="ModelToEntity\ContinentMapper.cs" />
+    <Compile Include="ModelToEntity\CountryIpAddressMapper.cs" />
+    <Compile Include="ModelToEntity\CountryMapper.cs" />
+    <Compile Include="ModelToEntity\CountryNameByLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\EarthRegionMapper.cs" />
+    <Compile Include="ModelToEntity\ExcelCountryMapper.cs" />
+    <Compile Include="ModelToEntity\ExtensionsMapper.cs" />
+    <Compile Include="ModelToEntity\FacilitiesCategoryMapper.cs" />
+    <Compile Include="ModelToEntity\FacilitiesMapper.cs" />
+    <Compile Include="ModelToEntity\FacilitiesNameByLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\FilesMapper.cs" />
+    <Compile Include="ModelToEntity\FlightConditionMapper.cs" />
+    <Compile Include="ModelToEntity\FlightFreeServiceMapper.cs" />
+    <Compile Include="ModelToEntity\FlightNumbersMapper.cs" />
+    <Compile Include="ModelToEntity\FlightPathMapper.cs" />
+    <Compile Include="ModelToEntity\FlightStopOverMapper.cs" />
+    <Compile Include="ModelToEntity\FoldersMapper.cs" />
+    <Compile Include="ModelToEntity\HotelAccessibilityMapper.cs" />
+    <Compile Include="ModelToEntity\HotelCommentsMapper.cs" />
+    <Compile Include="ModelToEntity\HotelFacilitiesMapper.cs" />
+    <Compile Include="ModelToEntity\HotelNameByLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\HotelOrRoomConditionsMapper.cs" />
+    <Compile Include="ModelToEntity\HotelPhotosMapper.cs" />
+    <Compile Include="ModelToEntity\HotelRoomBedsMapper.cs" />
+    <Compile Include="ModelToEntity\HotelRoomCommentsMapper.cs" />
+    <Compile Include="ModelToEntity\HotelRoomMapper.cs" />
+    <Compile Include="ModelToEntity\HotelRoomNightPriceMapper.cs" />
+    <Compile Include="ModelToEntity\HotelRoomPhotosMapper.cs" />
+    <Compile Include="ModelToEntity\HotelRoomTypeMapper.cs" />
+    <Compile Include="ModelToEntity\HotelRoomTypeNameByLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\HotelsMapper.cs" />
+    <Compile Include="ModelToEntity\JobOpportunityMapper.cs" />
+    <Compile Include="ModelToEntity\LanguageMapper.cs" />
+    <Compile Include="ModelToEntity\MessagesMapper.cs" />
+    <Compile Include="ModelToEntity\NewCompanyMapper.cs" />
+    <Compile Include="ModelToEntity\NewFlightConditionMapper.cs" />
+    <Compile Include="ModelToEntity\NewsMapper.cs" />
+    <Compile Include="ModelToEntity\NewsTagsMapper.cs" />
+    <Compile Include="ModelToEntity\NewUserMapper.cs" />
+    <Compile Include="ModelToEntity\OnlineFlightTicketMapper.cs" />
+    <Compile Include="ModelToEntity\OnlineFlightTicketPassengersMapper.cs" />
+    <Compile Include="ModelToEntity\OnlineFlightTicketPathMapper.cs" />
+    <Compile Include="ModelToEntity\OrdersMapper.cs" />
+    <Compile Include="ModelToEntity\PassengerFlightMapper.cs" />
+    <Compile Include="ModelToEntity\PassengerMapper.cs" />
+    <Compile Include="ModelToEntity\ReceivedResumeMapper.cs" />
+    <Compile Include="ModelToEntity\RequestAirplaneServiceMapper.cs" />
+    <Compile Include="ModelToEntity\RequestAirplaneTicketMapper.cs" />
+    <Compile Include="ModelToEntity\RequestAirplaneTicketPassengerMapper.cs" />
+    <Compile Include="ModelToEntity\RequestStatusMapper.cs" />
+    <Compile Include="ModelToEntity\ResponseAirplaneTicketMapper.cs" />
+    <Compile Include="ModelToEntity\RolesInSectionMapper.cs" />
+    <Compile Include="ModelToEntity\SbsBranchAwardsMapper.cs" />
+    <Compile Include="ModelToEntity\SbsBranchesMapper.cs" />
+    <Compile Include="ModelToEntity\SbsBranchImagesMapper.cs" />
+    <Compile Include="ModelToEntity\SbsTagsMapper.cs" />
+    <Compile Include="ModelToEntity\ServicesMapper.cs" />
+    <Compile Include="ModelToEntity\StateProvinceMapper.cs" />
+    <Compile Include="ModelToEntity\StateProvinceNameByLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\StatusMapper.cs" />
+    <Compile Include="ModelToEntity\TicketNumberMapper.cs" />
+    <Compile Include="ModelToEntity\UserAddressMapper.cs" />
+    <Compile Include="ModelToEntity\UserAndPassengerDocumentMapper.cs" />
+    <Compile Include="ModelToEntity\UserCreditInfoMapper.cs" />
+    <Compile Include="ModelToEntity\UserEmailMapper.cs" />
+    <Compile Include="ModelToEntity\UserFavoriteAirlineMapper.cs" />
+    <Compile Include="ModelToEntity\SbsSectionMapper.cs" />
+    <Compile Include="ModelToEntity\UserLanguageMapper.cs" />
+    <Compile Include="ModelToEntity\UserLoginLogMapper.cs" />
+    <Compile Include="ModelToEntity\UserPassengerMapper.cs" />
+    <Compile Include="ModelToEntity\SbsRoleMapper.cs" />
+    <Compile Include="ModelToEntity\SbsBranchTeamMapper.cs" />
+    <Compile Include="ModelToEntity\UsersMapper.cs" />
+    <Compile Include="ModelToEntity\UserTelMapper.cs" />
+    <Compile Include="ModelToEntity\WebPageBannersMapper.cs" />
+    <Compile Include="ModelToEntity\WebPageContextMapper.cs" />
+    <Compile Include="ModelToEntity\WebPagesMapper.cs" />
+    <Compile Include="ModelToEntity\WebsiteCategoryMapper.cs" />
+    <Compile Include="ModelToEntity\WebsiteFAQsMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SBSWebProject.Data.SqlServer\SBSWebProject.Data.SqlServer.csproj">
+      <Project>{239b18f7-9389-4a3a-801d-ac70690a610a}</Project>
+      <Name>SBSWebProject.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SBSWebProject.Data\SBSWebProject.Data.csproj">
+      <Project>{8f019dd1-a3c3-4123-8439-4b455e8b99e0}</Project>
+      <Name>SBSWebProject.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SBSWebProject.Web.Api.Models\SBSWebProject.Web.Api.Models.csproj">
+      <Project>{d6ba35b8-1811-406a-9bc4-0872b79532c6}</Project>
+      <Name>SBSWebProject.Web.Api.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

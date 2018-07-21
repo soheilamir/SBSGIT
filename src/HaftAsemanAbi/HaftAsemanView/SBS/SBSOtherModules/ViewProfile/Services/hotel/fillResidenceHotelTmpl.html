@@ -1,0 +1,35 @@
+﻿<section class="_w100 _flex base-residence-h-c">
+    <div class="_flex t-r-h-c _bg2 _w90-pad5 _dir-align-r">
+        <i class="_color-w sbs-ico-content-left"></i>
+        <h1 class="_color-w" ng-if="roomSelected">پر کردن امکانات اتاق</h1>
+        <h1 class="_color-w" ng-if="apartmentSelected">پر کردن امکانات آپارتمان</h1>
+    </div>
+    <div class="_flex _w90-pad5 body-r-hc _dir-align-r">
+        <section class="_flex fill-item-cotnent _w100">
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newRoom.RoomType" ng-if="roomSelected" ng-options="option.name for option in baseData.lstRoomType track by option.id">
+                <option value="">انتخاب نوع اتاق</option>
+            </select>
+            <select class="_select _select-form _dir-align-r _trans" ng-model="newApartment.RoomCnt" ng-if="apartmentSelected" ng-options="option.number for option in baseData.lstRoomCnt track by option.id">
+                <option value="">انتخاب خواب</option>
+            </select>
+            <label class="_lbl _dir-align-r">تعداد بزرگسال:</label>
+            <input class="_txt _txt-form _fnt-fa _trans" type="text" placeholder="تعداد بزرگسال" ng-model="newRoom.adult" ng-if="roomSelected" />
+            <input class="_txt _txt-form _fnt-fa _trans" type="text" placeholder="تعداد بزرگسال" ng-model="newApartment.adult" ng-if="apartmentSelected" />
+            <label class="_lbl _dir-align-r">تعداد کودکان:</label>
+            <input class="_txt _txt-form _fnt-fa _trans" type="text" placeholder="تعداد کودکان" ng-model="newRoom.child" ng-if="roomSelected" />
+            <input class="_txt _txt-form _fnt-fa _trans" type="text" placeholder="تعداد کودکان" ng-model="newApartment.child" ng-if="apartmentSelected" />
+        </section>
+    </div>
+    <div class="_flex _bg-w1 _w90-pad5 footer-r-h-c _dir-align-l">
+        <div class="_flex _b-ico _cursor _trans" ng-click="AddRoomItem()" ng-if="roomSelected">
+            <strong>نمایش اطلاعات</strong>
+        </div>
+        <div class="_flex _b-ico _cursor _trans" ng-click="AddApartmentItem()" ng-if="apartmentSelected">
+            <strong>نمایش اطلاعات</strong>
+        </div>
+        <div class="_flex _b-ico _cursor _trans" ng-click="cancel();">
+            <strong>انصراف</strong>
+        </div>
+    </div>
+
+</section>

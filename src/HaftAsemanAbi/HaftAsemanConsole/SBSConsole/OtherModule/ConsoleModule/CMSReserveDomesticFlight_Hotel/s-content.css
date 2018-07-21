@@ -1,0 +1,36 @@
+﻿.base-body-search-content {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.t-search-content {
+    margin-top: 50px;
+    margin-bottom: 8px;
+}
+
+    .t-search-content.ch-t-search-content {
+        margin-bottom: 25px;
+    }
+
+    .t-search-content > h1 {
+        font-size: 1.2em;
+    }
+
+.base-search-content {
+    flex-flow: row wrap;
+    margin: 10px 0 15px;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+    .base-search-content.ch-base-search-content {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #DDD;
+        margin: 10px 5% 15px;
+    }
+
+.s-c {
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+}

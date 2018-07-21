@@ -1,0 +1,63 @@
+﻿<section class="_flex _w100 _h100 base-body-container _position-r">
+    <section class="_flex body-data-content _h100 _dir-align-r _bg-w1" over>
+        <section class="_w100 base-filter-content _dir-align-r">
+            <section class="_w100 _flex filter-content _dir-align-r">
+                <section class="_w40-m5 base-s-c _flex">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">نام دسته:</label>
+                        <select class="_select _select-form _dir-align-r _trans" ng-model="Facilities.FacilitiesItem" ng-options="option.CategoryName for option in lstFacilitiesCats track by option.Id">
+                            <option value="">انتخاب دسته امکانات</option>
+                        </select>
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="ShowPageContent();">
+                            <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">زبان:</label>
+                        <select class="_select _select-form _dir-align-r _trans" ng-model="Facilities.LanguagesItem" ng-options="option.ISO6391 for option in lstLangs track by option.Id">
+                            <option value="">انتخاب زبان</option>
+                        </select>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">عنوان امکانات:</label>
+                        <input type="text" placeholder="عنوان امکانات" class="_txt-form _fnt-fa" ng-model="Facilities.Name" />
+                        <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="AddFacilitiesByLang(Facilities)">
+                            <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="_w40-m5 base-s-c _flex">
+                    <ul class="_flex _w100 _dir-align-r ul-add-f-content">
+                        <li class="li-f-c _flex" ng-repeat="facilitiesItem in facilitiesLst">
+                            <i class="_color-red _trans sbs-ico-cross _cursor" ng-click="DeleteFacilitesItem($index)"></i>
+                            <span class="_bg3 _color-w1">{{facilitiesItem.LanguagesItem.ISO6391}}</span>
+                            <h1 class="_color-60">{{facilitiesItem.Name}}</h1>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+        <section class="_flex _w100 show-data-content _dir-align-r" style="background:#DDD" ui-i18n="{{lang}}">
+            <div id="grid1" ui-grid="gridOptions" dir="rtl" ui-grid-selection ui-grid-resize-columns ui-grid-move-columns class="grid _w100"></div>
+        </section>
+        <section class="_flex _w100 show-info-content _dir-align-r"></section>
+    </section>
+    <section class="_flex operation-content _dir-align-r _bg-w">
+        <div class="_w50 _flex _dir-align-r">
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="SaveData();" ng-show="ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-playlist_add"></i>
+                <span class="_color-w">ثبت اطلاعات</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="UpdateData();" ng-show="!ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-border_color"></i>
+                <span class="_color-w">ویرایش</span>
+            </div>
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="DeleteData();" ng-show="!ShowBttnSave">
+                <i class="_color-w _trans sbs-ico-delete"></i>
+                <span class="_color-w">حذف اطلاعات</span>
+            </div>
+        </div>
+    </section>
+</section>
+
+

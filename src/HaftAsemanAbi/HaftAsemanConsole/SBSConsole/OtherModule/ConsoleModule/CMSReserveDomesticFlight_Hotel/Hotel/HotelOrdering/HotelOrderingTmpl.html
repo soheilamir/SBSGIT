@@ -1,0 +1,61 @@
+﻿<section class="_flex _w100 _h100 base-body-container _position-r">
+    <section class="_flex body-data-content _h100 _dir-align-r" over>
+        <section class="_w100 base-filter-content _dir-align-r">
+            <section class="_w100 _flex filter-content _dir-align-r">
+                <section class="base-s-c _flex" style="width:45%;margin:0 2.5%">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">شماره سفارش:</label>
+                        <div angucomplete-alt id="auto_c_OrderNumber" placeholder="شماره سفارش" maxlength="50" pause="100" selected-object="selectedOrderNum" local-data="dataOrderNumberList" search-fields="FullName" title-field="FullName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+                        </div>
+                        <label class="_lbl _lbl-form _dir-align-r lbl-s" style="text-align:center;">تاریخ:</label>
+                        <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpFrom" type="text" placeholder="تاریخ سفارش" ng-model="newFlight.orderdate" persiandatepickers-bd />
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">نام مشتری:</label>
+                        <div angucomplete-alt id="auto_c_Users" placeholder="نام مشتری" maxlength="50" pause="100" selected-object="selectedUser" local-data="dataUserList" search-fields="FullName" title-field="FullName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">وضعیت:</label>
+                        <select class="_select _select-form _dir-align-r _trans" ng-model="Status" ng-options="option.name for option in lstOrderHotelStatus track by option.id">
+                            <option value="">انتخاب وضعیت</option>
+                        </select>
+                    </div>
+                </section>
+                <section class="base-s-c _flex" style="width:45%;margin:0 2.5%">
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-l">نام شهر یا هتل:</label>
+                        <div angucomplete-alt id="auto_c_Destination_Hotels" placeholder="نام شهر یا هتل" maxlength="50" pause="100" selected-object="selectedH_D" local-data="data_Des_H_List" search-fields="FullName" title-field="FullName" minlength="1" input-class="input-auto-s _fnt-fa _trans _dir-align-r" match-class="highlight">
+                        </div>
+                    </div>
+                    <div class="_w100 _flex split-i-c">
+                        <label class="_lbl _lbl-form _dir-align-r lbl-s">تاریخ ورود:</label>
+                        <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpFrom" type="text" placeholder="از تاریخ" ng-model="checkIn" persiandatepickers-from />
+                        <label class="_lbl _lbl-form _dir-align-r lbl-s" style="text-align:center;">خروج:</label>
+                        <input class="_txt _txt-form _txt-datepicker _fnt-fa _trans dpTo" type="text" placeholder="تا تاریخ" ng-model="checkOut" persiandatepickers-to />
+                    </div>
+                    <div class="_w100 _flex split-i-c _dir-align-l">
+                        <div class="bttn-srch-f _flex _trans _cursor" role="button" ng-click="SearchOnHotelOrder()" tabindex="0">
+                            <span class="_fnt-fa _color-w">جستجو</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section class="_flex _w100 show-data-content _dir-align-r _bg-d" ui-i18n="{{lang}}">
+            <div id="grid1" ui-grid="gridOptions" dir="rtl" ui-grid-selection ui-grid-resize-columns ui-grid-move-columns class="grid _w100"></div>
+        </section>
+        <section class="_flex _w100 show-info-content _dir-align-r" ng-show="false"></section>
+    </section>
+    <section class="_flex operation-content _dir-align-r">
+        <div class="_w50 _flex _dir-align-r">
+            <div class="_flex _bttn _bttn-form _cursor _dir-align-r" role="button" ng-click="ShowDetailHistoryHotelOrder();">
+                <i class="_color-w _trans sbs-ico-eye"></i>
+                <span class="_color-w">نمایش جزئیات سفارش</span>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+

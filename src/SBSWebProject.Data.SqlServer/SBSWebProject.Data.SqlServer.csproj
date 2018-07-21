@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{239B18F7-9389-4A3A-801D-AC70690A610A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SBSWebProject.Data.SqlServer</RootNamespace>
+    <AssemblyName>SBSWebProject.Data.SqlServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\lib\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\lib\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\lib\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataHandler\AirlineClassesDataHandler.cs" />
+    <Compile Include="DataHandler\AirlineClassPathDataHandler.cs" />
+    <Compile Include="DataHandler\AirlineClassPathFeeDataHandler.cs" />
+    <Compile Include="DataHandler\AirlineMembersDataHandler.cs" />
+    <Compile Include="DataHandler\AirlineNameByLanguageDataHandler.cs" />
+    <Compile Include="DataHandler\AirLinesDataHandler.cs" />
+    <Compile Include="DataHandler\AirlineSubClassesDataHandler.cs" />
+    <Compile Include="DataHandler\AirplaneDataHandler.cs" />
+    <Compile Include="DataHandler\AirplaneTicketPreferedAirlinesDataHandler.cs" />
+    <Compile Include="DataHandler\AirportNameByLanguageDataHandler.cs" />
+    <Compile Include="DataHandler\AirportsDataHandler.cs" />
+    <Compile Include="DataHandler\BlogsDataHandler.cs" />
+    <Compile Include="DataHandler\CityDataHandler.cs" />
+    <Compile Include="DataHandler\CityNameByLanguageDataHandler.cs" />
+    <Compile Include="DataHandler\CityPublicPlaceDataHandler.cs" />
+    <Compile Include="DataHandler\CityPublicPlaceNameByLanguageDataHandler.cs" />
+    <Compile Include="DataHandler\CompanyAttachmentDataHandler.cs" />
+    <Compile Include="DataHandler\CompanyDataHandler.cs" />
+    <Compile Include="DataHandler\CompanyEmployeeDataHandler.cs" />
+    <Compile Include="DataHandler\CompanyEmployeePositionDataHandler.cs" />
+    <Compile Include="DataHandler\CompanyOrdersConfirmationDataHandler.cs" />
+    <Compile Include="DataHandler\CompanySectionDataHandler.cs" />
+    <Compile Include="DataHandler\CompanyServiceFeeDataHandler.cs" />
+    <Compile Include="DataHandler\ConditionTypeDataHandler.cs" />
+    <Compile Include="DataHandler\ConditionValuesDataHandler.cs" />
+    <Compile Include="DataHandler\ContinentDataHandler.cs" />
+    <Compile Include="DataHandler\CountryDataHandler.cs" />
+    <Compile Include="DataHandler\CountryIpAddressesDataHandler.cs" />
+    <Compile Include="DataHandler\CountryNameByLanguageDataHandler.cs" />
+    <Compile Include="DataHandler\DomainEntity.cs" />
+    <Compile Include="DataHandler\EarthRegionDataHandler.cs" />
+    <Compile Include="DataHandler\ExtensionsDataHandler.cs" />
+    <Compile Include="DataHandler\FacilitiesCategoryDataHandler.cs" />
+    <Compile Include="DataHandler\FacilitiesDataHandler.cs" />
+    <Compile Include="DataHandler\FacilitiesNameByLanguageDataHandler.cs" />
+    <Compile Include="DataHandler\FilesDataHandler.cs" />
+    <Compile Include="DataHandler\FlightConditionDataHandler.cs" />
+    <Compile Include="DataHandler\FlightFreeServiceDataHandler.cs" />
+    <Compile Include="DataHandler\FlightNumbersDataHandler.cs" />
+    <Compile Include="DataHandler\FlightPathDataHandler.cs" />
+    <Compile Include="DataHandler\FlightStopOverDataHandler.cs" />
+    <Compile Include="DataHandler\FoldersDataHandler.cs" />
+    <Compile Include="DataHandler\HotelAccessibilityDataHandler.cs" />
+    <Compile Include="DataHandler\HotelCommentsDataHandler.cs" />
+    <Compile Include="DataHandler\HotelFacilitiesDataHandler.cs" />
+    <Compile Include="DataHandler\HotelNameByLanguageDataHandler.cs" />
+    <Compile Include="DataHandler\HotelOrRoomConditionsDataHandler.cs" />
+    <Compile Include="DataHandler\HotelPhotosDataHandler.cs" />
+    <Compile Include="DataHandler\HotelRoomBedsDataHandler.cs" />
+    <Compile Include="DataHandler\HotelRoomCommentsDataHandler.cs" />
+    <Compile Include="DataHandler\HotelRoomDataHandler.cs" />
+    <Compile Include="DataHandler\HotelRoomNightPriceDataHandler.cs" />
+    <Compile Include="DataHandler\HotelRoomPhotosDataHandler.cs" />
+    <Compile Include="DataHandler\HotelRoomTypeDataHandler.cs" />
+    <Compile Include="DataHandler\HotelRoomTypeNameByLanguageDataHandler.cs" />
+    <Compile Include="DataHandler\HotelsDataHandler.cs" />
+    <Compile Include="DataHandler\JobOpportunityDataHandler.cs" />
+    <Compile Include="DataHandler\LanguagesDataHandler.cs" />
+    <Compile Include="DataHandler\MessagesDataHandler.cs" />
+    <Compile Include="DataHandler\NewsDataHandler.cs" />
+    <Compile Include="DataHandler\NewsTagsDataHandler.cs" />
+    <Compile Include="DataHandler\OnlineFlightTicketDataHandler.cs" />
+    <Compile Include="DataHandler\OnlineFlightTicketPassengersDataHandler.cs" />
+    <Compile Include="DataHandler\OnlineFlightTicketPathDataHandler.cs" />
+    <Compile Include="DataHandler\OrdersDataHandler.cs" />
+    <Compile Include="DataHandler\PassengersDataHandler.cs" />
+    <Compile Include="DataHandler\ReceivedResumeDataHandler.cs" />
+    <Compile Include="DataHandler\RequestAirplaneServiceDataHandler.cs" />
+    <Compile Include="DataHandler\RequestAirplaneTicketDataHandler.cs" />
+    <Compile Include="DataHandler\RequestAirplaneTicketPassengerDataHandler.cs" />
+    <Compile Include="DataHandler\RequestStatusDataHandler.cs" />
+    <Compile Include="DataHandler\ResponseAirplaneTicketDataHandler.cs" />
+    <Compile Include="DataHandler\RolesInSectionDataHandler.cs" />
+    <Compile Include="DataHandler\SbsBranchAwardsDataHandler.cs" />
+    <Compile Include="DataHandler\SbsBranchesDataHandler.cs" />
+    <Compile Include="DataHandler\SbsBranchImagesDataHandler.cs" />
+    <Compile Include="DataHandler\SbsBranchTeamDataHandler.cs" />
+    <Compile Include="DataHandler\SbsRolesDataHandler.cs" />
+    <Compile Include="DataHandler\SbsSectionsDataHandler.cs" />
+    <Compile Include="DataHandler\SbsTagsDataHandler.cs" />
+    <Compile Include="DataHandler\ServicesDataHandler.cs" />
+    <Compile Include="DataHandler\StateProvinceDataHandler.cs" />
+    <Compile Include="DataHandler\StateProvinceNameByLanguageDataHandler.cs" />
+    <Compile Include="DataHandler\TicketNumberDataHandler.cs" />
+    <Compile Include="DataHandler\UserAddressesDataHandler.cs" />
+    <Compile Include="DataHandler\UserAndPassengerDocumentsDataHandler.cs" />
+    <Compile Include="DataHandler\UserCreditInfoDataHandler.cs" />
+    <Compile Include="DataHandler\UserEmailsDataHandler.cs" />
+    <Compile Include="DataHandler\UserFavoriteAirlinesDataHandler.cs" />
+    <Compile Include="DataHandler\UserLanguagesDataHandler.cs" />
+    <Compile Include="DataHandler\UserLoginLogDataHandler.cs" />
+    <Compile Include="DataHandler\UserPassengerDataHandler.cs" />
+    <Compile Include="DataHandler\UsersDataHandler.cs" />
+    <Compile Include="DataHandler\UsersInGroupDataHandler.cs" />
+    <Compile Include="DataHandler\UserTelsDataHandler.cs" />
+    <Compile Include="DataHandler\WebPageBannersDataHandler.cs" />
+    <Compile Include="DataHandler\WebPageContextDataHandler.cs" />
+    <Compile Include="DataHandler\WebPagesDataHandler.cs" />
+    <Compile Include="DataHandler\WebsiteCategoryDataHandler.cs" />
+    <Compile Include="DataHandler\WebsiteFaqsDataHandler.cs" />
+    <Compile Include="DomainEntities\AirlineClassesDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirlineClassPathDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirlineClassPathFeeDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirlineMembersDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirlineNameByLanguageDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirlinesDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirlineSubClassesDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirplaneDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirplaneTicketPreferedAirlinesDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirportNameByLanguageDomainEntity.cs" />
+    <Compile Include="DomainEntities\AirportsDomainEntity.cs" />
+    <Compile Include="DomainEntities\BlogsDomainEntity.cs" />
+    <Compile Include="DomainEntities\CityDomainEntity.cs" />
+    <Compile Include="DomainEntities\CityNameByLanguageDomainEntity.cs" />
+    <Compile Include="DomainEntities\CityPublicPlaceDomainEntity.cs" />
+    <Compile Include="DomainEntities\CityPublicPlaceNameByLanguageDomainEntity.cs" />
+    <Compile Include="DomainEntities\CompanyDomainEntity.cs" />
+    <Compile Include="DomainEntities\CompanyAttachmentDomainEntity.cs" />
+    <Compile Include="DomainEntities\CompanyEmployeeDomainEntity.cs" />
+    <Compile Include="DomainEntities\CompanyEmployeePositionDomainEntity.cs" />
+    <Compile Include="DomainEntities\CompanyOrdersConfirmationDomainEntity.cs" />
+    <Compile Include="DomainEntities\CompanySectionDomainEntity.cs" />
+    <Compile Include="DomainEntities\CompanyServiceFeeDomainEntity.cs" />
+    <Compile Include="DomainEntities\ConditionTypeDomainEntity.cs" />
+    <Compile Include="DomainEntities\ConditionValuesDomainEntity.cs" />
+    <Compile Include="DomainEntities\ContinentDomainEntity.cs" />
+    <Compile Include="DomainEntities\CountryDomainEntity.cs" />
+    <Compile Include="DomainEntities\CountryIpAddressesDomainEntity.cs" />
+    <Compile Include="DomainEntities\CountryNameByLanguageDomainEntity.cs" />
+    <Compile Include="DomainEntities\EarthRegionDomainEntity.cs" />
+    <Compile Include="DomainEntities\ExtensionsDomainEntity.cs" />
+    <Compile Include="DomainEntities\FacilitiesCategoryDomainEntity.cs" />
+    <Compile Include="DomainEntities\FacilitiesDomainEntity.cs" />
+    <Compile Include="DomainEntities\FacilitiesNameByLanguageDomainEntity.cs" />
+    <Compile Include="DomainEntities\FilesDomainEntity.cs" />
+    <Compile Include="DomainEntities\FlightConditionDomainEntity.cs" />
+    <Compile Include="DomainEntities\FlightFreeServicesDomainEntity.cs" />
+    <Compile Include="DomainEntities\FlightNumbersDomainEntity.cs" />
+    <Compile Include="DomainEntities\FlightPathDomainEntity.cs" />
+    <Compile Include="DomainEntities\FlightStopOverDomainEntity.cs" />
+    <Compile Include="DomainEntities\FoldersDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelAccessibilityDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelCommentsDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelFacilitiesDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelNameByLanguageDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelOrRoomConditionsDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelPhotosDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelRoomBedsDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelRoomCommentsDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelRoomDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelRoomNightPriceDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelRoomPhotosDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelRoomTypeDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelRoomTypeNameByLanguageDomainEntity.cs" />
+    <Compile Include="DomainEntities\HotelsDomainEntity.cs" />
+    <Compile Include="DomainEntities\JobOpportunityDomainEntity.cs" />
+    <Compile Include="DomainEntities\LanguagesDomainEntity.cs" />
+    <Compile Include="DomainEntities\MessagesDomainEntity.cs" />
+    <Compile Include="DomainEntities\NewsDomainEntity.cs" />
+    <Compile Include="DomainEntities\NewsTagsDomainEntity.cs" />
+    <Compile Include="DomainEntities\OnlineFlightTicketDomainEntity.cs" />
+    <Compile Include="DomainEntities\OnlineFlightTicketPassengersDomainEntity.cs" />
+    <Compile Include="DomainEntities\OnlineFlightTicketPathDomainEntity.cs" />
+    <Compile Include="DomainEntities\OrdersDomainEntity.cs" />
+    <Compile Include="DomainEntities\PassengersDomainEntity.cs" />
+    <Compile Include="DomainEntities\ReceivedResumeDomainEntity.cs" />
+    <Compile Include="DomainEntities\RequestAirplaneServiceDomainEntity.cs" />
+    <Compile Include="DomainEntities\RequestAirplaneTicketDomainEntity.cs" />
+    <Compile Include="DomainEntities\RequestAirplaneTicketPassengerDomainEntity.cs" />
+    <Compile Include="DomainEntities\RequestStatusDomainEntity.cs" />
+    <Compile Include="DomainEntities\ResponseAirplaneTicketDomainEntity.cs" />
+    <Compile Include="DomainEntities\RolesInSectionDomainEntity.cs" />
+    <Compile Include="DomainEntities\SbsBranchAwardsDomainEntity.cs" />
+    <Compile Include="DomainEntities\SbsBranchesDomainEntity.cs" />
+    <Compile Include="DomainEntities\SbsBranchImagesDomainEntity.cs" />
+    <Compile Include="DomainEntities\SbsBranchTeamDomainEntity.cs" />
+    <Compile Include="DomainEntities\SbsRolesDomainEntity.cs" />
+    <Compile Include="DomainEntities\SbsSectionsDomainEntity.cs" />
+    <Compile Include="DomainEntities\SbsTagsDomainEntity.cs" />
+    <Compile Include="DomainEntities\ServicesDomainEntity.cs" />
+    <Compile Include="DomainEntities\StateProvinceDomainEntity.cs" />
+    <Compile Include="DomainEntities\StateProvinceNameByLanguageDomainEntity.cs" />
+    <Compile Include="DomainEntities\TicketNumberDomainEntity.cs" />
+    <Compile Include="DomainEntities\UserDomainEntity.cs" />
+    <Compile Include="DomainEntities\UserAddresses.cs" />
+    <Compile Include="DomainEntities\UserAndPassengerDocuments.cs" />
+    <Compile Include="DomainEntities\UserCreditInfo.cs" />
+    <Compile Include="DomainEntities\UserEmailsDomainEntity.cs" />
+    <Compile Include="DomainEntities\UserFavoriteAirlinesDomainEntity.cs" />
+    <Compile Include="DomainEntities\UserLanguagesDomainEntity.cs" />
+    <Compile Include="DomainEntities\UserLoginLogDomainEntity.cs" />
+    <Compile Include="DomainEntities\UserPassengerDomainEntity.cs" />
+    <Compile Include="DomainEntities\UsersDomainEntity.cs" />
+    <Compile Include="DomainEntities\UserTelsDomainEntity.cs" />
+    <Compile Include="DomainEntities\WebPageBannersDomainEntity.cs" />
+    <Compile Include="DomainEntities\WebPageContextDomainEntity.cs" />
+    <Compile Include="DomainEntities\WebPagesDomainEntity.cs" />
+    <Compile Include="DomainEntities\WebsiteCategoryDomainEntity.cs" />
+    <Compile Include="DomainEntities\WebsiteFAQsDomainEntity.cs" />
+    <Compile Include="Mapping\AirlineClassesMap.cs" />
+    <Compile Include="Mapping\AirlineClassPathFeeMap.cs" />
+    <Compile Include="Mapping\AirlineClassPathMap.cs" />
+    <Compile Include="Mapping\AirlineMembersMap.cs" />
+    <Compile Include="Mapping\AirlineNameByLanguageMap.cs" />
+    <Compile Include="Mapping\AirlinesMap.cs" />
+    <Compile Include="Mapping\AirlineSubClassesMap.cs" />
+    <Compile Include="Mapping\AirplaneMap.cs" />
+    <Compile Include="Mapping\AirplaneTicketPreferedAirlinesMap.cs" />
+    <Compile Include="Mapping\AirportNameByLanguageMap.cs" />
+    <Compile Include="Mapping\AirportsMap.cs" />
+    <Compile Include="Mapping\BlogsMap.cs" />
+    <Compile Include="Mapping\CityMap.cs" />
+    <Compile Include="Mapping\CityNameByLanguageMap.cs" />
+    <Compile Include="Mapping\CityPublicPlaceMap.cs" />
+    <Compile Include="Mapping\CityPublicPlaceNameByLanguageMap.cs" />
+    <Compile Include="Mapping\CompanyAttachmentMap.cs" />
+    <Compile Include="Mapping\CompanyEmployeeMap.cs" />
+    <Compile Include="Mapping\CompanyEmployeePositionMap.cs" />
+    <Compile Include="Mapping\CompanyMap.cs" />
+    <Compile Include="Mapping\CompanyOrdersConfirmationMap.cs" />
+    <Compile Include="Mapping\CompanySectionMap.cs" />
+    <Compile Include="Mapping\CompanyServiceFeeMap.cs" />
+    <Compile Include="Mapping\ConditionTypeMap.cs" />
+    <Compile Include="Mapping\ConditionValueMap.cs" />
+    <Compile Include="Mapping\ContinentMap.cs" />
+    <Compile Include="Mapping\CountryIpAddressesMap.cs" />
+    <Compile Include="Mapping\CountryMap.cs" />
+    <Compile Include="Mapping\CountryNameByLanguageMap.cs" />
+    <Compile Include="Mapping\EarthRegionMap.cs" />
+    <Compile Include="Mapping\ExtensionsMap.cs" />
+    <Compile Include="Mapping\FacilitiesCategoryMap.cs" />
+    <Compile Include="Mapping\FacilitiesMap.cs" />
+    <Compile Include="Mapping\FacilitiesNameByLanguageMap.cs" />
+    <Compile Include="Mapping\FilesMap.cs" />
+    <Compile Include="Mapping\FlightConditionMap.cs" />
+    <Compile Include="Mapping\FlightFreeServiceMap.cs" />
+    <Compile Include="Mapping\FlightNumbersMap.cs" />
+    <Compile Include="Mapping\FlightPathMap.cs" />
+    <Compile Include="Mapping\FlightStopOverMap.cs" />
+    <Compile Include="Mapping\FoldersMap.cs" />
+    <Compile Include="Mapping\HotelAccessibilityMap.cs" />
+    <Compile Include="Mapping\HotelCommentsMap.cs" />
+    <Compile Include="Mapping\HotelFacilitiesMap.cs" />
+    <Compile Include="Mapping\HotelNameByLanguageMap.cs" />
+    <Compile Include="Mapping\HotelOrRoomConditionsMap.cs" />
+    <Compile Include="Mapping\HotelPhotosMap.cs" />
+    <Compile Include="Mapping\HotelRoomBedsMap.cs" />
+    <Compile Include="Mapping\HotelRoomCommentsMap.cs" />
+    <Compile Include="Mapping\HotelRoomMap.cs" />
+    <Compile Include="Mapping\HotelRoomNightPriceMap.cs" />
+    <Compile Include="Mapping\HotelRoomPhotosMap.cs" />
+    <Compile Include="Mapping\HotelRoomTypeMap.cs" />
+    <Compile Include="Mapping\HotelRoomTypeNameByLanguageMap.cs" />
+    <Compile Include="Mapping\HotelsMap.cs" />
+    <Compile Include="Mapping\InsuranceAgeIntervalMap.cs" />
+    <Compile Include="Mapping\InsuranceCoverageMap.cs" />
+    <Compile Include="Mapping\InsuranceOrdersMap.cs" />
+    <Compile Include="Mapping\InsurancePriceTableMap.cs" />
+    <Compile Include="Mapping\InsuranceTravelIntervalMap.cs" />
+    <Compile Include="Mapping\InsuranceZoneCountryMap.cs" />
+    <Compile Include="Mapping\InsuranceZoneMap.cs" />
+    <Compile Include="Mapping\InternationalInsuranceCompanyMap.cs" />
+    <Compile Include="Mapping\IranianInsuranceCompanyMap.cs" />
+    <Compile Include="Mapping\JobOpportunityMap.cs" />
+    <Compile Include="Mapping\LanguagesMap.cs" />
+    <Compile Include="Mapping\MessagesMap.cs" />
+    <Compile Include="Mapping\NewsMap.cs" />
+    <Compile Include="Mapping\NewsTagsMap.cs" />
+    <Compile Include="Mapping\OnlineFlightTicketMap.cs" />
+    <Compile Include="Mapping\OnlineFlightTicketPassengersMap.cs" />
+    <Compile Include="Mapping\OnlineFlightTicketPathMap.cs" />
+    <Compile Include="Mapping\OrdersMap.cs" />
+    <Compile Include="Mapping\PassengersMap.cs" />
+    <Compile Include="Mapping\PersonsMap.cs" />
+    <Compile Include="Mapping\ReceivedResumeMap.cs" />
+    <Compile Include="Mapping\RequestAirplaneServiceMap.cs" />
+    <Compile Include="Mapping\RequestAirplaneTicketMap.cs" />
+    <Compile Include="Mapping\RequestAirplaneTicketPassengerMap.cs" />
+    <Compile Include="Mapping\RequestStatusMap.cs" />
+    <Compile Include="Mapping\ResponseAirplaneTicketMap.cs" />
+    <Compile Include="Mapping\RolesInSectionMap.cs" />
+    <Compile Include="Mapping\SbsBranchAwardsMap.cs" />
+    <Compile Include="Mapping\SbsBranchesMap.cs" />
+    <Compile Include="Mapping\SbsBranchImagesMap.cs" />
+    <Compile Include="Mapping\SbsTagsMap.cs" />
+    <Compile Include="Mapping\ServicesMap.cs" />
+    <Compile Include="Mapping\StateProvinceMap.cs" />
+    <Compile Include="Mapping\StateProvinceNameByLanguageMap.cs" />
+    <Compile Include="Mapping\StatusMap.cs" />
+    <Compile Include="Mapping\SysdiagramsMap.cs" />
+    <Compile Include="Mapping\TaskMap.cs" />
+    <Compile Include="Mapping\TaskUserMap.cs" />
+    <Compile Include="Mapping\TicketNumberMap.cs" />
+    <Compile Include="Mapping\UserAddressesMap.cs" />
+    <Compile Include="Mapping\UserAndPassengerDocumentsMap.cs" />
+    <Compile Include="Mapping\UserCreditInfoMap.cs" />
+    <Compile Include="Mapping\UserEmailsMap.cs" />
+    <Compile Include="Mapping\UserFavoriteAirlinesMap.cs" />
+    <Compile Include="Mapping\SbsSectionsMap.cs" />
+    <Compile Include="Mapping\UserLanguagesMap.cs" />
+    <Compile Include="Mapping\UserLoginLogMap.cs" />
+    <Compile Include="Mapping\UserMap.cs" />
+    <Compile Include="Mapping\UserPassengerMap.cs" />
+    <Compile Include="Mapping\SbsRolesMap.cs" />
+    <Compile Include="Mapping\SbsBranchTeamMap.cs" />
+    <Compile Include="Mapping\UsersMap.cs" />
+    <Compile Include="Mapping\UserTelsMap.cs" />
+    <Compile Include="Mapping\VersionedClassMap.cs" />
+    <Compile Include="Mapping\WebPageBannersMap.cs" />
+    <Compile Include="Mapping\WebPageContextMap.cs" />
+    <Compile Include="Mapping\WebPagesMap.cs" />
+    <Compile Include="Mapping\WebsiteCategoryMap.cs" />
+    <Compile Include="Mapping\WebsiteFAQsMap.cs" />
+    <Compile Include="NewDataHandler\AirlineClassesDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirlineClassPathDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirlineClassPathFeeDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirlineMembersDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirlineNameByLanguageDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirLinesDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirlineSubClassesDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirplaneDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirplaneTicketPreferedAirlinesDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirportNameByLanguageDataHandler.cs" />
+    <Compile Include="NewDataHandler\AirportsDataHandler.cs" />
+    <Compile Include="NewDataHandler\BlogsDataHandler.cs" />
+    <Compile Include="NewDataHandler\CityDataHandler.cs" />
+    <Compile Include="NewDataHandler\CityNameByLanguageDataHandler.cs" />
+    <Compile Include="NewDataHandler\CityPublicPlaceDataHandler.cs" />
+    <Compile Include="NewDataHandler\CityPublicPlaceNameByLanguageDataHandler.cs" />
+    <Compile Include="NewDataHandler\CompanyAttachmentDataHandler.cs" />
+    <Compile Include="NewDataHandler\CompanyDataHandler.cs" />
+    <Compile Include="NewDataHandler\CompanyEmployeeDataHandler.cs" />
+    <Compile Include="NewDataHandler\CompanyEmployeePositionDataHandler.cs" />
+    <Compile Include="NewDataHandler\CompanyOrdersConfirmationDataHandler.cs" />
+    <Compile Include="NewDataHandler\CompanySectionDataHandler.cs" />
+    <Compile Include="NewDataHandler\CompanyServiceFeeDataHandler.cs" />
+    <Compile Include="NewDataHandler\ConditionTypeDataHandler.cs" />
+    <Compile Include="NewDataHandler\ConditionValuesDataHandler.cs" />
+    <Compile Include="NewDataHandler\ContinentDataHandler.cs" />
+    <Compile Include="NewDataHandler\CountryDataHandler.cs" />
+    <Compile Include="NewDataHandler\CountryIpAddressesDataHandler.cs" />
+    <Compile Include="NewDataHandler\CountryNameByLanguageDataHandler.cs" />
+    <Compile Include="NewDataHandler\DomainEntity.cs" />
+    <Compile Include="NewDataHandler\EarthRegionDataHandler.cs" />
+    <Compile Include="NewDataHandler\ExtensionsDataHandler.cs" />
+    <Compile Include="NewDataHandler\FacilitiesCategoryDataHandler.cs" />
+    <Compile Include="NewDataHandler\FacilitiesDataHandler.cs" />
+    <Compile Include="NewDataHandler\FacilitiesNameByLanguageDataHandler.cs" />
+    <Compile Include="NewDataHandler\FilesDataHandler.cs" />
+    <Compile Include="NewDataHandler\FlightConditionDataHandler.cs" />
+    <Compile Include="NewDataHandler\FlightFreeServiceDataHandler.cs" />
+    <Compile Include="NewDataHandler\FlightNumbersDataHandler.cs" />
+    <Compile Include="NewDataHandler\FlightPathDataHandler.cs" />
+    <Compile Include="NewDataHandler\FlightStopOverDataHandler.cs" />
+    <Compile Include="NewDataHandler\FoldersDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelAccessibilityDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelCommentsDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelFacilitiesDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelNameByLanguageDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelOrRoomConditionsDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelPhotosDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelRoomBedsDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelRoomCommentsDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelRoomDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelRoomNightPriceDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelRoomPhotosDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelRoomTypeDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelRoomTypeNameByLanguageDataHandler.cs" />
+    <Compile Include="NewDataHandler\HotelsDataHandler.cs" />
+    <Compile Include="NewDataHandler\IDomainEntity.cs" />
+    <Compile Include="NewDataHandler\InsuranceAgeIntervalDataHandler.cs" />
+    <Compile Include="NewDataHandler\InsuranceCoverageDataHandler.cs" />
+    <Compile Include="NewDataHandler\InsuranceOrdersDataHandler.cs" />
+    <Compile Include="NewDataHandler\InsurancePriceTableDataHandler.cs" />
+    <Compile Include="NewDataHandler\InsuranceTravelIntervalDataHandler.cs" />
+    <Compile Include="NewDataHandler\InsuranceZoneCountryDataHandler.cs" />
+    <Compile Include="NewDataHandler\InsuranceZoneDataHandler.cs" />
+    <Compile Include="NewDataHandler\InternationalInsuranceCompanyDataHandler.cs" />
+    <Compile Include="NewDataHandler\IranianInsuranceCompanyDataHandler.cs" />
+    <Compile Include="NewDataHandler\JobOpportunityDataHandler.cs" />
+    <Compile Include="NewDataHandler\LanguagesDataHandler.cs" />
+    <Compile Include="NewDataHandler\MessagesDataHandler.cs" />
+    <Compile Include="NewDataHandler\NewsDataHandler.cs" />
+    <Compile Include="NewDataHandler\NewsTagsDataHandler.cs" />
+    <Compile Include="NewDataHandler\OnlineFlightTicketDataHandler.cs" />
+    <Compile Include="NewDataHandler\OnlineFlightTicketPassengersDataHandler.cs" />
+    <Compile Include="NewDataHandler\OnlineFlightTicketPathDataHandler.cs" />
+    <Compile Include="NewDataHandler\OrdersDataHandler.cs" />
+    <Compile Include="NewDataHandler\PassengersDataHandler.cs" />
+    <Compile Include="NewDataHandler\PersonsDataHandler.cs" />
+    <Compile Include="NewDataHandler\ReceivedResumeDataHandler.cs" />
+    <Compile Include="NewDataHandler\RequestAirplaneServiceDataHandler.cs" />
+    <Compile Include="NewDataHandler\RequestAirplaneTicketDataHandler.cs" />
+    <Compile Include="NewDataHandler\RequestAirplaneTicketPassengerDataHandler.cs" />
+    <Compile Include="NewDataHandler\RequestStatusDataHandler.cs" />
+    <Compile Include="NewDataHandler\ResponseAirplaneTicketDataHandler.cs" />
+    <Compile Include="NewDataHandler\RolesInSectionDataHandler.cs" />
+    <Compile Include="NewDataHandler\SbsBranchAwardsDataHandler.cs" />
+    <Compile Include="NewDataHandler\SbsBranchesDataHandler.cs" />
+    <Compile Include="NewDataHandler\SbsBranchImagesDataHandler.cs" />
+    <Compile Include="NewDataHandler\SbsBranchTeamDataHandler.cs" />
+    <Compile Include="NewDataHandler\SbsRolesDataHandler.cs" />
+    <Compile Include="NewDataHandler\SbsSectionsDataHandler.cs" />
+    <Compile Include="NewDataHandler\SbsTagsDataHandler.cs" />
+    <Compile Include="NewDataHandler\ServicesDataHandler.cs" />
+    <Compile Include="NewDataHandler\StateProvinceDataHandler.cs" />
+    <Compile Include="NewDataHandler\StateProvinceNameByLanguageDataHandler.cs" />
+    <Compile Include="NewDataHandler\TicketNumberDataHandler.cs" />
+    <Compile Include="NewDataHandler\UserAddressesDataHandler.cs" />
+    <Compile Include="NewDataHandler\UserAndPassengerDocumentsDataHandler.cs" />
+    <Compile Include="NewDataHandler\UserCreditInfoDataHandler.cs" />
+    <Compile Include="NewDataHandler\UserEmailsDataHandler.cs" />
+    <Compile Include="NewDataHandler\UserFavoriteAirlinesDataHandler.cs" />
+    <Compile Include="NewDataHandler\UserLanguagesDataHandler.cs" />
+    <Compile Include="NewDataHandler\UserLoginLogDataHandler.cs" />
+    <Compile Include="NewDataHandler\UserPassengerDataHandler.cs" />
+    <Compile Include="NewDataHandler\UsersDataHandler.cs" />
+    <Compile Include="NewDataHandler\UsersInGroupDataHandler.cs" />
+    <Compile Include="NewDataHandler\UserTelsDataHandler.cs" />
+    <Compile Include="NewDataHandler\WebPageBannersDataHandler.cs" />
+    <Compile Include="NewDataHandler\WebPageContextDataHandler.cs" />
+    <Compile Include="NewDataHandler\WebPagesDataHandler.cs" />
+    <Compile Include="NewDataHandler\WebsiteCategoryDataHandler.cs" />
+    <Compile Include="NewDataHandler\WebsiteFaqsDataHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryProcessors\AddTaskQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\AllTasksQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\TaskByIdQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\UpdateTaskQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\UpdateTaskStatusQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\UserQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\UsersQueryProcessor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SBSWebProject.Common\SBSWebProject.Common.csproj">
+      <Project>{c2fe4937-9640-485e-8432-ffcf05875e1c}</Project>
+      <Name>SBSWebProject.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SBSWebProject.Data\SBSWebProject.Data.csproj">
+      <Project>{8f019dd1-a3c3-4123-8439-4b455e8b99e0}</Project>
+      <Name>SBSWebProject.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
