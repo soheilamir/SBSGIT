@@ -1174,6 +1174,10 @@
     <Content Include="scripts\angular-animate.min.js" />
     <Content Include="scripts\angular-aria.js" />
     <Content Include="scripts\angular-aria.min.js" />
+    <Content Include="scripts\swiper-js\swiper.esm.bundle.js" />
+    <Content Include="scripts\swiper-js\swiper.esm.js" />
+    <Content Include="scripts\swiper-js\swiper.js" />
+    <Content Include="scripts\swiper-js\swiper.min.js" />
     <Content Include="style\angular-kk-timepicker\angular-kk-timepicker.css" />
     <Content Include="scripts\angular-kk-timepicker\angular-kk-timepicker.js" />
     <Content Include="scripts\angular-kk-timepicker\angular-kk-timepicker.min.js" />
@@ -1988,6 +1992,8 @@
     <Content Include="style\sbs-console-tmpl-css.css" />
     <Content Include="style\sbs-profile-tmpl-css.css" />
     <Content Include="style\sbs-web-tmpl-css.css" />
+    <Content Include="style\swiper-css\swiper.css" />
+    <Content Include="style\swiper-css\swiper.min.css" />
     <Content Include="style\tooltip\angular-tooltips.css" />
     <Content Include="style\UIGrid\ui-grid.css" />
     <Content Include="style\UIGrid\ui-grid.min.css" />
@@ -2062,6 +2068,7 @@
     <Content Include="style\UIGrid\ui-grid.ttf" />
     <Content Include="style\UIGrid\ui-grid.woff" />
     <Content Include="style\bootstrap-theme.min.css" />
+    <Content Include="scripts\swiper-js\swiper.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
