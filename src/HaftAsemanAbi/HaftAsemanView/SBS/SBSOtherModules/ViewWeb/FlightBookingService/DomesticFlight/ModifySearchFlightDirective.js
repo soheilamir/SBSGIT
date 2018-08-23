@@ -8,10 +8,7 @@ angular.module('flightBookingServiceModule').directive('modifySearchFlight', ['$
         require: '^dfbServices',
         templateUrl: "/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/FlightBookingService/DomesticFlight/modifySearchFlightTmpl.html",
         link: function (scope, ele, attr, ctrl) {
-            scope.baseData = $rootScope.baseDefaultData;
-            scope.CloseModifySearchFlight = function () {
-                ctrl.ChangeFlight(false);
-            }
+
         },
     };
 }]);

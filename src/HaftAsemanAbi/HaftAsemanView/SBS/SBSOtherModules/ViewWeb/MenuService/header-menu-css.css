@@ -1,1 +1,125 @@
-﻿
+﻿.menu-content {
+    flex-flow: column nowrap;
+}
+
+    .menu-content .t-menu-c {
+        height: 30px;
+        min-height: 30px;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row nowrap;
+    }
+
+    .menu-content .b-menu-c {
+        align-items: center;
+        flex-flow: row nowrap;
+        background: #F4F4F4;
+    }
+
+.logo-sbs {
+    align-items: center;
+    justify-content: center;
+}
+
+    .logo-sbs > img {
+        height: 80%;
+        width: auto;
+    }
+
+.menu-content .b-menu-c > ul {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+    .menu-content .b-menu-c > ul > li {
+        flex-flow: row nowrap;
+    }
+
+        .menu-content .b-menu-c > ul > li > a {
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            padding: 0 5px;
+            font-size: 0.95em;
+            color: #707070;
+        }
+
+            .menu-content .b-menu-c > ul > li > a:hover {
+                color: #ee3f5b;
+                box-shadow: 0 -3px 0 0 #de2543 inset;
+            }
+
+        .menu-content .b-menu-c > ul > li.log-li {
+            margin-right: 150px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 70px;
+        }
+
+            .menu-content .b-menu-c > ul > li.log-li > .login {
+                margin-left: 10px;
+                border: 1px solid #ee3f5b;
+                background: #de2543;
+                color: #F1F1F1;
+                padding: 10px 8px;
+                border-radius: 4px;
+                box-shadow: 0 20px 10px 0 #ee3f5b inset;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+                .menu-content .b-menu-c > ul > li.log-li > .login:before {
+                    content: "\e926";
+                    font-family: 'sbsfnt' !important;
+                    color: #FFF;
+                    margin-left: 5px;
+                    font-size: 1em;
+                    -webkit-transition: all 0.5s ease 0s;
+                    -o-transition: all 0.5s ease 0s;
+                    transition: all 0.5s ease 0s;
+                    -moz-transition: all 0.5s ease 0s;
+                }
+
+                .menu-content .b-menu-c > ul > li.log-li > .login:hover:before {
+                    margin-left: 10px;
+                }
+
+            .menu-content .b-menu-c > ul > li.log-li > .signout {
+                border: 1px dashed #ee3f5b;
+                padding: 10px 8px;
+                border-radius: 4px;
+                color: #de2543;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .menu-content .b-menu-c > ul > li.log-li > .signout:before {
+                    content: "\e909";
+                    font-family: 'sbsfnt' !important;
+                    color: #de2543;
+                    margin-left: 5px;
+                    font-size: 1em;
+                    -webkit-transition: all 0.5s ease 0s;
+                    -o-transition: all 0.5s ease 0s;
+                    transition: all 0.5s ease 0s;
+                    -moz-transition: all 0.5s ease 0s;
+                }
+
+                .menu-content .b-menu-c > ul > li.log-li > .signout:hover:before {
+                    margin-left: 10px;
+                }
+
+        .menu-content .b-menu-c > ul > li.menu-li {
+            align-items: center;
+            justify-content: center;
+        }
+
+            .menu-content .b-menu-c > ul > li.menu-li > span {
+                font-size: 1.8em;
+                color: #AAA;
+            }
+
+                .menu-content .b-menu-c > ul > li.menu-li > span:hover {
+                    color: #de2543;
+                }

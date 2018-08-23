@@ -1,10 +1,9 @@
 ﻿
 'use strict'
-angular.module('headerMenuModule').directive('headerMenu', [function () {
+angular.module('headerMenuModule').directive('baseMenu', [function () {
     return {
         replace: true,
         scope: {
-            innerMenu: '=',
         },
         controller: "headerMenuCtrl",
         templateUrl: "/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/MenuService/HeaderMenuTmpl.html",

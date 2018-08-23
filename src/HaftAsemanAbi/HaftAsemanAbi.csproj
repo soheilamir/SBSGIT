@@ -1036,7 +1036,9 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\DF_B_ServiceCtrl.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\DF_B_ServiceDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\dF_B_ServiceTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\SortFlightServiceDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\FilteringFlightServiceDirective.js" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\SortFlightTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\FilteringFlightTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\ModifySearchFlightDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\modifySearchFlightTmpl.html" />
@@ -1115,14 +1117,7 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\websiteModule.js" />
     <Content Include="Image\add-sbs-img-content.png" />
     <Content Include="Image\checked-line-content.png" />
-    <Content Include="Image\element\arrow-botton-select-tag-img.png" />
-    <Content Include="Image\element\bg-pattern.jpg" />
-    <Content Include="Image\element\liner-opacity.gif" />
-    <Content Include="Image\element\overlay.png" />
-    <Content Include="Image\element\shimmer_bg.jpg" />
     <Content Include="Image\element\word-wide-img.png" />
-    <Content Include="Image\Flag\EP.png" />
-    <Content Include="Image\Flag\ir_16.png" />
     <Content Include="Image\jqUI_Img\animated-overlay.gif" />
     <Content Include="Image\jqUI_Img\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="Image\jqUI_Img\ui-bg_diagonals-thick_20_666666_40x40.png" />
@@ -1174,6 +1169,8 @@
     <Content Include="scripts\angular-animate.min.js" />
     <Content Include="scripts\angular-aria.js" />
     <Content Include="scripts\angular-aria.min.js" />
+    <Content Include="scripts\datepicker\ADM-dateTimePicker.js" />
+    <Content Include="scripts\datepicker\ADM-dateTimePicker.min.js" />
     <Content Include="scripts\swiper-js\swiper.esm.bundle.js" />
     <Content Include="scripts\swiper-js\swiper.esm.js" />
     <Content Include="scripts\swiper-js\swiper.js" />
@@ -1197,7 +1194,6 @@
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\autocomplete\angucomplete-alt.js" />
     <Content Include="scripts\chips\mdchips.js" />
-    <Content Include="scripts\datepicker\persian-datepicker.js" />
     <Content Include="scripts\dist\swiper.js" />
     <Content Include="scripts\dist\swiper.min.js" />
     <Content Include="scripts\fileupload\ng-file-upload-shim.min.js" />
@@ -1972,7 +1968,8 @@
     <Content Include="style\autocomplete\angucomplete-alt.css" />
     <Content Include="style\bootstrap.min.css" />
     <Content Include="style\chips\mdchips.css" />
-    <Content Include="style\datepicker\persian-datepicker.css" />
+    <Content Include="style\datepicker\ADM-dateTimePicker.css" />
+    <Content Include="style\datepicker\ADM-dateTimePicker.min.css" />
     <Content Include="style\dist\swiper.css" />
     <Content Include="style\dist\swiper.min.css" />
     <Content Include="style\font\filemanager\fmfnt.svg" />
@@ -2053,22 +2050,29 @@
     <Content Include="ckeditor\skins\bootstrapck\scss\config\_config.scss" />
     <Content Include="ckeditor\skins\bootstrapck\scss\config\_defaults.scss" />
     <Content Include="ckeditor\skins\bootstrapck\scss\dialog\dialog.scss" />
-    <Content Include="style\font\bnazanin.TTF" />
-    <Content Include="style\font\bnazanin_blod.TTF" />
-    <Content Include="style\font\bnazanin_regular.TTF" />
     <Content Include="style\font\filemanager\fmfnt.eot" />
     <Content Include="style\font\filemanager\fmfnt.ttf" />
     <Content Include="style\font\filemanager\fmfnt.woff" />
     <Content Include="style\font\sbsfnt.eot" />
     <Content Include="style\font\sbsfnt.ttf" />
     <Content Include="style\font\sbsfnt.woff" />
-    <Content Include="style\font\SEGOEUIL.ttf" />
-    <Content Include="style\font\segoe_ui_light.ttf" />
     <Content Include="style\UIGrid\ui-grid.eot" />
     <Content Include="style\UIGrid\ui-grid.ttf" />
     <Content Include="style\UIGrid\ui-grid.woff" />
     <Content Include="style\bootstrap-theme.min.css" />
     <Content Include="scripts\swiper-js\swiper.min.js.map" />
+    <Content Include="style\font\OpenSans-Bold.eot" />
+    <Content Include="style\font\OpenSans-Bold.ttf" />
+    <Content Include="style\font\OpenSans-Bold.woff" />
+    <Content Include="style\font\OpenSans-Light.eot" />
+    <Content Include="style\font\OpenSans-Light.ttf" />
+    <Content Include="style\font\OpenSans-Light.woff" />
+    <Content Include="style\font\OpenSans-Regular.eot" />
+    <Content Include="style\font\OpenSans-Regular.ttf" />
+    <Content Include="style\font\OpenSans-Regular.woff" />
+    <Content Include="style\font\OpenSans-Semibold.eot" />
+    <Content Include="style\font\OpenSans-Semibold.ttf" />
+    <Content Include="style\font\OpenSans-Semibold.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2081,7 +2085,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="HaftAsemanConsole\SBSConsole\OtherModule\ConsoleModule\CMSServicesBaseInfoFlight\" />
     <Folder Include="HaftAsemanConsole\SBSConsole\OtherModule\ConsoleModule\CMSServicesBaseInfoHotel\BaseHotelInfo\searchHotel\" />
-    <Folder Include="Image\temp\" />
     <Folder Include="Models\" />
     <Folder Include="scripts\i18n\ngLocale\" />
     <Folder Include="Uploads\" />

@@ -10,10 +10,16 @@ var SBSWebApp = angular.module("SBSWebApp", [
     'LocalStorageModule',
     // ng progress
     'ngProgress',
+    'ADM-dateTimePicker',
     'kk.timepicker'
 ]);
-SBSWebApp.config(['$httpProvider', function ($httpProvider) {
+SBSWebApp.config(['$httpProvider', 'ADMdtpProvider', function ($httpProvider, ADMdtp) {
     $httpProvider.interceptors.push('authInterceptorService');
+    ADMdtp.setOptions({
+        calType: "jalali", format: "YYYY/MM/DD", gregorianStartDay: 1,
+        autoClose: true,
+
+    });
 }]);
 SBSWebApp.run(['$rootScope', '$http', 'config', 'AuthManager', function ($rootScope, $http, config, AuthManager) {
     AuthManager.objAuth.fillAuthData();

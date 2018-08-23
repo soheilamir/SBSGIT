@@ -1,170 +1,83 @@
-﻿/* label class */
-[class^="_lbl"], [class*="_lbl"] {
-    font-size: 1em;
-    color: #606060;
-    width: 100%;
-    margin: 4px 0;
-}
-
-.c-lbl {
-    min-width: 30px;
-}
-/* end label class */
-/* combo box class */
-[class^="_select"], [class*="_select"] {
-    font-size: 0.95em;
-    color: #808080;
-    min-width: 120px;
-    width: 200px;
-    flex: 1 1 auto;
-    font-family: "BNazanin","BNazanin_regular","BNazanin_bold";
-}
-
-[class^="_select>form"], [class*="_select>form"] {
-    padding: 3px;
-    border-radius: 2px;
-    border: 1px solid #DDD;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background: url('../Image/element/arrow-botton-select-tag-img.png') no-repeat 5% center #FFF;
-}
-
-    [class^="_select>form"]:hover, [class*="_select>form"]:hover {
-        border: 1px solid #A27EAE;
-    }
-
-    [class^="_select>form"]:focus, [class*="_select>form"]:focus {
-        border: 1px solid #A27EAE;
-        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2) inset;
-    }
-/* end combo box class */
-/* textbox class */
-[class^="_txt"], [class*="_txt"], [class^="_txt-tel"], [class*="_txt-tel"], .kk-timepicker__input-group input[type=text] {
-    font-size: 1em !important;
-    color: #606060 !important;
-    border: 1px solid #DDD !important;
-    padding: 5px 2.2% !important;
-    width: 95%;
-    margin: 4px 0 !important;
-}
-
-.kk-timepicker__input-group input[type=text] {
-    width: 80px !important;
-    text-align: center !important;
-}
-
-[class^="_txt-tel"], [class*="_txt-tel"] {
-    padding: 5px 0 5px 20%;
-    width: 80%;
-}
-
-.kk-timepicker__input-group input[type=text]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    font-size: 0.9em;
-}
-
-.kk-timepicker__input-group input[type=text]::-moz-placeholder { /* Firefox 19+ */
-    font-size: 0.9em;
-}
-
-.kk-timepicker__input-group input[type=text]:-ms-input-placeholder { /* IE 10+ */
-    font-size: 0.9em;
-}
-
-.kk-timepicker__input-group input[type=text]:-moz-placeholder { /* Firefox 18- */
-    font-size: 0.9em;
-}
-
-[class^="_txt"]:hover, [class*="_txt"]:hover, [class^="_txt-tel"]:hover, [class*="_txt-tel"]:hover {
+﻿/* textbox & bttn class content */
+._input-selc-body {
+    border-radius: 3px;
+    background: #F1F1F1;
     border: 1px solid #A27EAE;
+    padding: 12px 10px;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 8px;
+    margin-bottom: 8px;
 }
 
-[class^="_txt"]:focus, [class*="_txt"]:focus, [class^="_txt-tel"]:focus, [class*="_txt-tel"]:focus, .kk-timepicker__input-group input[type=text]:hover, .kk-timepicker__input-group input[type=text]:focus {
-    border: 1px solid #A27EAE !important;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2) inset !important;
-}
-
-/* end textbox class */
-/* textarea class */
-[class^="_txtarea"], [class*="_txtarea"] {
-    font-size: 1em;
-    color: #606060;
-    border: 1px solid #DDD;
-    padding: 3px;
-    height: 150px;
-    min-height: 100px;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-}
-
-    [class^="_txtarea"]:hover, [class*="_txtarea"]:hover {
-        border: 1px solid #A27EAE;
+    ._input-selc-body > i {
+        margin-left: 5px;
+        font-size: 1em;
     }
 
-    [class^="_txtarea"]:focus, [class*="_txtarea"]:focus {
-        border: 1px solid #A27EAE;
-        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2) inset;
+        ._input-selc-body > i > b {
+            font-size: 0.7em;
+            color: #707070;
+            top: -38px;
+            right: -10px;
+            width: 100px;
+        }
+
+    ._input-selc-body ._i-to {
+        margin-right: 5px;
+        padding-right: 20px;
+        border-right: 1px dashed #CAB7D3;
     }
-/* end textarea class */
-/* bttn class */
-[class^="_bttn"], [class*="_bttn"], [class^="_bttn>1"], [class*="_bttn>1"] {
-    border: 1px solid #6C1B78 !important;
-    background: #6C1B78;
-    border-radius: 3px;
-    vertical-align: central;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 10px;
-    margin: 8px;
-    color: #F1F1F1;
+
+        ._input-selc-body ._i-to > b {
+            right: 0px;
+        }
+
+    ._input-selc-body > ._txt-c {
+        width: 120px;
+        border: none;
+        color: #707070;
+        font-size: 0.95em;
+        background: none;
+    }
+
+        ._input-selc-body > ._txt-c._txt-num {
+            width: 45px;
+        }
+
+._bttn-body-c, ._bttn-body-c > ._bttn-c {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-[class^="_bttn-log"], [class*="_bttn-log"] {
-    border: 1px solid #6C1B78;
-    background: #845092;
-    border-radius: 3px;
-    vertical-align: central;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 0;
-    margin: 0;
-    width: 100%;
-}
+    ._bttn-body-c > ._bttn-c {
+        border: 1px solid #6C1B78;
+        border-radius: 3px;
+        background: #6C1B78;
+        box-shadow: 0 20px 20px 0 #872296 inset;
+        padding: 12px 30px;
+        margin: 0 3px;
+        align-items: center;
+        margin-bottom: 8px;
+    }
 
-[class^="_bttn>1"], [class*="_bttn>1"] {
-    border: 1px solid #DDD;
-    background: #FFF;
-}
+        ._bttn-body-c > ._bttn-c > span {
+            color: #F1F1F1;
+            font-size: 0.95em;
+        }
 
-[class^="_bttn"]:hover, [class*="_bttn"]:hover {
-    cursor: pointer;
-    box-shadow: 0 0 8px 0 #6C1B78 inset;
-}
+        ._bttn-body-c > ._bttn-c > i {
+            color: #F1F1F1;
+            font-size: 1.2em;
+            margin-right: 3px;
+        }
 
-[class^="_bttn>1"]:hover, [class*="_bttn>1"]:hover {
-    cursor: pointer;
-    box-shadow: none;
-    border: 1px solid #CCC;
-}
-
-[class^="_bttn"] > i, [class*="_bttn"] > i, [class^="_bttn"] > span, [class*="_bttn"] > span {
-    font-size: 1em;
-    color: #FFF;
-}
-
-[class^="_bttn"] > span, [class*="_bttn"] > span {
-    font-size: 1.2em;
-}
-
-[class^="_bttn>1"] > i, [class*="_bttn>1"] > i {
-    font-size: 1em;
-    color: #606060;
-}
-
-[class^="_bttn"]:hover > i, [class*="_bttn"]:hover > i {
-    padding: 0 8px;
-}
-/* end bttn class */
+        ._bttn-body-c > ._bttn-c:hover > i {
+            margin-right: 6px;
+        }
+/* end textbox & bttn class content */
 /* checkBox class */
 .regular-checkbox {
     display: none;
@@ -398,6 +311,12 @@ div[overflow], section[overflow], article[overflow], figure[overflow] {
     border-bottom: 1px solid #CCC !important;
 }
 
+._box {
+    -webkit-box-sizing: unset !important;
+    -moz-box-sizing: unset !important;
+    box-sizing: unset !important;
+}
+
 ._trasform_-20 {
     -ms-transform: skewX(-20deg); /* IE 9 */
     -webkit-transform: skewX(-20deg); /* Safari */
@@ -411,11 +330,11 @@ div[overflow], section[overflow], article[overflow], figure[overflow] {
 }
 
 ._fnt-en {
-    font-family: "segoe_ui_light","SEGOEUIL",Tahoma,sans-serif;
+    font-family: "IranSans",sans-serif;
 }
 
 ._fnt-fa {
-    font-family: "BNazanin","BNazanin_regular","BNazanin_bold";
+    font-family: "IranSans",sans-serif;
 }
 
 ._border-r {

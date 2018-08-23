@@ -1,22 +1,41 @@
 ﻿@font-face {
-    font-family: "BNazanin";
+    font-family: IranSans;
     font-style: normal;
-    font-weight: normal;
-    src: url('/style/font/bnazanin.ttf') format('truetype');
+    font-weight: 900;
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Black.0cbe440.eot);
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Black.0cbe440.eot?#iefix) format("embedded-opentype"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Black.3d58553.woff2) format("woff2"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Black.6e6d05b.woff) format("woff"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Black.879c6f0.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: "BNazanin_bold";
+    font-family: IranSans;
     font-style: normal;
-    font-weight: normal;
-    src: url('/style/font/bnazanin_blod.ttf') format('truetype');
+    font-weight: 700;
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Bold.cacb945.eot);
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Bold.cacb945.eot?#iefix) format("embedded-opentype"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Bold.924be0f.woff2) format("woff2"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Bold.6ed6ddf.woff) format("woff"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Bold.cf91637.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: "BNazanin_regular";
+    font-family: IranSans;
     font-style: normal;
-    font-weight: normal;
-    src: url('/style/font/bnazanin_regular.ttf') format('truetype');
+    font-weight: 500;
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Medium.5a25001.eot);
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Medium.5a25001.eot?#iefix) format("embedded-opentype"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Medium.8451859.woff2) format("woff2"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Medium.32cc237.woff) format("woff"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Medium.caa93b1.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: IranSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Light.fe61680.eot);
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Light.fe61680.eot?#iefix) format("embedded-opentype"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Light.d11c490.woff2) format("woff2"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Light.74955f1.woff) format("woff"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa_Light.1604933.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: IranSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa.07e13ce.eot);
+    src: url(https://cdn.alibaba.ir/fonts/IRANSansWebFa.07e13ce.eot?#iefix) format("embedded-opentype"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa.38d4b5f.woff2) format("woff2"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa.d4bb655.woff) format("woff"),url(https://cdn.alibaba.ir/fonts/IRANSansWebFa.a5080d9.ttf) format("truetype");
 }
 
 @font-face {
@@ -25,20 +44,6 @@
     src: url('/style/font/sbsfnt.eot?o1k7md#iefix') format('embedded-opentype'), url('/style/font/sbsfnt.ttf?o1k7md') format('truetype'), url('/style/font/sbsfnt.woff?o1k7md') format('woff'), url('/style/font/sbsfnt.svg?o1k7md#sbsfnt') format('svg');
     font-weight: normal;
     font-style: normal;
-}
-
-@font-face {
-    font-family: "SEGOEUIL";
-    font-style: normal;
-    font-weight: normal;
-    src: url('/style/font/SEGOEUIL.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: "segoe_ui_light";
-    font-style: normal;
-    font-weight: normal;
-    src: url('/style/font/segoe_ui_light.ttf') format('truetype');
 }
 
 [class^="sbs-ico-"], [class*="sbs-ico-"] {
@@ -53,60 +58,16 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.sbs-ico-circle-compass:before {
-    content: "\e038";
-}
-
-.sbs-ico-user:before {
-    content: "\e900";
-}
-
-.sbs-ico-window:before {
-    content: "\e901";
-}
-
-.sbs-ico-star:before {
-    content: "\f02a";
-}
-
-.sbs-ico-connection:before {
-    content: "\e91b";
-}
-
-.sbs-ico-spoon-knife:before {
-    content: "\e9a3";
-}
-
-.sbs-ico-subway:before {
-    content: "\f239";
-}
-
-.sbs-ico-airport_shuttle:before {
-    content: "\eb3c";
-}
-
-.sbs-ico-golf_course:before {
-    content: "\eb45";
-}
-
-.sbs-ico-local_airport:before {
-    content: "\e53d";
-}
-
-.sbs-ico-local_parking:before {
-    content: "\e54f";
-}
-
-.sbs-ico-pool:before {
-    content: "\eb48";
-}
-
 .sbs-ico-playlist_add:before {
     content: "\e01e";
 }
 
 .sbs-ico-sort_by_alpha:before {
     content: "\e036";
+}
+
+.sbs-ico-circle-compass:before {
+    content: "\e038";
 }
 
 .sbs-ico-content-left:before {
@@ -137,12 +98,28 @@
     content: "\e313";
 }
 
+.sbs-ico-local_airport:before {
+    content: "\e53d";
+}
+
+.sbs-ico-local_parking:before {
+    content: "\e54f";
+}
+
 .sbs-ico-feedback:before {
     content: "\e87f";
 }
 
 .sbs-ico-trending_up:before {
     content: "\e8e5";
+}
+
+.sbs-ico-user:before {
+    content: "\e900";
+}
+
+.sbs-ico-window:before {
+    content: "\e901";
 }
 
 .sbs-ico-pause:before {
@@ -243,6 +220,10 @@
 
 .sbs-ico-stats-dots:before {
     content: "\e91a";
+}
+
+.sbs-ico-connection:before {
+    content: "\e91b";
 }
 
 .sbs-ico-power:before {
@@ -381,12 +362,32 @@
     content: "\e93d";
 }
 
+.sbs-ico-spoon-knife:before {
+    content: "\e9a3";
+}
+
+.sbs-ico-airport_shuttle:before {
+    content: "\eb3c";
+}
+
+.sbs-ico-golf_course:before {
+    content: "\eb45";
+}
+
+.sbs-ico-pool:before {
+    content: "\eb48";
+}
+
 .sbs-ico-signal:before {
     content: "\f012";
 }
 
 .sbs-ico-cog:before {
     content: "\f013";
+}
+
+.sbs-ico-star:before {
+    content: "\f02a";
 }
 
 .sbs-ico-edit:before {
@@ -428,6 +429,55 @@
 .sbs-ico-bed:before {
     content: "\f236";
 }
+
+.sbs-ico-subway:before {
+    content: "\f239";
+}
+
+.sbs-ico-toolbox:before {
+    content: "\e014";
+}
+
+.sbs-ico-clock:before {
+    content: "\e055";
+}
+
+.sbs-ico-coins:before {
+    content: "\e93e";
+}
+
+.sbs-ico-document-certificate:before {
+    content: "\e93f";
+}
+
+.sbs-ico-sort-amount-asc:before {
+    content: "\f160";
+}
+
+.sbs-ico-sort-amount-desc:before {
+    content: "\f161";
+}
+
+.sbs-ico-airline_seat_recline_extra:before {
+    content: "\e636";
+}
+
+.sbs-ico-airline_seat_recline_normal:before {
+    content: "\e637";
+}
+
+.sbs-ico-flight:before {
+    content: "\e539";
+}
+
+.sbs-ico-flight_land:before {
+    content: "\e940";
+}
+
+.sbs-ico-flight_takeoff:before {
+    content: "\e941";
+}
+
 
 /* file manager content */
 @font-face {
@@ -630,7 +680,7 @@ body[data-lang="fa"] {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: "BNazanin","BNazanin_regular","BNazanin_bold";
+    font-family: "IranSans",sans-serif;
     font-size: 1em;
     background: #F4F4F4 !important;
 }

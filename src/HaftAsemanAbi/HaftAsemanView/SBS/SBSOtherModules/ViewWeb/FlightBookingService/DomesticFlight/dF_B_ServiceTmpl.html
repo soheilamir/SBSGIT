@@ -1,134 +1,680 @@
-﻿<section class="_flex base-dfs _position-r" ng-class="{'ch-base-dfs':Departing.selectedItem!=null || Returning.selectedItem!=null}">
-    <section class="_w100 _h100 fade-content _position-a _trans" ng-class="{'show-fade':Show_searchFlightContent}"></section>
-    <section class="_flex s-f-c _position-f _trans_2" ng-class="{'show-sfc':Show_searchFlightContent}">
-        <modify-search-flight></modify-search-flight>
+﻿<section class="_flex _w100 df-base" ng-init="">
+    <section class="_flex _w90-pad5 _box _bg-w1 base-research" ng-hide="ShowPassengerContent==true;">
+        <ul class="_flex _w100 t-b-res _dir-align-r">
+            <li class="_flex">
+                <i class="sbs-ico-airplane"></i>
+            </li>
+            <li class="_flex">
+                <h2>بلیط هواپیما</h2>
+                <h2>تهران</h2>
+                <h2 class="dash"></h2>
+                <h2>شیراز</h2>
+            </li>
+            <li class="_flex calc-li">
+                <i class="sbs-ico-calendar"></i>
+            </li>
+            <li class="_flex">
+                <h2>رفت:</h2>
+                <h2>1397/5/28</h2>
+            </li>
+        </ul>
+        <div class="_flex _w100 b-b-res _h100 _dir-align-r">
+            <section class="_flex search-box-c" style="width:100%;margin:0;justify-content:flex-start;">
+                <div class="_flex _input-selc-body _dir-align-r">
+                    <i class="sbs-ico-mapmarker _color3 _position-r">
+                        <b class="_position-a _fnt-fa">شهر مبدا</b>
+                    </i>
+                    <input type="text" class="_txt-c _fnt-fa" value="" placeholder="مبدا" />
+                    <i class="sbs-ico-mapmarker _color3 _i-to _position-r">
+                        <b class="_position-a _fnt-fa">شهر مقصد</b>
+                    </i>
+                    <input type="text" class="_txt-c _fnt-fa" value="" placeholder="مقصد" />
+                </div>
+                <div class="_flex _input-selc-body _dir-align-r">
+                    <i class="sbs-ico-calendar _color3 _position-r">
+                        <b class="_position-a _fnt-fa">تاریخ رفت</b>
+                    </i>
+                    <adm-dtp ng-model="date11" full-data="date11_detail" maxdate="{{date12_detail.unix}}"></adm-dtp>
+                    <i class="sbs-ico-calendar _color3 _i-to _position-r">
+                        <b class="_position-a _fnt-fa">تاریخ برگشت</b>
+                    </i>
+                    <adm-dtp ng-model="date12" full-data="date12_detail" mindate="{{date11_detail.unix}}"></adm-dtp>
+                </div>
+                <div class="_flex _input-selc-body _dir-align-r">
+                    <i class="sbs-ico-users _color3 _position-r">
+                        <b class="_position-a _fnt-fa">بزرگسال (12 به بالا)</b>
+                    </i>
+                    <input type="number" class="_txt-c _txt-num _fnt-fa" value="1" min="1" max="9" placeholder="بزرگسال" />
+                </div>
+                <div class="_flex _input-selc-body _dir-align-r">
+                    <i class="sbs-ico-users _color3 _position-r">
+                        <b class="_position-a _fnt-fa">کودک (2 تا 12)</b>
+                    </i>
+                    <input type="number" class="_txt-c _txt-num _fnt-fa" value="0" min="0" max="9" placeholder="کودک" />
+                </div>
+                <div class="_flex _input-selc-body _dir-align-r">
+                    <i class="sbs-ico-users _color3 _position-r">
+                        <b class="_position-a _fnt-fa">نوزاد (زیر 2 سال)</b>
+                    </i>
+                    <input type="number" class="_txt-c _txt-num _fnt-fa" value="0" min="0" max="9" placeholder="نوزاد" />
+                </div>
+                <div class="_flex _bttn-body-c _dir-align-r">
+                    <button class="_flex _bttn-c _dir-align-r _fnt-fa">
+                        <span>جستجو</span>
+                        <i class="sbs-ico-chevron-left _trans"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
     </section>
-    <section class="_flex filter-f-c _position-f">
-        <filtering-flight-services></filtering-flight-services>
+    <section class="_flex _w95-pad25 _box step-base _dir-align-r">
+        <div class="_flex res-s-b _bg-w _h100 _dir-align-r" ng-hide="ShowPassengerContent==true;">
+            <i class="sbs-ico-chevron-left"></i>
+            <h2>تعداد نتایج:</h2>
+            <h3>5 عدد</h3>
+        </div>
+        <ul class="_flex step-body-c _w100 _bg-w _h100 _position-r">
+            <content class="_position-a"></content>
+            <li class="_flex _step-sel">
+                <i></i>
+                <h2>انتخاب پرواز</h2>
+            </li>
+            <li class="_flex" ng-class="{'_step-sel-pass':ShowPassengerContent}">
+                <i></i>
+                <h2>مشخصات مسافران</h2>
+            </li>
+            <li class="_flex" ng-class="{'_step-sel-lstpass':ShowLastReview}">
+                <i></i>
+                <h2>تایید اطلاعات</h2>
+            </li>
+            <li class="_flex" ng-class="{'_step-sel-payment':ShowFlightVacher}">
+                <i></i>
+                <h2>پرداخت</h2>
+            </li>
+            <li class="_flex" ng-class="{'_step-sel-vacher':ShowFlightVacher}">
+                <i></i>
+                <h2>صدور بلیط</h2>
+            </li>
+        </ul>
     </section>
-    <section class="_flex body-dfs _dir-align-r">
-        <section class="_flex _w100 f" ng-if="Departing.lst.length>0">
-            <div class="_flex _w100 t-f _dir-align-r">
-                <i class="_flex sbs-ico-long-arrow-left"></i>
-                <h1 class="_flex">پروازهای رفت</h1>
-            </div>
-            <ul class="_flex _w100 b-b-f _dir-align-r">
-                <li class="_flex _w100" ng-repeat="departing in Departing.lst | custFilterTicket:$root.Param.airline | orderBy:'DepartureTime'">
-                    <article class="_flex _w100 article-f-s" ng-class="{'selected-article-f-s':departing.selected}">
-                        <div class="_flex _w100 b-a-f">
-                            <div class="_flex t-a-f _dir-align-r">
-                                <img alt="{{departing.AirLine}}" title="{{departing.AirLine}}" src="{{departing.LogoImg}}" />
-                                <i class="_flex _fnt-fa _dir-align-r">{{departing.Name}} - {{departing.PlaneType}}</i>
-                                <i class="_flex _fnt-fa _dir-align-r">شماره پرواز: {{departing.FlightNo}}</i>
-                                <i class="_flex _fnt-fa _dir-align-r">ساعت پرواز: {{departing.DepartureTime}}</i>
-                                <i class="_flex _fnt-fa _dir-align-r">ساعت فرود: {{departing.ArrivalTime}}</i>
-                                <i class="_flex _fnt-fa _dir-align-r">سیستمی</i>
-                            </div>
-                            <div class="_w100 _flex b-desc-f _dir-align-r">
-                                <ul class="_w90-pad5 _flex">
-                                    <li class="_w100 _flex _dir-align-r inner-desc-f" ng-repeat="classFareListItem in departing.ClassFareList" ng-class="{'selected-inner-desc-f':classFareListItem.selected}">
-                                        <i class="_flex _fnt-fa _bold ch">موجود</i>
-                                        <i class="_flex _fnt-fa ch">اکونومی</i>
-                                        <i class="_flex _fnt-fa ch">{{classFareListItem.FlightClass}}</i>
-                                        <i class="_flex _fnt-fa _bold">بزرگسال: {{classFareListItem.AdultFare}}</i>
-                                        <i class="_flex _fnt-fa">کودک: {{classFareListItem.ChildFare}}</i>
-                                        <i class="_flex _fnt-fa">نوزاد: {{classFareListItem.InfantFare}}</i>
-                                        <div class="bttn-selected-f _bg2 _flex _trans _cursor" ng-click="DepartingSelectedFlight(departing,classFareListItem);" role="button" tabindex="0">
-                                            <span class="_fnt-fa _color-w">انتخاب پرواز</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+    <section class="_flex _w95-pad25 _box base-body-r-f _dir-align-r" ng-hide="ShowPassengerContent==true;">
+        <sort-flight-services class="_flex sort-b-c _dir-align-r"></sort-flight-services>
+        <section class="_flex _w100 filter-result-s">
+            <filtering-flight-services class="_flex filter-b-c _dir-align-r _w95-pad25 _box"></filtering-flight-services>
+            <ul class="_flex body-result-c _w100">
+                <li class="_w100 _trans">
+                    <article class="_flex _w95-pad25 art-items-flight _box">
+                        <div class="_flex _w100 t-art-f-i">
+                            <img alt="" title="" src="https://cdn.alibaba.ir/static/img/airlines/Domestic/EP.png" />
+                            <ul class="_flex u1">
+                                <li class="_flex">
+                                    <h2>هواپیمایی آسمان</h2>
+                                </li>
+                                <li class="_flex">
+                                    <i>Fooker 100</i>
+                                    <i>اکونومی</i>
+                                </li>
+                            </ul>
+                            <h4 class="_flex txt-info _dir-align-r">
+                                شماره پرواز:
+                                <i>EP3771</i>
+                            </h4>
+
+                            <h3 class="_flex calc-items">شنبه 28 مرداد</h3>
+
+                            <ul class="_flex u2">
+                                <li class="_flex">
+                                    <i class="sbs-ico-flight_takeoff"></i>
+                                    <h3>تهران</h3>
+                                </li>
+                                <li class="_flex arrow-dash">
+                                    <span></span>
+                                </li>
+                                <li class="_flex">
+                                    <i class="sbs-ico-flight_land"></i>
+                                    <h3>شیراز</h3>
+                                </li>
+                            </ul>
+                            <h4 class="_flex txt-info _dir-align-r">
+                                شماره ترمینال:
+                                <i>4</i>
+                            </h4>
                         </div>
+                        <ul class="_flex _w100 body-items">
+                            <li class="_flex min-price _trans">
+                                <div class="_flex _w90-pad5 _box lst-info f-info">
+                                    <h3>
+                                        تهران
+                                        <i>08:25</i>
+                                    </h3>
+                                    <h3>
+                                        شیراز
+                                        <i>09:50</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <h3>
+                                        مقدار بار مجاز
+                                        <i>30 کیلو گرم</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info-price">
+                                    <h3>
+                                        قیمت بزرگسال
+                                        <i>279,400 تومان</i>
+                                    </h3>
+                                    <h3>
+                                        قیمت کودک
+                                        <i>143,700 تومان</i>
+                                    </h3>
+                                    <h3>
+                                        قیمت نوزاد
+                                        <i>34,200 تومان</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <h2>
+                                        3,653,000
+                                        <i>ریال</i>
+                                    </h2>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <button class="_flex _bg1 bttn-slc-flight-c _fnt-fa" ng-click="ShowPassengerContent=true;">
+                                        <i>انتخاب بلیط</i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="_flex _trans">
+                                <div class="_flex _w90-pad5 _box lst-info f-info">
+                                    <h3>
+                                        تهران
+                                        <i>08:25</i>
+                                    </h3>
+                                    <h3>
+                                        شیراز
+                                        <i>09:50</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <h3>
+                                        مقدار بار مجاز
+                                        <i>30 کیلو گرم</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info-price">
+                                    <h3>
+                                        قیمت بزرگسال
+                                        <i>279,400 تومان</i>
+                                    </h3>
+                                    <h3>
+                                        قیمت کودک
+                                        <i>143,700 تومان</i>
+                                    </h3>
+                                    <h3>
+                                        قیمت نوزاد
+                                        <i>34,200 تومان</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <h2>
+                                        3,653,000
+                                        <i>ریال</i>
+                                    </h2>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <button class="_flex _bg1 bttn-slc-flight-c _fnt-fa">
+                                        <i>انتخاب بلیط</i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="_flex _trans">
+                                <div class="_flex _w90-pad5 _box lst-info f-info">
+                                    <h3>
+                                        تهران
+                                        <i>08:25</i>
+                                    </h3>
+                                    <h3>
+                                        شیراز
+                                        <i>09:50</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <h3>
+                                        مقدار بار مجاز
+                                        <i>30 کیلو گرم</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info-price">
+                                    <h3>
+                                        قیمت بزرگسال
+                                        <i>279,400 تومان</i>
+                                    </h3>
+                                    <h3>
+                                        قیمت کودک
+                                        <i>143,700 تومان</i>
+                                    </h3>
+                                    <h3>
+                                        قیمت نوزاد
+                                        <i>34,200 تومان</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <h2>
+                                        3,653,000
+                                        <i>ریال</i>
+                                    </h2>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <button class="_flex _bg1 bttn-slc-flight-c _fnt-fa">
+                                        <i>انتخاب بلیط</i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="_flex _trans">
+                                <div class="_flex _w90-pad5 _box lst-info f-info">
+                                    <h3>
+                                        تهران
+                                        <i>08:25</i>
+                                    </h3>
+                                    <h3>
+                                        شیراز
+                                        <i>09:50</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <h3>
+                                        مقدار بار مجاز
+                                        <i>30 کیلو گرم</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info-price">
+                                    <h3>
+                                        قیمت بزرگسال
+                                        <i>279,400 تومان</i>
+                                    </h3>
+                                    <h3>
+                                        قیمت کودک
+                                        <i>143,700 تومان</i>
+                                    </h3>
+                                    <h3>
+                                        قیمت نوزاد
+                                        <i>34,200 تومان</i>
+                                    </h3>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <h2>
+                                        3,653,000
+                                        <i>ریال</i>
+                                    </h2>
+                                </div>
+                                <div class="_flex _w90-pad5 _box lst-info">
+                                    <button class="_flex _bg1 bttn-slc-flight-c _fnt-fa">
+                                        <i>انتخاب بلیط</i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
                     </article>
                 </li>
             </ul>
         </section>
-        <section class="_flex _w100 f" ng-if="Returning.lst.length>0">
-            <div class="_flex _w100 t-f _dir-align-r">
-                <i class="_flex sbs-ico-long-arrow-right"></i>
-                <h1 class="_flex">پروازهای برگشت</h1>
-            </div>
-            <ul class="_flex _w100 b-b-f _dir-align-r">
-                <li class="_flex _w100" ng-repeat="returning in Returning.lst | custFilterTicket:$root.Param.airline | orderBy:'DepartureTime'">
-                    <article class="_flex _w100 article-f-s" ng-class="{'selected-article-f-s':returning.selected}">
-                        <div class="_flex _w100 b-a-f">
-                            <div class="_flex t-a-f _dir-align-r">
-                                <img alt="{{returning.AirLine}}" title="{{returning.AirLine}}" src="{{returning.LogoImg}}" />
-                                <i class="_flex _fnt-fa _dir-align-r">{{returning.Name}} - {{returning.PlaneType}}</i>
-                                <i class="_flex _fnt-fa _dir-align-r">شماره پرواز: {{returning.FlightNo}}</i>
-                                <i class="_flex _fnt-fa _dir-align-r">ساعت پرواز: {{returning.DepartureTime}}</i>
-                                <i class="_flex _fnt-fa _dir-align-r">ساعت فرود: {{returning.ArrivalTime}}</i>
-                                <i class="_flex _fnt-fa _dir-align-r">سیستمی</i>
-                            </div>
-                            <div class="_w100 _flex b-desc-f _dir-align-r">
-                                <ul class="_w90-pad5 _flex">
-                                    <li class="_w100 _flex _dir-align-r inner-desc-f" ng-repeat="classFareListItem in returning.ClassFareList" ng-class="{'selected-inner-desc-f':classFareListItem.selected}">
-                                        <i class="_flex _fnt-fa _bold ch">موجود</i>
-                                        <i class="_flex _fnt-fa ch">اکونومی</i>
-                                        <i class="_flex _fnt-fa ch">{{classFareListItem.FlightClass}}</i>
-                                        <i class="_flex _fnt-fa _bold">بزرگسال: {{classFareListItem.AdultFare}}</i>
-                                        <i class="_flex _fnt-fa">کودک: {{classFareListItem.ChildFare}}</i>
-                                        <i class="_flex _fnt-fa">نوزاد: {{classFareListItem.InfantFare}}</i>
-                                        <div class="bttn-selected-f _bg2 _flex _trans _cursor" ng-click="ReturningSelectedFlight(returning,classFareListItem);" role="button" tabindex="0">
-                                            <span class="_fnt-fa _color-w">انتخاب پرواز</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+    </section>
+    <!-- this section go to profile user section (section 2) -->
+    <section class="_w100 _dir-align-r" ng-hide="ShowFlightVacher==true">
+        <section class="_flex _w95-pad25 _box base-body-pass _dir-align-r" ng-show="ShowPassengerContent==true;">
+            <article class="_flex _w95-pad25 _box art-items-flight" ng-class="{'ch-art-items-flight':ShowPassengerContent}">
+                <div class="_flex _w100 t-art-f-i" ng-class="{'ch-t-art-f-i':ShowPassengerContent}">
+                    <img alt="" title="" src="https://cdn.alibaba.ir/static/img/airlines/Domestic/EP.png" />
+                    <ul class="_flex u1">
+                        <li class="_flex">
+                            <h2>هواپیمایی آسمان</h2>
+                        </li>
+                        <li class="_flex">
+                            <i>Fooker 100</i>
+                            <i>اکونومی</i>
+                        </li>
+                    </ul>
+                    <h4 class="_flex txt-info _dir-align-r" ng-class="{'ch-txt-info':ShowPassengerContent}">
+                        شماره پرواز:
+                        <i>EP3771</i>
+                    </h4>
+
+                    <h3 class="_flex calc-items">شنبه 28 مرداد</h3>
+
+                    <ul class="_flex u2" ng-class="{'ch-u2':ShowPassengerContent}">
+                        <li class="_flex">
+                            <i class="sbs-ico-flight_takeoff"></i>
+                            <h3>تهران</h3>
+                        </li>
+                        <li class="_flex arrow-dash">
+                            <span></span>
+                        </li>
+                        <li class="_flex">
+                            <i class="sbs-ico-flight_land"></i>
+                            <h3>شیراز</h3>
+                        </li>
+                    </ul>
+                    <h4 class="_flex txt-info _dir-align-r" ng-class="{'ch-txt-info-last':ShowPassengerContent}">
+                        شماره ترمینال:
+                        <i>4</i>
+                    </h4>
+                </div>
+                <ul class="_flex _w100 body-items">
+                    <li class="_flex _trans _w100" ng-class="{'ch-li-info-f':ShowPassengerContent}">
+                        <div class="_flex _w90-pad5 _box lst-info f-info">
+                            <h3>
+                                تهران
+                                <i>08:25</i>
+                            </h3>
+                            <h3>
+                                شیراز
+                                <i>09:50</i>
+                            </h3>
                         </div>
-                    </article>
-                </li>
-            </ul>
-        </section>
-        <section class="_flex _w100 f" style="margin-top:20px;">
-            <div class="_flex _w100 t-f _dir-align-r _bg1-1" style="background:#53155c;">
-                <h1 class="_flex" style="color:#FFF;">هتل های {{$root.DomesticResultTickets.searchFlightItem.Destination.CityName}}</h1>
-            </div>
-            <ul class="_flex _w100 _dir-align-r body-ul-re-h-content">
-                <li class="_flex _w100" ng-repeat="itemHotel in LsthotelData">
-                    <art-hotel-content item-hotel="itemHotel" lst-hotel="LsthotelData"></art-hotel-content>
-                </li>
-            </ul>
+                        <div class="_flex _w90-pad5 _box lst-info">
+                            <h3>
+                                مقدار بار مجاز
+                                <i>30 کیلو گرم</i>
+                            </h3>
+                        </div>
+                        <div class="_flex _w90-pad5 _box lst-info-price" ng-class="{'ch-info-p':ShowPassengerContent}">
+                            <h3>
+                                قیمت بزرگسال
+                                <i>279,400 تومان</i>
+                            </h3>
+                            <h3>
+                                قیمت کودک
+                                <i>143,700 تومان</i>
+                            </h3>
+                            <h3>
+                                قیمت نوزاد
+                                <i>34,200 تومان</i>
+                            </h3>
+                        </div>
+                        <div class="_flex _w90-pad5 _box lst-info">
+                            <h2>
+                                3,653,000
+                                <i>ریال</i>
+                            </h2>
+                        </div>
+                        <div class="_flex _w90-pad5 _box condition-sec">
+                            <h2 class="_w100">
+                                مطابق قوانین هواپیمایی کشوری اگر مسافر بلیط را کنسل کند، درصدی از هزینه بلیط به‌عنوان جریمه کنسلی از او دریافت می‌شود. درصد این جریمه را بسته به زمان اعلام کنسلی، در جدول مقابل آورده‌ایم. مابقی هزینه بلیط‌‌ حداکثر طی 72 ساعت به‌صورت آنلاین به حساب مسافر بازگردانده می‌شود.
+                            </h2>
+                            <ul class="_w100 _flex ul-cond">
+                                <li class="_w95-pad25 _box _flex _dir-align-r">
+                                    <h2>3 روز قبل از پرواز - 12 ظهر ‍</h2>
+                                    <span>٪20</span>
+                                </li>
+                                <li class="_w95-pad25 _box _flex _dir-align-r">
+                                    <h2>‍1 روز قبل از پرواز - 12 ظهر</h2>
+                                    <span>٪20</span>
+                                </li>
+                                <li class="_w95-pad25 _box _flex _dir-align-r">
+                                    <h2>‍3 ساعت قبل از پرواز</h2>
+                                    <span>٪20</span>
+                                </li>
+                                <li class="_w95-pad25 _box _flex _dir-align-r">
+                                    <h2>30 دقیقه قبل از پرواز‍</h2>
+                                    <span>٪20</span>
+                                </li>
+                                <li class="_w95-pad25 _box _flex _dir-align-r">
+                                    <h2>کمتر از 30 دقیقه قبل از پرواز‍</h2>
+                                    <span>٪40</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <section class="_flex _w100 pass-add-c" ng-hide="ShowLastReview==true;">
+                <div class="_w50 _box body-txt-pass">
+                    <div class="_flex _w90-pad5 _box txt-pass _bg-w">
+                        <i class="sbs-ico-airline_seat_recline_extra"></i>
+                        <h3> مشخصات مسافران را وارد کنید </h3>
+                    </div>
+                    <div class="_flex _w90-pad5 _box txt-pass">
+                        <i class="sbs-ico-feedback" style="font-size:1.3em;"></i>
+                        <h3 style="font-size:0.75em">اطلاعات مسافران را در زیر به‌صورت کامل و صحیح وارد کنید. برای افزودن مسافر، از دکمه‌های آبی بالا استفاده کنید. </h3>
+                    </div>
+                </div>
+                <div class="_flex _w50 _box body-btt-add-pass _dir-align-l">
+                    <button class="_flex bttn-add-pass _dir-align-r _fnt-fa">
+                        <i class="sbs-ico-playlist_add"></i>
+                        <h2>افزودن بزرگسال</h2>
+                    </button>
+                    <button class="_flex bttn-add-pass _dir-align-r _fnt-fa">
+                        <i class=" sbs-ico-playlist_add">
+                        </i>
+                        <h2>افزودن کودک</h2>
+                    </button>
+                    <button class="_flex bttn-add-pass _dir-align-r _fnt-fa">
+                        <i class=" sbs-ico-playlist_add">
+                        </i>
+                        <h2>افزودن نوزاد</h2>
+                    </button>
+                </div>
+            </section>
+            <section class="_flex _w100 body-fill-pass-c _dir-align-r" ng-hide="ShowLastReview==true;">
+                <div class="_flex _w90-m5 _box t-f-p _position-r">
+                    <i class="sbs-ico-users"></i>
+                    <h2>بزرگسال</h2>
+                </div>
+                <section class="_flex _w90-m5 _box b-f-p">
+                    <div class="_flex item-f-p">
+                        <input class="input-txt _w95-pad25 _fnt-fa" type="text" placeholder="نام لاتین" />
+                    </div>
+                    <div class="_flex item-f-p">
+                        <input class="input-txt _w95-pad25 _fnt-fa" type="text" placeholder="نام خانوادگی لاتین" />
+                    </div>
+                    <div class="_flex item-f-p">
+                        <select class="input-select _w95-pad25 _fnt-fa">
+                            <option>انتخاب جنسیت</option>
+                            <option>مرد</option>
+                            <option>زن</option>
+                        </select>
+                    </div>
+                    <div class="_flex item-f-p">
+                        <input class="input-txt _w95-pad25 _fnt-fa" type="number" placeholder="کد ملی" />
+                    </div>
+                    <div class="_flex item-f-p">
+                        <input class="input-txt _w95-pad25 _fnt-fa" type="text" placeholder="نام" />
+                    </div>
+                    <div class="_flex item-f-p">
+                        <input class="input-txt _w95-pad25 _fnt-fa" type="text" placeholder="نام خانوادگی" />
+                    </div>
+                    <div class="_flex item-f-p">
+                        <input class="input-txt _w95-pad25 _fnt-fa" type="text" placeholder="تاریخ تولد" />
+                    </div>
+                </section>
+            </section>
+            <section class="_flex _w100 body-btt-save-pass _dir-align-l" ng-hide="ShowLastReview==true;">
+                <div class="_flex _bttn-body-c _dir-align-r">
+                    <button class="_flex _bttn-c _dir-align-r _fnt-fa" ng-click="ShowLastReview=true">
+                        <span>ثبت اطلاعات مسافر</span>
+                        <i class="sbs-ico-border_color _trans"></i>
+                    </button>
+                </div>
+            </section>
         </section>
     </section>
-    <section class="_flex _w100 _dir-align-r _position-f show-selected-flight-content" ng-show="Departing.selectedItem!=null || Returning.selectedItem!=null">
-        <div class="_flex _w90-m5 d-item-content" ng-show="Departing.selectedItem!=null">
-            <figure class="_flex">
-                <img alt="{{Departing.selectedItem.AirLine}}" title="{{Departing.selectedItem.AirLine}}" src="{{Departing.selectedItem.LogoImg}}" />
-            </figure>
-            <i class="_flex _fnt-fa _dir-align-r">{{Departing.selectedItem.Name}} - {{Departing.selectedItem.PlaneType}}</i>
-            <i class="_flex _fnt-fa _dir-align-r">شماره پرواز: {{Departing.selectedItem.FlightNo}}</i>
-            <i class="_flex _fnt-fa _dir-align-r">ساعت پرواز: {{Departing.selectedItem.DepartureTime}}</i>
-            <i class="_flex _fnt-fa _dir-align-r">ساعت فرود: {{Departing.selectedItem.ArrivalTime}}</i>
-            <i class="_flex _fnt-fa">{{Departing.selected_c_f.FlightClass}}</i>
-            <i class="_flex _fnt-fa">کودک: {{Departing.selected_c_f.ChildFare}}</i>
-            <i class="_flex _fnt-fa">نوزاد: {{Departing.selected_c_f.InfantFare}}</i>
-            <i class="_flex _fnt-fa _bold">{{Departing.selected_c_f.AdultFare}}</i>
-        </div>
-        <div class="_flex _w90-m5 r-item-content" ng-show="Returning.selectedItem!=null">
-            <figure class="_flex">
-                <img alt="{{Returning.selectedItem.AirLine}}" title="{{Returning.selectedItem.AirLine}}" src="{{Returning.selectedItem.LogoImg}}" />
-            </figure>
-            <i class="_flex _fnt-fa _dir-align-r">{{Returning.selectedItem.Name}} - {{Returning.selectedItem.PlaneType}}</i>
-            <i class="_flex _fnt-fa _dir-align-r">شماره پرواز: {{Returning.selectedItem.FlightNo}}</i>
-            <i class="_flex _fnt-fa _dir-align-r">ساعت پرواز: {{Returning.selectedItem.DepartureTime}}</i>
-            <i class="_flex _fnt-fa _dir-align-r">ساعت فرود: {{Returning.selectedItem.ArrivalTime}}</i>
-            <i class="_flex _fnt-fa">{{Returning.selected_c_f.FlightClass}}</i>
-            <i class="_flex _fnt-fa">کودک: {{Returning.selected_c_f.ChildFare}}</i>
-            <i class="_flex _fnt-fa">نوزاد: {{Returning.selected_c_f.InfantFare}}</i>
-            <i class="_flex _fnt-fa _bold">{{Returning.selected_c_f.AdultFare}}</i>
-        </div>
-        <div class="_flex _w90-m5 b-item-content _dir-align-l">
-            <div class="last-bttn _flex _trans _cursor" role="button" tabindex="0" ng-click="CancelFlightSelected()">
-                <span class="_fnt-fa _color-w">انصراف</span>
+    <!-- this section go to profile user section (section 3) -->
+    <section class="_w100 _dir-align-r" ng-hide="ShowFlightVacher==true">
+        <section class="_w95-m25 _box _dir-align-r body-view-pass _bg-w" ng-show="ShowLastReview==true;">
+            <div class="_flex _w90-m5 _box t-v-p">
+                <i class="sbs-ico-users"></i>
+                <h3>مشخصات مسافران</h3>
             </div>
-            <div class="last-bttn _flex _trans _cursor" role="button" tabindex="0" ng-click="SubmitFlightSelected()">
-                <span class="_fnt-fa">تایید</span>
-                <span class="_fnt-fa">|</span>
-                <span class="_fnt-fa">{{totalPrice}}</span>
+            <div class="_w90-pad5 _box">
+                <table class="_w100 _tbl">
+                    <thead>
+                        <tr>
+                            <th>نام و نام خانوادگی</th>
+                            <th>نام و نام خانوادگی به انگلیسی</th>
+                            <th>جنسیت</th>
+                            <th>کد ملی</th>
+                            <th>تاریخ تولد</th>
+                            <th>قیمت</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                امیر
+                                سهیل
+                            </td>
+                            <td>amir soheil</td>
+                            <td>مرد</td>
+                            <td>
+                                0079797751
+                            </td>
+                            <td>
+                                1358/1/1
+                            </td>
+                            <td class="price">
+                                3,653,000 ریال
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <h1 class="_flex" style="color:#e1ba00;margin-top:10px;font-size:1.2em" ng-show="selectedHotel_1 || selectedHotel_2 || selectedHotel_3">هتل مورد نظر به روند درخواست اضافه گردید</h1>
-        </div>
+            <section class="_flex _w90-m5 body-btt-save-pass _dir-align-l">
+                <div class="_flex _bttn-body-c _dir-align-r">
+                    <button class="_flex _bttn-c _dir-align-r _fnt-fa" ng-click="ShowFlightVacher=true">
+                        <span>پرداخت صورتحساب</span>
+                        <i class="sbs-ico-coins _trans"></i>
+                    </button>
+                </div>
+            </section>
+        </section>
+    </section>
+    <!-- this section go to profile user section [[[[Print section]]]]-->
+    <section class="_flex _w95-m25 _box _dir-align-r vacher-content" ng-show="ShowFlightVacher==true">
+        <section class="_flex _w95-pad25 _box _bg-w _dir-align-r body-vacher-content">
+            <div class="_flex _w100 _dir-align-r info-trans">
+                <div class="_flex trans-items">
+                    <i class="sbs-ico-feedback _color-g"></i>
+                    <h3>پرداخت شما با موفقیت انجلم شد، سپاسگزاریم از این که همراه ما هستید.</h3>
+                </div>
+                <div class="_flex trans-items">
+                    <span class="_dir-align-r _flex">
+                        شما می توانید واچر پرواز خود را در بخش زیر پرینت نمایید،
+                        <i class="_color2">سفر یک تجربه است متفاوت تجربه کنید</i>
+                    </span>
+                </div>
+                <div class="_flex trans-items">
+                    <h4>کد رهگیری:</h4>
+                    <span>1332400956324</span>
+                </div>
+                <div class="_flex trans-items">
+                    <h4>شماره فاکتور:</h4>
+                    <span>569455</span>
+                </div>
+                <div class="_flex trans-items">
+                    <h4>تاریخ تراکنش:</h4>
+                    <span>شنبه 28 مرداد</span>
+                </div>
+
+            </div>
+            <div class="_flex price-trans-info">
+                <h3 class="_color-g">3,653,000 ریال</h3>
+            </div>
+        </section>
+        <section class="_flex _w95-pad25 _box _bg-w print-vacher-c _dir-align-r">
+            <header class="_flex _w100 _dir-align-r header-vacher-c">
+                <div class="_flex r-h-sdhs">
+                    <div class="_flex split-adhs">
+                        <span>نام درخواست کننده:</span>
+                        <h3>امیر سهیل</h3>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span>کد ملی:</span>
+                        <h3>0097756854</h3>
+                    </div>
+                </div>
+                <div class="_flex l-h-sdhs">
+                    <div class="_flex split-adhs">
+                        <span>شماره درخواست:</span>
+                        <h3>23423545430</h3>
+                    </div>
+                    <div class="_flex split-adhs">
+                        <span>تاریخ درخواست:</span>
+                        <h3>1397/05/28</h3>
+                    </div>
+                    <div class="_flex split-adhs _dir-align-l">
+                        <div class="_flex _bttn-body-c _dir-align-r">
+                            <button class="_flex _bttn-c _dir-align-r _fnt-fa">
+                                <span>پیرینت واچر پرواز</span>
+                                <i class="sbs-ico-files _trans"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="_w100 _dir-align-r" style="margin-bottom:25px;">
+                <table class="_w100 _tbl">
+                    <thead>
+                        <tr>
+
+                            <th>شماره پرواز</th>
+                            <th>مبدا</th>
+                            <th>مقصد</th>
+                            <th>خط هوایی</th>
+                            <th>شناسه نرخی</th>
+                            <th>روز پرواز</th>
+                            <th>تاریخ پرواز</th>
+                            <th>پرواز ساعت</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>FP632</td>
+                            <td>تهران</td>
+                            <td>شیراز</td>
+                            <td>آسمان - ترمینال 4</td>
+                            <td>V</td>
+                            <td>شنبه</td>
+                            <td>1397/05/28</td>
+                            <td>8:28 AM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <section class="_flex _w100 _dir-align-r body-print-con-sec">
+                <div class="_flex _w100 condition-sec">
+                    <h2 class="_w100">
+                        مطابق قوانین هواپیمایی کشوری اگر مسافر بلیط را کنسل کند، درصدی از هزینه بلیط به‌عنوان جریمه کنسلی از او دریافت می‌شود. درصد این جریمه را بسته به زمان اعلام کنسلی، در جدول مقابل آورده‌ایم. مابقی هزینه بلیط‌‌ حداکثر طی 72 ساعت به‌صورت آنلاین به حساب مسافر بازگردانده می‌شود.
+                    </h2>
+                    <ul class="_w100 _flex ul-cond">
+                        <li class="_w95-pad25 _box _flex _dir-align-r">
+                            <h2>3 روز قبل از پرواز - 12 ظهر ‍</h2>
+                            <span>٪20</span>
+                        </li>
+                        <li class="_w95-pad25 _box _flex _dir-align-r">
+                            <h2>‍1 روز قبل از پرواز - 12 ظهر</h2>
+                            <span>٪20</span>
+                        </li>
+                        <li class="_w95-pad25 _box _flex _dir-align-r">
+                            <h2>‍3 ساعت قبل از پرواز</h2>
+                            <span>٪20</span>
+                        </li>
+                        <li class="_w95-pad25 _box _flex _dir-align-r">
+                            <h2>30 دقیقه قبل از پرواز‍</h2>
+                            <span>٪20</span>
+                        </li>
+                        <li class="_w95-pad25 _box _flex _dir-align-r">
+                            <h2>کمتر از 30 دقیقه قبل از پرواز‍</h2>
+                            <span>٪40</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="_flex _w95-pad25 _dir-align-r vacher-print-info">
+                <h2 class="_w100">رعایت موارد ذیل در پرواز الزامی است:</h2>
+                <h3 class="_w95-pad25">حضور مسافر در فرودگاه یک ساعت و نیم قبل پرواز</h3>
+                <h3 class="_w95-pad25">ارائه کارت شناسائی عکسدار و معتبر حهت صدور بلیت، سوارشدن به هواپیما و استرداد بلیت</h3>
+                <h3 class="_w95-pad25">از قراردادن دوربین، موبایل، نوت بوک، اشیاء گرانبها و مدارک در بسته های تحویلی به هواپیما خودداری فرمائید. بر اساس مقررات، هواپیمائی در خصوص مفقود شدن موارد فوق هیچگونه مسئولیتی ندارد</h3>
+            </section>
+        </section>
     </section>
 </section>
