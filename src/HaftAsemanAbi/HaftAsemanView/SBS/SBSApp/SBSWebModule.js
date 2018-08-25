@@ -193,7 +193,9 @@ SBSWebApp.run(['$rootScope', '$http', 'config', 'AuthManager', function ($rootSc
         $rootScope.$broadcast("documentClicked", e.target);
     });
 }]);
+
 fetchData().then(bootstrapApplication);
+
 function fetchData() {
     var configuration = {
         G_URI_SBS_Services: "http://localhost:9983/",
@@ -207,18 +209,18 @@ function fetchData() {
     var $http = initInjector.get("$http");
     $http({
         method: configuration.Get,
-        url: configuration.G_URI_SBS_Services + 'api/V1/LacationInfo/GetInfoCurrency',
+        url: '',
         headers: { 'Content-Type': 'application/json' }
     }).success(function (data) {
-        configuration.currencyInfo = data;
+        //configuration.currencyInfo = data;
         SBSWebApp.constant("config", configuration);
     });
     return $http({
         method: configuration.Get,
-        url: configuration.G_URI_SBS_Services + 'api/V1/LacationInfo/GetInfoLocation',
+        url: '',
         headers: { 'Content-Type': 'application/json' }
     }).success(function (data) {
-        configuration.locationInfo = data;
+        //configuration.locationInfo = data;
         SBSWebApp.constant("config", configuration);
     });
 }
