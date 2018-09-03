@@ -540,12 +540,37 @@
             </div>
             <section class="_flex _w90-m5 body-btt-save-pass _dir-align-l">
                 <div class="_flex _bttn-body-c _dir-align-r">
-                    <button class="_flex _bttn-c _dir-align-r _fnt-fa" ng-click="ShowFlightVacher=true">
-                        <span>پرداخت صورتحساب</span>
+                    <button class="_flex _bttn-c _dir-align-r _fnt-fa" ng-click="ShowFlightVacher=true;ShowPriceSec=true">
+                        <span>تایید صورتحساب</span>
                         <i class="sbs-ico-coins _trans"></i>
                     </button>
                 </div>
             </section>
+        </section>
+    </section>
+    <section class="_w100 _h100 _position-f popup-price-sec _flex" ng-show="ShowPriceSec==true">
+        <section class="price-body-sec _dir-align-r" ng-init="checkedLaw=false">
+            <div class="head-title-content _flex _w95-pad25 _box _position-r">
+                <i class="sbs-ico-document-fill _color-blue-1"></i>
+                <h2>بخش ورود به درگاه بانک</h2>
+            </div>
+            <div class="body-popup-content _flex _h100 _w95-pad25 _box">
+                <h2>
+                    مبلغ قابل پرداخت
+                    <b class="_color-g">3,653,000 ریال</b>
+                </h2>
+                <i class="_color-red">برای ادامه روند کار، قوانین و مقررات را تایید نمایید.</i>
+                <div class="_flex law-co-radio _w100">
+                    <input type="checkbox" ng-model="checkedLaw" />
+                    <i>قوانین و مقررات خوانده و تایید می کنم</i>
+                </div>
+                <div class="_flex _bttn-body-c _dir-align-l _w100" ng-show="checkedLaw==true">
+                    <button class="_flex _bttn-c _dir-align-r _fnt-fa" ng-click="ShowPriceSec=false">
+                        <span>پرداخت صورتحساب</span>
+                        <i class="sbs-ico-coins _trans"></i>
+                    </button>
+                </div>
+            </div>
         </section>
     </section>
     <!-- this section go to profile user section [[[[Print section]]]]-->

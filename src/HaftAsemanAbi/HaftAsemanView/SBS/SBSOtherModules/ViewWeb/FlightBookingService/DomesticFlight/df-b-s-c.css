@@ -1046,3 +1046,75 @@
         box-shadow: 3px 0 0 0 #e91c1c;
     }
 /* end base print all flight vacher content ======================= */
+/* popup price body content ======================= */
+.popup-price-sec {
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.9);
+    z-index: 1500;
+    top: 0;
+    left: 0;
+}
+
+    .popup-price-sec > .price-body-sec {
+        width: 400px;
+        height: 300px;
+        background: #F5F5F5;
+        border-radius: 2px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+        flex-flow: column nowrap;
+        padding: 10px;
+    }
+
+.head-title-content {
+    min-height: 40px;
+    height: 40px;
+    border-bottom: 1px dashed #CCC;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+}
+
+    .head-title-content > i {
+        font-size: 1.5em;
+        margin-left: 8px;
+    }
+
+    .head-title-content > h2 {
+        font-size: 1em;
+        color: #606060;
+    }
+
+.body-popup-content {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+    .body-popup-content > h2 {
+        color: #505050;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+        .body-popup-content > h2 > b {
+            font-size: 1.3em;
+        }
+
+    .body-popup-content > i {
+        font-size: 0.8em;
+        margin-bottom: 10px;
+    }
+
+.law-co-radio {
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+    .law-co-radio > i {
+        font-size: 0.8em;
+        color: #606060;
+    }

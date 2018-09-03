@@ -123,3 +123,68 @@
                 .menu-content .b-menu-c > ul > li.menu-li > span:hover {
                     color: #de2543;
                 }
+/* popup-content and change section =========================== */
+.popup-content {
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.law-content, .sugg-content {
+    width: 700px;
+    height: 550px;
+    background: #F5F5F5;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    flex-flow: column nowrap;
+    padding: 10px;
+}
+
+.sugg-content {
+    width: 500px;
+    height: 400px;
+}
+
+.head-title-content {
+    min-height: 40px;
+    height: 40px;
+    border-bottom: 1px dashed #CCC;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+}
+
+    .head-title-content > i {
+        font-size: 1.5em;
+        margin-left: 8px;
+    }
+
+    .head-title-content > h2 {
+        font-size: 1em;
+        color: #606060;
+    }
+
+.body-popup-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 90%;
+    padding: 0 5%;
+}
+
+    .body-popup-content > h2 {
+        font-size: 1em;
+        margin-bottom: 8px;
+        color: #505050;
+    }
+
+    .body-popup-content > p {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+        text-align: justify;
+        color: #707070;
+    }
+/* end popup-content and change section =========================== */
