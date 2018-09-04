@@ -5,6 +5,7 @@ using System.IdentityModel.Tokens;
 using System.Security.Claims;
 using Thinktecture.IdentityModel.Client;
 
+
 namespace CreateJwt
 {
     class Program

@@ -1038,7 +1038,6 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\dF_B_ServiceTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\SortFlightServiceDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\FilteringFlightServiceDirective.js" />
-    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\SortFlightTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\FilteringFlightTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\ModifySearchFlightDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\FlightBookingService\DomesticFlight\modifySearchFlightTmpl.html" />
@@ -1942,6 +1941,7 @@
     <Content Include="scripts\i18n\angular-locale_zh.js" />
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
+    <None Include="Properties\PublishProfiles\HaftAsemanAbi.pubxml" />
     <None Include="scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="scripts\jquery-1.6.4.js" />
     <Content Include="scripts\jquery-1.6.4.min.js" />
@@ -1996,7 +1996,9 @@
     <Content Include="style\UIGrid\ui-grid.min.css" />
     <Content Include="style\UIGrid\ui-grid.svg" />
     <Content Include="UserProfile.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
