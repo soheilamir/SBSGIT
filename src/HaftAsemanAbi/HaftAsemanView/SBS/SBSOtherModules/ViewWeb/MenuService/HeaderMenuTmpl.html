@@ -18,12 +18,17 @@
                 <a class="_flex _fnt-fa _h100 _trans" title="#" href="#">بلاگ هفت آسمان</a>
             </li>
             <li class="_h100 _flex log-li">
-                <a class="_flex _fnt-fa _trans login" title="#" href="#">ورود یه سامانه</a>
-                <a class="_flex _fnt-fa _trans signout" title="#" href="#">عضویت</a>
+                <a class="_flex _fnt-fa _trans login" title="#" href="#" ng-click="ShowSection_1=!ShowSection_1">قوانیت و مقررات</a>
+                <a class="_flex _fnt-fa _trans login" title="#" href="#" ng-click="ShowSection_2=!ShowSection_2">پیشنهاد و انتقادات</a>
+                <!--<a class="_flex _fnt-fa _trans signout" title="#" href="#">عضویت</a>-->
             </li>
             <li class="_h100 _flex menu-li">
                 <span class="sbs-ico-menu _cursor _trans"></span>
             </li>
         </ul>
     </div>
+    <section class="_w100 _h100 _position-f popup-content _flex" ng-show="ShowSection_1==true || ShowSection_2==true">
+        <law-regulation ng-show="ShowSection_1==true" class="law-content"></law-regulation>
+        <suggestions-criticism ng-show="ShowSection_2==true" class="sugg-content"></suggestions-criticism>
+    </section>
 </section>

@@ -1078,6 +1078,10 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\HeaderMenuDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\HeaderMenuModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\HeaderMenuTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\Laws_RegulationsDirective.js" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\Laws_RegulationsTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\Suggestions_CriticismsTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\Suggestions_CriticismsDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\NewsPageService\DetailNewsServiceDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\NewsPageService\detailNewsServiceTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\NewsPageService\news-page-content.css" />
