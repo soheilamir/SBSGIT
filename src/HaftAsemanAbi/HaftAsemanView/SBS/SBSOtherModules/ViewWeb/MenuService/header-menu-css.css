@@ -10,6 +10,26 @@
         flex-flow: row nowrap;
     }
 
+        .menu-content .t-menu-c .t-phone-c {
+            flex-flow: row nowrap;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+            .menu-content .t-menu-c .t-phone-c > i, .menu-content .t-menu-c .t-phone-c > span {
+                color: orange;
+                font-size: 0.9em;
+            }
+
+            .menu-content .t-menu-c .t-phone-c > i {
+                font-size: 1.5em;
+            }
+
+            .menu-content .t-menu-c .t-phone-c > span {
+                color: #F1F1F1;
+                margin-left: 8px;
+            }
+
     .menu-content .b-menu-c {
         align-items: center;
         flex-flow: row nowrap;
@@ -19,6 +39,8 @@
 .logo-sbs {
     align-items: center;
     justify-content: center;
+    min-width: 160px;
+    width: 160px;
 }
 
     .logo-sbs > img {
@@ -50,10 +72,10 @@
             }
 
         .menu-content .b-menu-c > ul > li.log-li {
-            margin-right: 150px;
+            margin-right: 35%;
             align-items: center;
             justify-content: center;
-            margin-left: 70px;
+            margin-left: 5%;
         }
 
             .menu-content .b-menu-c > ul > li.log-li > .login {
@@ -85,7 +107,7 @@
                     margin-left: 10px;
                 }
 
-            .menu-content .b-menu-c > ul > li.log-li > .signout {
+            .menu-content .b-menu-c > ul > li.log-li > .signout-login {
                 border: 1px dashed #ee3f5b;
                 padding: 10px 8px;
                 border-radius: 4px;
@@ -94,7 +116,7 @@
                 justify-content: center;
             }
 
-                .menu-content .b-menu-c > ul > li.log-li > .signout:before {
+                .menu-content .b-menu-c > ul > li.log-li > .signout-login:before {
                     content: "\e909";
                     font-family: 'sbsfnt' !important;
                     color: #de2543;
@@ -106,8 +128,15 @@
                     -moz-transition: all 0.5s ease 0s;
                 }
 
-                .menu-content .b-menu-c > ul > li.log-li > .signout:hover:before {
+                .menu-content .b-menu-c > ul > li.log-li > .signout-login:hover:before {
                     margin-left: 10px;
+                    color: #F1F1F1;
+                }
+
+                .menu-content .b-menu-c > ul > li.log-li > .signout-login:hover {
+                    background: #e94963;
+                    color: #F1F1F1;
+                    box-shadow: 0 -3px 0 0 #d41f3c inset;
                 }
 
         .menu-content .b-menu-c > ul > li.menu-li {
@@ -188,3 +217,35 @@
         color: #707070;
     }
 /* end popup-content and change section =========================== */
+/* base-inner-menu section */
+.base-inner-menu {
+    min-height: 320px;
+    height: 320px;
+    top: 99px;
+    background: #F4F4F4;
+    box-shadow: 0 10px 50px 0 rgba(0,0,0,0.1)inset,0 5px 10px 0 rgba(0,0,0,0.1)inset;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.arrow-menu {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 450px solid #C1C1C1;
+    border-right: 450px solid transparent;
+}
+
+    .arrow-menu > img {
+        top: -420px;
+        left: 10px;
+        width: 280px;
+    }
+
+.base-inner-menu .body-menu {
+    width: 70%;
+    padding-right: 3%;
+}
+/* end base-inner-menu section =========================== */

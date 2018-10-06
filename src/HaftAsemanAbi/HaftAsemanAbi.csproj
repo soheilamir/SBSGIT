@@ -1012,6 +1012,8 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\AboutServiceFactory.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\AboutServiceModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\aboutServiceTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\all-directive-content.css" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\SearchDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\BlogPageService\blog-page-content.css" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\BlogPageService\BlogServiceCtrl.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\BlogPageService\BlogServiceDirective.js" />
@@ -1079,6 +1081,8 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\HeaderMenuDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\HeaderMenuModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\HeaderMenuTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\InnerMenuDirective.js" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\InnerMenuTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\Laws_RegulationsDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\Laws_RegulationsTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\MenuService\Suggestions_CriticismsTmpl.html" />
