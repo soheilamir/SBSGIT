@@ -53,7 +53,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Excel.4.5">
-      <HintPath>..\..\..\..\..\Tools\WebTools\ExcelDataReader\net45\Excel.4.5.dll</HintPath>
+      <HintPath>..\..\..\..\SBS\SBSWebProject_96-08-30\src\SBSWebProject.Web.Api\bin\Excel.4.5.dll</HintPath>
     </Reference>
     <Reference Include="FluentNHibernate">
       <HintPath>..\..\lib\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
