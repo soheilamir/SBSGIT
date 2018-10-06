@@ -1,0 +1,46 @@
+﻿<section class="_flex search-box-c">
+    <div class="_flex _input-selc-body _dir-align-r">
+        <i class="sbs-ico-mapmarker _color3 _position-r">
+            <b class="_position-a _fnt-fa">شهر مبدا</b>
+        </i>
+        <input type="text" class="_txt-c _fnt-fa" value="" placeholder="مبدا" />
+        <i class="sbs-ico-mapmarker _color3 _i-to _position-r">
+            <b class="_position-a _fnt-fa">شهر مقصد</b>
+        </i>
+        <input type="text" class="_txt-c _fnt-fa" value="" placeholder="مقصد" />
+    </div>
+    <div class="_flex _input-selc-body _dir-align-r">
+        <i class="sbs-ico-calendar _color3 _position-r">
+            <b class="_position-a _fnt-fa">تاریخ رفت</b>
+        </i>
+        <adm-dtp ng-model="date11" full-data="date11_detail" maxdate="{{date12_detail.unix}}"></adm-dtp>
+        <i class="sbs-ico-calendar _color3 _i-to _position-r">
+            <b class="_position-a _fnt-fa">تاریخ برگشت</b>
+        </i>
+        <adm-dtp ng-model="date12" full-data="date12_detail" mindate="{{date11_detail.unix}}"></adm-dtp>
+    </div>
+    <div class="_flex _input-selc-body _dir-align-r">
+        <i class="sbs-ico-users _color3 _position-r">
+            <b class="_position-a _fnt-fa">بزرگسال (12 به بالا)</b>
+        </i>
+        <input type="number" class="_txt-c _txt-num _fnt-fa" value="1" min="1" max="9" placeholder="بزرگسال" />
+    </div>
+    <div class="_flex _input-selc-body _dir-align-r">
+        <i class="sbs-ico-users _color3 _position-r">
+            <b class="_position-a _fnt-fa">کودک (2 تا 12)</b>
+        </i>
+        <input type="number" class="_txt-c _txt-num _fnt-fa" value="0" min="0" max="9" placeholder="کودک" />
+    </div>
+    <div class="_flex _input-selc-body _dir-align-r">
+        <i class="sbs-ico-users _color3 _position-r">
+            <b class="_position-a _fnt-fa">نوزاد (زیر 2 سال)</b>
+        </i>
+        <input type="number" class="_txt-c _txt-num _fnt-fa" value="0" min="0" max="9" placeholder="نوزاد" />
+    </div>
+    <div class="_flex _bttn-body-c _dir-align-r">
+        <button class="_flex _bttn-c _dir-align-r _fnt-fa" ng-click="GoToPage();">
+            <span>جستجو</span>
+            <i class="sbs-ico-chevron-left _trans"></i>
+        </button>
+    </div>
+</section>

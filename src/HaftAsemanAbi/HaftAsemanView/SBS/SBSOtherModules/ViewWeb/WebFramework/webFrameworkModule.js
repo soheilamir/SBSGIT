@@ -10,6 +10,8 @@ angular.module('webFrameworkModule', [
     'newsServiceModule',
     'loginServiceModule',
     'regServiceModule',
+    'AllDirectiveModule',
+    'AllSecHotelModule',
     //flight booking module
     'flightBookingServiceModule',
     //hotel booking module

@@ -58,6 +58,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.sbs-ico-eye1:before {
+  content: "\e942";
+}
+.sbs-ico-message-square:before {
+  content: "\e943";
+}
+.sbs-ico-thumbs-up:before {
+  content: "\e944";
+}
+.sbs-ico-toolbox:before {
+  content: "\e014";
+}
 .sbs-ico-playlist_add:before {
   content: "\e01e";
 }
@@ -66,6 +78,9 @@
 }
 .sbs-ico-circle-compass:before {
   content: "\e038";
+}
+.sbs-ico-clock:before {
+  content: "\e055";
 }
 .sbs-ico-content-left:before {
   content: "\e101";
@@ -88,14 +103,26 @@
 .sbs-ico-keyboard_arrow_down:before {
   content: "\e313";
 }
+.sbs-ico-flight:before {
+  content: "\e539";
+}
 .sbs-ico-local_airport:before {
   content: "\e53d";
 }
 .sbs-ico-local_parking:before {
   content: "\e54f";
 }
+.sbs-ico-airline_seat_recline_extra:before {
+  content: "\e636";
+}
+.sbs-ico-airline_seat_recline_normal:before {
+  content: "\e637";
+}
 .sbs-ico-feedback:before {
   content: "\e87f";
+}
+.sbs-ico-settings_phone:before {
+  content: "\e8c5";
 }
 .sbs-ico-trending_up:before {
   content: "\e8e5";
@@ -286,6 +313,18 @@
 .sbs-ico-select-arrows:before {
   content: "\e93d";
 }
+.sbs-ico-coins:before {
+  content: "\e93e";
+}
+.sbs-ico-document-certificate:before {
+  content: "\e93f";
+}
+.sbs-ico-flight_land:before {
+  content: "\e940";
+}
+.sbs-ico-flight_takeoff:before {
+  content: "\e941";
+}
 .sbs-ico-spoon-knife:before {
   content: "\e9a3";
 }
@@ -322,6 +361,12 @@
 .sbs-ico-angle-down:before {
   content: "\f107";
 }
+.sbs-ico-sort-amount-asc:before {
+  content: "\f160";
+}
+.sbs-ico-sort-amount-desc:before {
+  content: "\f161";
+}
 .sbs-ico-long-arrow-left:before {
   content: "\f177";
 }
@@ -340,45 +385,22 @@
 .sbs-ico-subway:before {
   content: "\f239";
 }
-.sbs-ico-toolbox:before {
-  content: "\e014";
-}
-.sbs-ico-clock:before {
-  content: "\e055";
-}
-.sbs-ico-coins:before {
-  content: "\e93e";
-}
-.sbs-ico-document-certificate:before {
-  content: "\e93f";
-}
-.sbs-ico-sort-amount-asc:before {
-  content: "\f160";
-}
-.sbs-ico-sort-amount-desc:before {
-  content: "\f161";
-}
 .sbs-ico-volume-control-phone:before {
   content: "\f2a0";
 }
-.sbs-ico-airline_seat_recline_extra:before {
-  content: "\e636";
+.sbs-ico-banknote:before {
+  content: "\e945";
 }
-.sbs-ico-airline_seat_recline_normal:before {
-  content: "\e637";
+.sbs-ico-shield:before {
+  content: "\e022";
 }
-.sbs-ico-flight:before {
-  content: "\e539";
+.sbs-ico-map1:before {
+  content: "\e025";
 }
-.sbs-ico-flight_land:before {
-  content: "\e940";
+.sbs-ico-chat1:before {
+  content: "\e049";
 }
-.sbs-ico-flight_takeoff:before {
-  content: "\e941";
-}
-.sbs-ico-settings_phone:before {
-  content: "\e8c5";
-}
+
 
 
 /* file manager content */
