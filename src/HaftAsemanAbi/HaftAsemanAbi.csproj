@@ -1018,7 +1018,7 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\CompanyBannerTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\FlightSearchBokkingDirective_1.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\FlightSearchBookingTmpl.html" />
-    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\SearchBookingTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\SearchBookingTmpl_1.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\SearchBookingDirective_1.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\BlogPageService\blog-page-content.css" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\BlogPageService\BlogServiceCtrl.js" />
