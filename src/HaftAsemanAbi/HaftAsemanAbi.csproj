@@ -1013,13 +1013,13 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\AboutServiceModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\aboutServiceTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\all-directive-content.css" />
-    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\AllDirectiveModule_1.js" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\AllDirectiveModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\CompanyBannerDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\CompanyBannerTmpl.html" />
-    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\FlightSearchBokkingDirective_1.js" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\FlightSearchBokkingDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\FlightSearchBookingTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\SearchBookingTmpl.html" />
-    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\SearchBookingDirective_1.js" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\SearchBookingDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\BlogPageService\blog-page-content.css" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\BlogPageService\BlogServiceCtrl.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\BlogPageService\BlogServiceDirective.js" />
