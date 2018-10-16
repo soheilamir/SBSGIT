@@ -68,7 +68,7 @@ angular.module('SBSWebApp').config(['$routeProvider', function ($routeProvider) 
                 }
         },
         {
-            url: '/haft-aseman-abi/travel-agency/sbs-login-authentication',
+            url: '/haft-aseman-abi/travel-agency/sbs-reg-log-authentication',
             config:
                 {
                     template: '<wwa-login-service></wwa-login-service>'
