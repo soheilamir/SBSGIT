@@ -1969,6 +1969,7 @@
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
     <None Include="Properties\PublishProfiles\HaftAsemanAbi.pubxml" />
+    <None Include="Properties\PublishProfiles\SBSPublish.pubxml" />
     <None Include="scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="scripts\jquery-1.6.4.js" />
     <Content Include="scripts\jquery-1.6.4.min.js" />
