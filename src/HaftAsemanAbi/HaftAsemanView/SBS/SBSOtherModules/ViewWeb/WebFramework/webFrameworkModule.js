@@ -8,8 +8,7 @@ angular.module('webFrameworkModule', [
     'teamsServiceModule',
     'blogServiceModule',
     'newsServiceModule',
-    'loginServiceModule',
-    'regServiceModule',
+    'AuthenticationModule',
     'AllDirectiveModule',
     'AllSecHotelModule',
     //flight booking module
