@@ -1,4 +1,38 @@
-﻿/* search booking css content ======================== */
+﻿.swiper-container {
+    width: 100%;
+    height: auto;
+}
+
+.swip-banner-h {
+    height: 600px !important;
+}
+
+.swip-call-h {
+    height: 500px !important;
+}
+
+.swiper-about-container {
+    height: 580px !important;
+}
+
+.swiper-call-container {
+    z-index: 200;
+}
+
+.swip-log-reg {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.swiper-hotel-city-container {
+    height: 380px !important;
+}
+
+.slider-h-c {
+    height: 90%;
+}
+/* search booking css content ======================== */
 
 .reserve-box {
     width: 90%;

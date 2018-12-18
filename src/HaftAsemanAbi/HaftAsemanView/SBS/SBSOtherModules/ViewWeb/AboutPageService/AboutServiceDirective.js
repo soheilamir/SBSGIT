@@ -1,6 +1,6 @@
 ﻿
 'use strict'
-var swiperAbout = [], swiperAwards = [];
+
 angular.module('aboutServiceModule').directive('aboutService', ['$rootScope', function ($rootScope) {
     return {
         scope: {
@@ -8,29 +8,13 @@ angular.module('aboutServiceModule').directive('aboutService', ['$rootScope', fu
         controller: "aboutServiceCtrl",
         templateUrl: "/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/AboutPageService/aboutServiceTmpl.html",
         link: function (scope, ele, attr) {
-
-        },
-    };
-}]).directive("aboutSwiperDirective", [function () {
-    return {
-        restrict: "A",
-        link: function (scope, element, attrs) {
-            swiperAbout = new Swiper('.swiper-about-container', {
-                pagination: '.about-pagination',
-                slidesPerView: 'auto',
-                paginationClickable: true,
-            });
-        },
-    };
-}]).directive("awardsSwiperDirective", [function () {
-    return {
-        restrict: "A",
-        link: function (scope, element, attrs) {
-            swiperAwards = new Swiper('.swiper-awards-container', {
-                pagination: '.awards-pagination',
-                slidesPerView: 'auto',
-                paginationClickable: true,
-
+            var swiperCo = new Swiper('.swiper-about-container', {
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                },
+                speed: 2000,
+                effect: 'fade',
             });
         },
     };

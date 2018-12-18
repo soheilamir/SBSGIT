@@ -8,7 +8,8 @@ angular.module('AllDirectiveModule').directive('coBannerSwiper', [function () {
         },
         templateUrl: "/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/AllDirective/CompanyBannerTmpl.html",
         link: function (scope, element, attrs) {
-            swiperAbout = new Swiper('.swiper-coView-container', {
+           var swiperCo = new Swiper('.swiper-coView-container', {
+                autoHeight: true, //enable auto height
                 spaceBetween: 30,
                 centeredSlides: true,
                 autoplay: {

@@ -2,6 +2,7 @@
 'use strict'
 angular.module('contactServiceModule').directive('apiMapSbs', ['$rootScope', function ($rootScope) {
     return {
+        replace: true,
         scope: {
         },
         require: '^contactService',

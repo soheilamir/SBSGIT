@@ -16,11 +16,12 @@
         margin-bottom: 70px;
     }
 
-        .base-body-log-reg .title-login-reg-ser > i,.base-body-log-reg .title-login-reg-ser > span {
+        .base-body-log-reg .title-login-reg-ser > i, .base-body-log-reg .title-login-reg-ser > span {
             font-size: 1.3em;
             color: orange;
             margin: 0 8px;
         }
+
         .base-body-log-reg .title-login-reg-ser > span {
             font-size: 1em;
         }
@@ -33,3 +34,149 @@
             font-size: 0.9em;
             color: #808080;
         }
+
+.login-reg-base-body {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 20px 5%;
+}
+
+.t-l-r {
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+    .t-l-r > img {
+        margin-left: 12px;
+        width: 130px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .t-l-r > h2 {
+        font-size: 1.3em;
+    }
+
+.body-con-reg-log {
+    background: #FFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #DDD;
+    min-height: 400px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.split-log-reg-c {
+    width: 45%;
+    padding: 0 5%;
+    height: 400px;
+}
+
+.reg-content {
+    height: 480px;
+}
+
+.login-content {
+    flex-flow: column nowrap;
+    border-left: 1px dashed #D1D1D1;
+    align-items: center;
+    justify-content: center;
+}
+
+    .login-content ._input-selc-body {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+        .login-content ._input-selc-body > h3 {
+            color: #808080;
+            margin-left: 10px;
+        }
+
+        .login-content ._input-selc-body > input[type="text"], .login-content ._input-selc-body > input[type="password"] {
+            width: 250px;
+        }
+
+.text-login-content {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+    .text-login-content > p, .text-login-content > h3 {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .text-login-content > h3 {
+        color: orange;
+    }
+
+    .text-login-content > ul {
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+        .text-login-content > ul > li {
+            margin-bottom: 10px;
+            border: 1px solid #DDD;
+            background: #E1E1E1;
+            padding: 8px;
+            margin: 10px;
+            width: auto;
+            border-radius: 3px;
+            align-items: center;
+            justify-content: flex-start;
+            flex-flow: row nowrap;
+        }
+
+            .text-login-content > ul > li > i {
+                color: orange;
+                margin-left: 5px;
+            }
+
+            .text-login-content > ul > li > span {
+                font-size: 0.9em;
+            }
+
+.log-with-other, .log-with-other .body-log-with-other {
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+    .log-with-other .body-log-with-other > button {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        box-shadow: none;
+        min-width: 45%;
+    }
+
+        .log-with-other .body-log-with-other > button > i {
+            margin-left: 8px;
+        }
+
+        .log-with-other .body-log-with-other > button.bu-f {
+            background: #1a6ad8 !important;
+            border: 1px solid #1a6ad8;
+        }
+
+        .log-with-other .body-log-with-other > button.bu-g {
+            background: #e50606 !important;
+            border: 1px solid #e50606;
+        }
+
+.ch-inner-body-h {
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.ch-info-s-c {
+    margin-top: 20px !important;
+    margin-bottom: 50px !important;
+}

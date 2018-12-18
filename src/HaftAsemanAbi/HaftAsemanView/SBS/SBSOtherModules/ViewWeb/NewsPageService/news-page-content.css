@@ -1,25 +1,4 @@
-﻿/* swiper container */
-.swiper-container {
-    height: 100%;
-    width: 100%;
-}
-
-.swiper-slides {
-    width: 100%;
-    background-size: cover !important;
-}
-
-.swiper-pagination-bullet {
-    height: 12px;
-    width: 12px;
-    background: #aaa;
-    opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-    background: #6C1B78;
-}
-/* end swiper container */
+﻿
 .base-news-content {
     flex-flow: column nowrap;
     direction: rtl;

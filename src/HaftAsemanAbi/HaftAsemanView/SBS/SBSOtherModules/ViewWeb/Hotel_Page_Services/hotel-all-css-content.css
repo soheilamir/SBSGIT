@@ -1,8 +1,6 @@
 ﻿/* swiper hotel */
 
-.slider-h-c {
-    height: 90%;
-}
+
 /* end swiper hotel */
 .h-view-content {
     flex-flow: row wrap;
@@ -159,7 +157,7 @@
 }
 
     .article-h-content > figure {
-        height: 170px;
+        height: 150px;
         box-shadow: 0 -50px 50px 0px rgba(0,0,0,0.8) inset;
         flex-flow: column nowrap;
         align-items: flex-start;

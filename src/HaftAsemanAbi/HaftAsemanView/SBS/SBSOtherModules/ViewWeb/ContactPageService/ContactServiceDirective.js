@@ -6,7 +6,7 @@ angular.module('contactServiceModule').directive('contactService', ['$rootScope'
         },
         controller: "contactServiceCtrl",
         templateUrl: "/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/contactServiceTmpl.html",
-        link: function (scope, ele, attr) {
+        link: function (scope, element, attrs) {
 
         },
     };

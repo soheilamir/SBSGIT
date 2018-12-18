@@ -1009,7 +1009,6 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\about-page-service-content.css" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\AboutServiceCtrl.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\AboutServiceDirective.js" />
-    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\AboutServiceFactory.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\AboutServiceModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\aboutServiceTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AllDirective\all-directive-content.css" />
@@ -1112,13 +1111,14 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\NewsPageService\NewsServiceModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\NewsPageService\NewsServiceTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\AuthenticationServiceFactory.js" />
-    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\JavaScript.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\log-reg-css-content.css" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\AuthenticationServiceModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\Login_Reg_ServicesCtrl.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\Login_Reg_ServicesDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\Login_Reg_ServicesModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\Login_Reg_ServicesTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\LogRegBaseTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\Register_Login_Service\LogRegSecDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\TeamsPageService\DetailTeamsServiceDirective.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\TeamsPageService\detailTeamsServiceTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\TeamsPageService\teams-page-content.css" />
@@ -2107,6 +2107,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="HaftAsemanConsole\SBSConsole\OtherModule\ConsoleModule\CMSServicesBaseInfoFlight\" />
     <Folder Include="HaftAsemanConsole\SBSConsole\OtherModule\ConsoleModule\CMSServicesBaseInfoHotel\BaseHotelInfo\searchHotel\" />
+    <Folder Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\AboutPageService\AboutDirective\" />
     <Folder Include="Models\" />
     <Folder Include="scripts\i18n\ngLocale\" />
     <Folder Include="Uploads\" />
