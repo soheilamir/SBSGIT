@@ -7,7 +7,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin-top: 50px;
-    margin-bottom: 150px;
 }
 
 .t-v-h-c {
@@ -277,7 +276,7 @@
 }
 
     .full-ex-h-v-content > article {
-        width: 280px;
+        width: 290px;
         height: 380px;
         margin: 0;
         background: #E9E9E9;

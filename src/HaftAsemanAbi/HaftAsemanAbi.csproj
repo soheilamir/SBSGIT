@@ -1127,6 +1127,8 @@
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\TeamsPageService\TeamsServiceFactory.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\TeamsPageService\TeamsServiceModule.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\TeamsPageService\teamsServiceTmpl.html" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\WebFramework\FooterDirective.js" />
+    <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\WebFramework\FooterTmpl.html" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\WebFramework\webframework.css" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\WebFramework\webFrameworkCtrl.js" />
     <Content Include="HaftAsemanView\SBS\SBSOtherModules\ViewWeb\WebFramework\webFrameworkDirective.js" />

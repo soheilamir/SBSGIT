@@ -4,6 +4,7 @@ angular.module('contactServiceModule').directive('callContent', ['$rootScope', f
     return {
         replace: true,
         scope: {
+            showFoter: "=",
         },
         require: '^contactService',
         templateUrl: "/HaftAsemanView/SBS/SBSOtherModules/ViewWeb/ContactPageService/callContentTmpl.html",
